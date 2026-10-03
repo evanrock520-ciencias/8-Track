@@ -25,8 +25,10 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(GoogleTest)
 
+add_subdirectory(8-track)
+
 enable_testing()
 add_subdirectory(tests)
 
 add_executable(main main.cpp)
-target_link_libraries(main PRIVATE Qt6::Widgets)
+target_link_libraries(main PRIVATE Qt6::Widgets compiler)
