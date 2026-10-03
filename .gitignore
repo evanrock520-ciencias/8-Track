@@ -67,3 +67,10 @@ Testing/
 
 # IDE
 .idea/
+
+# LaTex
+*.aux
+*.fls
+*.log
+*.gz
+*.fdb_latexmk

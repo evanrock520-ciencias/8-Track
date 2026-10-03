@@ -1,0 +1,30 @@
+name: Report
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'docs/report/**'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'docs/report/**'
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Compile Document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: docs/report
+
+      - name: Upload report
+        uses: actions/upload-artifact@v6
+        with:
+          name: report
+          path: docs/report/main.pdf
