@@ -74,3 +74,6 @@ Testing/
 *.log
 *.gz
 *.fdb_latexmk
+
+# docs
+docs/html
