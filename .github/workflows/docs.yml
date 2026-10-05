@@ -3,8 +3,6 @@ name: Documentation
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 permissions:
   contents: write
 
@@ -14,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v4
+        with:
+          submodules: true
       - name: Generate and Deploy Doxygen Docs
         uses: AgarwalSaurav/ghaction-doxygen-ghpages@release/v2
         with:
