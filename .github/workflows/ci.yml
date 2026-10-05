@@ -19,12 +19,16 @@ jobs:
         with:
           version: '6.12'
           target: 'desktop'
+          cache: 'true'
 
       - name: Build Project
         uses: threeal/cmake-action@v2.1.0
         with:
           source-dir: .
           build-dir: build
+
+      - name: Format Code
+        uses: j178/prek-action@5337cb91e0fa35a7ff31b9ca345126d8bbbcdf16
 
       - name: Run Tests
         run: ctest --test-dir build --output-on-failure
