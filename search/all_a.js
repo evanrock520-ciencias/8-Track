@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['not_0',['NOT',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d',1,'Track8::Compiler']]],
-  ['number_1',['NUMBER',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa34f55eca38e0605a84f169ff61a2a396',1,'Track8::Compiler']]]
+  ['name_0',['name',['../classTrack8_1_1Domain_1_1Album.html#abcce544ef1602c97a76f4d0e1b69c7c0',1,'Track8::Domain::Album::name()'],['../classTrack8_1_1Domain_1_1Performer.html#afe3908e28871b8df0cf26808cbf93f9f',1,'Track8::Domain::Performer::name()']]],
+  ['not_1',['NOT',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d',1,'Track8::Compiler']]],
+  ['number_2',['NUMBER',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa34f55eca38e0605a84f169ff61a2a396',1,'Track8::Compiler']]]
 ];

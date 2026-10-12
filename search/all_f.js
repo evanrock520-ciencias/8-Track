@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['to_0',['TO',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c',1,'Track8::Compiler']]],
-  ['token_1',['Token',['../classTrack8_1_1Compiler_1_1Token.html',1,'Track8::Compiler::Token'],['../classTrack8_1_1Compiler_1_1Token.html#a51675f478755067a85e641f497abe4be',1,'Track8::Compiler::Token::Token()']]],
-  ['token_2ehpp_2',['Token.hpp',['../Token_8hpp.html',1,'']]],
-  ['tokentype_3',['TokenType',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f',1,'Track8::Compiler']]],
-  ['tokentype_2ehpp_4',['TokenType.hpp',['../TokenType_8hpp.html',1,'']]],
-  ['track_5',['TRACK',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00',1,'Track8::Compiler']]],
-  ['track8_6',['Track8',['../namespaceTrack8.html',1,'']]],
-  ['track8_3a_3acompiler_7',['Compiler',['../namespaceTrack8_1_1Compiler.html',1,'Track8']]],
-  ['type_8',['type',['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token']]]
+  ['title_0',['title',['../classTrack8_1_1Domain_1_1Song.html#a008891b1fcd8fb5e1dacfd2294884ebe',1,'Track8::Domain::Song']]],
+  ['to_1',['TO',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c',1,'Track8::Compiler']]],
+  ['token_2',['Token',['../classTrack8_1_1Compiler_1_1Token.html',1,'Track8::Compiler::Token'],['../classTrack8_1_1Compiler_1_1Token.html#a51675f478755067a85e641f497abe4be',1,'Track8::Compiler::Token::Token()']]],
+  ['token_2ehpp_3',['Token.hpp',['../Token_8hpp.html',1,'']]],
+  ['tokentype_4',['TokenType',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f',1,'Track8::Compiler']]],
+  ['tokentype_2ehpp_5',['TokenType.hpp',['../TokenType_8hpp.html',1,'']]],
+  ['track_6',['TRACK',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00',1,'Track8::Compiler']]],
+  ['track_7',['track',['../classTrack8_1_1Domain_1_1Song.html#acce12dedef853db9083e50ab3297276d',1,'Track8::Domain::Song']]],
+  ['track8_8',['Track8',['../namespaceTrack8.html',1,'']]],
+  ['track8_3a_3acompiler_9',['Compiler',['../namespaceTrack8_1_1Compiler.html',1,'Track8']]],
+  ['track8_3a_3adomain_10',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
+  ['type_11',['type',['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token']]]
 ];

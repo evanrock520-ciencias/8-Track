@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['token_0',['Token',['../classTrack8_1_1Compiler_1_1Token.html',1,'Track8::Compiler']]]
+  ['album_0',['Album',['../classTrack8_1_1Domain_1_1Album.html',1,'Track8::Domain']]],
+  ['artist_1',['Artist',['../classTrack8_1_1Domain_1_1Artist.html',1,'Track8::Domain']]]
 ];
