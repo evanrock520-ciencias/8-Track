@@ -1,10 +1,22 @@
 var searchData=
 [
-  ['m_5fid_0',['m_id',['../classTrack8_1_1Domain_1_1Performer.html#ae981e95881b346c09428259b9c5ec061',1,'Track8::Domain::Performer']]],
-  ['m_5fname_1',['m_name',['../classTrack8_1_1Domain_1_1Performer.html#ae6e7955af59185e1b193f22e083bf975',1,'Track8::Domain::Performer']]],
-  ['markasartist_2',['markAsArtist',['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a4377630cbc6f633a44b37e79141d26ae',1,'Track8::Repositories::IPerformerRepository']]],
-  ['markasgroup_3',['markAsGroup',['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a043c0a68dbe9d1a37bf98471cff558ab',1,'Track8::Repositories::IPerformerRepository']]],
-  ['member_4',['MEMBER',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b',1,'Track8::Compiler']]],
-  ['members_5',['members',['../classTrack8_1_1Domain_1_1Group.html#a894278c7d2c893475e5cc5b96df23cd8',1,'Track8::Domain::Group']]],
-  ['month_6',['month',['../classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd',1,'Track8::Domain::Date']]]
+  ['m_5falbum_0',['m_album',['../structTrack8_1_1Miner_1_1Metadata.html#a733dc06366354ebb342e6a70100feb95',1,'Track8::Miner::Metadata']]],
+  ['m_5fgenre_1',['m_genre',['../structTrack8_1_1Miner_1_1Metadata.html#a3021c2e6493370f0a5a7b6a98701ab2c',1,'Track8::Miner::Metadata']]],
+  ['m_5fid_2',['m_id',['../classTrack8_1_1Domain_1_1Performer.html#ae981e95881b346c09428259b9c5ec061',1,'Track8::Domain::Performer']]],
+  ['m_5fname_3',['m_name',['../classTrack8_1_1Domain_1_1Performer.html#ae6e7955af59185e1b193f22e083bf975',1,'Track8::Domain::Performer']]],
+  ['m_5fpath_4',['m_path',['../structTrack8_1_1Miner_1_1Metadata.html#a2afc451a9c385d3ee610c71afbfd8caa',1,'Track8::Miner::Metadata']]],
+  ['m_5fperformer_5',['m_performer',['../structTrack8_1_1Miner_1_1Metadata.html#aec16cc99dddf596a1ba124e0f8d96e53',1,'Track8::Miner::Metadata']]],
+  ['m_5ftitle_6',['m_title',['../structTrack8_1_1Miner_1_1Metadata.html#af1fd0e1f78910609720999b62dfd113a',1,'Track8::Miner::Metadata']]],
+  ['m_5ftracknumber_7',['m_trackNumber',['../structTrack8_1_1Miner_1_1Metadata.html#a977fb564ec6c2931702943654550d264',1,'Track8::Miner::Metadata']]],
+  ['m_5fyear_8',['m_year',['../structTrack8_1_1Miner_1_1Metadata.html#a8c89fe52b67e39653ae3346a78616f2e',1,'Track8::Miner::Metadata']]],
+  ['markasartist_9',['markAsArtist',['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a4377630cbc6f633a44b37e79141d26ae',1,'Track8::Repositories::IPerformerRepository']]],
+  ['markasgroup_10',['markAsGroup',['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a043c0a68dbe9d1a37bf98471cff558ab',1,'Track8::Repositories::IPerformerRepository']]],
+  ['member_11',['MEMBER',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b',1,'Track8::Compiler']]],
+  ['members_12',['members',['../classTrack8_1_1Domain_1_1Group.html#a894278c7d2c893475e5cc5b96df23cd8',1,'Track8::Domain::Group']]],
+  ['metadata_13',['Metadata',['../structTrack8_1_1Miner_1_1Metadata.html',1,'Track8::Miner']]],
+  ['metadata_2ehpp_14',['Metadata.hpp',['../Metadata_8hpp.html',1,'']]],
+  ['mine_15',['mine',['../classTrack8_1_1Miner_1_1Miner.html#a67995ef02bf434cf6f50a04fb58f76b2',1,'Track8::Miner::Miner']]],
+  ['miner_16',['Miner',['../classTrack8_1_1Miner_1_1Miner.html',1,'Track8::Miner::Miner'],['../classTrack8_1_1Miner_1_1Miner.html#adbef37ef6ec3755c48d2df943d2367d7',1,'Track8::Miner::Miner::Miner()']]],
+  ['miner_2ehpp_17',['Miner.hpp',['../Miner_8hpp.html',1,'']]],
+  ['month_18',['month',['../classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd',1,'Track8::Domain::Date']]]
 ];
