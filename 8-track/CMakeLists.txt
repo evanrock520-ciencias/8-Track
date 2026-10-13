@@ -12,6 +12,10 @@ target_sources(domain INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Artist.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Group.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Date.hpp
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IPerformerRepository.hpp
 )
 
 # Biblioteca de MuQL
