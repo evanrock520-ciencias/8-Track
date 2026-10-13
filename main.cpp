@@ -1,9 +1,5 @@
-#include <qapplication.h>
-#include <qmainwindow.h>
+#include <iostream>
 
 int main(int argc, char** argv) {
-    QApplication app(argc, argv);
-    QMainWindow window;
-    window.show();
-    return app.exec();
+    std::cout << "This is 8-track." << std::endl;
 }
