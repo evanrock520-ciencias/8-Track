@@ -17,16 +17,25 @@ public:
      * @param date Fecha con formato YYYY-MM-DD.
      */
     explicit Date(const std::string& date) {
-        std::istringstream ss{date};
-        std::chrono::year_month_day ymd;
-        std::chrono::from_stream(ss, "%F", ymd);
-
-        if (ss.fail() || !ymd.ok())
+        if (date.size() < 10)
+            throw std::invalid_argument("Date is too short.");
+        if (date[4] != '-' || date[7] != '-')
             throw std::invalid_argument("Invalid date format.");
 
-        m_year = static_cast<int>(ymd.year());
-        m_month = static_cast<int>(static_cast<unsigned>(ymd.month()));
-        m_day = static_cast<int>(static_cast<unsigned>(ymd.day()));
+        try {
+            m_year = std::stoi(date.substr(0, 4));
+            m_month = std::stoi(date.substr(5, 2));
+            m_day = std::stoi(date.substr(8, 2));
+        } catch (const std::exception& e) {
+            throw std::invalid_argument(e.what());
+        }
+
+        if (m_year < 0 || m_year > 9999)
+            throw std::invalid_argument("Invalid year.");
+        if (m_month < 0 || m_month > 12)
+            throw std::invalid_argument("Invalid month.");
+        if (m_day < 0 || m_day > 31)
+            throw std::invalid_argument("Invalid day.");
     }
 
     /**
