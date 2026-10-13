@@ -16,7 +16,7 @@ Miner::Miner(std::filesystem::path path) : m_path(std::move(path)) {};
 void Miner::mine(const std::function<void(const Metadata&)>& callback) const {
     if (!std::filesystem::exists(m_path)) {
         throw std::runtime_error(
-            std::format("%s is not a valid directory.", m_path.c_str()));
+            std::format("{} is not a valid directory.", m_path.string()));
     }
 
     for (const auto& entry :
