@@ -14,7 +14,7 @@ target_sources(domain INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Date.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/ISongRepository.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IPerformerRepository.hpp
 )
 
@@ -27,3 +27,15 @@ target_include_directories(compiler PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
 )
+
+# Biblioteca del Minero
+add_library(miner
+    src/miner/Miner.cpp
+)
+
+target_include_directories(miner PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+target_link_libraries(miner PRIVATE tag)

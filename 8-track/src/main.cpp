@@ -1,6 +1,17 @@
+#include "miner/Miner.hpp"
+
 #include <argparse/argparse.hpp>
 #include <iostream>
 #include <string>
+
+// En realidad deberia llamar a la capa de servicios.
+static void scan(std::string directory) {
+    using namespace Track8::Miner;
+    const Miner miner(std::move(directory));
+    miner.mine([](const Track8::Miner::Metadata& metadata) {
+        std::cout << metadata.m_path << '\n';
+    });
+}
 
 int main(int argc, char* argv[]) {
     argparse::ArgumentParser program("8-track");
@@ -25,6 +36,7 @@ int main(int argc, char* argv[]) {
         const auto path = program.get<std::string>("--scan");
         std::cout << "Scanning " << path << '\n';
         // TODO: Minar un directorio.
+        scan(path);
     }
 
     // Si se solicita realizar una consulta por consola.
