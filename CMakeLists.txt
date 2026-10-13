@@ -32,16 +32,22 @@ FetchContent_Declare(
 
 FetchContent_Declare(
         argparse
-        GIT_REPOSITORY https://github.com/rue-ryuzaki/argparse
-        GIT_TAG v1.11.0
+        GIT_REPOSITORY https://github.com/p-ranav/argparse
+        GIT_TAG v3.2
 )
 
-FetchContent_MakeAvailable(GoogleTest Taglib argparse)
+FetchContent_Declare(
+        tabulate
+        GIT_REPOSITORY https://github.com/p-ranav/tabulate
+        GIT_TAG v2.0
+)
+
+FetchContent_MakeAvailable(GoogleTest Taglib argparse tabulate)
 
 add_subdirectory(8-track)
 
 enable_testing()
 add_subdirectory(tests)
 
-add_executable(main main.cpp)
-target_link_libraries(main PRIVATE Qt6::Quick compiler TagLib argparse)
+add_executable(main 8-track/src/main.cpp)
+target_link_libraries(main PRIVATE Qt6::Quick compiler tag argparse tabulate)
