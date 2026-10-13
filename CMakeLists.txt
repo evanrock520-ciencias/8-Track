@@ -12,7 +12,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+qt_standard_project_setup(REQUIRES 6.5)
 
 include(FetchContent)
 
@@ -23,7 +24,19 @@ FetchContent_Declare(
         GIT_TAG v1.15.2
 )
 
-FetchContent_MakeAvailable(GoogleTest)
+FetchContent_Declare(
+        Taglib
+        GIT_REPOSITORY https://github.com/taglib/taglib
+        GIT_TAG v2.3.2
+)
+
+FetchContent_Declare(
+        argparse
+        GIT_REPOSITORY https://github.com/rue-ryuzaki/argparse
+        GIT_TAG v1.11.0
+)
+
+FetchContent_MakeAvailable(GoogleTest Taglib argparse)
 
 add_subdirectory(8-track)
 
@@ -31,4 +44,4 @@ enable_testing()
 add_subdirectory(tests)
 
 add_executable(main main.cpp)
-target_link_libraries(main PRIVATE Qt6::Widgets compiler)
+target_link_libraries(main PRIVATE Qt6::Quick compiler TagLib argparse)
