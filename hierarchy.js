@@ -2,6 +2,9 @@ var hierarchy =
 [
     [ "Track8::Domain::Album", "classTrack8_1_1Domain_1_1Album.html", null ],
     [ "Track8::Domain::Date", "classTrack8_1_1Domain_1_1Date.html", null ],
+    [ "Track8::Repositories::IAlbumRepository", "classTrack8_1_1Repositories_1_1IAlbumRepository.html", null ],
+    [ "Track8::Repositories::IPerformerRepository", "classTrack8_1_1Repositories_1_1IPerformerRepository.html", null ],
+    [ "Track8::Repositories::ISongRepository", "classTrack8_1_1Repositories_1_1ISongRepository.html", null ],
     [ "Track8::Domain::Performer", "classTrack8_1_1Domain_1_1Performer.html", [
       [ "Track8::Domain::Artist", "classTrack8_1_1Domain_1_1Artist.html", null ],
       [ "Track8::Domain::Group", "classTrack8_1_1Domain_1_1Group.html", null ]

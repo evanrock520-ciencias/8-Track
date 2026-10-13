@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['from_0',['FROM',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa9cb26dba96b451a88aeb73e3be10a4ce',1,'Track8::Compiler']]]
+  ['find_0',['find',['../classTrack8_1_1Repositories_1_1IAlbumRepository.html#ad47fe00cb41114868f25adacbc049601',1,'Track8::Repositories::IAlbumRepository::find(const std::string &amp;name, const std::filesystem::path &amp;path)=0'],['../classTrack8_1_1Repositories_1_1IAlbumRepository.html#a2eb47d0101efb30284fb6042a1e80cc4',1,'Track8::Repositories::IAlbumRepository::find(int id)=0'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b',1,'Track8::Repositories::IPerformerRepository::find()'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#aacb4beeff5e9f8f3424469d38d1b2d3d',1,'Track8::Repositories::ISongRepository::find(const std::filesystem::path &amp;path)=0'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#a41a78ad1ab20ab101fb2ff9354ce8f7d',1,'Track8::Repositories::ISongRepository::find(int id)=0'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#a7b75312dbb8c059556ff7d1ea9292674',1,'Track8::Repositories::ISongRepository::find(const Compiler::Query &amp;query)=0']]],
+  ['from_1',['FROM',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa9cb26dba96b451a88aeb73e3be10a4ce',1,'Track8::Compiler']]]
 ];

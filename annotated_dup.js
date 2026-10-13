@@ -12,6 +12,11 @@ var annotated_dup =
         [ "Performer", "classTrack8_1_1Domain_1_1Performer.html", "classTrack8_1_1Domain_1_1Performer" ],
         [ "Song", "classTrack8_1_1Domain_1_1Song.html", "classTrack8_1_1Domain_1_1Song" ],
         [ "SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", "classTrack8_1_1Domain_1_1SongBuilder" ]
+      ] ],
+      [ "Repositories", "namespaceTrack8_1_1Repositories.html", [
+        [ "IAlbumRepository", "classTrack8_1_1Repositories_1_1IAlbumRepository.html", "classTrack8_1_1Repositories_1_1IAlbumRepository" ],
+        [ "IPerformerRepository", "classTrack8_1_1Repositories_1_1IPerformerRepository.html", "classTrack8_1_1Repositories_1_1IPerformerRepository" ],
+        [ "ISongRepository", "classTrack8_1_1Repositories_1_1ISongRepository.html", "classTrack8_1_1Repositories_1_1ISongRepository" ]
       ] ]
     ] ]
 ];
