@@ -50,7 +50,15 @@ class SongBuilder {
 public:
     SongBuilder() = default;
 
-    [[nodiscard]] Song create() const { return std::move(m_song); }
+    /**
+     * Otorga la instancia final de la rola y limpia la rola almacenada.
+     * @return La instancia final de la rola.
+     */
+    [[nodiscard]] Song create() {
+        Song result = std::move(m_song);
+        m_song = Song();
+        return result;
+    }
 
     SongBuilder& with_id(const int id) {
         if (id < 0)
