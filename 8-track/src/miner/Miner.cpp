@@ -1,9 +1,11 @@
 #include "miner/Miner.hpp"
 #include "miner/Metadata.hpp"
+#include "utils/Utils.hpp"
 
 #include <format>
 #include <functional>
 #include <iostream>
+#include <ranges>
 #include <taglib/fileref.h>
 #include <taglib/tag.h>
 
@@ -47,16 +49,16 @@ Metadata Miner::parseFile(const std::filesystem::path& path) {
 
     const TagLib::Tag* tag = fileRef.tag();
 
-    if (!tag->title().isEmpty())
+    if (!Utils::empty(tag->title().to8Bit()))
         metadata.m_title = tag->title().to8Bit(true);
 
-    if (!tag->artist().isEmpty())
+    if (!Utils::empty(tag->artist().to8Bit()))
         metadata.m_performer = tag->artist().to8Bit(true);
 
-    if (!tag->album().isEmpty())
+    if (!Utils::empty(tag->album().to8Bit()))
         metadata.m_album = tag->album().to8Bit(true);
 
-    if (!tag->genre().isEmpty())
+    if (!Utils::empty(tag->album().to8Bit()))
         metadata.m_genre = tag->genre().to8Bit(true);
 
     metadata.m_year =
