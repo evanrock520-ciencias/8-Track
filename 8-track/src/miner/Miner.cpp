@@ -2,10 +2,8 @@
 #include "miner/Metadata.hpp"
 #include "utils/Utils.hpp"
 
-#include <format>
 #include <functional>
 #include <iostream>
-#include <ranges>
 #include <taglib/fileref.h>
 #include <taglib/tag.h>
 
@@ -17,8 +15,7 @@ Miner::Miner(std::filesystem::path path) : m_path(std::move(path)) {};
 
 void Miner::mine(const std::function<void(const Metadata&)>& callback) const {
     if (!std::filesystem::exists(m_path)) {
-        throw std::runtime_error(
-            std::format("{} is not a valid directory.", m_path.string()));
+        throw std::runtime_error("Invalid directory");
     }
 
     for (const auto& entry :
