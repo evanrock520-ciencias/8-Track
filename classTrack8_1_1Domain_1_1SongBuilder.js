@@ -1,7 +1,7 @@
 var classTrack8_1_1Domain_1_1SongBuilder =
 [
     [ "SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html#a1416c57ccfbbdf3168695d6b1a4e4c50", null ],
-    [ "create", "classTrack8_1_1Domain_1_1SongBuilder.html#a7e8567e2f0b1c11a5451429cc31ce81c", null ],
+    [ "create", "classTrack8_1_1Domain_1_1SongBuilder.html#a44e9fc3e61ee20818306f4f2f0c2a98b", null ],
     [ "with_album", "classTrack8_1_1Domain_1_1SongBuilder.html#a27fc0563aecbb824f774412b08d0fd0d", null ],
     [ "with_genre", "classTrack8_1_1Domain_1_1SongBuilder.html#a7d3965a72caa2777c7531980b5d8f996", null ],
     [ "with_id", "classTrack8_1_1Domain_1_1SongBuilder.html#a11fce5adced0806e0da413ccb01500c1", null ],
