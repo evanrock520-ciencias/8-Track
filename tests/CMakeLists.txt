@@ -26,4 +26,5 @@ target_link_libraries(miner_tests
 )
 
 include(GoogleTest)
-gtest_discover_tests(domain_tests miner_tests)
+gtest_discover_tests(domain_tests)
+gtest_discover_tests(miner_tests)
