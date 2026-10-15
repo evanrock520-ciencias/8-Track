@@ -18,7 +18,6 @@ public:
      */
     void mine(const std::function<void(const Metadata&)>& callback) const;
 
-private:
     /**
      * @brief Obtiene los metadatos de un archivo `.mp3`.
      * @param path La ruta de un archivo `mp3`.
@@ -26,6 +25,7 @@ private:
      */
     static Metadata parseFile(const std::filesystem::path& path);
 
+private:
     std::filesystem::path m_path;
 };
 } // namespace Track8::Miner
