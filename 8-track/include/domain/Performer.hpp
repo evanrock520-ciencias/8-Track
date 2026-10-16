@@ -19,7 +19,7 @@ public:
     [[nodiscard]] const std::string& name() const { return m_name; };
 
 protected:
-    int m_id;
+    int m_id = -1;
     std::string m_name;
 };
 } // namespace Track8::Domain
