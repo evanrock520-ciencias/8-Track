@@ -16,8 +16,8 @@ public:
     [[nodiscard]] int line() const { return m_line; }
 
 private:
-    const TokenType m_type;
-    const std::string& m_lexeme;
+    TokenType m_type;
+    std::string m_lexeme;
     int m_line;
 };
 } // namespace Track8::Compiler
