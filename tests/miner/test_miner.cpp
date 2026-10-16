@@ -56,8 +56,9 @@ protected:
 // TXXX=description=Provided to YouTube by ATO Record
 
 TEST_F(MinerTest, MetadataWithAllTags) {
-    const Metadata metadata = Miner::parseFile(dataDir / "big_time.mp3");
-    EXPECT_EQ(metadata.m_path, dataDir / "big_time.mp3");
+    const Metadata metadata =
+        Miner::parseFile(dataDir / "songs" / "big_time.mp3");
+    EXPECT_EQ(metadata.m_path, dataDir / "songs" / "big_time.mp3");
     EXPECT_EQ(metadata.m_performer, "Angel Olsen");
     EXPECT_EQ(metadata.m_title, "Big Time");
     EXPECT_EQ(metadata.m_album, "Big Time");
@@ -67,11 +68,46 @@ TEST_F(MinerTest, MetadataWithAllTags) {
 
 TEST_F(MinerTest, EmptyMetadata) {
     const Metadata metadata =
-        Miner::parseFile(dataDir / "polka_dots_and_moonbeams.mp3");
-    EXPECT_EQ(metadata.m_path, dataDir / "polka_dots_and_moonbeams.mp3");
+        Miner::parseFile(dataDir / "songs" / "polka_dots_and_moonbeams.mp3");
+    EXPECT_EQ(metadata.m_path,
+              dataDir / "songs" / "polka_dots_and_moonbeams.mp3");
     EXPECT_EQ(metadata.m_performer, "Unknown");
     EXPECT_EQ(metadata.m_title, "Unknown");
     EXPECT_EQ(metadata.m_album, "Unknown");
     EXPECT_EQ(metadata.m_year, 2026);
     EXPECT_EQ(metadata.m_genre, "Unknown");
+}
+
+TEST_F(MinerTest, ScanAllFiles) {
+    // En songs hay 3 canciones.
+    constexpr int expectedFiles = 3;
+    int currentFiles = 0;
+
+    const Miner miner(dataDir / "songs");
+    miner.mine([&currentFiles](const Metadata&) { currentFiles++; });
+
+    EXPECT_EQ(currentFiles, expectedFiles);
+}
+
+TEST_F(MinerTest, OnlyScanMp3Files) {
+    constexpr int expectedFiles = 0;
+    int currentFiles = 0;
+
+    // En datadir / "images" solo existen andromeda.jpg y cat.png
+    const Miner miner(dataDir / "images");
+    miner.mine([&currentFiles](const Metadata&) { currentFiles++; });
+
+    EXPECT_EQ(currentFiles, expectedFiles);
+}
+
+TEST_F(MinerTest, ScanRecursively) {
+    // En el directorio general hay 4 canciones.
+    // 3 en songs y una en la raíz.
+    constexpr int expectedFiles = 4;
+    int currentFiles = 0;
+
+    const Miner miner(dataDir);
+    miner.mine([&currentFiles](const Metadata&) { currentFiles++; });
+
+    EXPECT_EQ(currentFiles, expectedFiles);
 }
