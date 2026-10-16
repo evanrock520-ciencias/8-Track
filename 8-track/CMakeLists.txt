@@ -18,6 +18,26 @@ target_sources(domain INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IPerformerRepository.hpp
 )
 
+# Biblioteca de Database
+add_library(database
+        src/database/DatabaseManager.cpp
+        src/database/SQLiteAlbumRepository.cpp
+        src/database/SQLitePerformerRepository.cpp
+        src/database/SQLiteSongRepository.cpp
+)
+
+target_include_directories(database PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+qt_add_resources(database "schema"
+    PREFIX "/sql"
+        FILES resources/sql/rolas.sql
+)
+
+target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core)
+
 # Biblioteca de MuQL
 add_library(compiler
     src/compiler/Token.cpp
