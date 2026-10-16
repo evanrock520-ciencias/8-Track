@@ -55,7 +55,7 @@ Metadata Miner::parseFile(const std::filesystem::path& path) {
     if (!Utils::empty(tag->album().to8Bit()))
         metadata.m_album = tag->album().to8Bit(true);
 
-    if (!Utils::empty(tag->album().to8Bit()))
+    if (!Utils::empty(tag->genre().to8Bit()))
         metadata.m_genre = tag->genre().to8Bit(true);
 
     metadata.m_year =
