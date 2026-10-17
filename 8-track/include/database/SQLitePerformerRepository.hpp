@@ -1,6 +1,8 @@
 #pragma once
 #include "domain/repositories/IPerformerRepository.hpp"
 
+#include <QSqlDatabase>
+
 using namespace Track8::Repositories;
 
 namespace Track8::Database {
@@ -11,6 +13,7 @@ namespace Track8::Database {
  */
 class SQLitePerformerRepository : public IPerformerRepository {
 public:
+    explicit SQLitePerformerRepository(QSqlDatabase database);
     ~SQLitePerformerRepository() override = default;
 
     int save(const std::string& name) override;
@@ -33,5 +36,8 @@ public:
     void update(const Domain::Group& group) override;
 
     std::vector<std::shared_ptr<Domain::Performer>> getAll() override;
+
+private:
+    QSqlDatabase m_database;
 };
 } // namespace Track8::Database
