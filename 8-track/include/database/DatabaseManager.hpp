@@ -29,8 +29,18 @@ public:
     [[nodiscard]] QSqlDatabase database() const { return m_database; }
 
 private:
-    void createTables();
-    void insertDefaultSeeds();
+    /**
+     * Ejecuta el script `rolas.sql` para crear las tablas de la base de datos.
+     */
+    void createTables() const;
+
+    /**
+     * Regresa si la tabla está inicializada.
+     * @brief Revisa que la tabla `rolas` ha sido creada, considerando que es la
+     * última definida en el script.
+     * @return Si la tabla está inicializada.
+     */
+    bool isInitialized() const;
 
     QSqlDatabase m_database;
     std::string m_connectionName;
