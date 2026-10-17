@@ -33,7 +33,8 @@ target_include_directories(database PUBLIC
 
 qt_add_resources(database "schema"
     PREFIX "/sql"
-        FILES resources/sql/rolas.sql
+    BASE resources/sql
+    FILES resources/sql/rolas.sql
 )
 
 target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core)
