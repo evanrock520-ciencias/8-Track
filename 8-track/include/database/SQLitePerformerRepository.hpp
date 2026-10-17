@@ -13,7 +13,7 @@ namespace Track8::Database {
  */
 class SQLitePerformerRepository : public IPerformerRepository {
 public:
-    explicit SQLitePerformerRepository(QSqlDatabase database);
+    explicit SQLitePerformerRepository(const QSqlDatabase& database);
     ~SQLitePerformerRepository() override = default;
 
     int save(const std::string& name) override;

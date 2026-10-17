@@ -13,7 +13,7 @@ namespace Track8::Database {
  */
 class SQLiteSongRepository : public ISongRepository {
 public:
-    explicit SQLiteSongRepository(QSqlDatabase database);
+    explicit SQLiteSongRepository(const QSqlDatabase& database);
     ~SQLiteSongRepository() override = default;
 
     int save(const Domain::Song& song) override;
