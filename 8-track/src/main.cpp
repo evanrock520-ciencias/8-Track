@@ -1,5 +1,7 @@
+#include "database/DatabaseManager.hpp"
 #include "miner/Miner.hpp"
 
+#include <QCoreApplication>
 #include <argparse/argparse.hpp>
 #include <iostream>
 #include <string>
@@ -14,6 +16,8 @@ static void scan(std::string directory) {
 }
 
 int main(int argc, char* argv[]) {
+    QCoreApplication application(argc, argv);
+    QCoreApplication::setApplicationName(QStringLiteral("8-track"));
     argparse::ArgumentParser program("8-track");
 
     program.add_argument("--scan", "-s")
@@ -51,6 +55,7 @@ int main(int argc, char* argv[]) {
 
         std::cout << "Querying " << query << " from " << database << '\n';
         // TODO: Tabular la consulta
+        Track8::Database::DatabaseManager manager(database);
     }
 
     // TODO: Lanzar la aplicación gráfica.
