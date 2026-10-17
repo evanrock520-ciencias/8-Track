@@ -4,6 +4,12 @@ var annotated_dup =
       [ "Compiler", "namespaceTrack8_1_1Compiler.html", [
         [ "Token", "classTrack8_1_1Compiler_1_1Token.html", "classTrack8_1_1Compiler_1_1Token" ]
       ] ],
+      [ "Database", "namespaceTrack8_1_1Database.html", [
+        [ "DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html", "classTrack8_1_1Database_1_1DatabaseManager" ],
+        [ "SQLiteAlbumRepository", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html", "classTrack8_1_1Database_1_1SQLiteAlbumRepository" ],
+        [ "SQLitePerformerRepository", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html", "classTrack8_1_1Database_1_1SQLitePerformerRepository" ],
+        [ "SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html", "classTrack8_1_1Database_1_1SQLiteSongRepository" ]
+      ] ],
       [ "Domain", "namespaceTrack8_1_1Domain.html", [
         [ "Album", "classTrack8_1_1Domain_1_1Album.html", "classTrack8_1_1Domain_1_1Album" ],
         [ "Artist", "classTrack8_1_1Domain_1_1Artist.html", "classTrack8_1_1Domain_1_1Artist" ],

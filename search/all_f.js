@@ -10,10 +10,11 @@ var searchData=
   ['track_7',['track',['../classTrack8_1_1Domain_1_1Song.html#acce12dedef853db9083e50ab3297276d',1,'Track8::Domain::Song']]],
   ['track8_8',['Track8',['../namespaceTrack8.html',1,'']]],
   ['track8_3a_3acompiler_9',['Compiler',['../namespaceTrack8_1_1Compiler.html',1,'Track8']]],
-  ['track8_3a_3adomain_10',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
-  ['track8_3a_3aminer_11',['Miner',['../namespaceTrack8_1_1Miner.html',1,'Track8']]],
-  ['track8_3a_3arepositories_12',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
-  ['track8_3a_3autils_13',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]],
-  ['trim_14',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
-  ['type_15',['type',['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token']]]
+  ['track8_3a_3adatabase_10',['Database',['../namespaceTrack8_1_1Database.html',1,'Track8']]],
+  ['track8_3a_3adomain_11',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
+  ['track8_3a_3aminer_12',['Miner',['../namespaceTrack8_1_1Miner.html',1,'Track8']]],
+  ['track8_3a_3arepositories_13',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
+  ['track8_3a_3autils_14',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]],
+  ['trim_15',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
+  ['type_16',['type',['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token']]]
 ];
