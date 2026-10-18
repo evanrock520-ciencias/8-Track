@@ -32,6 +32,7 @@ add_executable(database_tests
         database/main.cpp
         database/test_album_repository.cpp
         database/test_performer_repository.cpp
+        database/test_song_repository.cpp
 )
 
 target_link_libraries(database_tests
