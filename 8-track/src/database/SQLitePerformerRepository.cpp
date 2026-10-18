@@ -173,22 +173,117 @@ void SQLitePerformerRepository::markAsGroup(int id) {
         throw std::runtime_error(m_database.lastError().text().toStdString());
 }
 
-void SQLitePerformerRepository::addToGroup(int groupId, int performerId) {}
+void SQLitePerformerRepository::addToGroup(int groupId, int performerId) {
+    QSqlQuery query(m_database);
+    query.prepare("INSERT OR IGNORE INTO in_group (id_person, id_group) VALUES "
+                  "(:id_person, :id_group)");
+    query.bindValue(":id_person", performerId);
+    query.bindValue(":id_group", groupId);
 
-void SQLitePerformerRepository::removeFromGroup(int groupId, int performerId) {}
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+}
+
+void SQLitePerformerRepository::removeFromGroup(int groupId, int performerId) {
+    QSqlQuery query(m_database);
+    query.prepare("DELETE FROM in_group WHERE id_person = :id_person AND "
+                  "id_group = :id_group");
+    query.bindValue(":id_person", performerId);
+    query.bindValue(":id_group", groupId);
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+}
 
 std::vector<std::shared_ptr<Domain::Artist>>
 SQLitePerformerRepository::getMembers(int groupId) {
-    return {};
+    QSqlQuery query(m_database);
+    query.prepare(
+        "SELECT person.id_person, person.stage_name, person.real_name, "
+        "person.birth_date, person.death_date FROM in_group ig JOIN persons "
+        "person ON person.id_person = ig.id_person WHERE ig.id_group = :id");
+    query.bindValue(":id", groupId);
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Artist>> members;
+    while (query.next()) {
+        const auto id = query.value("id_person").toInt();
+        members.push_back(std::make_shared<Domain::Artist>(
+            id, query.value("stage_name").toString().toStdString(),
+            query.value("real_name").toString().toStdString(),
+            Domain::Date(query.value("birth_date").toString().toStdString()),
+            Domain::Date(query.value("death_date").toString().toStdString())));
+    }
+    return members;
 }
 
-void SQLitePerformerRepository::update(const Domain::Artist& artist) {}
+void SQLitePerformerRepository::update(const Domain::Performer& performer) {
+    QSqlQuery query(m_database);
+    query.prepare(
+        "UPDATE performers SET name = :name WHERE id_performer = :id");
+    query.bindValue(":name", QString::fromStdString(performer.name()));
+    query.bindValue(":id", performer.id());
 
-void SQLitePerformerRepository::update(const Domain::Group& group) {}
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+}
+
+void SQLitePerformerRepository::update(const Domain::Artist& artist) {
+    QSqlQuery query(m_database);
+    query.prepare("UPDATE persons SET stage_name = :stage_name, real_name = "
+                  ":real_name, birth_date = :birth_date, death_date = "
+                  ":death_date WHERE id_person = :id_person");
+    query.bindValue(":stage_name", QString::fromStdString(artist.stage_name()));
+    query.bindValue(":real_name", QString::fromStdString(artist.real_name()));
+    query.bindValue(":birth_date",
+                    QString::fromStdString(artist.birth_date().asString()));
+    query.bindValue(":id", artist.id());
+
+    std::string death_date = "0000-00-00";
+    if (artist.death_date())
+        death_date = artist.death_date()->asString();
+    query.bindValue(":death_date", QString::fromStdString(death_date));
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+}
+
+void SQLitePerformerRepository::update(const Domain::Group& group) {
+    QSqlQuery query(m_database);
+    query.prepare("UPDATE groups SET name = :name, start_date = :start_date, "
+                  "end_date = :end_date WHERE id_group = :id");
+    query.bindValue(":name", QString::fromStdString(group.name()));
+    query.bindValue(":start_date",
+                    QString::fromStdString(group.start_date().asString()));
+    query.bindValue(":id", group.id());
+
+    std::string end_date = "0000-00-00";
+    if (group.end_date())
+        end_date = group.end_date()->asString();
+    query.bindValue(":end_date", QString::fromStdString(end_date));
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+}
 
 std::vector<std::shared_ptr<Domain::Performer>>
 SQLitePerformerRepository::getAll() {
-    return {};
+    QSqlQuery query(m_database);
+    query.prepare("SELECT * FROM performers");
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Performer>> performers;
+    while (query.next()) {
+        performers.emplace_back(std::make_shared<Domain::Performer>(
+            query.value("id_performer").toInt(),
+            query.value("name").toString().toStdString()));
+    }
+
+    return performers;
 }
 
 std::shared_ptr<Domain::Artist>
