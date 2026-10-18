@@ -36,6 +36,8 @@ public:
     std::vector<std::shared_ptr<Domain::Artist>>
     getMembers(int groupId) override;
 
+    void update(const Domain::Performer& performer) override;
+
     void update(const Domain::Artist& artist) override;
 
     void update(const Domain::Group& group) override;
