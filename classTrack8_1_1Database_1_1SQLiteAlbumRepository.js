@@ -1,5 +1,6 @@
 var classTrack8_1_1Database_1_1SQLiteAlbumRepository =
 [
+    [ "SQLiteAlbumRepository", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#ac5da29e0748585b2cb38047a593e0781", null ],
     [ "~SQLiteAlbumRepository", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a7cec6c6754f655a513e0997419cfd430", null ],
     [ "find", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a84967b4cb88f46be4908db0e213c90e9", null ],
     [ "find", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a9de1ffd5f1d814f3f39595553b3f638f", null ],

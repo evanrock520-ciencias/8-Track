@@ -113,14 +113,17 @@ Inheritance diagram for Track8::Database::SQLitePerformerRepository:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af91490698f3f11c37a2f475c39803ac4" id="r_af91490698f3f11c37a2f475c39803ac4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af91490698f3f11c37a2f475c39803ac4">SQLitePerformerRepository</a> (const QSqlDatabase &amp;database)</td></tr>
 <tr class="memitem:abb72cec510ff6deefdf7e7f4a7b0e6a3" id="r_abb72cec510ff6deefdf7e7f4a7b0e6a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb72cec510ff6deefdf7e7f4a7b0e6a3">~SQLitePerformerRepository</a> () override=default</td></tr>
 <tr class="memitem:a809d20086c4965df3dae759186688ede" id="r_a809d20086c4965df3dae759186688ede"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809d20086c4965df3dae759186688ede">save</a> (const std::string &amp;name) override</td></tr>
 <tr class="memitem:a28bd330f66263fd845aac4f81337a7b9" id="r_a28bd330f66263fd845aac4f81337a7b9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28bd330f66263fd845aac4f81337a7b9">find</a> (const std::string &amp;name) override</td></tr>
+<tr class="memitem:ab73baf1893dfe7204906c46747222b1d" id="r_ab73baf1893dfe7204906c46747222b1d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab73baf1893dfe7204906c46747222b1d">find</a> (int id) override</td></tr>
 <tr class="memitem:a94ae78cb67698abf3f17c80b39488c0f" id="r_a94ae78cb67698abf3f17c80b39488c0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94ae78cb67698abf3f17c80b39488c0f">markAsGroup</a> (int id) override</td></tr>
 <tr class="memitem:ab405c204dc6787da775226d03b643980" id="r_ab405c204dc6787da775226d03b643980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab405c204dc6787da775226d03b643980">markAsArtist</a> (int id) override</td></tr>
 <tr class="memitem:a74c4fb05957a1d6bc195ee12862a6e17" id="r_a74c4fb05957a1d6bc195ee12862a6e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74c4fb05957a1d6bc195ee12862a6e17">addToGroup</a> (int groupId, int performerId) override</td></tr>
 <tr class="memitem:a79785c24add2c8f96694777272d98530" id="r_a79785c24add2c8f96694777272d98530"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79785c24add2c8f96694777272d98530">removeFromGroup</a> (int groupId, int performerId) override</td></tr>
 <tr class="memitem:a5c95697fac6f881113e5b2d198fdfdb0" id="r_a5c95697fac6f881113e5b2d198fdfdb0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Artist.html">Domain::Artist</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c95697fac6f881113e5b2d198fdfdb0">getMembers</a> (int groupId) override</td></tr>
+<tr class="memitem:a8d2d91219fbaa422be525f82382217da" id="r_a8d2d91219fbaa422be525f82382217da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d2d91219fbaa422be525f82382217da">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &amp;performer) override</td></tr>
 <tr class="memitem:aa61f39c2ca1a42b9b74bbfb91ed13e1a" id="r_aa61f39c2ca1a42b9b74bbfb91ed13e1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa61f39c2ca1a42b9b74bbfb91ed13e1a">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Artist.html">Domain::Artist</a> &amp;artist) override</td></tr>
 <tr class="memitem:af32ca74d3c151f413e7ad6608130bac2" id="r_af32ca74d3c151f413e7ad6608130bac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af32ca74d3c151f413e7ad6608130bac2">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &amp;group) override</td></tr>
 <tr class="memitem:ae86e1879aea5a9ea822a73906655e853" id="r_ae86e1879aea5a9ea822a73906655e853"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae86e1879aea5a9ea822a73906655e853">getAll</a> () override</td></tr>
@@ -130,6 +133,31 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementación de IPerformerRepository para SQLite. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af91490698f3f11c37a2f475c39803ac4" name="af91490698f3f11c37a2f475c39803ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91490698f3f11c37a2f475c39803ac4">&#9670;&#160;</a></span>SQLitePerformerRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Track8::Database::SQLitePerformerRepository::SQLitePerformerRepository </td>
+          <td>(</td>
+          <td class="paramtype">const QSqlDatabase &amp;</td>          <td class="paramname"><span class="paramname"><em>database</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abb72cec510ff6deefdf7e7f4a7b0e6a3" name="abb72cec510ff6deefdf7e7f4a7b0e6a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb72cec510ff6deefdf7e7f4a7b0e6a3">&#9670;&#160;</a></span>~SQLitePerformerRepository()</h2>
 
@@ -195,7 +223,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a28bd330f66263fd845aac4f81337a7b9" name="a28bd330f66263fd845aac4f81337a7b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28bd330f66263fd845aac4f81337a7b9">&#9670;&#160;</a></span>find()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28bd330f66263fd845aac4f81337a7b9">&#9670;&#160;</a></span>find() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,6 +253,40 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>El intérprete relacionado al nombre. </dd></dl>
 
 <p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b">Track8::Repositories::IPerformerRepository</a>.</p>
+
+</div>
+</div>
+<a id="ab73baf1893dfe7204906c46747222b1d" name="ab73baf1893dfe7204906c46747222b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73baf1893dfe7204906c46747222b1d">&#9670;&#160;</a></span>find() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt; Track8::Database::SQLitePerformerRepository::find </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encuentra un intérprete por id. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>El id del intérprete </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>El intérprete relacionado al id. </dd></dl>
+
+<p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html#a52a852744e705ee4198653a39d92371a">Track8::Repositories::IPerformerRepository</a>.</p>
 
 </div>
 </div>
@@ -429,7 +491,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa61f39c2ca1a42b9b74bbfb91ed13e1a" name="aa61f39c2ca1a42b9b74bbfb91ed13e1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61f39c2ca1a42b9b74bbfb91ed13e1a">&#9670;&#160;</a></span>update() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61f39c2ca1a42b9b74bbfb91ed13e1a">&#9670;&#160;</a></span>update() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -462,7 +524,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="af32ca74d3c151f413e7ad6608130bac2" name="af32ca74d3c151f413e7ad6608130bac2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af32ca74d3c151f413e7ad6608130bac2">&#9670;&#160;</a></span>update() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af32ca74d3c151f413e7ad6608130bac2">&#9670;&#160;</a></span>update() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,6 +553,39 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html#a1a0298d5b3e03b16f4dbe1e919a1a2a3">Track8::Repositories::IPerformerRepository</a>.</p>
+
+</div>
+</div>
+<a id="a8d2d91219fbaa422be525f82382217da" name="a8d2d91219fbaa422be525f82382217da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d2d91219fbaa422be525f82382217da">&#9670;&#160;</a></span>update() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Track8::Database::SQLitePerformerRepository::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>performer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Actualiza a un intérprete en la base de datos. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">performer</td><td>El intérprete actualizado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html#a33ea067821e8bd688232fe8dce2a16a0">Track8::Repositories::IPerformerRepository</a>.</p>
 
 </div>
 </div>

@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Album_8hpp.html",
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#a4377630cbc6f633a44b37e79141d26ae"
+"classTrack8_1_1Repositories_1_1IAlbumRepository.html#a3a4a7e31d495dae99f2992a8cc5d8d74"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

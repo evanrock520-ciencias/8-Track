@@ -95,64 +95,78 @@ $(function(){initNavTree('Date_8hpp_source.html','',''); });
 <div class="contents">
 <a href="Date_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTrack8_1_1Domain.html">Track8::Domain</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Date</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">   19</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Date</a>(<span class="keyword">const</span> std::string&amp; date) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (date.size() &lt; 10)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Date is too short.&quot;</span>);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> (date[4] != <span class="charliteral">&#39;-&#39;</span> || date[7] != <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid date format.&quot;</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            m_year = std::stoi(date.substr(0, 4));</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            m_month = std::stoi(date.substr(5, 2));</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            m_day = std::stoi(date.substr(8, 2));</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">throw</span> std::invalid_argument(e.what());</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (m_year &lt; 0 || m_year &gt; 9999)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid year.&quot;</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (m_month &lt; 0 || m_month &gt; 12)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid month.&quot;</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (m_day &lt; 0 || m_day &gt; 31)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid day.&quot;</span>);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTrack8_1_1Domain.html">Track8::Domain</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html">   14</a></span><span class="keyword">class </span><a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Date</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">   20</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Date</a>(<span class="keyword">const</span> std::string&amp; date) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (date.size() &lt; 10)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Date is too short.&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (date[4] != <span class="charliteral">&#39;-&#39;</span> || date[7] != <span class="charliteral">&#39;-&#39;</span>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid date format.&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            m_year = std::stoi(date.substr(0, 4));</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            m_month = std::stoi(date.substr(5, 2));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            m_day = std::stoi(date.substr(8, 2));</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">throw</span> std::invalid_argument(e.what());</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (m_year &lt; 0 || m_year &gt; 9999)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid year.&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span> (m_month &lt; 0 || m_month &gt; 12)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid month.&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (m_day &lt; 0 || m_day &gt; 31)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid day.&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77">   47</a></span>    <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77">Date</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">year</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">month</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">day</a>) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        m_year = <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">year</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        m_month = <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">month</a>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        m_day = <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">day</a>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77">   48</a></span>    <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77">Date</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">year</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">month</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">day</a>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        m_year = <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">year</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        m_month = <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">month</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        m_day = <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">day</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">   53</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">year</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_year; }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">   54</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">month</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_month; }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">   55</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">day</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_day; }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> m_year = 0;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">int</span> m_month = 0;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">int</span> m_day = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">   54</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">year</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_year; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">   55</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">month</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_month; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">   56</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">day</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_day; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf">   58</a></span>    [[nodiscard]] std::string <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf">asString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        std::stringstream ss;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        ss &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4) &lt;&lt; m_year &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; std::setw(2)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>           &lt;&lt; m_month &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; std::setw(2) &lt;&lt; m_day;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace Track8::Domain</span></div>
-<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a191ab4ef2037b1515d11df737325a74a"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Track8::Domain::Date::Date</a></div><div class="ttdeci">Date(const std::string &amp;date)</div><div class="ttdef"><b>Definition</b> Date.hpp:19</div></div>
-<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a4bf643402d3ebd826ac62d7de10c2038"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">Track8::Domain::Date::year</a></div><div class="ttdeci">int year() const</div><div class="ttdef"><b>Definition</b> Date.hpp:53</div></div>
-<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a5aa62efe85c457ab64def63afca1dd77"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77">Track8::Domain::Date::Date</a></div><div class="ttdeci">Date(const int year, const int month, const int day)</div><div class="ttdef"><b>Definition</b> Date.hpp:47</div></div>
-<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a9ac55dbc5d29579b264a401feb436d77"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">Track8::Domain::Date::day</a></div><div class="ttdeci">int day() const</div><div class="ttdef"><b>Definition</b> Date.hpp:55</div></div>
-<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_aeb7959ab10accd12abac50a0aaa362fd"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">Track8::Domain::Date::month</a></div><div class="ttdeci">int month() const</div><div class="ttdef"><b>Definition</b> Date.hpp:54</div></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classTrack8_1_1Domain_1_1Date.html#a9194b658f4ec78444ed51b5e6327b288">   65</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a9194b658f4ec78444ed51b5e6327b288">operator==</a>(<span class="keyword">const</span> <a class="code hl_function" href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Date</a>&amp; other) <span class="keyword">const</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">int</span> m_year = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> m_month = 0;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> m_day = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace Track8::Domain</span></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a191ab4ef2037b1515d11df737325a74a"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a">Track8::Domain::Date::Date</a></div><div class="ttdeci">Date(const std::string &amp;date)</div><div class="ttdef"><b>Definition</b> Date.hpp:20</div></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a4bf643402d3ebd826ac62d7de10c2038"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a4bf643402d3ebd826ac62d7de10c2038">Track8::Domain::Date::year</a></div><div class="ttdeci">int year() const</div><div class="ttdef"><b>Definition</b> Date.hpp:54</div></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a5aa62efe85c457ab64def63afca1dd77"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77">Track8::Domain::Date::Date</a></div><div class="ttdeci">Date(const int year, const int month, const int day)</div><div class="ttdef"><b>Definition</b> Date.hpp:48</div></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a9194b658f4ec78444ed51b5e6327b288"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a9194b658f4ec78444ed51b5e6327b288">Track8::Domain::Date::operator==</a></div><div class="ttdeci">bool operator==(const Date &amp;other) const =default</div></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_a9ac55dbc5d29579b264a401feb436d77"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77">Track8::Domain::Date::day</a></div><div class="ttdeci">int day() const</div><div class="ttdef"><b>Definition</b> Date.hpp:56</div></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_abdae0cf3ce0f020e1772e3de4089f3cf"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf">Track8::Domain::Date::asString</a></div><div class="ttdeci">std::string asString() const</div><div class="ttdef"><b>Definition</b> Date.hpp:58</div></div>
+<div class="ttc" id="aclassTrack8_1_1Domain_1_1Date_html_aeb7959ab10accd12abac50a0aaa362fd"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Date.html#aeb7959ab10accd12abac50a0aaa362fd">Track8::Domain::Date::month</a></div><div class="ttdeci">int month() const</div><div class="ttdef"><b>Definition</b> Date.hpp:55</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Domain_html"><div class="ttname"><a href="namespaceTrack8_1_1Domain.html">Track8::Domain</a></div><div class="ttdef"><b>Definition</b> Album.hpp:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

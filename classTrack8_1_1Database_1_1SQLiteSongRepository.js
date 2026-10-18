@@ -1,5 +1,6 @@
 var classTrack8_1_1Database_1_1SQLiteSongRepository =
 [
+    [ "SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html#a5d5b159f5483b2f869d8a7b68d72ac30", null ],
     [ "~SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html#a162de14e008511ff112c3d6acc6246fd", null ],
     [ "find", "classTrack8_1_1Database_1_1SQLiteSongRepository.html#aa3caf2fd8d38365c4d519b97e1620fa7", null ],
     [ "find", "classTrack8_1_1Database_1_1SQLiteSongRepository.html#af8aa932cffd3d8daee10193e52a52ff9", null ],

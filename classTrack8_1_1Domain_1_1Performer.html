@@ -116,9 +116,10 @@ Inheritance diagram for Track8::Domain::Performer:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af4ddf7fd6e4c6e8985f92d2c005dc9a7" id="r_af4ddf7fd6e4c6e8985f92d2c005dc9a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4ddf7fd6e4c6e8985f92d2c005dc9a7">Performer</a> (const int <a class="el" href="#a5b7d5d7845317bb73cc1c83c41d283c8">id</a>, std::string <a class="el" href="#afe3908e28871b8df0cf26808cbf93f9f">name</a>)</td></tr>
-<tr class="memitem:a92bc0ff2ac5c6a34aaeec5258598d532" id="r_a92bc0ff2ac5c6a34aaeec5258598d532"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92bc0ff2ac5c6a34aaeec5258598d532">~Performer</a> ()=default</td></tr>
+<tr class="memitem:a0c25fa944a6e1daf6ca8e692af30bcfd" id="r_a0c25fa944a6e1daf6ca8e692af30bcfd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c25fa944a6e1daf6ca8e692af30bcfd">~Performer</a> ()=default</td></tr>
 <tr class="memitem:a5b7d5d7845317bb73cc1c83c41d283c8" id="r_a5b7d5d7845317bb73cc1c83c41d283c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b7d5d7845317bb73cc1c83c41d283c8">id</a> () const</td></tr>
 <tr class="memitem:afe3908e28871b8df0cf26808cbf93f9f" id="r_afe3908e28871b8df0cf26808cbf93f9f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe3908e28871b8df0cf26808cbf93f9f">name</a> () const</td></tr>
+<tr class="memitem:ab785eaef752b6aaf589496f4aa4f8f32" id="r_ab785eaef752b6aaf589496f4aa4f8f32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab785eaef752b6aaf589496f4aa4f8f32">operator==</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Performer</a> &amp;performer) const =default</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -157,8 +158,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a92bc0ff2ac5c6a34aaeec5258598d532" name="a92bc0ff2ac5c6a34aaeec5258598d532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92bc0ff2ac5c6a34aaeec5258598d532">&#9670;&#160;</a></span>~Performer()</h2>
+<a id="a0c25fa944a6e1daf6ca8e692af30bcfd" name="a0c25fa944a6e1daf6ca8e692af30bcfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c25fa944a6e1daf6ca8e692af30bcfd">&#9670;&#160;</a></span>~Performer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +168,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Track8::Domain::Performer::~Performer </td>
+          <td class="memname">virtual Track8::Domain::Performer::~Performer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -175,7 +176,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -227,6 +228,31 @@ Protected Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab785eaef752b6aaf589496f4aa4f8f32" name="ab785eaef752b6aaf589496f4aa4f8f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab785eaef752b6aaf589496f4aa4f8f32">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Domain::Performer::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Performer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>performer</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
