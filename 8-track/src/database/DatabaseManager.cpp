@@ -17,6 +17,9 @@ DatabaseManager::DatabaseManager(const std::filesystem::path& path)
 
     if (!isInitialized())
         createTables();
+
+    QSqlQuery query(m_database);
+    query.exec("PRAGMA foreign_keys = ON");
 }
 
 bool DatabaseManager::isInitialized() const {
