@@ -33,6 +33,13 @@ public:
     find(const std::string& name) = 0;
 
     /**
+     * Encuentra un intérprete por id.
+     * @param id El id del intérprete
+     * @return El intérprete relacionado al id.
+     */
+    virtual std::shared_ptr<Domain::Performer> find(int id) = 0;
+
+    /**
      * Marca como grupo o banda a un intérprete.
      * @param id El id del intérprte en la tabla de `performers`.
      */
