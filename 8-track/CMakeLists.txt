@@ -12,6 +12,7 @@ target_sources(domain INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Artist.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Group.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Date.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/Stats.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/ISongRepository.hpp
@@ -60,3 +61,15 @@ target_include_directories(miner PUBLIC
 )
 
 target_link_libraries(miner PRIVATE tag)
+
+# Biblioteca de servicios
+add_library(services
+    src/services/LibraryService.cpp
+)
+
+target_include_directories(services PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+target_link_libraries(services PRIVATE domain miner database)
