@@ -74,6 +74,12 @@ public:
     getMembers(int groupId) = 0;
 
     /**
+     * Actualiza a un intérprete en la base de datos.
+     * @param performer El intérprete actualizado.
+     */
+    virtual void update(const Domain::Performer& performer) = 0;
+
+    /**
      * Actualiza a un artista en la base de datos.
      * @param artist El artista actualizado.
      */
