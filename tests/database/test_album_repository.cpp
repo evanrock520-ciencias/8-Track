@@ -51,3 +51,36 @@ TEST_F(SQLiteAlbumRepositoryTest, FindWithPathAndName) {
     ASSERT_NE(saved, nullptr);
     ASSERT_EQ(album, *saved);
 }
+
+TEST_F(SQLiteAlbumRepositoryTest, UpdateAlbum) {
+    using namespace Track8::Domain;
+    const Album bigTime(1, "/home/user/Music/big-time", "Big Time", 2022);
+    const int id = m_repository->save(bigTime);
+
+    const Album allMirrors(1, "/home/user/Music/all-mirrors", "All Mirrors",
+                           2019);
+    m_repository->update(allMirrors);
+
+    const auto saved = m_repository->find(id);
+    ASSERT_NE(saved, nullptr);
+    ASSERT_EQ(allMirrors, *saved);
+}
+
+TEST_F(SQLiteAlbumRepositoryTest, GetAll) {
+    using namespace Track8::Domain;
+    constexpr int ALBUMS = 100;
+    for (int id = 1; id < ALBUMS; id++) {
+        const Album album(id, "/home/user/Music/Album" + std::to_string(id),
+                          "Album" + std::to_string(id), 1920 + id);
+        m_repository->save(album);
+    }
+
+    const auto albums = m_repository->getAll();
+    ASSERT_EQ(albums.size(), ALBUMS);
+
+    for (const auto& album : albums) {
+        const int id = album->id();
+        const auto other = m_repository->find(id);
+        ASSERT_EQ(*album, *other);
+    }
+}
