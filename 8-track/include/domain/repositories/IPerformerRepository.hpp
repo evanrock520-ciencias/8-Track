@@ -33,6 +33,13 @@ public:
     find(const std::string& name) = 0;
 
     /**
+     * Encuentra un intérprete por id.
+     * @param id El id del intérprete
+     * @return El intérprete relacionado al id.
+     */
+    virtual std::shared_ptr<Domain::Performer> find(int id) = 0;
+
+    /**
      * Marca como grupo o banda a un intérprete.
      * @param id El id del intérprte en la tabla de `performers`.
      */
@@ -65,6 +72,12 @@ public:
      */
     virtual std::vector<std::shared_ptr<Domain::Artist>>
     getMembers(int groupId) = 0;
+
+    /**
+     * Actualiza a un intérprete en la base de datos.
+     * @param performer El intérprete actualizado.
+     */
+    virtual void update(const Domain::Performer& performer) = 0;
 
     /**
      * Actualiza a un artista en la base de datos.

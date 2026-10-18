@@ -1,5 +1,6 @@
 #pragma once
 #include <chrono>
+#include <iomanip>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -53,6 +54,15 @@ public:
     [[nodiscard]] int year() const { return m_year; }
     [[nodiscard]] int month() const { return m_month; }
     [[nodiscard]] int day() const { return m_day; }
+
+    [[nodiscard]] std::string asString() const {
+        std::stringstream ss;
+        ss << std::setfill('0') << std::setw(4) << m_year << "-" << std::setw(2)
+           << m_month << "-" << std::setw(2) << m_day;
+        return ss.str();
+    }
+
+    bool operator==(const Date& other) const = default;
 
 private:
     int m_year = 0;

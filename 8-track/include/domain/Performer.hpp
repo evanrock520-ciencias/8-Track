@@ -13,10 +13,12 @@ class Performer {
 public:
     Performer(const int id, std::string name)
         : m_id(id), m_name(std::move(name)) {};
-    ~Performer() = default;
+    virtual ~Performer() = default;
 
     [[nodiscard]] int id() const { return m_id; };
     [[nodiscard]] const std::string& name() const { return m_name; };
+
+    bool operator==(const Performer& performer) const = default;
 
 protected:
     int m_id = -1;

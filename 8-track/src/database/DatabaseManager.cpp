@@ -7,15 +7,19 @@
 namespace Track8::Database {
 
 DatabaseManager::DatabaseManager(const std::filesystem::path& path)
-    : m_connectionName(path) {
-    QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName(QString::fromStdString(m_connectionName));
-    m_database = database;
-    if (!database.open())
+    : m_connectionName("eight_track") {
+    m_database = QSqlDatabase::addDatabase(
+        "QSQLITE", QString::fromStdString(m_connectionName));
+    m_database.setDatabaseName(QString::fromStdString(path.string()));
+
+    if (!m_database.open())
         throw std::runtime_error("Cannot open database");
 
     if (!isInitialized())
         createTables();
+
+    QSqlQuery query(m_database);
+    query.exec("PRAGMA foreign_keys = ON");
 }
 
 bool DatabaseManager::isInitialized() const {

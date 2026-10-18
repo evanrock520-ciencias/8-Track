@@ -22,6 +22,8 @@ public:
     [[nodiscard]] const std::string& name() const { return m_name; };
     [[nodiscard]] const std::filesystem::path& path() const { return m_path; };
 
+    bool operator==(const Album& other) const = default;
+
 private:
     int m_id = -1;
     std::filesystem::path m_path;

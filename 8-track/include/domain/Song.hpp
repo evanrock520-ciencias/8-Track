@@ -27,6 +27,13 @@ public:
         return m_performer;
     }
 
+    bool operator==(const Song& other) const {
+        return m_id == other.m_id && m_track_number == other.m_track_number &&
+               m_title == other.m_title && m_genre == other.m_genre &&
+               m_year == other.m_year && m_path == other.m_path &&
+               *m_album == *other.album() && *m_performer == *other.performer();
+    };
+
     friend class SongBuilder;
 
 private:
