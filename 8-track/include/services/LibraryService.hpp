@@ -19,17 +19,18 @@ public:
         const std::shared_ptr<Repositories::ISongRepository>& songs);
     ~LibraryService() = default;
 
-    void scan(const std::filesystem::path& path);
-    void importTrack(const Track8::Miner::Metadata& metadata);
+    void scan(const std::filesystem::path& path) const;
+    void importTrack(const Track8::Miner::Metadata& metadata) const;
 
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Song>> songs() const;
     [[nodiscard]] Domain::Stats stats() const;
 
 private:
-    std::shared_ptr<Domain::Performer>
-    findOrCreatePerformer(const std::string& name);
-    std::shared_ptr<Domain::Album>
+    [[nodiscard]] std::shared_ptr<Domain::Performer>
+    findOrCreatePerformer(const std::string& name) const;
+    [[nodiscard]] std::shared_ptr<Domain::Album>
     findOrCreateAlbum(const std::string& name, const std::filesystem::path& dir,
-                      int year);
+                      int year) const;
 
     std::shared_ptr<Repositories::IAlbumRepository> m_albums;
     std::shared_ptr<Repositories::ISongRepository> m_songs;
