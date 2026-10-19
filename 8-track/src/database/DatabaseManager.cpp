@@ -1,5 +1,6 @@
 #include "database/DatabaseManager.hpp"
 
+#include <QDir>
 #include <QFile>
 #include <QSqlQuery>
 #include <iostream>
@@ -11,6 +12,10 @@ DatabaseManager::DatabaseManager(const std::filesystem::path& path)
     m_database = QSqlDatabase::addDatabase(
         "QSQLITE", QString::fromStdString(m_connectionName));
     m_database.setDatabaseName(QString::fromStdString(path.string()));
+
+    // En linux lo crea en ~/.local/share/8-track/8-track.db
+    const QFileInfo info(QString::fromStdString(path.string()));
+    QDir().mkpath(info.absolutePath());
 
     if (!m_database.open())
         throw std::runtime_error("Cannot open database");
