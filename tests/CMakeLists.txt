@@ -43,7 +43,24 @@ target_link_libraries(database_tests
         Qt6::Core
 )
 
+# Test de la capa de servicios
+add_executable(services_tests
+        services/main.cpp
+        services/test_library_service.cpp
+)
+
+target_link_libraries(services_tests
+    PRIVATE
+        GTest::gtest
+        domain
+        database
+        miner
+        services
+        Qt6::Core
+)
+
 include(GoogleTest)
 gtest_discover_tests(domain_tests)
 gtest_discover_tests(miner_tests)
 gtest_discover_tests(database_tests)
+gtest_discover_tests(services_tests)
