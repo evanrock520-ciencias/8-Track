@@ -44,6 +44,8 @@ public:
 
     std::vector<std::shared_ptr<Domain::Performer>> getAll() override;
 
+    unsigned int count() override;
+
 private:
     /**
      * Encuentra a un artista de la tabla de `groups`
