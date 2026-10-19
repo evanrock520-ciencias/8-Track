@@ -57,9 +57,8 @@ int main(int argc, char* argv[]) {
     // Si se solicita realizar una consulta por consola.
     if (program.is_used("--query")) {
         const auto query = program.get<std::string>("--query");
-        const auto database = program.get<std::string>("--database");
 
-        std::cout << "Querying " << query << " from " << database << '\n';
+        std::cout << "Querying " << query << '\n';
         // TODO: Tabular la consulta
     }
 
