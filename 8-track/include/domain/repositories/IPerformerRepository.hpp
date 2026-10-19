@@ -96,5 +96,11 @@ public:
      * @return Todos los intérpretes de la base de datos.
      */
     virtual std::vector<std::shared_ptr<Domain::Performer>> getAll() = 0;
+
+    /**
+     * Regresa la cantidad de intérpretes en la base de datos.
+     * @return La cantidad de intérpretes en la base de datos.
+     */
+    virtual unsigned int count() = 0;
 };
 } // namespace Track8::Repositories

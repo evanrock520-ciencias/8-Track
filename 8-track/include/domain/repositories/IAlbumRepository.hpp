@@ -48,5 +48,11 @@ public:
      * @return Todos los álbums en la base de datos.
      */
     virtual std::vector<std::shared_ptr<Domain::Album>> getAll() = 0;
+
+    /**
+     * Regresa la cantidad de albums en la base de datos.
+     * @return La cantidad de albums en la base de datos.
+     */
+    virtual unsigned int count() = 0;
 };
 } // namespace Track8::Repositories
