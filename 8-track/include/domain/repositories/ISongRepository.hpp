@@ -69,5 +69,11 @@ public:
      * @return Todas las canciones de la base de datos.
      */
     virtual std::vector<std::shared_ptr<Domain::Song>> getAll() = 0;
+
+    /**
+     * Regresa la cantidad de rolas en la base de datos.
+     * @return La cantidad de rolas en la base de datos.
+     */
+    virtual unsigned int count() = 0;
 };
 } // namespace Track8::Repositories

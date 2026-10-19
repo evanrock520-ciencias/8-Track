@@ -95,4 +95,8 @@ std::vector<std::shared_ptr<Domain::Album>> SQLiteAlbumRepository::getAll() {
     return albums;
 }
 
+unsigned int SQLiteAlbumRepository::count() {
+    return getAll().size();
+}
+
 } // namespace Track8::Database

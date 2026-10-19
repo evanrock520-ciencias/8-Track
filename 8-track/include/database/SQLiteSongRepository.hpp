@@ -40,6 +40,8 @@ public:
 
     std::vector<std::shared_ptr<Domain::Song>> getAll() override;
 
+    unsigned int count() override;
+
 private:
     /**
      * @brief Reconstruye una `rola` a partir de los repositorios de performers

@@ -27,6 +27,8 @@ public:
 
     std::vector<std::shared_ptr<Domain::Album>> getAll() override;
 
+    unsigned int count() override;
+
 private:
     QSqlDatabase m_database;
 };
