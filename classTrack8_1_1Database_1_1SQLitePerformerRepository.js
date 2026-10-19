@@ -3,6 +3,7 @@ var classTrack8_1_1Database_1_1SQLitePerformerRepository =
     [ "SQLitePerformerRepository", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#af91490698f3f11c37a2f475c39803ac4", null ],
     [ "~SQLitePerformerRepository", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#abb72cec510ff6deefdf7e7f4a7b0e6a3", null ],
     [ "addToGroup", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a74c4fb05957a1d6bc195ee12862a6e17", null ],
+    [ "count", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#afbf9415cafafb58a965ac6bbf12c88e7", null ],
     [ "find", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a28bd330f66263fd845aac4f81337a7b9", null ],
     [ "find", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#ab73baf1893dfe7204906c46747222b1d", null ],
     [ "getAll", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html#ae86e1879aea5a9ea822a73906655e853", null ],

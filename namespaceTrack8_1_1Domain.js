@@ -6,5 +6,6 @@ var namespaceTrack8_1_1Domain =
     [ "Group", "classTrack8_1_1Domain_1_1Group.html", "classTrack8_1_1Domain_1_1Group" ],
     [ "Performer", "classTrack8_1_1Domain_1_1Performer.html", "classTrack8_1_1Domain_1_1Performer" ],
     [ "Song", "classTrack8_1_1Domain_1_1Song.html", "classTrack8_1_1Domain_1_1Song" ],
-    [ "SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", "classTrack8_1_1Domain_1_1SongBuilder" ]
+    [ "SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", "classTrack8_1_1Domain_1_1SongBuilder" ],
+    [ "Stats", "structTrack8_1_1Domain_1_1Stats.html", "structTrack8_1_1Domain_1_1Stats" ]
 ];

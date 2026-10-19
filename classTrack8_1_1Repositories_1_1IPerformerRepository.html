@@ -126,6 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad42a50e4a30fd5f3d08d1cae7b5dbb25" id="r_ad42a50e4a30fd5f3d08d1cae7b5dbb25"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad42a50e4a30fd5f3d08d1cae7b5dbb25">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Artist.html">Domain::Artist</a> &amp;artist)=0</td></tr>
 <tr class="memitem:a1a0298d5b3e03b16f4dbe1e919a1a2a3" id="r_a1a0298d5b3e03b16f4dbe1e919a1a2a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a0298d5b3e03b16f4dbe1e919a1a2a3">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &amp;group)=0</td></tr>
 <tr class="memitem:ad94b6245bce9864a49e8407f8034ed2b" id="r_ad94b6245bce9864a49e8407f8034ed2b"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad94b6245bce9864a49e8407f8034ed2b">getAll</a> ()=0</td></tr>
+<tr class="memitem:a9cef273da46be8b8fd0bf97410b1ddf8" id="r_a9cef273da46be8b8fd0bf97410b1ddf8"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cef273da46be8b8fd0bf97410b1ddf8">count</a> ()=0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interfaz del repository que administra y mantiene la comunicación con las tablas de <span class="tt">performers</span>, <span class="tt">persons</span> y <span class="tt">groups</span>. </p>
@@ -191,6 +192,34 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a74c4fb05957a1d6bc195ee12862a6e17">Track8::Database::SQLitePerformerRepository</a>.</p>
+
+</div>
+</div>
+<a id="a9cef273da46be8b8fd0bf97410b1ddf8" name="a9cef273da46be8b8fd0bf97410b1ddf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cef273da46be8b8fd0bf97410b1ddf8">&#9670;&#160;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int Track8::Repositories::IPerformerRepository::count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa la cantidad de intérpretes en la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>La cantidad de intérpretes en la base de datos. </dd></dl>
+
+<p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLitePerformerRepository.html#afbf9415cafafb58a965ac6bbf12c88e7">Track8::Database::SQLitePerformerRepository</a>.</p>
 
 </div>
 </div>

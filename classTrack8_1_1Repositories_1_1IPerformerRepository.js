@@ -2,6 +2,7 @@ var classTrack8_1_1Repositories_1_1IPerformerRepository =
 [
     [ "~IPerformerRepository", "classTrack8_1_1Repositories_1_1IPerformerRepository.html#a1af1d781687403fcd5fbe1edbdb923b0", null ],
     [ "addToGroup", "classTrack8_1_1Repositories_1_1IPerformerRepository.html#aa89ee5c73d39b32dfe6648d7a67b2da5", null ],
+    [ "count", "classTrack8_1_1Repositories_1_1IPerformerRepository.html#a9cef273da46be8b8fd0bf97410b1ddf8", null ],
     [ "find", "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b", null ],
     [ "find", "classTrack8_1_1Repositories_1_1IPerformerRepository.html#a52a852744e705ee4198653a39d92371a", null ],
     [ "getAll", "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b", null ],

@@ -119,6 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2eb47d0101efb30284fb6042a1e80cc4" id="r_a2eb47d0101efb30284fb6042a1e80cc4"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eb47d0101efb30284fb6042a1e80cc4">find</a> (int id)=0</td></tr>
 <tr class="memitem:a52c8e36102628b45752d7e1c07135a91" id="r_a52c8e36102628b45752d7e1c07135a91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52c8e36102628b45752d7e1c07135a91">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &amp;album)=0</td></tr>
 <tr class="memitem:aa65cba0902c8dfaa65d5c054e2304c65" id="r_aa65cba0902c8dfaa65d5c054e2304c65"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa65cba0902c8dfaa65d5c054e2304c65">getAll</a> ()=0</td></tr>
+<tr class="memitem:aa3aabe8ceed9e75eef8205039c42d873" id="r_aa3aabe8ceed9e75eef8205039c42d873"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3aabe8ceed9e75eef8205039c42d873">count</a> ()=0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interfaz del repository que administra y mantiene la comunicación con las tabla de ´albums`. </p>
@@ -149,6 +150,34 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aa3aabe8ceed9e75eef8205039c42d873" name="aa3aabe8ceed9e75eef8205039c42d873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3aabe8ceed9e75eef8205039c42d873">&#9670;&#160;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int Track8::Repositories::IAlbumRepository::count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa la cantidad de albums en la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>La cantidad de albums en la base de datos. </dd></dl>
+
+<p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#aa34421eff859fed90e81ea4167c95e3b">Track8::Database::SQLiteAlbumRepository</a>.</p>
+
+</div>
+</div>
 <a id="ad47fe00cb41114868f25adacbc049601" name="ad47fe00cb41114868f25adacbc049601"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad47fe00cb41114868f25adacbc049601">&#9670;&#160;</a></span>find() <span class="overload">[1/2]</span></h2>
 

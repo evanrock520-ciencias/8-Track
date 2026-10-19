@@ -12,6 +12,7 @@ var hierarchy =
     [ "Track8::Repositories::ISongRepository", "classTrack8_1_1Repositories_1_1ISongRepository.html", [
       [ "Track8::Database::SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html", null ]
     ] ],
+    [ "Track8::Services::LibraryService", "classTrack8_1_1Services_1_1LibraryService.html", null ],
     [ "Track8::Miner::Metadata", "structTrack8_1_1Miner_1_1Metadata.html", null ],
     [ "Track8::Miner::Miner", "classTrack8_1_1Miner_1_1Miner.html", null ],
     [ "Track8::Domain::Performer", "classTrack8_1_1Domain_1_1Performer.html", [
@@ -20,5 +21,6 @@ var hierarchy =
     ] ],
     [ "Track8::Domain::Song", "classTrack8_1_1Domain_1_1Song.html", null ],
     [ "Track8::Domain::SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", null ],
+    [ "Track8::Domain::Stats", "structTrack8_1_1Domain_1_1Stats.html", null ],
     [ "Track8::Compiler::Token", "classTrack8_1_1Compiler_1_1Token.html", null ]
 ];

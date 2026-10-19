@@ -132,16 +132,18 @@ $(function(){initNavTree('SQLiteSongRepository_8hpp_source.html','',''); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#abc7ba457e3eb014ca86c50efbbb2a4d4">   41</a></span>    std::vector&lt;std::shared_ptr&lt;Domain::Song&gt;&gt; <a class="code hl_function" href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#abc7ba457e3eb014ca86c50efbbb2a4d4">getAll</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    [[nodiscard]] std::shared_ptr&lt;Domain::Song&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    buildSong(<span class="keyword">const</span> QSqlQuery&amp; query) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    QSqlDatabase m_database;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::shared_ptr&lt;IAlbumRepository&gt; m_albums;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::shared_ptr&lt;IPerformerRepository&gt; m_performers;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#ad253a7047ae036d8b8309e456d172300">   43</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#ad253a7047ae036d8b8309e456d172300">count</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    [[nodiscard]] std::shared_ptr&lt;Domain::Song&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    buildSong(<span class="keyword">const</span> QSqlQuery&amp; query) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    QSqlDatabase m_database;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::shared_ptr&lt;IAlbumRepository&gt; m_albums;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::shared_ptr&lt;IPerformerRepository&gt; m_performers;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace Track8::Database</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace Track8::Database</span></div>
 <div class="ttc" id="aIAlbumRepository_8hpp_html"><div class="ttname"><a href="IAlbumRepository_8hpp.html">IAlbumRepository.hpp</a></div></div>
 <div class="ttc" id="aIPerformerRepository_8hpp_html"><div class="ttname"><a href="IPerformerRepository_8hpp.html">IPerformerRepository.hpp</a></div></div>
 <div class="ttc" id="aISongRepository_8hpp_html"><div class="ttname"><a href="ISongRepository_8hpp.html">ISongRepository.hpp</a></div></div>
@@ -153,6 +155,7 @@ $(function(){initNavTree('SQLiteSongRepository_8hpp_source.html','',''); });
 <div class="ttc" id="aclassTrack8_1_1Database_1_1SQLiteSongRepository_html_aa3caf2fd8d38365c4d519b97e1620fa7"><div class="ttname"><a href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#aa3caf2fd8d38365c4d519b97e1620fa7">Track8::Database::SQLiteSongRepository::find</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Domain::Song &gt; &gt; find(const Compiler::Query &amp;query) override</div></div>
 <div class="ttc" id="aclassTrack8_1_1Database_1_1SQLiteSongRepository_html_aaeb0d676bdcca013a2b5d5cc46db3509"><div class="ttname"><a href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#aaeb0d676bdcca013a2b5d5cc46db3509">Track8::Database::SQLiteSongRepository::update</a></div><div class="ttdeci">void update(const Domain::Song &amp;song) override</div></div>
 <div class="ttc" id="aclassTrack8_1_1Database_1_1SQLiteSongRepository_html_abc7ba457e3eb014ca86c50efbbb2a4d4"><div class="ttname"><a href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#abc7ba457e3eb014ca86c50efbbb2a4d4">Track8::Database::SQLiteSongRepository::getAll</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Domain::Song &gt; &gt; getAll() override</div></div>
+<div class="ttc" id="aclassTrack8_1_1Database_1_1SQLiteSongRepository_html_ad253a7047ae036d8b8309e456d172300"><div class="ttname"><a href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#ad253a7047ae036d8b8309e456d172300">Track8::Database::SQLiteSongRepository::count</a></div><div class="ttdeci">unsigned int count() override</div></div>
 <div class="ttc" id="aclassTrack8_1_1Database_1_1SQLiteSongRepository_html_af8aa932cffd3d8daee10193e52a52ff9"><div class="ttname"><a href="classTrack8_1_1Database_1_1SQLiteSongRepository.html#af8aa932cffd3d8daee10193e52a52ff9">Track8::Database::SQLiteSongRepository::find</a></div><div class="ttdeci">std::shared_ptr&lt; Domain::Song &gt; find(const std::filesystem::path &amp;path) override</div></div>
 <div class="ttc" id="aclassTrack8_1_1Domain_1_1Song_html"><div class="ttname"><a href="classTrack8_1_1Domain_1_1Song.html">Track8::Domain::Song</a></div><div class="ttdoc">Representación de una rola.</div><div class="ttdef"><b>Definition</b> Song.hpp:15</div></div>
 <div class="ttc" id="aclassTrack8_1_1Repositories_1_1ISongRepository_html"><div class="ttname"><a href="classTrack8_1_1Repositories_1_1ISongRepository.html">Track8::Repositories::ISongRepository</a></div><div class="ttdoc">Interfaz del repository que administra y mantiene la comunicación con las tabla de ´rolas`.</div><div class="ttdef"><b>Definition</b> ISongRepository.hpp:20</div></div>
