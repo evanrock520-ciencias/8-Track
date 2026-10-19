@@ -135,4 +135,8 @@ SQLiteSongRepository::buildSong(const QSqlQuery& query) const {
     return std::make_shared<Domain::Song>(std::move(song));
 }
 
+unsigned int SQLiteSongRepository::count() {
+    return getAll().size();
+}
+
 } // namespace Track8::Database

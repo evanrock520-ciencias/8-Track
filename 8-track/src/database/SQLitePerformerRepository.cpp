@@ -343,4 +343,8 @@ SQLitePerformerRepository::findName(const int id) const {
     return query.value("name").toString().toStdString();
 }
 
+unsigned int SQLitePerformerRepository::count() {
+    return getAll().size();
+}
+
 } // namespace Track8::Database
