@@ -19,10 +19,29 @@ public:
         const std::shared_ptr<Repositories::ISongRepository>& songs);
     ~LibraryService() = default;
 
+    /**
+     * @brief Escanea un directorio y guarda todos sus metadatos en la base de
+     * datos de la aplicación.
+     * @param path La ruta del directorio a escanear.
+     */
     void scan(const std::filesystem::path& path) const;
+
+    /**
+     * Guarda la metadata de una canción en la base de datos.
+     * @param metadata Los metadatos relacionadaos a una canción.
+     */
     void importTrack(const Track8::Miner::Metadata& metadata) const;
 
+    /**
+     * Regresa las canciones de la base de datos.
+     * @return Las canciones de la base de datos.
+     */
     [[nodiscard]] std::vector<std::shared_ptr<Domain::Song>> songs() const;
+
+    /**
+     * Regresa las estadisticas de todos los repositorios.
+     * @return Las estadisticas de todos los repositorios.
+     */
     [[nodiscard]] Domain::Stats stats() const;
 
 private:
