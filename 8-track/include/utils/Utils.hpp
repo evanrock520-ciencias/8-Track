@@ -28,4 +28,17 @@ inline bool empty(const std::string& str) {
     return result.empty();
 }
 
+inline bool isDigit(const char expected) {
+    return expected >= '0' && expected <= '9';
+}
+
+inline bool isAlpha(const char expected) {
+    // Quizás expandir esto para el lenguaje.
+    return expected >= 'a' && expected <= 'z' ||
+           expected >= 'A' && expected <= 'Z' || expected == '_';
+}
+
+inline bool isAlphaNumeric(const char expected) {
+    return isAlpha(expected) || isDigit(expected);
+}
 } // namespace Track8::Utils
