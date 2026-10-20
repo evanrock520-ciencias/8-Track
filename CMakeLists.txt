@@ -57,4 +57,4 @@ enable_testing()
 add_subdirectory(tests)
 
 add_executable(main 8-track/src/main.cpp)
-target_link_libraries(main PRIVATE Qt6::Quick compiler argparse tabulate miner database services)
+target_link_libraries(main PRIVATE Qt6::Quick compiler miner database services cli)
