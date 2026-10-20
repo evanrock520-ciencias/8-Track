@@ -7,8 +7,6 @@
 #include "miner/Miner.hpp"
 #include "services/LibraryService.hpp"
 
-#include <qobject.h>
-
 namespace Track8::Services {
 
 class LibraryService {
