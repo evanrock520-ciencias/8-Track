@@ -73,3 +73,16 @@ target_include_directories(services PUBLIC
 )
 
 target_link_libraries(services PRIVATE domain miner database)
+
+# Biblioteca de CLI
+add_library(cli
+        src/cli/Cli.cpp
+        src/cli/Tabulator.cpp
+)
+
+target_include_directories(cli PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+target_link_libraries(cli PRIVATE services argparse tabulate)
