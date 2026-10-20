@@ -1,6 +1,10 @@
 var annotated_dup =
 [
     [ "Track8", "namespaceTrack8.html", [
+      [ "Cli", "namespaceTrack8_1_1Cli.html", [
+        [ "Cli", "classTrack8_1_1Cli_1_1Cli.html", "classTrack8_1_1Cli_1_1Cli" ],
+        [ "Tabulator", "classTrack8_1_1Cli_1_1Tabulator.html", null ]
+      ] ],
       [ "Compiler", "namespaceTrack8_1_1Compiler.html", [
         [ "Token", "classTrack8_1_1Compiler_1_1Token.html", "classTrack8_1_1Compiler_1_1Token" ]
       ] ],
