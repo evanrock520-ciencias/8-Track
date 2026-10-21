@@ -1,6 +1,7 @@
 #pragma once
 #include "Token.hpp"
 
+#include <cstddef>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -37,8 +38,8 @@ private:
 
     std::string m_source;
     std::vector<Token> m_tokens;
-    int m_start = 0;
-    int m_current = 0;
+    std::size_t m_start = 0;
+    std::size_t m_current = 0;
     int m_line = 1;
 };
 
