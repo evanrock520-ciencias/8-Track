@@ -1,6 +1,6 @@
 #include <utility>
 
-#include "../../../include/compiler/lexer/Token.hpp"
+#include "compiler/lexer/Token.hpp"
 
 namespace Track8::Compiler {
 Token::Token(const TokenType type, std::string lexeme, const int line,
