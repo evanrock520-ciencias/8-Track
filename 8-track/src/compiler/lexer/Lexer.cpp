@@ -16,7 +16,7 @@ std::vector<Token> Lexer::scanTokens() {
         scanToken();
     }
 
-    m_tokens.emplace_back(TokenType::END_OF_FILE, "", m_line, nullptr);
+    m_tokens.emplace_back(TokenType::END_OF_FILE, "", m_line, std::any{});
     return m_tokens;
 }
 
@@ -50,6 +50,10 @@ void Lexer::scanToken() {
             break;
         }
 
+        throw std::runtime_error(std::to_string(m_line) +
+                                 ": Unexpected character '='. Did you mean "
+                                 "'=>'?");
+
     default:
         if (Utils::isDigit(currentChar))
             number();
@@ -57,7 +61,8 @@ void Lexer::scanToken() {
             identifier();
         else
             throw std::runtime_error(std::to_string(m_line) +
-                                     ": Invalid token type");
+                                     ": Unexpected character '" + currentChar +
+                                     "'.");
         break;
     }
 }
@@ -101,6 +106,7 @@ void Lexer::number() {
 }
 
 void Lexer::string() {
+    const int startLine = m_line;
     while (peek() != '"' && !isAtEnd()) {
         if (peek() == '\n')
             m_line++;
@@ -108,11 +114,11 @@ void Lexer::string() {
     }
 
     if (isAtEnd())
-        throw std::runtime_error(std::to_string(m_line) +
-                                 " Unterminated string.");
+        throw std::runtime_error(std::to_string(startLine) +
+                                 ": Unterminated string.");
 
     advance();
-    std::string value = m_source.substr(m_start + 1, m_current - m_start - 1);
+    std::string value = m_source.substr(m_start + 1, m_current - m_start - 2);
     addToken(TokenType::STRING, value);
 }
 
@@ -130,7 +136,7 @@ void Lexer::identifier() {
 }
 
 void Lexer::addToken(const TokenType type) {
-    addToken(type, nullptr);
+    addToken(type, std::any{});
 }
 
 void Lexer::addToken(const TokenType type, const std::any& literal) {
