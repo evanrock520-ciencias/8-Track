@@ -59,8 +59,20 @@ target_link_libraries(services_tests
         Qt6::Core
 )
 
+# Test del compilador MuQL
+add_executable(compiler_tests
+    compiler/test_lexer.cpp
+)
+
+target_link_libraries(compiler_tests
+    PRIVATE
+        GTest::gtest_main
+        compiler
+)
+
 include(GoogleTest)
 gtest_discover_tests(domain_tests)
 gtest_discover_tests(miner_tests)
 gtest_discover_tests(database_tests)
 gtest_discover_tests(services_tests)
+gtest_discover_tests(compiler_tests)
