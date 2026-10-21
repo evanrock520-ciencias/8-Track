@@ -16,6 +16,7 @@ public:
     [[nodiscard]] const TokenType& type() const { return m_type; }
     [[nodiscard]] const std::string& lexeme() const { return m_lexeme; }
     [[nodiscard]] int line() const { return m_line; }
+    [[nodiscard]] std::any literal() const { return m_literal; }
 
 private:
     TokenType m_type;

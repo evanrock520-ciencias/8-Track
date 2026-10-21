@@ -7,11 +7,19 @@
 
 namespace Track8::Compiler {
 
+/**
+ * @class Lexer
+ * @brief Escanea una cadena cruda (raw) para tokenizarla.
+ */
 class Lexer {
 public:
     explicit Lexer(std::string source);
 
-    std::vector<Token> scanTokens();
+    /**
+     * @brief Escanea la cadena @ref source para tokenizarla.
+     * @return Un vector con los tokens de la cadena.
+     */
+    [[nodiscard]] std::vector<Token> scanTokens();
 
 private:
     [[nodiscard]] bool isAtEnd() const;
