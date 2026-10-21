@@ -6,7 +6,7 @@
 
 namespace Track8::Compiler {
 
-inline std::unordered_map<std::string, TokenType> keywords = {
+inline const std::unordered_map<std::string, TokenType> keywords = {
     {"and", TokenType::AND},         {"or", TokenType::OR},
     {"not", TokenType::NOT},         {"like", TokenType::LIKE},
     {"asc", TokenType::ASC},         {"desc", TokenType::DESC},
