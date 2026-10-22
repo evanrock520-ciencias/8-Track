@@ -92,13 +92,16 @@ $(function(){initNavTree('namespaceTrack8_1_1Compiler.html','',''); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Track8::Compiler Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:Lexer" id="r_Lexer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Lexer.html">Lexer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escanea una cadena cruda (raw) para tokenizarla.  <a href="classTrack8_1_1Compiler_1_1Lexer.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Token" id="r_Token"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Token.html">Token</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representación de un token del DSL de consultas <span class="tt">MuQL</span>  <a href="classTrack8_1_1Compiler_1_1Token.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
@@ -145,6 +148,10 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:a95550111a704460ff9d70502d9c3a35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa los tokens posibles para el DSL de consultas <span class="tt">MuQL</span>.  <a href="#a95550111a704460ff9d70502d9c3a35f">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab52b621dbbf0d2d03ad79c053e251809" id="r_ab52b621dbbf0d2d03ad79c053e251809"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab52b621dbbf0d2d03ad79c053e251809">keywords</a></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a95550111a704460ff9d70502d9c3a35f" name="a95550111a704460ff9d70502d9c3a35f"></a>
@@ -201,6 +208,60 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a95550111a704460ff9d70502d9c3a35fa581953f6b20ad7f993b64b1dc632032e" name="a95550111a704460ff9d70502d9c3a35fa581953f6b20ad7f993b64b1dc632032e"></a>END_OF_FILE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="ab52b621dbbf0d2d03ad79c053e251809" name="ab52b621dbbf0d2d03ad79c053e251809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52b621dbbf0d2d03ad79c053e251809">&#9670;&#160;</a></span>keywords</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt;std::string, <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a>&gt; Track8::Compiler::keywords</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;and&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa558ffc8f5770d8e4f95f51d822685532">TokenType::AND</a>},         {<span class="stringliteral">&quot;or&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa1d00e7dce692e8dc3f6877f035e3a616">TokenType::OR</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;not&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d">TokenType::NOT</a>},         {<span class="stringliteral">&quot;like&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faa7598964efa10e649f92662b79e8d4d3">TokenType::LIKE</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;asc&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fac6e421eaad140c1bc1a39980502df80c">TokenType::ASC</a>},         {<span class="stringliteral">&quot;desc&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607">TokenType::DESC</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;by&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa925ab312a51a924ab68d9812baa788ff">TokenType::BY</a>},           {<span class="stringliteral">&quot;sort&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faa7bdfbfac6ba2252b889996b1430abb4">TokenType::SORT</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;similar&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa3f61c27723eb822b016231683b2bbc4d">TokenType::SIMILAR</a>}, {<span class="stringliteral">&quot;from&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa9cb26dba96b451a88aeb73e3be10a4ce">TokenType::FROM</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;to&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c">TokenType::TO</a>},           {<span class="stringliteral">&quot;year&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf">TokenType::YEAR</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;track&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00">TokenType::TRACK</a>},     {<span class="stringliteral">&quot;performer&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa8216cf2d7b61590abb3dc0651bf85005">TokenType::PERFORMER</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;artist&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faba22a109d019841ce7afe03702e1768f">TokenType::ARTIST</a>},   {<span class="stringliteral">&quot;band&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faa8a5bbeedca093b94b7f0d3f185b98f7">TokenType::BAND</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;album&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faeaa4b00b7c00e8fb9c185fdbb83b36a0">TokenType::ALBUM</a>},     {<span class="stringliteral">&quot;song&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fac184d7ee5f39c2a4112a9c14640488fa">TokenType::SONG</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;member&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b">TokenType::MEMBER</a>},   {<span class="stringliteral">&quot;path&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3">TokenType::PATH</a>}}</div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d">Track8::Compiler::TokenType::NOT</a></div><div class="ttdeci">@ NOT</div><div class="ttdef"><b>Definition</b> TokenType.hpp:25</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa1d00e7dce692e8dc3f6877f035e3a616"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa1d00e7dce692e8dc3f6877f035e3a616">Track8::Compiler::TokenType::OR</a></div><div class="ttdeci">@ OR</div><div class="ttdef"><b>Definition</b> TokenType.hpp:26</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c">Track8::Compiler::TokenType::TO</a></div><div class="ttdeci">@ TO</div><div class="ttdef"><b>Definition</b> TokenType.hpp:34</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa3f61c27723eb822b016231683b2bbc4d"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa3f61c27723eb822b016231683b2bbc4d">Track8::Compiler::TokenType::SIMILAR</a></div><div class="ttdeci">@ SIMILAR</div><div class="ttdef"><b>Definition</b> TokenType.hpp:32</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa558ffc8f5770d8e4f95f51d822685532"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa558ffc8f5770d8e4f95f51d822685532">Track8::Compiler::TokenType::AND</a></div><div class="ttdeci">@ AND</div><div class="ttdef"><b>Definition</b> TokenType.hpp:24</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3">Track8::Compiler::TokenType::PATH</a></div><div class="ttdeci">@ PATH</div><div class="ttdef"><b>Definition</b> TokenType.hpp:44</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607">Track8::Compiler::TokenType::DESC</a></div><div class="ttdeci">@ DESC</div><div class="ttdef"><b>Definition</b> TokenType.hpp:29</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b">Track8::Compiler::TokenType::MEMBER</a></div><div class="ttdeci">@ MEMBER</div><div class="ttdef"><b>Definition</b> TokenType.hpp:43</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa8216cf2d7b61590abb3dc0651bf85005"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa8216cf2d7b61590abb3dc0651bf85005">Track8::Compiler::TokenType::PERFORMER</a></div><div class="ttdeci">@ PERFORMER</div><div class="ttdef"><b>Definition</b> TokenType.hpp:37</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa925ab312a51a924ab68d9812baa788ff"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa925ab312a51a924ab68d9812baa788ff">Track8::Compiler::TokenType::BY</a></div><div class="ttdeci">@ BY</div><div class="ttdef"><b>Definition</b> TokenType.hpp:30</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa9cb26dba96b451a88aeb73e3be10a4ce"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa9cb26dba96b451a88aeb73e3be10a4ce">Track8::Compiler::TokenType::FROM</a></div><div class="ttdeci">@ FROM</div><div class="ttdef"><b>Definition</b> TokenType.hpp:33</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35faa7598964efa10e649f92662b79e8d4d3"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35faa7598964efa10e649f92662b79e8d4d3">Track8::Compiler::TokenType::LIKE</a></div><div class="ttdeci">@ LIKE</div><div class="ttdef"><b>Definition</b> TokenType.hpp:27</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35faa7bdfbfac6ba2252b889996b1430abb4"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35faa7bdfbfac6ba2252b889996b1430abb4">Track8::Compiler::TokenType::SORT</a></div><div class="ttdeci">@ SORT</div><div class="ttdef"><b>Definition</b> TokenType.hpp:31</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35faa8a5bbeedca093b94b7f0d3f185b98f7"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35faa8a5bbeedca093b94b7f0d3f185b98f7">Track8::Compiler::TokenType::BAND</a></div><div class="ttdeci">@ BAND</div><div class="ttdef"><b>Definition</b> TokenType.hpp:39</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00">Track8::Compiler::TokenType::TRACK</a></div><div class="ttdeci">@ TRACK</div><div class="ttdef"><b>Definition</b> TokenType.hpp:36</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35faba22a109d019841ce7afe03702e1768f"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35faba22a109d019841ce7afe03702e1768f">Track8::Compiler::TokenType::ARTIST</a></div><div class="ttdeci">@ ARTIST</div><div class="ttdef"><b>Definition</b> TokenType.hpp:38</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fac184d7ee5f39c2a4112a9c14640488fa"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fac184d7ee5f39c2a4112a9c14640488fa">Track8::Compiler::TokenType::SONG</a></div><div class="ttdeci">@ SONG</div><div class="ttdef"><b>Definition</b> TokenType.hpp:41</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fac6e421eaad140c1bc1a39980502df80c"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fac6e421eaad140c1bc1a39980502df80c">Track8::Compiler::TokenType::ASC</a></div><div class="ttdeci">@ ASC</div><div class="ttdef"><b>Definition</b> TokenType.hpp:28</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf">Track8::Compiler::TokenType::YEAR</a></div><div class="ttdeci">@ YEAR</div><div class="ttdef"><b>Definition</b> TokenType.hpp:35</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35faeaa4b00b7c00e8fb9c185fdbb83b36a0"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35faeaa4b00b7c00e8fb9c185fdbb83b36a0">Track8::Compiler::TokenType::ALBUM</a></div><div class="ttdeci">@ ALBUM</div><div class="ttdef"><b>Definition</b> TokenType.hpp:40</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

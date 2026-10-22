@@ -7,6 +7,9 @@ var searchData=
   ['importtrack_4',['importTrack',['../classTrack8_1_1Services_1_1LibraryService.html#a73860fd03a86671eb365941a781eac93',1,'Track8::Services::LibraryService']]],
   ['iperformerrepository_5',['IPerformerRepository',['../classTrack8_1_1Repositories_1_1IPerformerRepository.html',1,'Track8::Repositories']]],
   ['iperformerrepository_2ehpp_6',['IPerformerRepository.hpp',['../IPerformerRepository_8hpp.html',1,'']]],
-  ['isongrepository_7',['ISongRepository',['../classTrack8_1_1Repositories_1_1ISongRepository.html',1,'Track8::Repositories']]],
-  ['isongrepository_2ehpp_8',['ISongRepository.hpp',['../ISongRepository_8hpp.html',1,'']]]
+  ['isalpha_7',['isAlpha',['../namespaceTrack8_1_1Utils.html#a4f75f3945f0a07daa596738fb63ed627',1,'Track8::Utils']]],
+  ['isalphanumeric_8',['isAlphaNumeric',['../namespaceTrack8_1_1Utils.html#a8b01d650a8b6bb712403e70a065e6302',1,'Track8::Utils']]],
+  ['isdigit_9',['isDigit',['../namespaceTrack8_1_1Utils.html#a51772d64acf223ca38f66abb3828fc00',1,'Track8::Utils']]],
+  ['isongrepository_10',['ISongRepository',['../classTrack8_1_1Repositories_1_1ISongRepository.html',1,'Track8::Repositories']]],
+  ['isongrepository_2ehpp_11',['ISongRepository.hpp',['../ISongRepository_8hpp.html',1,'']]]
 ];

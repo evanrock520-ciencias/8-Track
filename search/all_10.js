@@ -1,5 +1,25 @@
 var searchData=
 [
-  ['update_0',['update',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a23261b779d7fccccf80e255ad3c1ff47',1,'Track8::Database::SQLiteAlbumRepository::update()'],['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a8d2d91219fbaa422be525f82382217da',1,'Track8::Database::SQLitePerformerRepository::update(const Domain::Performer &amp;performer) override'],['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#aa61f39c2ca1a42b9b74bbfb91ed13e1a',1,'Track8::Database::SQLitePerformerRepository::update(const Domain::Artist &amp;artist) override'],['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#af32ca74d3c151f413e7ad6608130bac2',1,'Track8::Database::SQLitePerformerRepository::update(const Domain::Group &amp;group) override'],['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#aaeb0d676bdcca013a2b5d5cc46db3509',1,'Track8::Database::SQLiteSongRepository::update()'],['../classTrack8_1_1Repositories_1_1IAlbumRepository.html#a52c8e36102628b45752d7e1c07135a91',1,'Track8::Repositories::IAlbumRepository::update()'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a33ea067821e8bd688232fe8dce2a16a0',1,'Track8::Repositories::IPerformerRepository::update(const Domain::Performer &amp;performer)=0'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad42a50e4a30fd5f3d08d1cae7b5dbb25',1,'Track8::Repositories::IPerformerRepository::update(const Domain::Artist &amp;artist)=0'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a1a0298d5b3e03b16f4dbe1e919a1a2a3',1,'Track8::Repositories::IPerformerRepository::update(const Domain::Group &amp;group)=0'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#a4a7c387d149639aa38cafe4fd25894be',1,'Track8::Repositories::ISongRepository::update()']]],
-  ['utils_2ehpp_1',['Utils.hpp',['../Utils_8hpp.html',1,'']]]
+  ['tabulate_0',['tabulate',['../classTrack8_1_1Cli_1_1Tabulator.html#a80d816ec2f914cca794df97537e093f8',1,'Track8::Cli::Tabulator']]],
+  ['tabulator_1',['Tabulator',['../classTrack8_1_1Cli_1_1Tabulator.html',1,'Track8::Cli']]],
+  ['tabulator_2ehpp_2',['Tabulator.hpp',['../Tabulator_8hpp.html',1,'']]],
+  ['title_3',['title',['../classTrack8_1_1Domain_1_1Song.html#a008891b1fcd8fb5e1dacfd2294884ebe',1,'Track8::Domain::Song']]],
+  ['to_4',['TO',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c',1,'Track8::Compiler']]],
+  ['token_5',['Token',['../classTrack8_1_1Compiler_1_1Token.html',1,'Track8::Compiler::Token'],['../classTrack8_1_1Compiler_1_1Token.html#a76de2cc67d813f53dbf43a2b7147f4bd',1,'Track8::Compiler::Token::Token()']]],
+  ['token_2ehpp_6',['Token.hpp',['../Token_8hpp.html',1,'']]],
+  ['tokentype_7',['TokenType',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f',1,'Track8::Compiler']]],
+  ['tokentype_2ehpp_8',['TokenType.hpp',['../TokenType_8hpp.html',1,'']]],
+  ['track_9',['TRACK',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00',1,'Track8::Compiler']]],
+  ['track_10',['track',['../classTrack8_1_1Domain_1_1Song.html#acce12dedef853db9083e50ab3297276d',1,'Track8::Domain::Song']]],
+  ['track8_11',['Track8',['../namespaceTrack8.html',1,'']]],
+  ['track8_3a_3acli_12',['Cli',['../namespaceTrack8_1_1Cli.html',1,'Track8']]],
+  ['track8_3a_3acompiler_13',['Compiler',['../namespaceTrack8_1_1Compiler.html',1,'Track8']]],
+  ['track8_3a_3adatabase_14',['Database',['../namespaceTrack8_1_1Database.html',1,'Track8']]],
+  ['track8_3a_3adomain_15',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
+  ['track8_3a_3aminer_16',['Miner',['../namespaceTrack8_1_1Miner.html',1,'Track8']]],
+  ['track8_3a_3arepositories_17',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
+  ['track8_3a_3aservices_18',['Services',['../namespaceTrack8_1_1Services.html',1,'Track8']]],
+  ['track8_3a_3autils_19',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]],
+  ['trim_20',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
+  ['type_21',['type',['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token']]]
 ];

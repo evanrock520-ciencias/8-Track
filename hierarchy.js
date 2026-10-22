@@ -13,6 +13,7 @@ var hierarchy =
     [ "Track8::Repositories::ISongRepository", "classTrack8_1_1Repositories_1_1ISongRepository.html", [
       [ "Track8::Database::SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html", null ]
     ] ],
+    [ "Track8::Compiler::Lexer", "classTrack8_1_1Compiler_1_1Lexer.html", null ],
     [ "Track8::Services::LibraryService", "classTrack8_1_1Services_1_1LibraryService.html", null ],
     [ "Track8::Miner::Metadata", "structTrack8_1_1Miner_1_1Metadata.html", null ],
     [ "Track8::Miner::Miner", "classTrack8_1_1Miner_1_1Miner.html", null ],

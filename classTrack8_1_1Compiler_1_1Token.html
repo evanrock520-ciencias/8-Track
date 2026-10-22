@@ -104,16 +104,17 @@ $(function(){initNavTree('classTrack8_1_1Compiler_1_1Token.html','','classTrack8
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a51675f478755067a85e641f497abe4be" id="r_a51675f478755067a85e641f497abe4be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51675f478755067a85e641f497abe4be">Token</a> (<a class="el" href="namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f">TokenType</a> <a class="el" href="#a6b986655dd04c89bc95b430af348de2b">type</a>, const std::string &amp;<a class="el" href="#add821bca0739acae09b963581afb5b18">lexeme</a>, int <a class="el" href="#a0208fedebd963328f5ccd1ebaefc6077">line</a>)</td></tr>
+<tr class="memitem:a76de2cc67d813f53dbf43a2b7147f4bd" id="r_a76de2cc67d813f53dbf43a2b7147f4bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76de2cc67d813f53dbf43a2b7147f4bd">Token</a> (<a class="el" href="namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f">TokenType</a> <a class="el" href="#a6b986655dd04c89bc95b430af348de2b">type</a>, std::string <a class="el" href="#add821bca0739acae09b963581afb5b18">lexeme</a>, int <a class="el" href="#a0208fedebd963328f5ccd1ebaefc6077">line</a>, std::any <a class="el" href="#abb998384cb849195deef1557961c681a">literal</a>)</td></tr>
 <tr class="memitem:a6b986655dd04c89bc95b430af348de2b" id="r_a6b986655dd04c89bc95b430af348de2b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f">TokenType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b986655dd04c89bc95b430af348de2b">type</a> () const</td></tr>
 <tr class="memitem:add821bca0739acae09b963581afb5b18" id="r_add821bca0739acae09b963581afb5b18"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add821bca0739acae09b963581afb5b18">lexeme</a> () const</td></tr>
 <tr class="memitem:a0208fedebd963328f5ccd1ebaefc6077" id="r_a0208fedebd963328f5ccd1ebaefc6077"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0208fedebd963328f5ccd1ebaefc6077">line</a> () const</td></tr>
+<tr class="memitem:abb998384cb849195deef1557961c681a" id="r_abb998384cb849195deef1557961c681a"><td class="memItemLeft" align="right" valign="top">std::any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb998384cb849195deef1557961c681a">literal</a> () const</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Representación de un token del DSL de consultas <span class="tt">MuQL</span> </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a51675f478755067a85e641f497abe4be" name="a51675f478755067a85e641f497abe4be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51675f478755067a85e641f497abe4be">&#9670;&#160;</a></span>Token()</h2>
+<a id="a76de2cc67d813f53dbf43a2b7147f4bd" name="a76de2cc67d813f53dbf43a2b7147f4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76de2cc67d813f53dbf43a2b7147f4bd">&#9670;&#160;</a></span>Token()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,12 +127,17 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>lexeme</em></span>, </td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>lexeme</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>line</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::any</td>          <td class="paramname"><span class="paramname"><em>literal</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -189,6 +195,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abb998384cb849195deef1557961c681a" name="abb998384cb849195deef1557961c681a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb998384cb849195deef1557961c681a">&#9670;&#160;</a></span>literal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::any Track8::Compiler::Token::literal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6b986655dd04c89bc95b430af348de2b" name="a6b986655dd04c89bc95b430af348de2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b986655dd04c89bc95b430af348de2b">&#9670;&#160;</a></span>type()</h2>
 
@@ -215,7 +246,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>8-track/include/compiler/<a class="el" href="Token_8hpp_source.html">Token.hpp</a></li>
+<li>8-track/include/compiler/lexer/<a class="el" href="Token_8hpp_source.html">Token.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
