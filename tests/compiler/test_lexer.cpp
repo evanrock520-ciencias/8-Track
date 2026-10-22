@@ -24,6 +24,7 @@ TEST(LexerTest, LexerString) {
     ASSERT_EQ(tokens.size(), 2);
     ASSERT_EQ(tokens.at(0).type(), Compiler::TokenType::STRING);
     ASSERT_EQ(tokens.at(0).lexeme(), "\"Loveless\"");
+    ASSERT_EQ(std::any_cast<std::string>(tokens.at(0).literal()), "Loveless");
 }
 
 TEST(LexerTest, LexerNumber) {
@@ -138,4 +139,34 @@ TEST(LexerTest, QueryUsingDoubleCharactersTokens) {
     ASSERT_EQ(tokensEquals.at(1).type(), Compiler::TokenType::EXACTLY);
     ASSERT_EQ(tokensEquals.at(2).type(), Compiler::TokenType::STRING);
     ASSERT_EQ(tokensEquals.at(2).lexeme(), R"("Opeth")");
+}
+
+TEST(LexerTest, NonClosedString) {
+    Compiler::Lexer lexer(R"(band: "Vampire Weekend)");
+    EXPECT_ANY_THROW(const auto tokens = lexer.scanTokens());
+}
+
+TEST(LexerTest, UnexpectedCharacters) {
+    Compiler::Lexer lexerA("#");
+    EXPECT_ANY_THROW(const auto tokensA = lexerA.scanTokens());
+
+    Compiler::Lexer lexerB("@");
+    EXPECT_ANY_THROW(const auto tokensB = lexerB.scanTokens());
+
+    Compiler::Lexer lexerC("&");
+    EXPECT_ANY_THROW(const auto tokensC = lexerC.scanTokens());
+
+    Compiler::Lexer lexerD("|");
+    EXPECT_ANY_THROW(const auto tokensD = lexerD.scanTokens());
+
+    Compiler::Lexer lexerE("=");
+    EXPECT_ANY_THROW(const auto tokensE = lexerE.scanTokens());
+}
+
+TEST(LexerTest, ExpectedLiteralValues) {
+    Compiler::Lexer lexer(R"(artist: "Nico" and to: 1970)");
+    const auto tokens = lexer.scanTokens();
+    ASSERT_EQ(tokens.size(), 8);
+    ASSERT_EQ(std::any_cast<std::string>(tokens.at(2).literal()), "Nico");
+    ASSERT_EQ(std::any_cast<int>(tokens.at(6).literal()), 1970);
 }
