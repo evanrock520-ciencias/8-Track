@@ -42,7 +42,8 @@ target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core)
 
 # Biblioteca de MuQL
 add_library(compiler
-    src/compiler/Token.cpp
+        src/compiler/lexer/Token.cpp
+        src/compiler/lexer/Lexer.cpp
 )
 
 target_include_directories(compiler PUBLIC
