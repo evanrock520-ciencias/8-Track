@@ -1,18 +1,20 @@
 #pragma once
 #include "compiler/ast/Filters.hpp"
+#include "compiler/ast/IExpressionVisitor.hpp"
 
 #include <memory>
 #include <optional>
 #include <string>
+#include <utility>
 
 namespace Track8::Compiler {
-
-class IExpressionVisitor;
 
 class IExpressionNode {
 public:
     virtual ~IExpressionNode() = default;
     virtual void accept(IExpressionVisitor& visitor) const = 0;
+
+    bool operator==(const IExpressionNode& node) const = default;
 };
 
 class BinaryExpressionNode : public IExpressionNode {
@@ -20,11 +22,11 @@ public:
     BinaryExpressionNode(const BinaryOperation type,
                          std::unique_ptr<IExpressionNode> left,
                          std::unique_ptr<IExpressionNode> right)
-        : m_type(type), m_left(std::move(left)), m_right(std::move(right)) {};
+        : m_type(type), m_left(std::move(left)), m_right(std::move(right)) {}
 
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
-    };
+    }
 
     [[nodiscard]] BinaryOperation type() const { return m_type; }
     [[nodiscard]] const IExpressionNode& left() const { return *m_left; }
@@ -43,7 +45,7 @@ public:
 
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
-    };
+    }
 
     [[nodiscard]] const IExpressionNode& expression() const {
         return *m_expression;
@@ -55,13 +57,13 @@ private:
 
 class TextFilterNode : public IExpressionNode {
 public:
-    TextFilterNode(const FilterField type, const std::string& value,
+    TextFilterNode(const FilterField type, std::string value,
                    const MatchMode mode)
-        : m_type(type), m_value(value), m_mode(mode) {}
+        : m_type(type), m_value(std::move(value)), m_mode(mode) {}
 
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
-    };
+    }
 
     [[nodiscard]] FilterField type() const { return m_type; }
     [[nodiscard]] const std::string& value() const { return m_value; }
@@ -80,7 +82,7 @@ public:
 
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
-    };
+    }
 
     [[nodiscard]] std::optional<int> from() const { return m_from; }
     [[nodiscard]] std::optional<int> to() const { return m_to; }
@@ -98,7 +100,7 @@ public:
 
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
-    };
+    }
 
     [[nodiscard]] std::optional<int> from() const { return m_from; }
     [[nodiscard]] std::optional<int> to() const { return m_to; }
@@ -110,12 +112,12 @@ private:
 
 class FreeFilterNode : public IExpressionNode {
 public:
-    explicit FreeFilterNode(const std::string& expression)
-        : m_expression(expression) {}
+    explicit FreeFilterNode(std::string expression)
+        : m_expression(std::move(expression)) {}
 
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
-    };
+    }
 
     [[nodiscard]] const std::string& expression() const { return m_expression; }
 
