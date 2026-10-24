@@ -62,6 +62,7 @@ target_link_libraries(services_tests
 # Test del compilador MuQL
 add_executable(compiler_tests
     compiler/test_lexer.cpp
+        compiler/test_ast.cpp
 )
 
 target_link_libraries(compiler_tests
