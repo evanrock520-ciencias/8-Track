@@ -148,9 +148,7 @@ public:
     }
 
     bool operator==(const FreeFilterNode& node) const = default;
-    < [[nodiscard]] const std::string& expression() const {
-        return m_expression;
-    }
+    [[nodiscard]] const std::string& expression() const { return m_expression; }
 
 private:
     std::string m_expression;
