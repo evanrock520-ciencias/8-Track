@@ -1,4 +1,5 @@
 #pragma once
+#include "IExpressionNode.hpp"
 #include "compiler/ast/Filters.hpp"
 #include "compiler/ast/IExpressionVisitor.hpp"
 
@@ -9,14 +10,10 @@
 
 namespace Track8::Compiler {
 
-class IExpressionNode {
-public:
-    virtual ~IExpressionNode() = default;
-    virtual void accept(IExpressionVisitor& visitor) const = 0;
-
-    bool operator==(const IExpressionNode& node) const = default;
-};
-
+/**
+ * @class BinaryExpressionNode
+ * @brief Representa un nodo binario para las operaciones `OR` y `AND`.
+ */
 class BinaryExpressionNode : public IExpressionNode {
 public:
     BinaryExpressionNode(const BinaryOperation type,
@@ -28,6 +25,8 @@ public:
         visitor.visit(*this);
     }
 
+    bool operator==(const BinaryExpressionNode& node) const = default;
+
     [[nodiscard]] BinaryOperation type() const { return m_type; }
     [[nodiscard]] const IExpressionNode& left() const { return *m_left; }
     [[nodiscard]] const IExpressionNode& right() const { return *m_right; }
@@ -38,6 +37,10 @@ private:
     std::unique_ptr<IExpressionNode> m_right;
 };
 
+/**
+ * @class NegationExpressionNode
+ * @brief Representa un nodo de negación.
+ */
 class NegationExpressionNode : public IExpressionNode {
 public:
     explicit NegationExpressionNode(std::unique_ptr<IExpressionNode> expression)
@@ -51,10 +54,16 @@ public:
         return *m_expression;
     }
 
+    bool operator==(const NegationExpressionNode& node) const = default;
+
 private:
     std::unique_ptr<IExpressionNode> m_expression;
 };
 
+/**
+ * @class TextFilterNode
+ * @brief Representa un filtro textual sobre algún campo de la base de datos.
+ */
 class TextFilterNode : public IExpressionNode {
 public:
     TextFilterNode(const FilterField type, std::string value,
@@ -64,6 +73,8 @@ public:
     void accept(IExpressionVisitor& visitor) const override {
         visitor.visit(*this);
     }
+
+    bool operator==(const TextFilterNode& node) const = default;
 
     [[nodiscard]] FilterField type() const { return m_type; }
     [[nodiscard]] const std::string& value() const { return m_value; }
@@ -75,6 +86,10 @@ private:
     MatchMode m_mode;
 };
 
+/**
+ * @class TrackFilterNode
+ * @brief Representa un filtro de rango entre números de pista en un álbum.
+ */
 class TrackFilterNode : public IExpressionNode {
 public:
     TrackFilterNode(const std::optional<int> from, const std::optional<int> to)
@@ -84,6 +99,8 @@ public:
         visitor.visit(*this);
     }
 
+    bool operator==(const TrackFilterNode& node) const = default;
+
     [[nodiscard]] std::optional<int> from() const { return m_from; }
     [[nodiscard]] std::optional<int> to() const { return m_to; }
 
@@ -92,6 +109,10 @@ private:
     std::optional<int> m_to;
 };
 
+/**
+ * @class TemporalFilterNode
+ * @brief Representa un filtro de rango temporal.
+ */
 class TemporalFilterNode : public IExpressionNode {
 public:
     TemporalFilterNode(const std::optional<int> from,
@@ -102,6 +123,8 @@ public:
         visitor.visit(*this);
     }
 
+    bool operator==(const TemporalFilterNode& node) const = default;
+
     [[nodiscard]] std::optional<int> from() const { return m_from; }
     [[nodiscard]] std::optional<int> to() const { return m_to; }
 
@@ -110,6 +133,11 @@ private:
     std::optional<int> m_to;
 };
 
+/**
+ * @class FreeFilterNode
+ * @brief Representa una expresión libre. Estás son usadas para buscar por todos
+ * los campos relevantes: `title`, `genre`, `album` y `performer`.
+ */
 class FreeFilterNode : public IExpressionNode {
 public:
     explicit FreeFilterNode(std::string expression)
@@ -119,7 +147,10 @@ public:
         visitor.visit(*this);
     }
 
-    [[nodiscard]] const std::string& expression() const { return m_expression; }
+    bool operator==(const FreeFilterNode& node) const = default;
+    < [[nodiscard]] const std::string& expression() const {
+        return m_expression;
+    }
 
 private:
     std::string m_expression;
