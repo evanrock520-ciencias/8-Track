@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['tabulate_0',['tabulate',['../classTrack8_1_1Cli_1_1Tabulator.html#a80d816ec2f914cca794df97537e093f8',1,'Track8::Cli::Tabulator']]],
-  ['title_1',['title',['../classTrack8_1_1Domain_1_1Song.html#a008891b1fcd8fb5e1dacfd2294884ebe',1,'Track8::Domain::Song']]],
-  ['token_2',['Token',['../classTrack8_1_1Compiler_1_1Token.html#a76de2cc67d813f53dbf43a2b7147f4bd',1,'Track8::Compiler::Token']]],
-  ['track_3',['track',['../classTrack8_1_1Domain_1_1Song.html#acce12dedef853db9083e50ab3297276d',1,'Track8::Domain::Song']]],
-  ['trim_4',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
-  ['type_5',['type',['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token']]]
+  ['real_5fname_0',['real_name',['../classTrack8_1_1Domain_1_1Artist.html#a4ff3f2b40d696cbd04096f58db74d06b',1,'Track8::Domain::Artist']]],
+  ['remove_1',['remove',['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#a6b99797c2257c5360a38759980e751d4',1,'Track8::Database::SQLiteSongRepository::remove()'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#a2c85c3dd7a286975a958c0f6a0c33ebd',1,'Track8::Repositories::ISongRepository::remove()']]],
+  ['removefromgroup_2',['removeFromGroup',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a79785c24add2c8f96694777272d98530',1,'Track8::Database::SQLitePerformerRepository::removeFromGroup()'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a133435b3774f10ab099130c24b1644ee',1,'Track8::Repositories::IPerformerRepository::removeFromGroup()']]],
+  ['right_3',['right',['../classTrack8_1_1Compiler_1_1BinaryExpressionNode.html#a85f71e9ba73fa8f85a4bffb1b898bba3',1,'Track8::Compiler::BinaryExpressionNode']]],
+  ['root_4',['root',['../classTrack8_1_1Compiler_1_1Query.html#a0a1d3ef668b0b9613e518558b1df5dcb',1,'Track8::Compiler::Query']]],
+  ['run_5',['run',['../classTrack8_1_1Cli_1_1Cli.html#a10b572e1648dbcb1f6221763aac631f7',1,'Track8::Cli::Cli']]]
 ];

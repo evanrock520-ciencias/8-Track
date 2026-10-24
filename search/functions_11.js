@@ -1,11 +1,13 @@
 var searchData=
 [
-  ['with_5falbum_0',['with_album',['../classTrack8_1_1Domain_1_1SongBuilder.html#a27fc0563aecbb824f774412b08d0fd0d',1,'Track8::Domain::SongBuilder']]],
-  ['with_5fgenre_1',['with_genre',['../classTrack8_1_1Domain_1_1SongBuilder.html#a7d3965a72caa2777c7531980b5d8f996',1,'Track8::Domain::SongBuilder']]],
-  ['with_5fid_2',['with_id',['../classTrack8_1_1Domain_1_1SongBuilder.html#a11fce5adced0806e0da413ccb01500c1',1,'Track8::Domain::SongBuilder']]],
-  ['with_5fpath_3',['with_path',['../classTrack8_1_1Domain_1_1SongBuilder.html#abb13185d3fdc8ff263a70837c6bf3af9',1,'Track8::Domain::SongBuilder']]],
-  ['with_5fperformer_4',['with_performer',['../classTrack8_1_1Domain_1_1SongBuilder.html#aff7db9d1539784edfdd0524ef72a169f',1,'Track8::Domain::SongBuilder']]],
-  ['with_5ftitle_5',['with_title',['../classTrack8_1_1Domain_1_1SongBuilder.html#aec5840cf339113e90459dfb7d0cad4a7',1,'Track8::Domain::SongBuilder']]],
-  ['with_5ftrack_6',['with_track',['../classTrack8_1_1Domain_1_1SongBuilder.html#a57584ade14620df2aea234fdd3530e75',1,'Track8::Domain::SongBuilder']]],
-  ['with_5fyear_7',['with_year',['../classTrack8_1_1Domain_1_1SongBuilder.html#a888907be5dc4cd2360b14bafef4f2eb2',1,'Track8::Domain::SongBuilder']]]
+  ['tabulate_0',['tabulate',['../classTrack8_1_1Cli_1_1Tabulator.html#a80d816ec2f914cca794df97537e093f8',1,'Track8::Cli::Tabulator']]],
+  ['temporalfilternode_1',['TemporalFilterNode',['../classTrack8_1_1Compiler_1_1TemporalFilterNode.html#a2cc670e1dfd2aa521ed953db58ae56ec',1,'Track8::Compiler::TemporalFilterNode']]],
+  ['textfilternode_2',['TextFilterNode',['../classTrack8_1_1Compiler_1_1TextFilterNode.html#a20e8d639a2d30996bc69b3db2d291e24',1,'Track8::Compiler::TextFilterNode']]],
+  ['title_3',['title',['../classTrack8_1_1Domain_1_1Song.html#a008891b1fcd8fb5e1dacfd2294884ebe',1,'Track8::Domain::Song']]],
+  ['to_4',['to',['../classTrack8_1_1Compiler_1_1TrackFilterNode.html#a99fcaf879ce2d9d62195a538a2120cbc',1,'Track8::Compiler::TrackFilterNode::to()'],['../classTrack8_1_1Compiler_1_1TemporalFilterNode.html#a8b65d4ab86fc812b45da28796c652577',1,'Track8::Compiler::TemporalFilterNode::to()']]],
+  ['token_5',['Token',['../classTrack8_1_1Compiler_1_1Token.html#a76de2cc67d813f53dbf43a2b7147f4bd',1,'Track8::Compiler::Token']]],
+  ['track_6',['track',['../classTrack8_1_1Domain_1_1Song.html#acce12dedef853db9083e50ab3297276d',1,'Track8::Domain::Song']]],
+  ['trackfilternode_7',['TrackFilterNode',['../classTrack8_1_1Compiler_1_1TrackFilterNode.html#ac13aca1b03800c5fda72b2f63f361abc',1,'Track8::Compiler::TrackFilterNode']]],
+  ['trim_8',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
+  ['type_9',['type',['../classTrack8_1_1Compiler_1_1BinaryExpressionNode.html#a923e4055901f1c798423e9115c603ed5',1,'Track8::Compiler::BinaryExpressionNode::type()'],['../classTrack8_1_1Compiler_1_1TextFilterNode.html#a6a2e187817defc1fc19226a5ee727e21',1,'Track8::Compiler::TextFilterNode::type()'],['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token::type()']]]
 ];

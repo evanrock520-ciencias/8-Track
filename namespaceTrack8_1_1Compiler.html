@@ -100,13 +100,68 @@ $(function(){initNavTree('namespaceTrack8_1_1Compiler.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:AstPrinter" id="r_AstPrinter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1AstPrinter.html">AstPrinter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementación de <a class="el" href="classTrack8_1_1Compiler_1_1IExpressionVisitor.html">IExpressionVisitor</a> para recorrer árboles AST e imprimirlos.  <a href="classTrack8_1_1Compiler_1_1AstPrinter.html#details">More...</a><br /></td></tr>
+<tr class="memitem:BinaryExpressionNode" id="r_BinaryExpressionNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1BinaryExpressionNode.html">BinaryExpressionNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un nodo binario para las operaciones <span class="tt">OR</span> y <span class="tt">AND</span>.  <a href="classTrack8_1_1Compiler_1_1BinaryExpressionNode.html#details">More...</a><br /></td></tr>
+<tr class="memitem:FreeFilterNode" id="r_FreeFilterNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1FreeFilterNode.html">FreeFilterNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa una expresión libre. Estás son usadas para buscar por todos los campos relevantes: <span class="tt">title</span>, <span class="tt">genre</span>, <span class="tt">album</span> y <span class="tt">performer</span>.  <a href="classTrack8_1_1Compiler_1_1FreeFilterNode.html#details">More...</a><br /></td></tr>
+<tr class="memitem:IExpressionNode" id="r_IExpressionNode"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1IExpressionNode.html">IExpressionNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interfaz representativa de los nodos de un árbol de sintáxis.  <a href="classTrack8_1_1Compiler_1_1IExpressionNode.html#details">More...</a><br /></td></tr>
+<tr class="memitem:IExpressionVisitor" id="r_IExpressionVisitor"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1IExpressionVisitor.html">IExpressionVisitor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interfaz del visitante para recorrer el AST de una consulta MuQL.  <a href="classTrack8_1_1Compiler_1_1IExpressionVisitor.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Lexer" id="r_Lexer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Lexer.html">Lexer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escanea una cadena cruda (raw) para tokenizarla.  <a href="classTrack8_1_1Compiler_1_1Lexer.html#details">More...</a><br /></td></tr>
+<tr class="memitem:NegationExpressionNode" id="r_NegationExpressionNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1NegationExpressionNode.html">NegationExpressionNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un nodo de negación.  <a href="classTrack8_1_1Compiler_1_1NegationExpressionNode.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Query" id="r_Query"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Query.html">Query</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa una consulta MuQL usando un AST.  <a href="classTrack8_1_1Compiler_1_1Query.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SortClause" id="r_SortClause"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTrack8_1_1Compiler_1_1SortClause.html">SortClause</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa una clausula que determina el orden para obtener una tabla.  <a href="structTrack8_1_1Compiler_1_1SortClause.html#details">More...</a><br /></td></tr>
+<tr class="memitem:TemporalFilterNode" id="r_TemporalFilterNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1TemporalFilterNode.html">TemporalFilterNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un filtro de rango temporal.  <a href="classTrack8_1_1Compiler_1_1TemporalFilterNode.html#details">More...</a><br /></td></tr>
+<tr class="memitem:TextFilterNode" id="r_TextFilterNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1TextFilterNode.html">TextFilterNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un filtro textual sobre algún campo de la base de datos.  <a href="classTrack8_1_1Compiler_1_1TextFilterNode.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Token" id="r_Token"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Token.html">Token</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representación de un token del DSL de consultas <span class="tt">MuQL</span>  <a href="classTrack8_1_1Compiler_1_1Token.html#details">More...</a><br /></td></tr>
+<tr class="memitem:TrackFilterNode" id="r_TrackFilterNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1TrackFilterNode.html">TrackFilterNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un filtro de rango entre números de pista en un álbum.  <a href="classTrack8_1_1Compiler_1_1TrackFilterNode.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a37e82e2702eb0930fe778839e66ecdc6" id="r_a37e82e2702eb0930fe778839e66ecdc6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37e82e2702eb0930fe778839e66ecdc6">BinaryOperation</a> { <a class="el" href="#a37e82e2702eb0930fe778839e66ecdc6a558ffc8f5770d8e4f95f51d822685532">AND</a>
+, <a class="el" href="#a37e82e2702eb0930fe778839e66ecdc6a1d00e7dce692e8dc3f6877f035e3a616">OR</a>
+ }</td></tr>
+<tr class="memitem:a4a361b693db2ca8396990ad7103ef264" id="r_a4a361b693db2ca8396990ad7103ef264"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a361b693db2ca8396990ad7103ef264">FilterField</a> { <br />
+&#160;&#160;<a class="el" href="#a4a361b693db2ca8396990ad7103ef264a8216cf2d7b61590abb3dc0651bf85005">PERFORMER</a>
+, <a class="el" href="#a4a361b693db2ca8396990ad7103ef264aba22a109d019841ce7afe03702e1768f">ARTIST</a>
+, <a class="el" href="#a4a361b693db2ca8396990ad7103ef264aa8a5bbeedca093b94b7f0d3f185b98f7">BAND</a>
+, <a class="el" href="#a4a361b693db2ca8396990ad7103ef264aeaa4b00b7c00e8fb9c185fdbb83b36a0">ALBUM</a>
+, <br />
+&#160;&#160;<a class="el" href="#a4a361b693db2ca8396990ad7103ef264ac184d7ee5f39c2a4112a9c14640488fa">SONG</a>
+, <a class="el" href="#a4a361b693db2ca8396990ad7103ef264add491b2538cbf3a30c33edf37aa419db">GENRE</a>
+, <a class="el" href="#a4a361b693db2ca8396990ad7103ef264a77e6cb59f088a2937324f798be141b4b">MEMBER</a>
+, <a class="el" href="#a4a361b693db2ca8396990ad7103ef264a5ffb5f0d0de78321df46fc7c93ca64a3">PATH</a>
+<br />
+ }</td></tr>
+<tr class="memitem:a1accb3830cc60d15715ef601def644a9" id="r_a1accb3830cc60d15715ef601def644a9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1accb3830cc60d15715ef601def644a9">MatchMode</a> { <a class="el" href="#a1accb3830cc60d15715ef601def644a9a7c8b81e077a45b6d2c9c03d3a22c0d5b">CONTAINS</a>
+, <a class="el" href="#a1accb3830cc60d15715ef601def644a9ac41e056424136b6e8c4e23dd6326efa1">EXACT</a>
+, <a class="el" href="#a1accb3830cc60d15715ef601def644a9a3f61c27723eb822b016231683b2bbc4d">SIMILAR</a>
+ }</td></tr>
+<tr class="memitem:a5f8ea858e9e2d9305befb27b944901f9" id="r_a5f8ea858e9e2d9305befb27b944901f9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9">SortField</a> { <br />
+&#160;&#160;<a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9aeaa4b00b7c00e8fb9c185fdbb83b36a0">ALBUM</a>
+, <a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9ac184d7ee5f39c2a4112a9c14640488fa">SONG</a>
+, <a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9a8216cf2d7b61590abb3dc0651bf85005">PERFORMER</a>
+, <a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9ad18101729d290479023d5eceeb29c9cf">YEAR</a>
+, <br />
+&#160;&#160;<a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9ab82057c0f8a7631cf533363631986a00">TRACK</a>
+, <a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9add491b2538cbf3a30c33edf37aa419db">GENRE</a>
+, <a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9a5ffb5f0d0de78321df46fc7c93ca64a3">PATH</a>
+<br />
+ }</td></tr>
+<tr class="memitem:a3236dd2fe772b1498a347dd1800a3d78" id="r_a3236dd2fe772b1498a347dd1800a3d78"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3236dd2fe772b1498a347dd1800a3d78">SortOrder</a> { <a class="el" href="#a3236dd2fe772b1498a347dd1800a3d78ac6e421eaad140c1bc1a39980502df80c">ASC</a>
+, <a class="el" href="#a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607">DESC</a>
+ }</td></tr>
 <tr class="memitem:a95550111a704460ff9d70502d9c3a35f" id="r_a95550111a704460ff9d70502d9c3a35f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> { <br />
 &#160;&#160;<a class="el" href="#a95550111a704460ff9d70502d9c3a35fa8f874dba9c38e5730ba55b9fb1200729">LEFT_PAREN</a>
 , <a class="el" href="#a95550111a704460ff9d70502d9c3a35fa8f61c4a39a7185a98f3494a932a23be0">RIGHT_PAREN</a>
@@ -154,6 +209,148 @@ Variables</h2></td></tr>
 <tr class="memitem:ab52b621dbbf0d2d03ad79c053e251809" id="r_ab52b621dbbf0d2d03ad79c053e251809"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab52b621dbbf0d2d03ad79c053e251809">keywords</a></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a37e82e2702eb0930fe778839e66ecdc6" name="a37e82e2702eb0930fe778839e66ecdc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e82e2702eb0930fe778839e66ecdc6">&#9670;&#160;</a></span>BinaryOperation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a37e82e2702eb0930fe778839e66ecdc6">Track8::Compiler::BinaryOperation</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a37e82e2702eb0930fe778839e66ecdc6a558ffc8f5770d8e4f95f51d822685532" name="a37e82e2702eb0930fe778839e66ecdc6a558ffc8f5770d8e4f95f51d822685532"></a>AND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a37e82e2702eb0930fe778839e66ecdc6a1d00e7dce692e8dc3f6877f035e3a616" name="a37e82e2702eb0930fe778839e66ecdc6a1d00e7dce692e8dc3f6877f035e3a616"></a>OR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4a361b693db2ca8396990ad7103ef264" name="a4a361b693db2ca8396990ad7103ef264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a361b693db2ca8396990ad7103ef264">&#9670;&#160;</a></span>FilterField</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a4a361b693db2ca8396990ad7103ef264">Track8::Compiler::FilterField</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264a8216cf2d7b61590abb3dc0651bf85005" name="a4a361b693db2ca8396990ad7103ef264a8216cf2d7b61590abb3dc0651bf85005"></a>PERFORMER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264aba22a109d019841ce7afe03702e1768f" name="a4a361b693db2ca8396990ad7103ef264aba22a109d019841ce7afe03702e1768f"></a>ARTIST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264aa8a5bbeedca093b94b7f0d3f185b98f7" name="a4a361b693db2ca8396990ad7103ef264aa8a5bbeedca093b94b7f0d3f185b98f7"></a>BAND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264aeaa4b00b7c00e8fb9c185fdbb83b36a0" name="a4a361b693db2ca8396990ad7103ef264aeaa4b00b7c00e8fb9c185fdbb83b36a0"></a>ALBUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264ac184d7ee5f39c2a4112a9c14640488fa" name="a4a361b693db2ca8396990ad7103ef264ac184d7ee5f39c2a4112a9c14640488fa"></a>SONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264add491b2538cbf3a30c33edf37aa419db" name="a4a361b693db2ca8396990ad7103ef264add491b2538cbf3a30c33edf37aa419db"></a>GENRE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264a77e6cb59f088a2937324f798be141b4b" name="a4a361b693db2ca8396990ad7103ef264a77e6cb59f088a2937324f798be141b4b"></a>MEMBER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4a361b693db2ca8396990ad7103ef264a5ffb5f0d0de78321df46fc7c93ca64a3" name="a4a361b693db2ca8396990ad7103ef264a5ffb5f0d0de78321df46fc7c93ca64a3"></a>PATH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1accb3830cc60d15715ef601def644a9" name="a1accb3830cc60d15715ef601def644a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1accb3830cc60d15715ef601def644a9">&#9670;&#160;</a></span>MatchMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a1accb3830cc60d15715ef601def644a9">Track8::Compiler::MatchMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1accb3830cc60d15715ef601def644a9a7c8b81e077a45b6d2c9c03d3a22c0d5b" name="a1accb3830cc60d15715ef601def644a9a7c8b81e077a45b6d2c9c03d3a22c0d5b"></a>CONTAINS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1accb3830cc60d15715ef601def644a9ac41e056424136b6e8c4e23dd6326efa1" name="a1accb3830cc60d15715ef601def644a9ac41e056424136b6e8c4e23dd6326efa1"></a>EXACT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1accb3830cc60d15715ef601def644a9a3f61c27723eb822b016231683b2bbc4d" name="a1accb3830cc60d15715ef601def644a9a3f61c27723eb822b016231683b2bbc4d"></a>SIMILAR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5f8ea858e9e2d9305befb27b944901f9" name="a5f8ea858e9e2d9305befb27b944901f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8ea858e9e2d9305befb27b944901f9">&#9670;&#160;</a></span>SortField</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a5f8ea858e9e2d9305befb27b944901f9">Track8::Compiler::SortField</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9aeaa4b00b7c00e8fb9c185fdbb83b36a0" name="a5f8ea858e9e2d9305befb27b944901f9aeaa4b00b7c00e8fb9c185fdbb83b36a0"></a>ALBUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9ac184d7ee5f39c2a4112a9c14640488fa" name="a5f8ea858e9e2d9305befb27b944901f9ac184d7ee5f39c2a4112a9c14640488fa"></a>SONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9a8216cf2d7b61590abb3dc0651bf85005" name="a5f8ea858e9e2d9305befb27b944901f9a8216cf2d7b61590abb3dc0651bf85005"></a>PERFORMER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9ad18101729d290479023d5eceeb29c9cf" name="a5f8ea858e9e2d9305befb27b944901f9ad18101729d290479023d5eceeb29c9cf"></a>YEAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9ab82057c0f8a7631cf533363631986a00" name="a5f8ea858e9e2d9305befb27b944901f9ab82057c0f8a7631cf533363631986a00"></a>TRACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9add491b2538cbf3a30c33edf37aa419db" name="a5f8ea858e9e2d9305befb27b944901f9add491b2538cbf3a30c33edf37aa419db"></a>GENRE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ea858e9e2d9305befb27b944901f9a5ffb5f0d0de78321df46fc7c93ca64a3" name="a5f8ea858e9e2d9305befb27b944901f9a5ffb5f0d0de78321df46fc7c93ca64a3"></a>PATH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3236dd2fe772b1498a347dd1800a3d78" name="a3236dd2fe772b1498a347dd1800a3d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3236dd2fe772b1498a347dd1800a3d78">&#9670;&#160;</a></span>SortOrder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a3236dd2fe772b1498a347dd1800a3d78">Track8::Compiler::SortOrder</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3236dd2fe772b1498a347dd1800a3d78ac6e421eaad140c1bc1a39980502df80c" name="a3236dd2fe772b1498a347dd1800a3d78ac6e421eaad140c1bc1a39980502df80c"></a>ASC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607" name="a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607"></a>DESC&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a95550111a704460ff9d70502d9c3a35f" name="a95550111a704460ff9d70502d9c3a35f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95550111a704460ff9d70502d9c3a35f">&#9670;&#160;</a></span>TokenType</h2>
 

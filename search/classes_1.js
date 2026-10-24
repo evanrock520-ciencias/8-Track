@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cli_0',['Cli',['../classTrack8_1_1Cli_1_1Cli.html',1,'Track8::Cli']]]
+  ['binaryexpressionnode_0',['BinaryExpressionNode',['../classTrack8_1_1Compiler_1_1BinaryExpressionNode.html',1,'Track8::Compiler']]]
 ];

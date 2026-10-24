@@ -1,7 +1,50 @@
 var namespaceTrack8_1_1Compiler =
 [
+    [ "AstPrinter", "classTrack8_1_1Compiler_1_1AstPrinter.html", "classTrack8_1_1Compiler_1_1AstPrinter" ],
+    [ "BinaryExpressionNode", "classTrack8_1_1Compiler_1_1BinaryExpressionNode.html", "classTrack8_1_1Compiler_1_1BinaryExpressionNode" ],
+    [ "FreeFilterNode", "classTrack8_1_1Compiler_1_1FreeFilterNode.html", "classTrack8_1_1Compiler_1_1FreeFilterNode" ],
+    [ "IExpressionNode", "classTrack8_1_1Compiler_1_1IExpressionNode.html", "classTrack8_1_1Compiler_1_1IExpressionNode" ],
+    [ "IExpressionVisitor", "classTrack8_1_1Compiler_1_1IExpressionVisitor.html", "classTrack8_1_1Compiler_1_1IExpressionVisitor" ],
     [ "Lexer", "classTrack8_1_1Compiler_1_1Lexer.html", "classTrack8_1_1Compiler_1_1Lexer" ],
+    [ "NegationExpressionNode", "classTrack8_1_1Compiler_1_1NegationExpressionNode.html", "classTrack8_1_1Compiler_1_1NegationExpressionNode" ],
+    [ "Query", "classTrack8_1_1Compiler_1_1Query.html", "classTrack8_1_1Compiler_1_1Query" ],
+    [ "SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", "structTrack8_1_1Compiler_1_1SortClause" ],
+    [ "TemporalFilterNode", "classTrack8_1_1Compiler_1_1TemporalFilterNode.html", "classTrack8_1_1Compiler_1_1TemporalFilterNode" ],
+    [ "TextFilterNode", "classTrack8_1_1Compiler_1_1TextFilterNode.html", "classTrack8_1_1Compiler_1_1TextFilterNode" ],
     [ "Token", "classTrack8_1_1Compiler_1_1Token.html", "classTrack8_1_1Compiler_1_1Token" ],
+    [ "TrackFilterNode", "classTrack8_1_1Compiler_1_1TrackFilterNode.html", "classTrack8_1_1Compiler_1_1TrackFilterNode" ],
+    [ "BinaryOperation", "namespaceTrack8_1_1Compiler.html#a37e82e2702eb0930fe778839e66ecdc6", [
+      [ "AND", "namespaceTrack8_1_1Compiler.html#a37e82e2702eb0930fe778839e66ecdc6a558ffc8f5770d8e4f95f51d822685532", null ],
+      [ "OR", "namespaceTrack8_1_1Compiler.html#a37e82e2702eb0930fe778839e66ecdc6a1d00e7dce692e8dc3f6877f035e3a616", null ]
+    ] ],
+    [ "FilterField", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264", [
+      [ "PERFORMER", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264a8216cf2d7b61590abb3dc0651bf85005", null ],
+      [ "ARTIST", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264aba22a109d019841ce7afe03702e1768f", null ],
+      [ "BAND", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264aa8a5bbeedca093b94b7f0d3f185b98f7", null ],
+      [ "ALBUM", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264aeaa4b00b7c00e8fb9c185fdbb83b36a0", null ],
+      [ "SONG", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264ac184d7ee5f39c2a4112a9c14640488fa", null ],
+      [ "GENRE", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264add491b2538cbf3a30c33edf37aa419db", null ],
+      [ "MEMBER", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264a77e6cb59f088a2937324f798be141b4b", null ],
+      [ "PATH", "namespaceTrack8_1_1Compiler.html#a4a361b693db2ca8396990ad7103ef264a5ffb5f0d0de78321df46fc7c93ca64a3", null ]
+    ] ],
+    [ "MatchMode", "namespaceTrack8_1_1Compiler.html#a1accb3830cc60d15715ef601def644a9", [
+      [ "CONTAINS", "namespaceTrack8_1_1Compiler.html#a1accb3830cc60d15715ef601def644a9a7c8b81e077a45b6d2c9c03d3a22c0d5b", null ],
+      [ "EXACT", "namespaceTrack8_1_1Compiler.html#a1accb3830cc60d15715ef601def644a9ac41e056424136b6e8c4e23dd6326efa1", null ],
+      [ "SIMILAR", "namespaceTrack8_1_1Compiler.html#a1accb3830cc60d15715ef601def644a9a3f61c27723eb822b016231683b2bbc4d", null ]
+    ] ],
+    [ "SortField", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9", [
+      [ "ALBUM", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9aeaa4b00b7c00e8fb9c185fdbb83b36a0", null ],
+      [ "SONG", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9ac184d7ee5f39c2a4112a9c14640488fa", null ],
+      [ "PERFORMER", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9a8216cf2d7b61590abb3dc0651bf85005", null ],
+      [ "YEAR", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9ad18101729d290479023d5eceeb29c9cf", null ],
+      [ "TRACK", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9ab82057c0f8a7631cf533363631986a00", null ],
+      [ "GENRE", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9add491b2538cbf3a30c33edf37aa419db", null ],
+      [ "PATH", "namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9a5ffb5f0d0de78321df46fc7c93ca64a3", null ]
+    ] ],
+    [ "SortOrder", "namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78", [
+      [ "ASC", "namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78ac6e421eaad140c1bc1a39980502df80c", null ],
+      [ "DESC", "namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607", null ]
+    ] ],
     [ "TokenType", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35f", [
       [ "LEFT_PAREN", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa8f874dba9c38e5730ba55b9fb1200729", null ],
       [ "RIGHT_PAREN", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa8f61c4a39a7185a98f3494a932a23be0", null ],

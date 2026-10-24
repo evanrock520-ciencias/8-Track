@@ -6,8 +6,19 @@ var annotated_dup =
         [ "Tabulator", "classTrack8_1_1Cli_1_1Tabulator.html", null ]
       ] ],
       [ "Compiler", "namespaceTrack8_1_1Compiler.html", [
+        [ "AstPrinter", "classTrack8_1_1Compiler_1_1AstPrinter.html", "classTrack8_1_1Compiler_1_1AstPrinter" ],
+        [ "BinaryExpressionNode", "classTrack8_1_1Compiler_1_1BinaryExpressionNode.html", "classTrack8_1_1Compiler_1_1BinaryExpressionNode" ],
+        [ "FreeFilterNode", "classTrack8_1_1Compiler_1_1FreeFilterNode.html", "classTrack8_1_1Compiler_1_1FreeFilterNode" ],
+        [ "IExpressionNode", "classTrack8_1_1Compiler_1_1IExpressionNode.html", "classTrack8_1_1Compiler_1_1IExpressionNode" ],
+        [ "IExpressionVisitor", "classTrack8_1_1Compiler_1_1IExpressionVisitor.html", "classTrack8_1_1Compiler_1_1IExpressionVisitor" ],
         [ "Lexer", "classTrack8_1_1Compiler_1_1Lexer.html", "classTrack8_1_1Compiler_1_1Lexer" ],
-        [ "Token", "classTrack8_1_1Compiler_1_1Token.html", "classTrack8_1_1Compiler_1_1Token" ]
+        [ "NegationExpressionNode", "classTrack8_1_1Compiler_1_1NegationExpressionNode.html", "classTrack8_1_1Compiler_1_1NegationExpressionNode" ],
+        [ "Query", "classTrack8_1_1Compiler_1_1Query.html", "classTrack8_1_1Compiler_1_1Query" ],
+        [ "SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", "structTrack8_1_1Compiler_1_1SortClause" ],
+        [ "TemporalFilterNode", "classTrack8_1_1Compiler_1_1TemporalFilterNode.html", "classTrack8_1_1Compiler_1_1TemporalFilterNode" ],
+        [ "TextFilterNode", "classTrack8_1_1Compiler_1_1TextFilterNode.html", "classTrack8_1_1Compiler_1_1TextFilterNode" ],
+        [ "Token", "classTrack8_1_1Compiler_1_1Token.html", "classTrack8_1_1Compiler_1_1Token" ],
+        [ "TrackFilterNode", "classTrack8_1_1Compiler_1_1TrackFilterNode.html", "classTrack8_1_1Compiler_1_1TrackFilterNode" ]
       ] ],
       [ "Database", "namespaceTrack8_1_1Database.html", [
         [ "DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html", "classTrack8_1_1Database_1_1DatabaseManager" ],
