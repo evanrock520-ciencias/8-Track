@@ -50,7 +50,7 @@ not year: 1990 => 1999
 
 ```txt
 sort: asc by song
-sort: desc by release
+sort: desc by year
 sort: by album
-album: "All Mirrors" sort: asc by album sort: asc by track
+album: "All Mirrors" sort: asc by album
 ```
