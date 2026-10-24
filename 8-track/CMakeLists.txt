@@ -44,6 +44,8 @@ target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core)
 add_library(compiler
         src/compiler/lexer/Token.cpp
         src/compiler/lexer/Lexer.cpp
+
+        src/compiler/ast/AstPrinter.cpp
 )
 
 target_include_directories(compiler PUBLIC
