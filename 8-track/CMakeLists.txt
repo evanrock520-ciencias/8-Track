@@ -46,6 +46,8 @@ add_library(compiler
         src/compiler/lexer/Lexer.cpp
 
         src/compiler/ast/AstPrinter.cpp
+
+        src/compiler/parser/Parser.cpp
 )
 
 target_include_directories(compiler PUBLIC
