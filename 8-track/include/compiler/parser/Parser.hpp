@@ -42,6 +42,9 @@ private:
     std::unique_ptr<IExpressionNode> similarFilter();
     static std::unique_ptr<IExpressionNode>
     orAll(std::vector<std::unique_ptr<IExpressionNode>> nodes);
+
+    std::optional<SortClause> sortClause();
+
     int integer();
     std::vector<Domain::Range> rangeList();
     Domain::Range rangeItem();
