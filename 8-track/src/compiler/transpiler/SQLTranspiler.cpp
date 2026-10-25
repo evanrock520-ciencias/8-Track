@@ -102,7 +102,11 @@ void SQLTranspiler::visit(const TextFilterNode& node) {
         m_generated.append("albums.name " + mode + " ?");
         break;
     case FilterField::MEMBER:
-        // TODO: Hacer otro JOIN en in_group
+        m_generated.append(
+            "performers.id_performer IN (SELECT ig.id_group FROM in_group ig "
+            "JOIN persons person ON person.id_person = ig.id_person WHERE "
+            "person.stage_name " +
+            mode + " ?)");
         break;
     case FilterField::PATH:
         m_generated.append("rolas.path " + mode + " ?");
