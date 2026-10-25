@@ -63,6 +63,7 @@ target_link_libraries(services_tests
 add_executable(compiler_tests
     compiler/test_lexer.cpp
         compiler/test_ast.cpp
+        compiler/test_parser.cpp
 )
 
 target_link_libraries(compiler_tests
