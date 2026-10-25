@@ -129,3 +129,44 @@ TEST(TranspilerTest, TranspilerTemporalFilterFromTo) {
     EXPECT_EQ(std::get<int>(bindingFrom), 2010);
     EXPECT_EQ(std::get<int>(bindingTo), 2018);
 }
+
+TEST(TranspilerTest, TranspilerNotFilter) {
+    const auto sqlQuery = sql(R"(not album: "Pablo Honey")");
+    EXPECT_EQ(
+        sqlQuery.generated,
+        "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+        "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+        "ON rolas.id_album = albums.id_album WHERE NOT (albums.name LIKE ?);");
+
+    const auto binding = sqlQuery.bindings.at(0);
+    EXPECT_EQ(std::get<std::string>(binding), "%Pablo Honey%");
+}
+
+TEST(TranspilerTest, TranspilerAndFilter) {
+    const auto sqlQuery = sql(R"(album:= "Pet Sounds" and track: 5)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE (albums.name = ?) AND "
+              "(rolas.track = ?);");
+
+    const auto& albumBinding = sqlQuery.bindings.at(0);
+    const auto& trackBinding = sqlQuery.bindings.at(1);
+    EXPECT_EQ(std::get<std::string>(albumBinding), "Pet Sounds");
+    EXPECT_EQ(std::get<int>(trackBinding), 5);
+}
+
+TEST(TranspilerTest, TranspilerOrFilter) {
+    const auto sqlQuery = sql(R"(performer:= "The Zombies" or "Beach Boys")");
+    EXPECT_EQ(
+        sqlQuery.generated,
+        "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+        "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+        "ON rolas.id_album = albums.id_album WHERE (performers.name = ?) OR "
+        "(performers.name = ?);");
+
+    const auto bindingLeft = sqlQuery.bindings.at(0);
+    const auto bindingRight = sqlQuery.bindings.at(1);
+    EXPECT_EQ(std::get<std::string>(bindingLeft), "The Zombies");
+    EXPECT_EQ(std::get<std::string>(bindingRight), "Beach Boys");
+}
