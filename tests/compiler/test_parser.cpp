@@ -484,3 +484,27 @@ TEST(ParserTest, ImplicitAndWithParentheses) {
     const auto* rightNode = dynamic_cast<const BinaryExpressionNode*>(right);
     ASSERT_EQ(rightNode->type(), BinaryOperation::OR);
 }
+
+TEST(ParserTest, UseSortClause) {
+    Lexer lexer(R"(album: "Titanic Rising" sort: desc by track)");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasSort());
+
+    const auto clause = query.sortClause();
+    EXPECT_EQ(clause->order(), SortOrder::DESC);
+    EXPECT_EQ(clause->field(), SortField::TRACK);
+}
+
+TEST(ParserTest, DefaultSortOrderIsAsc) {
+    Lexer lexer(R"(album: "Titanic Rising" sort: by track)");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasSort());
+
+    const auto clause = query.sortClause();
+    EXPECT_EQ(clause->order(), SortOrder::ASC);
+    EXPECT_EQ(clause->field(), SortField::TRACK);
+}
