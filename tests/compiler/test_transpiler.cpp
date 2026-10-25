@@ -181,3 +181,13 @@ TEST(TranspilerTest, TranspilerMember) {
         "(SELECT ig.id_group FROM in_group ig JOIN persons person ON "
         "person.id_person = ig.id_person WHERE person.stage_name LIKE ?);");
 }
+
+TEST(TranspilerTest, TranspilerQueryWithSortClause) {
+    const auto sqlQuery =
+        sql(R"(performer:= "Weyes Blood" sort: desc by year)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE performers.name = ? "
+              "ORDER BY rolas.year DESC ;");
+}
