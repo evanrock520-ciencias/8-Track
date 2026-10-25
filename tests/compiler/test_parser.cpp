@@ -116,3 +116,53 @@ TEST(ParserTest, TemporalFilterWithYear) {
     ASSERT_EQ(nodeD->from(), 2000);
     ASSERT_EQ(nodeD->to(), 2010);
 }
+
+TEST(ParserTest, TrackFilter) {
+    Lexer lexerA(R"(track: 5)");
+    Parser parserA(lexerA.scanTokens());
+
+    const auto queryA = parserA.parse();
+    ASSERT_TRUE(queryA.hasFilter());
+
+    const auto* rootA = queryA.root();
+    ASSERT_EQ(typeid(*rootA), typeid(TrackFilterNode));
+    const auto* nodeA = dynamic_cast<const TrackFilterNode*>(rootA);
+    ASSERT_EQ(nodeA->from(), 5);
+    ASSERT_EQ(nodeA->to(), 5);
+
+    Lexer lexerB(R"(track: => 6)");
+    Parser parserB(lexerB.scanTokens());
+
+    const auto queryB = parserB.parse();
+    ASSERT_TRUE(queryB.hasFilter());
+
+    const auto* rootB = queryB.root();
+    ASSERT_EQ(typeid(*rootB), typeid(TrackFilterNode));
+    const auto* nodeB = dynamic_cast<const TrackFilterNode*>(rootB);
+    ASSERT_EQ(nodeB->to(), 6);
+    ASSERT_FALSE(nodeB->from().has_value());
+
+    Lexer lexerC(R"(track: 3 => )");
+    Parser parserC(lexerC.scanTokens());
+
+    const auto queryC = parserC.parse();
+    ASSERT_TRUE(queryC.hasFilter());
+
+    const auto* rootC = queryC.root();
+    ASSERT_EQ(typeid(*rootC), typeid(TrackFilterNode));
+    const auto* nodeC = dynamic_cast<const TrackFilterNode*>(rootC);
+    ASSERT_EQ(nodeC->from(), 3);
+    ASSERT_FALSE(nodeC->to().has_value());
+
+    Lexer lexerD(R"(track: 1 => 4)");
+    Parser parserD(lexerD.scanTokens());
+
+    const auto queryD = parserD.parse();
+    ASSERT_TRUE(queryD.hasFilter());
+
+    const auto* rootD = queryD.root();
+    ASSERT_EQ(typeid(*rootD), typeid(TrackFilterNode));
+    const auto* nodeD = dynamic_cast<const TrackFilterNode*>(rootD);
+    ASSERT_EQ(nodeD->from(), 1);
+    ASSERT_EQ(nodeD->to(), 4);
+}
