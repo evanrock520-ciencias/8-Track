@@ -16,6 +16,7 @@ inline const std::unordered_map<std::string, TokenType> keywords = {
     {"track", TokenType::TRACK},     {"performer", TokenType::PERFORMER},
     {"artist", TokenType::ARTIST},   {"band", TokenType::BAND},
     {"album", TokenType::ALBUM},     {"song", TokenType::SONG},
-    {"member", TokenType::MEMBER},   {"path", TokenType::PATH}};
+    {"member", TokenType::MEMBER},   {"path", TokenType::PATH},
+    {"genre", TokenType::GENRE}};
 
 }

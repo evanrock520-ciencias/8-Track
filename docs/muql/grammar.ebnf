@@ -1,0 +1,38 @@
+query           → expression? sort? ;
+
+expression      → or ;
+or              → and ( "or" and )* ;
+and             → not ( "and"? not )* ;
+not             → "not" not | primary ;
+primary         → "(" expression ")" | filter | term ;
+
+term            → value_list ;
+
+filter          → text_filter
+                | temporal_filter
+                | track_filter
+                | similar_filter ;
+
+text_filter     → text_field ( ":" | ":=" ) value_list ;
+text_field      → "performer" | "artist" | "band" | "album" | "song"
+                | "genre" | "member" | "path" ;
+value_list      → value ( "or" value )* ;
+
+temporal_filter → "year" ":" range_list
+                | ( "from" | "to" ) ":" INTEGER ;
+
+track_filter    → "track" ":" range_list ;
+
+range_list      → range_item ( "or" range_item )* ;
+range_item      → INTEGER ( "=>" INTEGER? )?
+                | "=>" INTEGER ;
+
+similar_filter  → "similar" ":" similar_field "like" value ;
+similar_field   → "song" | "performer" | "album" | "genre" ;
+
+sort            → "sort" ":" order? "by" sort_key ;
+order           → "asc" | "desc" ;
+sort_key        → "song" | "performer" | "album" | "year"
+                | "track" | "genre" | "path" ;
+
+value           → STRING | IDENTIFIER ;
