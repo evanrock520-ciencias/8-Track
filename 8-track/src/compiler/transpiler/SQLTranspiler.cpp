@@ -11,7 +11,24 @@ SQLQuery SQLTranspiler::generate(const Query& query) {
     return {m_generated.append(";"), m_bindings};
 }
 
-void SQLTranspiler::visit(const TemporalFilterNode& node) {}
+void SQLTranspiler::visit(const TemporalFilterNode& node) {
+    if (node.from().has_value()) {
+        m_generated.append("rolas.year >= ?");
+        m_bindings.emplace_back(node.from().value());
+    }
+
+    // NOTE: Quizás hubiera sido mejor guardar std::nullopt en lugar de ambos
+    // con el mismo valor.
+    if (node.to().has_value() && node.from().has_value() &&
+        node.to().value() != node.from().value())
+        m_generated.append(" AND ");
+
+    if (node.to().has_value() && (!node.from().has_value() ||
+                                  node.to().value() != node.from().value())) {
+        m_generated.append("rolas.year <= ?");
+        m_bindings.emplace_back(node.to().value());
+    }
+}
 
 void SQLTranspiler::visit(const TrackFilterNode& node) {
     if (node.from().has_value()) {
@@ -23,7 +40,8 @@ void SQLTranspiler::visit(const TrackFilterNode& node) {
         node.to().value() != node.from().value())
         m_generated.append(" AND ");
 
-    if (node.to().has_value() && node.to().value() != node.from().value()) {
+    if (node.to().has_value() && (!node.from().has_value() ||
+                                  node.to().value() != node.from().value())) {
         m_generated.append("rolas.track <= ?");
         m_bindings.emplace_back(node.to().value());
     }
