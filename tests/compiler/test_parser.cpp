@@ -166,3 +166,81 @@ TEST(ParserTest, TrackFilter) {
     ASSERT_EQ(nodeD->from(), 1);
     ASSERT_EQ(nodeD->to(), 4);
 }
+
+TEST(ParserTest, SimilarWorksWithTheFourFields) {
+    Lexer lexerA(R"(similar: song like "Black")");
+    Parser parserA(lexerA.scanTokens());
+
+    const auto queryA = parserA.parse();
+    ASSERT_TRUE(queryA.hasFilter());
+
+    const auto* rootA = queryA.root();
+    ASSERT_EQ(typeid(*rootA), typeid(TextFilterNode));
+    const auto* nodeA = dynamic_cast<const TextFilterNode*>(rootA);
+    ASSERT_EQ(nodeA->type(), FilterField::SONG);
+    ASSERT_EQ(nodeA->value(), "Black");
+    ASSERT_EQ(nodeA->mode(), MatchMode::SIMILAR);
+
+    Lexer lexerB(R"(similar: album like "Spiderland")");
+    Parser parserB(lexerB.scanTokens());
+
+    const auto queryB = parserB.parse();
+    ASSERT_TRUE(queryB.hasFilter());
+
+    const auto* rootB = queryB.root();
+    ASSERT_EQ(typeid(*rootB), typeid(TextFilterNode));
+    const auto* nodeB = dynamic_cast<const TextFilterNode*>(rootB);
+    ASSERT_EQ(nodeB->type(), FilterField::ALBUM);
+    ASSERT_EQ(nodeB->value(), "Spiderland");
+    ASSERT_EQ(nodeB->mode(), MatchMode::SIMILAR);
+
+    Lexer lexerC(R"(similar: performer like "Angel")");
+    Parser parserC(lexerC.scanTokens());
+
+    const auto queryC = parserC.parse();
+    ASSERT_TRUE(queryC.hasFilter());
+
+    const auto* rootC = queryC.root();
+    ASSERT_EQ(typeid(*rootC), typeid(TextFilterNode));
+    const auto* nodeC = dynamic_cast<const TextFilterNode*>(rootC);
+    ASSERT_EQ(nodeC->type(), FilterField::PERFORMER);
+    ASSERT_EQ(nodeC->value(), "Angel");
+    ASSERT_EQ(nodeC->mode(), MatchMode::SIMILAR);
+
+    Lexer lexerD(R"(similar: genre like "Art")");
+    Parser parserD(lexerD.scanTokens());
+
+    const auto queryD = parserD.parse();
+    ASSERT_TRUE(queryD.hasFilter());
+
+    const auto* rootD = queryD.root();
+    ASSERT_EQ(typeid(*rootD), typeid(TextFilterNode));
+    const auto* nodeD = dynamic_cast<const TextFilterNode*>(rootD);
+    ASSERT_EQ(nodeD->type(), FilterField::GENRE);
+    ASSERT_EQ(nodeD->value(), "Art");
+    ASSERT_EQ(nodeD->mode(), MatchMode::SIMILAR);
+}
+
+TEST(ParserTest, SimilarFailsWithDifferentsFields) {
+    Lexer lexer(R"(similar: score like 5)");
+    Parser parser(lexer.scanTokens());
+    EXPECT_THROW(const auto query = parser.parse(), std::runtime_error);
+}
+
+TEST(ParserTest, NegationNode) {
+    Lexer lexer(R"(not song: "In My Life")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(NegationExpressionNode));
+    const auto* node = dynamic_cast<const NegationExpressionNode*>(root);
+    const auto& internal = node->expression();
+    const auto* internalNode = dynamic_cast<const TextFilterNode*>(&internal);
+    ASSERT_NE(internalNode, nullptr);
+    ASSERT_EQ(internalNode->type(), FilterField::SONG);
+    ASSERT_EQ(internalNode->value(), "In My Life");
+    ASSERT_EQ(internalNode->mode(), MatchMode::CONTAINS);
+}
