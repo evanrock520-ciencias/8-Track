@@ -28,10 +28,7 @@ private:
     void visitRange(std::string_view column, std::optional<int> from,
                     std::optional<int> to);
 
-    std::string m_generated =
-        "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
-        "rolas.id_performer = performers.id_performer LEFT JOIN albums ON "
-        "rolas.id_album = albums.id_album";
+    std::string m_generated;
     std::vector<SqlValue> m_bindings;
 };
 

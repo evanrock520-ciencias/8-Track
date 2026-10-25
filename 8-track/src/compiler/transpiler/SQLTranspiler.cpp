@@ -3,12 +3,22 @@
 namespace Track8::Compiler::SQL {
 
 SQLQuery SQLTranspiler::generate(const Query& query) {
+    clear();
+
     if (query.hasFilter()) {
         m_generated.append(" WHERE ");
         query.root()->accept(*this);
     }
 
     return {m_generated.append(";"), m_bindings};
+}
+
+void SQLTranspiler::clear() {
+    m_generated =
+        "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+        "rolas.id_performer = performers.id_performer LEFT JOIN albums ON "
+        "rolas.id_album = albums.id_album";
+    m_bindings.clear();
 }
 
 void SQLTranspiler::visit(const TemporalFilterNode& node) {
@@ -41,9 +51,16 @@ void SQLTranspiler::visitRange(const std::string_view column,
     }
 }
 
-void SQLTranspiler::visit(const NegationExpressionNode& node) {}
+void SQLTranspiler::visit(const NegationExpressionNode& node) {
+    m_generated.append("NOT ");
+    parenthesize(node.expression());
+}
 
-void SQLTranspiler::visit(const BinaryExpressionNode& node) {}
+void SQLTranspiler::visit(const BinaryExpressionNode& node) {
+    parenthesize(node.left());
+    m_generated.append(node.type() == BinaryOperation::AND ? " AND " : " OR ");
+    parenthesize(node.right());
+}
 
 void SQLTranspiler::visit(const FreeFilterNode& node) {
     const std::string value = "%" + node.expression() + "%";
@@ -108,6 +125,12 @@ std::string SQLTranspiler::resolveOperator(const Compiler::MatchMode mode) {
     default:
         throw std::runtime_error("Invalid match mode");
     }
+}
+
+void SQLTranspiler::parenthesize(const IExpressionNode& node) {
+    m_generated.append("(");
+    node.accept(*this);
+    m_generated.append(")");
 }
 
 } // namespace Track8::Compiler::SQL
