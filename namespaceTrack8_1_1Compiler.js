@@ -10,6 +10,7 @@ var namespaceTrack8_1_1Compiler =
     [ "NegationExpressionNode", "classTrack8_1_1Compiler_1_1NegationExpressionNode.html", "classTrack8_1_1Compiler_1_1NegationExpressionNode" ],
     [ "Parser", "classTrack8_1_1Compiler_1_1Parser.html", "classTrack8_1_1Compiler_1_1Parser" ],
     [ "Query", "classTrack8_1_1Compiler_1_1Query.html", "classTrack8_1_1Compiler_1_1Query" ],
+    [ "QueryCompiler", "classTrack8_1_1Compiler_1_1QueryCompiler.html", null ],
     [ "SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", "structTrack8_1_1Compiler_1_1SortClause" ],
     [ "SQLCompiler", "classTrack8_1_1Compiler_1_1SQLCompiler.html", "classTrack8_1_1Compiler_1_1SQLCompiler" ],
     [ "TemporalFilterNode", "classTrack8_1_1Compiler_1_1TemporalFilterNode.html", "classTrack8_1_1Compiler_1_1TemporalFilterNode" ],

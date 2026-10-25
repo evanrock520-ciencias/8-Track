@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"classTrack8_1_1Compiler_1_1TrackFilterNode.html#a99fcaf879ce2d9d62195a538a2120cbc":[1,0,0,1,16,4],
+"classTrack8_1_1Compiler_1_1TrackFilterNode.html#ac13aca1b03800c5fda72b2f63f361abc":[0,0,0,1,16,0],
+"classTrack8_1_1Compiler_1_1TrackFilterNode.html#ac13aca1b03800c5fda72b2f63f361abc":[1,0,0,1,16,0],
+"classTrack8_1_1Database_1_1DatabaseManager.html":[0,0,0,2,0],
 "classTrack8_1_1Database_1_1DatabaseManager.html":[1,0,0,2,0],
 "classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b":[0,0,0,2,0,0],
 "classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b":[1,0,0,2,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b":[1,0,0,5,1,3],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad42a50e4a30fd5f3d08d1cae7b5dbb25":[0,0,0,5,1,11],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad42a50e4a30fd5f3d08d1cae7b5dbb25":[1,0,0,5,1,11],
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b":[0,0,0,5,1,5],
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b":[1,0,0,5,1,5],
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8":[0,0,0,5,1,10],
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8":[1,0,0,5,1,10],
-"classTrack8_1_1Repositories_1_1ISongRepository.html":[0,0,0,5,2]
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b":[0,0,0,5,1,5]
 };
