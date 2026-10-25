@@ -28,11 +28,13 @@ var hierarchy =
     [ "Track8::Services::LibraryService", "classTrack8_1_1Services_1_1LibraryService.html", null ],
     [ "Track8::Miner::Metadata", "structTrack8_1_1Miner_1_1Metadata.html", null ],
     [ "Track8::Miner::Miner", "classTrack8_1_1Miner_1_1Miner.html", null ],
+    [ "Track8::Compiler::Parser", "classTrack8_1_1Compiler_1_1Parser.html", null ],
     [ "Track8::Domain::Performer", "classTrack8_1_1Domain_1_1Performer.html", [
       [ "Track8::Domain::Artist", "classTrack8_1_1Domain_1_1Artist.html", null ],
       [ "Track8::Domain::Group", "classTrack8_1_1Domain_1_1Group.html", null ]
     ] ],
     [ "Track8::Compiler::Query", "classTrack8_1_1Compiler_1_1Query.html", null ],
+    [ "Track8::Domain::Range", "structTrack8_1_1Domain_1_1Range.html", null ],
     [ "Track8::Domain::Song", "classTrack8_1_1Domain_1_1Song.html", null ],
     [ "Track8::Domain::SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", null ],
     [ "Track8::Compiler::SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", null ],

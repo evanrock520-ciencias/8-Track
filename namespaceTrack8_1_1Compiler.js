@@ -7,6 +7,7 @@ var namespaceTrack8_1_1Compiler =
     [ "IExpressionVisitor", "classTrack8_1_1Compiler_1_1IExpressionVisitor.html", "classTrack8_1_1Compiler_1_1IExpressionVisitor" ],
     [ "Lexer", "classTrack8_1_1Compiler_1_1Lexer.html", "classTrack8_1_1Compiler_1_1Lexer" ],
     [ "NegationExpressionNode", "classTrack8_1_1Compiler_1_1NegationExpressionNode.html", "classTrack8_1_1Compiler_1_1NegationExpressionNode" ],
+    [ "Parser", "classTrack8_1_1Compiler_1_1Parser.html", "classTrack8_1_1Compiler_1_1Parser" ],
     [ "Query", "classTrack8_1_1Compiler_1_1Query.html", "classTrack8_1_1Compiler_1_1Query" ],
     [ "SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", "structTrack8_1_1Compiler_1_1SortClause" ],
     [ "TemporalFilterNode", "classTrack8_1_1Compiler_1_1TemporalFilterNode.html", "classTrack8_1_1Compiler_1_1TemporalFilterNode" ],
@@ -77,5 +78,10 @@ var namespaceTrack8_1_1Compiler =
       [ "PATH", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3", null ],
       [ "END_OF_FILE", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa581953f6b20ad7f993b64b1dc632032e", null ]
     ] ],
+    [ "isSimilarField", "namespaceTrack8_1_1Compiler.html#a85ddaf2fc82e038f371a9f63e7e0e063", null ],
+    [ "isSortKey", "namespaceTrack8_1_1Compiler.html#a6d998838ac23ebac2c4258b23ddc7ae5", null ],
+    [ "isTemporalField", "namespaceTrack8_1_1Compiler.html#ade4826b55b99c1e131d0885e447531e9", null ],
+    [ "isTextField", "namespaceTrack8_1_1Compiler.html#af5f34555928de37de972dbef5db3490c", null ],
+    [ "isValue", "namespaceTrack8_1_1Compiler.html#a1366f5cbdb9daa8025355382e79aae2e", null ],
     [ "keywords", "namespaceTrack8_1_1Compiler.html#ab52b621dbbf0d2d03ad79c053e251809", null ]
 ];

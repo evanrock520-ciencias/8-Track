@@ -13,5 +13,6 @@ var searchData=
   ['sqlitesongrepository_10',['SQLiteSongRepository',['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#a5d5b159f5483b2f869d8a7b68d72ac30',1,'Track8::Database::SQLiteSongRepository']]],
   ['stage_5fname_11',['stage_name',['../classTrack8_1_1Domain_1_1Artist.html#a06470ca4e0cf8ec534eb70e343e1610f',1,'Track8::Domain::Artist']]],
   ['start_5fdate_12',['start_date',['../classTrack8_1_1Domain_1_1Group.html#a17556eb778dc9038a3d9a818322b691d',1,'Track8::Domain::Group']]],
-  ['stats_13',['stats',['../classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e',1,'Track8::Services::LibraryService']]]
+  ['startsrangeitem_13',['startsRangeItem',['../namespaceTrack8_1_1Utils.html#a69d4af4f40b99245fac3b56c3881c9e9',1,'Track8::Utils']]],
+  ['stats_14',['stats',['../classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e',1,'Track8::Services::LibraryService']]]
 ];

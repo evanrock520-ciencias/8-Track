@@ -24,8 +24,9 @@ var searchData=
   ['sqlitesongrepository_2ehpp_21',['SQLiteSongRepository.hpp',['../SQLiteSongRepository_8hpp.html',1,'']]],
   ['stage_5fname_22',['stage_name',['../classTrack8_1_1Domain_1_1Artist.html#a06470ca4e0cf8ec534eb70e343e1610f',1,'Track8::Domain::Artist']]],
   ['start_5fdate_23',['start_date',['../classTrack8_1_1Domain_1_1Group.html#a17556eb778dc9038a3d9a818322b691d',1,'Track8::Domain::Group']]],
-  ['stats_24',['Stats',['../structTrack8_1_1Domain_1_1Stats.html',1,'Track8::Domain']]],
-  ['stats_25',['stats',['../classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e',1,'Track8::Services::LibraryService']]],
-  ['stats_2ehpp_26',['Stats.hpp',['../Stats_8hpp.html',1,'']]],
-  ['string_27',['STRING',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa63b588d5559f64f89a416e656880b949',1,'Track8::Compiler']]]
+  ['startsrangeitem_24',['startsRangeItem',['../namespaceTrack8_1_1Utils.html#a69d4af4f40b99245fac3b56c3881c9e9',1,'Track8::Utils']]],
+  ['stats_25',['Stats',['../structTrack8_1_1Domain_1_1Stats.html',1,'Track8::Domain']]],
+  ['stats_26',['stats',['../classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e',1,'Track8::Services::LibraryService']]],
+  ['stats_2ehpp_27',['Stats.hpp',['../Stats_8hpp.html',1,'']]],
+  ['string_28',['STRING',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa63b588d5559f64f89a416e656880b949',1,'Track8::Compiler']]]
 ];

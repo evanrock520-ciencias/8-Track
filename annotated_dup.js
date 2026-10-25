@@ -13,6 +13,7 @@ var annotated_dup =
         [ "IExpressionVisitor", "classTrack8_1_1Compiler_1_1IExpressionVisitor.html", "classTrack8_1_1Compiler_1_1IExpressionVisitor" ],
         [ "Lexer", "classTrack8_1_1Compiler_1_1Lexer.html", "classTrack8_1_1Compiler_1_1Lexer" ],
         [ "NegationExpressionNode", "classTrack8_1_1Compiler_1_1NegationExpressionNode.html", "classTrack8_1_1Compiler_1_1NegationExpressionNode" ],
+        [ "Parser", "classTrack8_1_1Compiler_1_1Parser.html", "classTrack8_1_1Compiler_1_1Parser" ],
         [ "Query", "classTrack8_1_1Compiler_1_1Query.html", "classTrack8_1_1Compiler_1_1Query" ],
         [ "SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", "structTrack8_1_1Compiler_1_1SortClause" ],
         [ "TemporalFilterNode", "classTrack8_1_1Compiler_1_1TemporalFilterNode.html", "classTrack8_1_1Compiler_1_1TemporalFilterNode" ],
@@ -32,6 +33,7 @@ var annotated_dup =
         [ "Date", "classTrack8_1_1Domain_1_1Date.html", "classTrack8_1_1Domain_1_1Date" ],
         [ "Group", "classTrack8_1_1Domain_1_1Group.html", "classTrack8_1_1Domain_1_1Group" ],
         [ "Performer", "classTrack8_1_1Domain_1_1Performer.html", "classTrack8_1_1Domain_1_1Performer" ],
+        [ "Range", "structTrack8_1_1Domain_1_1Range.html", "structTrack8_1_1Domain_1_1Range" ],
         [ "Song", "classTrack8_1_1Domain_1_1Song.html", "classTrack8_1_1Domain_1_1Song" ],
         [ "SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", "classTrack8_1_1Domain_1_1SongBuilder" ],
         [ "Stats", "structTrack8_1_1Domain_1_1Stats.html", "structTrack8_1_1Domain_1_1Stats" ]

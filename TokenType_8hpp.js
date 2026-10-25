@@ -31,5 +31,10 @@ var TokenType_8hpp =
       [ "Track8::Compiler::TokenType::MEMBER", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b", null ],
       [ "Track8::Compiler::TokenType::PATH", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3", null ],
       [ "Track8::Compiler::TokenType::END_OF_FILE", "namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa581953f6b20ad7f993b64b1dc632032e", null ]
-    ] ]
+    ] ],
+    [ "Track8::Compiler::isSimilarField", "namespaceTrack8_1_1Compiler.html#a85ddaf2fc82e038f371a9f63e7e0e063", null ],
+    [ "Track8::Compiler::isSortKey", "namespaceTrack8_1_1Compiler.html#a6d998838ac23ebac2c4258b23ddc7ae5", null ],
+    [ "Track8::Compiler::isTemporalField", "namespaceTrack8_1_1Compiler.html#ade4826b55b99c1e131d0885e447531e9", null ],
+    [ "Track8::Compiler::isTextField", "namespaceTrack8_1_1Compiler.html#af5f34555928de37de972dbef5db3490c", null ],
+    [ "Track8::Compiler::isValue", "namespaceTrack8_1_1Compiler.html#a1366f5cbdb9daa8025355382e79aae2e", null ]
 ];

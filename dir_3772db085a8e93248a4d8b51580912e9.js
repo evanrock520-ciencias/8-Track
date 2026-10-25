@@ -6,6 +6,7 @@ var dir_3772db085a8e93248a4d8b51580912e9 =
     [ "Date.hpp", "Date_8hpp.html", "Date_8hpp" ],
     [ "Group.hpp", "Group_8hpp.html", "Group_8hpp" ],
     [ "Performer.hpp", "Performer_8hpp.html", "Performer_8hpp" ],
+    [ "Range.hpp", "Range_8hpp.html", "Range_8hpp" ],
     [ "Song.hpp", "Song_8hpp.html", "Song_8hpp" ],
     [ "Stats.hpp", "Stats_8hpp.html", "Stats_8hpp" ]
 ];

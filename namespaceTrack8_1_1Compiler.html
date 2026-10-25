@@ -93,6 +93,7 @@ $(function(){initNavTree('namespaceTrack8_1_1Compiler.html','',''); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Track8::Compiler Namespace Reference</div></div>
 </div><!--header-->
@@ -114,6 +115,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escanea una cadena cruda (raw) para tokenizarla.  <a href="classTrack8_1_1Compiler_1_1Lexer.html#details">More...</a><br /></td></tr>
 <tr class="memitem:NegationExpressionNode" id="r_NegationExpressionNode"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1NegationExpressionNode.html">NegationExpressionNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un nodo de negación.  <a href="classTrack8_1_1Compiler_1_1NegationExpressionNode.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Parser" id="r_Parser"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Parser.html">Parser</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convierte tokens provenientes del <a class="el" href="classTrack8_1_1Compiler_1_1Lexer.html">Lexer</a> en árboles de sinxtáxis abstracta.  <a href="classTrack8_1_1Compiler_1_1Parser.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Query" id="r_Query"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Compiler_1_1Query.html">Query</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa una consulta MuQL usando un AST.  <a href="classTrack8_1_1Compiler_1_1Query.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SortClause" id="r_SortClause"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTrack8_1_1Compiler_1_1SortClause.html">SortClause</a></td></tr>
@@ -203,6 +206,14 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:a95550111a704460ff9d70502d9c3a35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa los tokens posibles para el DSL de consultas <span class="tt">MuQL</span>.  <a href="#a95550111a704460ff9d70502d9c3a35f">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af5f34555928de37de972dbef5db3490c" id="r_af5f34555928de37de972dbef5db3490c"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5f34555928de37de972dbef5db3490c">isTextField</a> (const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> token) noexcept</td></tr>
+<tr class="memitem:ade4826b55b99c1e131d0885e447531e9" id="r_ade4826b55b99c1e131d0885e447531e9"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade4826b55b99c1e131d0885e447531e9">isTemporalField</a> (const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> token) noexcept</td></tr>
+<tr class="memitem:a85ddaf2fc82e038f371a9f63e7e0e063" id="r_a85ddaf2fc82e038f371a9f63e7e0e063"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85ddaf2fc82e038f371a9f63e7e0e063">isSimilarField</a> (const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> token) noexcept</td></tr>
+<tr class="memitem:a6d998838ac23ebac2c4258b23ddc7ae5" id="r_a6d998838ac23ebac2c4258b23ddc7ae5"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d998838ac23ebac2c4258b23ddc7ae5">isSortKey</a> (const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> token) noexcept</td></tr>
+<tr class="memitem:a1366f5cbdb9daa8025355382e79aae2e" id="r_a1366f5cbdb9daa8025355382e79aae2e"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1366f5cbdb9daa8025355382e79aae2e">isValue</a> (const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a> type) noexcept</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -407,6 +418,132 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a85ddaf2fc82e038f371a9f63e7e0e063" name="a85ddaf2fc82e038f371a9f63e7e0e063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ddaf2fc82e038f371a9f63e7e0e063">&#9670;&#160;</a></span>isSimilarField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Compiler::isSimilarField </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d998838ac23ebac2c4258b23ddc7ae5" name="a6d998838ac23ebac2c4258b23ddc7ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d998838ac23ebac2c4258b23ddc7ae5">&#9670;&#160;</a></span>isSortKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Compiler::isSortKey </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade4826b55b99c1e131d0885e447531e9" name="ade4826b55b99c1e131d0885e447531e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4826b55b99c1e131d0885e447531e9">&#9670;&#160;</a></span>isTemporalField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Compiler::isTemporalField </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5f34555928de37de972dbef5db3490c" name="af5f34555928de37de972dbef5db3490c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f34555928de37de972dbef5db3490c">&#9670;&#160;</a></span>isTextField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Compiler::isTextField </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1366f5cbdb9daa8025355382e79aae2e" name="a1366f5cbdb9daa8025355382e79aae2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1366f5cbdb9daa8025355382e79aae2e">&#9670;&#160;</a></span>isValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Compiler::isValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a95550111a704460ff9d70502d9c3a35f">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
 <a id="ab52b621dbbf0d2d03ad79c053e251809" name="ab52b621dbbf0d2d03ad79c053e251809"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab52b621dbbf0d2d03ad79c053e251809">&#9670;&#160;</a></span>keywords</h2>
@@ -437,7 +574,8 @@ Variables</h2></td></tr>
 <div class="line">    {<span class="stringliteral">&quot;track&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00">TokenType::TRACK</a>},     {<span class="stringliteral">&quot;performer&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa8216cf2d7b61590abb3dc0651bf85005">TokenType::PERFORMER</a>},</div>
 <div class="line">    {<span class="stringliteral">&quot;artist&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faba22a109d019841ce7afe03702e1768f">TokenType::ARTIST</a>},   {<span class="stringliteral">&quot;band&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faa8a5bbeedca093b94b7f0d3f185b98f7">TokenType::BAND</a>},</div>
 <div class="line">    {<span class="stringliteral">&quot;album&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35faeaa4b00b7c00e8fb9c185fdbb83b36a0">TokenType::ALBUM</a>},     {<span class="stringliteral">&quot;song&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fac184d7ee5f39c2a4112a9c14640488fa">TokenType::SONG</a>},</div>
-<div class="line">    {<span class="stringliteral">&quot;member&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b">TokenType::MEMBER</a>},   {<span class="stringliteral">&quot;path&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3">TokenType::PATH</a>}}</div>
+<div class="line">    {<span class="stringliteral">&quot;member&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa77e6cb59f088a2937324f798be141b4b">TokenType::MEMBER</a>},   {<span class="stringliteral">&quot;path&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fa5ffb5f0d0de78321df46fc7c93ca64a3">TokenType::PATH</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;genre&quot;</span>, <a class="code hl_enumvalue" href="#a95550111a704460ff9d70502d9c3a35fadd491b2538cbf3a30c33edf37aa419db">TokenType::GENRE</a>}}</div>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa10df3d67626099df882920ba6552f16d">Track8::Compiler::TokenType::NOT</a></div><div class="ttdeci">@ NOT</div><div class="ttdef"><b>Definition</b> TokenType.hpp:25</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa1d00e7dce692e8dc3f6877f035e3a616"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa1d00e7dce692e8dc3f6877f035e3a616">Track8::Compiler::TokenType::OR</a></div><div class="ttdeci">@ OR</div><div class="ttdef"><b>Definition</b> TokenType.hpp:26</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fa304917b92bc3dc0953aab8356f74c02c">Track8::Compiler::TokenType::TO</a></div><div class="ttdeci">@ TO</div><div class="ttdef"><b>Definition</b> TokenType.hpp:34</div></div>
@@ -457,6 +595,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fac184d7ee5f39c2a4112a9c14640488fa"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fac184d7ee5f39c2a4112a9c14640488fa">Track8::Compiler::TokenType::SONG</a></div><div class="ttdeci">@ SONG</div><div class="ttdef"><b>Definition</b> TokenType.hpp:41</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fac6e421eaad140c1bc1a39980502df80c"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fac6e421eaad140c1bc1a39980502df80c">Track8::Compiler::TokenType::ASC</a></div><div class="ttdeci">@ ASC</div><div class="ttdef"><b>Definition</b> TokenType.hpp:28</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf">Track8::Compiler::TokenType::YEAR</a></div><div class="ttdeci">@ YEAR</div><div class="ttdef"><b>Definition</b> TokenType.hpp:35</div></div>
+<div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35fadd491b2538cbf3a30c33edf37aa419db"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35fadd491b2538cbf3a30c33edf37aa419db">Track8::Compiler::TokenType::GENRE</a></div><div class="ttdeci">@ GENRE</div><div class="ttdef"><b>Definition</b> TokenType.hpp:42</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Compiler_html_a95550111a704460ff9d70502d9c3a35faeaa4b00b7c00e8fb9c185fdbb83b36a0"><div class="ttname"><a href="#a95550111a704460ff9d70502d9c3a35faeaa4b00b7c00e8fb9c185fdbb83b36a0">Track8::Compiler::TokenType::ALBUM</a></div><div class="ttdeci">@ ALBUM</div><div class="ttdef"><b>Definition</b> TokenType.hpp:40</div></div>
 </div><!-- fragment -->
 </div>
