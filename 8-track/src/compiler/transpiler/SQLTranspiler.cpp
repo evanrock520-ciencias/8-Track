@@ -13,7 +13,21 @@ SQLQuery SQLTranspiler::generate(const Query& query) {
 
 void SQLTranspiler::visit(const TemporalFilterNode& node) {}
 
-void SQLTranspiler::visit(const TrackFilterNode& node) {}
+void SQLTranspiler::visit(const TrackFilterNode& node) {
+    if (node.from().has_value()) {
+        m_generated.append("rolas.track >= ?");
+        m_bindings.emplace_back(node.from().value());
+    }
+
+    if (node.to().has_value() && node.from().has_value() &&
+        node.to().value() != node.from().value())
+        m_generated.append(" AND ");
+
+    if (node.to().has_value() && node.to().value() != node.from().value()) {
+        m_generated.append("rolas.track <= ?");
+        m_bindings.emplace_back(node.to().value());
+    }
+}
 
 void SQLTranspiler::visit(const NegationExpressionNode& node) {}
 
