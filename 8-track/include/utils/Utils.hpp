@@ -1,5 +1,9 @@
 #pragma once
+#include "compiler/ast/Filters.hpp"
+#include "compiler/lexer/TokenType.hpp"
+
 #include <ranges>
+#include <stdexcept>
 #include <string>
 
 namespace Track8::Utils {
@@ -41,4 +45,33 @@ inline bool isAlpha(const char expected) {
 inline bool isAlphaNumeric(const char expected) {
     return isAlpha(expected) || isDigit(expected);
 }
+
+inline Compiler::FilterField toFilterField(const Compiler::TokenType type) {
+    switch (type) {
+    case Compiler::TokenType::PERFORMER:
+        return Compiler::FilterField::PERFORMER;
+    case Compiler::TokenType::ARTIST:
+        return Compiler::FilterField::ARTIST;
+    case Compiler::TokenType::BAND:
+        return Compiler::FilterField::BAND;
+    case Compiler::TokenType::ALBUM:
+        return Compiler::FilterField::ALBUM;
+    case Compiler::TokenType::SONG:
+        return Compiler::FilterField::SONG;
+    case Compiler::TokenType::GENRE:
+        return Compiler::FilterField::GENRE;
+    case Compiler::TokenType::MEMBER:
+        return Compiler::FilterField::MEMBER;
+    case Compiler::TokenType::PATH:
+        return Compiler::FilterField::PATH;
+    default:
+        throw std::runtime_error("type with no filter field equivalent");
+    }
+}
+
+inline bool startsRangeItem(const Compiler::TokenType type) {
+    return type == Compiler::TokenType::NUMBER ||
+           type == Compiler::TokenType::RANGE;
+}
+
 } // namespace Track8::Utils
