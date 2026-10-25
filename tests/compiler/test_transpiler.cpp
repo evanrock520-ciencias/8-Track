@@ -23,7 +23,7 @@ TEST(TranspilerTest, TranspilerFreeFilter) {
         "rolas.id_album = albums.id_album WHERE rolas.title LIKE ? OR "
         "rolas.genre LIKE ? OR performers.name LIKE ? OR albums.name LIKE ?;");
     for (const auto& binding : sqlQuery.bindings)
-        EXPECT_EQ(std::get<std::string>(binding), "Love");
+        EXPECT_EQ(std::get<std::string>(binding), "%Love%");
 }
 
 TEST(TranspilerTest, TranspilerTextFilterContains) {
@@ -33,7 +33,7 @@ TEST(TranspilerTest, TranspilerTextFilterContains) {
               "rolas.id_performer = performers.id_performer LEFT JOIN albums "
               "ON rolas.id_album = albums.id_album WHERE rolas.title LIKE ?;");
     const auto& binding = sqlQuery.bindings.at(0);
-    EXPECT_EQ(std::get<std::string>(binding), "Anger Never Dies");
+    EXPECT_EQ(std::get<std::string>(binding), "%Anger Never Dies%");
 }
 
 TEST(TranspilerTest, TranspilerTextFilterExactly) {
