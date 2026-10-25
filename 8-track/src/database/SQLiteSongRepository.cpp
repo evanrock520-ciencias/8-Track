@@ -83,6 +83,10 @@ SQLiteSongRepository::find(const Compiler::Query& query) {
         }
     }
 
+    if (!queryDatabase.exec())
+        throw std::runtime_error(
+            queryDatabase.lastError().text().toStdString());
+
     std::vector<std::shared_ptr<Domain::Song>> songs;
     while (queryDatabase.next())
         if (auto song = buildSong(queryDatabase))
