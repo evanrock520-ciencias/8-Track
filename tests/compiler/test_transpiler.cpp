@@ -51,7 +51,7 @@ TEST(TranspilerTest, TranspilerTrackFilter) {
     EXPECT_EQ(sqlQuery.generated,
               "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
               "rolas.id_performer = performers.id_performer LEFT JOIN albums "
-              "ON rolas.id_album = albums.id_album WHERE rolas.track >= ?;");
+              "ON rolas.id_album = albums.id_album WHERE rolas.track = ?;");
 
     const auto binding = sqlQuery.bindings.at(0);
     EXPECT_EQ(std::get<int>(binding), 3);
@@ -83,12 +83,23 @@ TEST(TranspilerTest, TranspilerTrackFilterRange) {
     EXPECT_EQ(std::get<int>(bindingTo), 6);
 }
 
+TEST(TranspilerTest, TranspilerTrackFilterEqualRange) {
+    const auto sqlQuery = sql(R"(track: 3 => 3)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE rolas.track = ?;");
+
+    const auto binding = sqlQuery.bindings.at(0);
+    EXPECT_EQ(std::get<int>(binding), 3);
+}
+
 TEST(TranspilerTest, TranspilerTemporalFilterFrom) {
     const auto sqlQuery = sql(R"(year: 1990)");
     EXPECT_EQ(sqlQuery.generated,
               "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
               "rolas.id_performer = performers.id_performer LEFT JOIN albums "
-              "ON rolas.id_album = albums.id_album WHERE rolas.year >= ?;");
+              "ON rolas.id_album = albums.id_album WHERE rolas.year = ?;");
 
     const auto binding = sqlQuery.bindings.at(0);
     EXPECT_EQ(std::get<int>(binding), 1990);
