@@ -363,3 +363,124 @@ TEST(ParserTest, ChainedOrForTemporalFilter) {
     ASSERT_EQ(rightNode->from(), 1950);
     ASSERT_EQ(rightNode->to(), 1965);
 }
+
+TEST(ParserTest, ImplicitAndNode) {
+    Lexer lexer(R"(similar: song like "Love" member: "John Lennon")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::AND);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+    const auto* leftNode = dynamic_cast<const TextFilterNode*>(left);
+    ASSERT_EQ(leftNode->type(), FilterField::SONG);
+    ASSERT_EQ(leftNode->value(), "Love");
+    ASSERT_EQ(leftNode->mode(), MatchMode::SIMILAR);
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TextFilterNode));
+    const auto* rightNode = dynamic_cast<const TextFilterNode*>(right);
+    ASSERT_EQ(rightNode->type(), FilterField::MEMBER);
+    ASSERT_EQ(rightNode->value(), "John Lennon");
+    ASSERT_EQ(rightNode->mode(), MatchMode::CONTAINS);
+}
+
+TEST(ParserTest, ImplicitAndWithSimilar) {
+    Lexer lexer(R"(artist: "John Lennon" similar: song like "Love")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::AND);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+    const auto* leftNode = dynamic_cast<const TextFilterNode*>(left);
+    ASSERT_EQ(leftNode->type(), FilterField::ARTIST);
+    ASSERT_EQ(leftNode->value(), "John Lennon");
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TextFilterNode));
+    const auto* rightNode = dynamic_cast<const TextFilterNode*>(right);
+    ASSERT_EQ(rightNode->type(), FilterField::SONG);
+    ASSERT_EQ(rightNode->value(), "Love");
+    ASSERT_EQ(rightNode->mode(), MatchMode::SIMILAR);
+}
+
+TEST(ParserTest, ImplicitAndWithTrack) {
+    Lexer lexer(R"(artist: "John Lennon" track: 1)");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::AND);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TrackFilterNode));
+    const auto* rightNode = dynamic_cast<const TrackFilterNode*>(right);
+    ASSERT_EQ(rightNode->from(), 1);
+    ASSERT_EQ(rightNode->to(), 1);
+}
+
+TEST(ParserTest, ImplicitAndWithNot) {
+    Lexer lexer(R"(artist: "John Lennon" not song: "Love")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::AND);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(NegationExpressionNode));
+    const auto* rightNode = dynamic_cast<const NegationExpressionNode*>(right);
+    const auto* inner =
+        dynamic_cast<const TextFilterNode*>(&rightNode->expression());
+    ASSERT_NE(inner, nullptr);
+    ASSERT_EQ(inner->type(), FilterField::SONG);
+    ASSERT_EQ(inner->value(), "Love");
+}
+
+TEST(ParserTest, ImplicitAndWithParentheses) {
+    Lexer lexer(R"(artist: "John Lennon" (song: "Love" or song: "Help"))");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::AND);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(BinaryExpressionNode));
+    const auto* rightNode = dynamic_cast<const BinaryExpressionNode*>(right);
+    ASSERT_EQ(rightNode->type(), BinaryOperation::OR);
+}
