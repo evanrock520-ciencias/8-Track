@@ -17,12 +17,14 @@ Query Parser::parse() {
     if (!isAtEnd() && !check(TokenType::SORT))
         root = expression();
 
-    // TODO: sort
+    std::optional<SortClause> sort;
+    if (check(TokenType::SORT))
+        sort = sortClause();
 
     if (!isAtEnd())
         fail("expected end of input");
 
-    return Query(std::move(root), std::nullopt);
+    return Query(std::move(root), sort);
 }
 
 std::unique_ptr<IExpressionNode> Parser::expression() {
@@ -44,7 +46,6 @@ std::unique_ptr<IExpressionNode> Parser::orExpression() {
 std::unique_ptr<IExpressionNode> Parser::andExpression() {
     auto expr = notExpression();
 
-    // TODO: También si empieza otra expresión de NOT
     while (check(TokenType::AND) || startsNot()) {
         match(TokenType::AND);
         auto right = notExpression();
@@ -276,6 +277,24 @@ std::vector<std::string> Parser::values() {
         values.push_back(value());
     }
     return values;
+}
+
+std::optional<SortClause> Parser::sortClause() {
+    consume(TokenType::SORT, "expected the 'sort' keyword");
+    consume(TokenType::COLON, "expected ':' after 'sort' keyword");
+
+    auto order = SortOrder::ASC;
+    if (match({TokenType::ASC, TokenType::DESC}))
+        order = Utils::toSortOrder(previous().type());
+
+    consume(TokenType::BY, "expected 'by' in sort clause");
+
+    if (!isSortKey(peek().type()))
+        fail("expected a sort key ('song', 'performer', 'album', 'year', "
+             "'track', 'genre', 'path')");
+
+    const SortField field = Utils::toSortField(advance().type());
+    return SortClause(order, field);
 }
 
 bool Parser::isFilterStart() const {
