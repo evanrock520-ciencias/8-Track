@@ -57,6 +57,17 @@ TEST(TranspilerTest, TranspilerTrackFilter) {
     EXPECT_EQ(std::get<int>(binding), 3);
 }
 
+TEST(TranspilerTest, TranspilerTrackFilterTo) {
+    const auto sqlQuery = sql(R"(track: => 5)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE rolas.track <= ?;");
+
+    const auto binding = sqlQuery.bindings.at(0);
+    EXPECT_EQ(std::get<int>(binding), 5);
+}
+
 TEST(TranspilerTest, TranspilerTrackFilterRange) {
     const auto sqlQuery = sql(R"(track: 3 => 6)");
     EXPECT_EQ(sqlQuery.generated,
@@ -70,4 +81,40 @@ TEST(TranspilerTest, TranspilerTrackFilterRange) {
 
     EXPECT_EQ(std::get<int>(bindingFrom), 3);
     EXPECT_EQ(std::get<int>(bindingTo), 6);
+}
+
+TEST(TranspilerTest, TranspilerTemporalFilterFrom) {
+    const auto sqlQuery = sql(R"(year: 1990)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE rolas.year >= ?;");
+
+    const auto binding = sqlQuery.bindings.at(0);
+    EXPECT_EQ(std::get<int>(binding), 1990);
+}
+
+TEST(TranspilerTest, TranspilerTemporalFilterTo) {
+    const auto sqlQuery = sql(R"(year: => 2018)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE rolas.year <= ?;");
+
+    const auto binding = sqlQuery.bindings.at(0);
+    EXPECT_EQ(std::get<int>(binding), 2018);
+}
+
+TEST(TranspilerTest, TranspilerTemporalFilterFromTo) {
+    const auto sqlQuery = sql(R"(year: 2010 => 2018)");
+    EXPECT_EQ(sqlQuery.generated,
+              "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+              "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+              "ON rolas.id_album = albums.id_album WHERE rolas.year >= ? AND "
+              "rolas.year <= ?;");
+
+    const auto bindingFrom = sqlQuery.bindings.at(0);
+    const auto bindingTo = sqlQuery.bindings.at(1);
+    EXPECT_EQ(std::get<int>(bindingFrom), 2010);
+    EXPECT_EQ(std::get<int>(bindingTo), 2018);
 }
