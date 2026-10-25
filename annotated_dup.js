@@ -6,6 +6,10 @@ var annotated_dup =
         [ "Tabulator", "classTrack8_1_1Cli_1_1Tabulator.html", null ]
       ] ],
       [ "Compiler", "namespaceTrack8_1_1Compiler.html", [
+        [ "SQL", "namespaceTrack8_1_1Compiler_1_1SQL.html", [
+          [ "SQLQuery", "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html", "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery" ],
+          [ "SQLTranspiler", "classTrack8_1_1Compiler_1_1SQL_1_1SQLTranspiler.html", "classTrack8_1_1Compiler_1_1SQL_1_1SQLTranspiler" ]
+        ] ],
         [ "AstPrinter", "classTrack8_1_1Compiler_1_1AstPrinter.html", "classTrack8_1_1Compiler_1_1AstPrinter" ],
         [ "BinaryExpressionNode", "classTrack8_1_1Compiler_1_1BinaryExpressionNode.html", "classTrack8_1_1Compiler_1_1BinaryExpressionNode" ],
         [ "FreeFilterNode", "classTrack8_1_1Compiler_1_1FreeFilterNode.html", "classTrack8_1_1Compiler_1_1FreeFilterNode" ],

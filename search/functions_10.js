@@ -11,8 +11,9 @@ var searchData=
   ['sqlitealbumrepository_8',['SQLiteAlbumRepository',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#ac5da29e0748585b2cb38047a593e0781',1,'Track8::Database::SQLiteAlbumRepository']]],
   ['sqliteperformerrepository_9',['SQLitePerformerRepository',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#af91490698f3f11c37a2f475c39803ac4',1,'Track8::Database::SQLitePerformerRepository']]],
   ['sqlitesongrepository_10',['SQLiteSongRepository',['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#a5d5b159f5483b2f869d8a7b68d72ac30',1,'Track8::Database::SQLiteSongRepository']]],
-  ['stage_5fname_11',['stage_name',['../classTrack8_1_1Domain_1_1Artist.html#a06470ca4e0cf8ec534eb70e343e1610f',1,'Track8::Domain::Artist']]],
-  ['start_5fdate_12',['start_date',['../classTrack8_1_1Domain_1_1Group.html#a17556eb778dc9038a3d9a818322b691d',1,'Track8::Domain::Group']]],
-  ['startsrangeitem_13',['startsRangeItem',['../namespaceTrack8_1_1Utils.html#a69d4af4f40b99245fac3b56c3881c9e9',1,'Track8::Utils']]],
-  ['stats_14',['stats',['../classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e',1,'Track8::Services::LibraryService']]]
+  ['sqlquery_11',['SQLQuery',['../structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html#a925134378b3f4b108cd88d5831e9d8cb',1,'Track8::Compiler::SQL::SQLQuery']]],
+  ['stage_5fname_12',['stage_name',['../classTrack8_1_1Domain_1_1Artist.html#a06470ca4e0cf8ec534eb70e343e1610f',1,'Track8::Domain::Artist']]],
+  ['start_5fdate_13',['start_date',['../classTrack8_1_1Domain_1_1Group.html#a17556eb778dc9038a3d9a818322b691d',1,'Track8::Domain::Group']]],
+  ['startsrangeitem_14',['startsRangeItem',['../namespaceTrack8_1_1Utils.html#a69d4af4f40b99245fac3b56c3881c9e9',1,'Track8::Utils']]],
+  ['stats_15',['stats',['../classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e',1,'Track8::Services::LibraryService']]]
 ];

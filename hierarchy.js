@@ -16,7 +16,8 @@ var hierarchy =
       [ "Track8::Compiler::TrackFilterNode", "classTrack8_1_1Compiler_1_1TrackFilterNode.html", null ]
     ] ],
     [ "Track8::Compiler::IExpressionVisitor", "classTrack8_1_1Compiler_1_1IExpressionVisitor.html", [
-      [ "Track8::Compiler::AstPrinter", "classTrack8_1_1Compiler_1_1AstPrinter.html", null ]
+      [ "Track8::Compiler::AstPrinter", "classTrack8_1_1Compiler_1_1AstPrinter.html", null ],
+      [ "Track8::Compiler::SQL::SQLTranspiler", "classTrack8_1_1Compiler_1_1SQL_1_1SQLTranspiler.html", null ]
     ] ],
     [ "Track8::Repositories::IPerformerRepository", "classTrack8_1_1Repositories_1_1IPerformerRepository.html", [
       [ "Track8::Database::SQLitePerformerRepository", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html", null ]
@@ -38,6 +39,7 @@ var hierarchy =
     [ "Track8::Domain::Song", "classTrack8_1_1Domain_1_1Song.html", null ],
     [ "Track8::Domain::SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", null ],
     [ "Track8::Compiler::SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", null ],
+    [ "Track8::Compiler::SQL::SQLQuery", "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html", null ],
     [ "Track8::Domain::Stats", "structTrack8_1_1Domain_1_1Stats.html", null ],
     [ "Track8::Cli::Tabulator", "classTrack8_1_1Cli_1_1Tabulator.html", null ],
     [ "Track8::Compiler::Token", "classTrack8_1_1Compiler_1_1Token.html", null ]

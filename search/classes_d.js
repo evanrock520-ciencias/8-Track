@@ -6,5 +6,7 @@ var searchData=
   ['sqlitealbumrepository_3',['SQLiteAlbumRepository',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html',1,'Track8::Database']]],
   ['sqliteperformerrepository_4',['SQLitePerformerRepository',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html',1,'Track8::Database']]],
   ['sqlitesongrepository_5',['SQLiteSongRepository',['../classTrack8_1_1Database_1_1SQLiteSongRepository.html',1,'Track8::Database']]],
-  ['stats_6',['Stats',['../structTrack8_1_1Domain_1_1Stats.html',1,'Track8::Domain']]]
+  ['sqlquery_6',['SQLQuery',['../structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html',1,'Track8::Compiler::SQL']]],
+  ['sqltranspiler_7',['SQLTranspiler',['../classTrack8_1_1Compiler_1_1SQL_1_1SQLTranspiler.html',1,'Track8::Compiler::SQL']]],
+  ['stats_8',['Stats',['../structTrack8_1_1Domain_1_1Stats.html',1,'Track8::Domain']]]
 ];

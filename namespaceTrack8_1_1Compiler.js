@@ -1,5 +1,6 @@
 var namespaceTrack8_1_1Compiler =
 [
+    [ "SQL", "namespaceTrack8_1_1Compiler_1_1SQL.html", "namespaceTrack8_1_1Compiler_1_1SQL" ],
     [ "AstPrinter", "classTrack8_1_1Compiler_1_1AstPrinter.html", "classTrack8_1_1Compiler_1_1AstPrinter" ],
     [ "BinaryExpressionNode", "classTrack8_1_1Compiler_1_1BinaryExpressionNode.html", "classTrack8_1_1Compiler_1_1BinaryExpressionNode" ],
     [ "FreeFilterNode", "classTrack8_1_1Compiler_1_1FreeFilterNode.html", "classTrack8_1_1Compiler_1_1FreeFilterNode" ],

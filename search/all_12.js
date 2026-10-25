@@ -20,13 +20,14 @@ var searchData=
   ['track8_17',['Track8',['../namespaceTrack8.html',1,'']]],
   ['track8_3a_3acli_18',['Cli',['../namespaceTrack8_1_1Cli.html',1,'Track8']]],
   ['track8_3a_3acompiler_19',['Compiler',['../namespaceTrack8_1_1Compiler.html',1,'Track8']]],
-  ['track8_3a_3adatabase_20',['Database',['../namespaceTrack8_1_1Database.html',1,'Track8']]],
-  ['track8_3a_3adomain_21',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
-  ['track8_3a_3aminer_22',['Miner',['../namespaceTrack8_1_1Miner.html',1,'Track8']]],
-  ['track8_3a_3arepositories_23',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
-  ['track8_3a_3aservices_24',['Services',['../namespaceTrack8_1_1Services.html',1,'Track8']]],
-  ['track8_3a_3autils_25',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]],
-  ['trackfilternode_26',['TrackFilterNode',['../classTrack8_1_1Compiler_1_1TrackFilterNode.html',1,'Track8::Compiler::TrackFilterNode'],['../classTrack8_1_1Compiler_1_1TrackFilterNode.html#ac13aca1b03800c5fda72b2f63f361abc',1,'Track8::Compiler::TrackFilterNode::TrackFilterNode()']]],
-  ['trim_27',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
-  ['type_28',['type',['../classTrack8_1_1Compiler_1_1BinaryExpressionNode.html#a923e4055901f1c798423e9115c603ed5',1,'Track8::Compiler::BinaryExpressionNode::type()'],['../classTrack8_1_1Compiler_1_1TextFilterNode.html#a6a2e187817defc1fc19226a5ee727e21',1,'Track8::Compiler::TextFilterNode::type()'],['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token::type()']]]
+  ['track8_3a_3acompiler_3a_3asql_20',['SQL',['../namespaceTrack8_1_1Compiler_1_1SQL.html',1,'Track8::Compiler']]],
+  ['track8_3a_3adatabase_21',['Database',['../namespaceTrack8_1_1Database.html',1,'Track8']]],
+  ['track8_3a_3adomain_22',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
+  ['track8_3a_3aminer_23',['Miner',['../namespaceTrack8_1_1Miner.html',1,'Track8']]],
+  ['track8_3a_3arepositories_24',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
+  ['track8_3a_3aservices_25',['Services',['../namespaceTrack8_1_1Services.html',1,'Track8']]],
+  ['track8_3a_3autils_26',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]],
+  ['trackfilternode_27',['TrackFilterNode',['../classTrack8_1_1Compiler_1_1TrackFilterNode.html',1,'Track8::Compiler::TrackFilterNode'],['../classTrack8_1_1Compiler_1_1TrackFilterNode.html#ac13aca1b03800c5fda72b2f63f361abc',1,'Track8::Compiler::TrackFilterNode::TrackFilterNode()']]],
+  ['trim_28',['trim',['../namespaceTrack8_1_1Utils.html#a3f4c2f7787b1fe002e5b96a8c7291c5a',1,'Track8::Utils']]],
+  ['type_29',['type',['../classTrack8_1_1Compiler_1_1BinaryExpressionNode.html#a923e4055901f1c798423e9115c603ed5',1,'Track8::Compiler::BinaryExpressionNode::type()'],['../classTrack8_1_1Compiler_1_1TextFilterNode.html#a6a2e187817defc1fc19226a5ee727e21',1,'Track8::Compiler::TextFilterNode::type()'],['../classTrack8_1_1Compiler_1_1Token.html#a6b986655dd04c89bc95b430af348de2b',1,'Track8::Compiler::Token::type()']]]
 ];
