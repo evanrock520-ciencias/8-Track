@@ -64,6 +64,7 @@ add_executable(compiler_tests
     compiler/test_lexer.cpp
         compiler/test_ast.cpp
         compiler/test_parser.cpp
+        compiler/test_transpiler.cpp
 )
 
 target_link_libraries(compiler_tests
