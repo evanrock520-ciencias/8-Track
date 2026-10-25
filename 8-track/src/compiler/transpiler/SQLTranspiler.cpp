@@ -28,14 +28,16 @@ void SQLTranspiler::visitRange(const std::string_view column,
         return;
     }
 
-    if (node.to().has_value() && node.from().has_value() &&
-        node.to().value() != node.from().value())
-        m_generated.append(" AND ");
+    if (from.has_value()) {
+        m_generated.append(column).append(" >= ?");
+        m_bindings.emplace_back(from.value());
+    }
 
-    if (node.to().has_value() && (!node.from().has_value() ||
-                                  node.to().value() != node.from().value())) {
-        m_generated.append("rolas.track <= ?");
-        m_bindings.emplace_back(node.to().value());
+    if (to.has_value()) {
+        if (from.has_value())
+            m_generated.append(" AND ");
+        m_generated.append(column).append(" <= ?");
+        m_bindings.emplace_back(to.value());
     }
 }
 
