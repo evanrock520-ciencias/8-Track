@@ -21,11 +21,12 @@ public:
 
 private:
     void clear();
+    static std::string resolveOperator(Compiler::MatchMode mode);
 
     std::string m_generated =
         "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
         "rolas.id_performer = performers.id_performer LEFT JOIN albums ON "
-        "rolas.id_album = albums.id_album WHERE ";
+        "rolas.id_album = albums.id_album";
     std::vector<SqlValue> m_bindings;
 };
 
