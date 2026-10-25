@@ -44,12 +44,10 @@ target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core)
 add_library(compiler
         src/compiler/lexer/Token.cpp
         src/compiler/lexer/Lexer.cpp
-
         src/compiler/ast/AstPrinter.cpp
-
         src/compiler/parser/Parser.cpp
-
         src/compiler/transpiler/SQLTranspiler.cpp
+        src/compiler/SQLCompiler.cpp
 )
 
 target_include_directories(compiler PUBLIC
@@ -79,7 +77,7 @@ target_include_directories(services PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(services PRIVATE domain miner database)
+target_link_libraries(services PRIVATE domain miner database compiler)
 
 # Biblioteca de CLI
 add_library(cli
