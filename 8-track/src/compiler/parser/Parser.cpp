@@ -45,7 +45,7 @@ std::unique_ptr<IExpressionNode> Parser::andExpression() {
     auto expr = notExpression();
 
     // TODO: También si empieza otra expresión de NOT
-    while (check(TokenType::AND)) {
+    while (check(TokenType::AND) || startsNot()) {
         match(TokenType::AND);
         auto right = notExpression();
         expr = std::make_unique<BinaryExpressionNode>(
