@@ -170,3 +170,14 @@ TEST(TranspilerTest, TranspilerOrFilter) {
     EXPECT_EQ(std::get<std::string>(bindingLeft), "The Zombies");
     EXPECT_EQ(std::get<std::string>(bindingRight), "Beach Boys");
 }
+
+TEST(TranspilerTest, TranspilerMember) {
+    const auto sqlQuery = sql(R"(member: "Nico")");
+    EXPECT_EQ(
+        sqlQuery.generated,
+        "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
+        "rolas.id_performer = performers.id_performer LEFT JOIN albums "
+        "ON rolas.id_album = albums.id_album WHERE performers.id_performer IN "
+        "(SELECT ig.id_group FROM in_group ig JOIN persons person ON "
+        "person.id_person = ig.id_person WHERE person.stage_name LIKE ?);");
+}
