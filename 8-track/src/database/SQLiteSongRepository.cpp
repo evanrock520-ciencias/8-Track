@@ -1,5 +1,8 @@
 #include "database/SQLiteSongRepository.hpp"
 
+#include "compiler/SQLCompiler.hpp"
+#include "compiler/transpiler/SQLTranspiler.hpp"
+
 #include <QSqlError>
 #include <QSqlQuery>
 #include <stdexcept>
@@ -65,7 +68,28 @@ SQLiteSongRepository::find(const std::filesystem::path& path) {
 
 std::vector<std::shared_ptr<Domain::Song>>
 SQLiteSongRepository::find(const Compiler::Query& query) {
-    // TODO: Esto va depués de implementar MuQL
+    Compiler::SQL::SQLTranspiler transpiler;
+    const auto sqlQuery = transpiler.generate(query);
+
+    QSqlQuery queryDatabase(m_database);
+    queryDatabase.prepare(QString::fromStdString(sqlQuery.generated));
+
+    for (const auto& binding : sqlQuery.bindings) {
+        if (std::holds_alternative<std::string>(binding)) {
+            queryDatabase.addBindValue(
+                QString::fromStdString(std::get<std::string>(binding)));
+        } else {
+            queryDatabase.addBindValue(std::get<int>(binding));
+        }
+    }
+
+    std::vector<std::shared_ptr<Domain::Song>> songs;
+    while (queryDatabase.next())
+        if (auto song = buildSong(queryDatabase))
+            songs.push_back(std::move(song));
+
+    return songs;
+
     return {};
 }
 
