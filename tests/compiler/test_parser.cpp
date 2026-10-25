@@ -244,3 +244,122 @@ TEST(ParserTest, NegationNode) {
     ASSERT_EQ(internalNode->value(), "In My Life");
     ASSERT_EQ(internalNode->mode(), MatchMode::CONTAINS);
 }
+
+TEST(ParserTest, FreeNode) {
+    Lexer lexer(R"("Pink")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(FreeFilterNode));
+    const auto* node = dynamic_cast<const FreeFilterNode*>(root);
+    ASSERT_EQ(node->expression(), "Pink");
+}
+
+TEST(ParserTest, AndNode) {
+    Lexer lexer(R"(similar: song like "Love" and member: "John Lennon")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::AND);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+    const auto* leftNode = dynamic_cast<const TextFilterNode*>(left);
+    ASSERT_EQ(leftNode->type(), FilterField::SONG);
+    ASSERT_EQ(leftNode->value(), "Love");
+    ASSERT_EQ(leftNode->mode(), MatchMode::SIMILAR);
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TextFilterNode));
+    const auto* rightNode = dynamic_cast<const TextFilterNode*>(right);
+    ASSERT_EQ(rightNode->type(), FilterField::MEMBER);
+    ASSERT_EQ(rightNode->value(), "John Lennon");
+    ASSERT_EQ(rightNode->mode(), MatchMode::CONTAINS);
+}
+
+TEST(ParserTest, OrNode) {
+    Lexer lexer(R"(band: "Vampire Weekend" or band: "Belle and Sebastian")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::OR);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+    const auto* leftNode = dynamic_cast<const TextFilterNode*>(left);
+    ASSERT_EQ(leftNode->type(), FilterField::BAND);
+    ASSERT_EQ(leftNode->value(), "Vampire Weekend");
+    ASSERT_EQ(leftNode->mode(), MatchMode::CONTAINS);
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TextFilterNode));
+    const auto* rightNode = dynamic_cast<const TextFilterNode*>(right);
+    ASSERT_EQ(rightNode->type(), FilterField::BAND);
+    ASSERT_EQ(rightNode->value(), "Belle and Sebastian");
+    ASSERT_EQ(rightNode->mode(), MatchMode::CONTAINS);
+}
+
+TEST(ParserTest, ChainedOrForSameFilter) {
+    Lexer lexer(R"(band: "Vampire Weekend" or "Belle and Sebastian")");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::OR);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TextFilterNode));
+    const auto* leftNode = dynamic_cast<const TextFilterNode*>(left);
+    ASSERT_EQ(leftNode->type(), FilterField::BAND);
+    ASSERT_EQ(leftNode->value(), "Vampire Weekend");
+    ASSERT_EQ(leftNode->mode(), MatchMode::CONTAINS);
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TextFilterNode));
+    const auto* rightNode = dynamic_cast<const TextFilterNode*>(right);
+    ASSERT_EQ(rightNode->type(), FilterField::BAND);
+    ASSERT_EQ(rightNode->value(), "Belle and Sebastian");
+    ASSERT_EQ(rightNode->mode(), MatchMode::CONTAINS);
+}
+
+TEST(ParserTest, ChainedOrForTemporalFilter) {
+    Lexer lexer(R"(year: 2010 => 2026 or year: 1950 => 1965)");
+    Parser parser(lexer.scanTokens());
+
+    const auto query = parser.parse();
+    ASSERT_TRUE(query.hasFilter());
+
+    const auto* root = query.root();
+    ASSERT_EQ(typeid(*root), typeid(BinaryExpressionNode));
+    const auto* node = dynamic_cast<const BinaryExpressionNode*>(root);
+    ASSERT_EQ(node->type(), BinaryOperation::OR);
+
+    const auto left = &node->left();
+    ASSERT_EQ(typeid(*left), typeid(TemporalFilterNode));
+    const auto* leftNode = dynamic_cast<const TemporalFilterNode*>(left);
+    ASSERT_EQ(leftNode->from(), 2010);
+    ASSERT_EQ(leftNode->to(), 2026);
+
+    const auto right = &node->right();
+    ASSERT_EQ(typeid(*right), typeid(TemporalFilterNode));
+    const auto* rightNode = dynamic_cast<const TemporalFilterNode*>(right);
+    ASSERT_EQ(rightNode->from(), 1950);
+    ASSERT_EQ(rightNode->to(), 1965);
+}
