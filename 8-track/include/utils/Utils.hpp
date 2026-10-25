@@ -69,6 +69,38 @@ inline Compiler::FilterField toFilterField(const Compiler::TokenType type) {
     }
 }
 
+inline Compiler::SortOrder toSortOrder(const Compiler::TokenType type) {
+    switch (type) {
+    case Compiler::TokenType::ASC:
+        return Compiler::SortOrder::ASC;
+    case Compiler::TokenType::DESC:
+        return Compiler::SortOrder::DESC;
+    default:
+        throw std::runtime_error("type with no sort order equivalent");
+    }
+}
+
+inline Compiler::SortField toSortField(const Compiler::TokenType type) {
+    switch (type) {
+    case Compiler::TokenType::SONG:
+        return Compiler::SortField::SONG;
+    case Compiler::TokenType::PERFORMER:
+        return Compiler::SortField::PERFORMER;
+    case Compiler::TokenType::ALBUM:
+        return Compiler::SortField::ALBUM;
+    case Compiler::TokenType::YEAR:
+        return Compiler::SortField::YEAR;
+    case Compiler::TokenType::GENRE:
+        return Compiler::SortField::GENRE;
+    case Compiler::TokenType::PATH:
+        return Compiler::SortField::PATH;
+    case Compiler::TokenType::TRACK:
+        return Compiler::SortField::TRACK;
+    default:
+        throw std::runtime_error("type with no sort order equivalent");
+    }
+}
+
 inline bool startsRangeItem(const Compiler::TokenType type) {
     return type == Compiler::TokenType::NUMBER ||
            type == Compiler::TokenType::RANGE;
