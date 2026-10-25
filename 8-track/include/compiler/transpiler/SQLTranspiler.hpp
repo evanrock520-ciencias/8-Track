@@ -3,7 +3,9 @@
 #include "compiler/ast/Query.hpp"
 #include "compiler/transpiler/SQLQuery.hpp"
 
+#include <optional>
 #include <string>
+#include <string_view>
 #include <vector>
 
 namespace Track8::Compiler::SQL {
@@ -22,6 +24,9 @@ public:
 private:
     void clear();
     static std::string resolveOperator(Compiler::MatchMode mode);
+    void parenthesize(const IExpressionNode& node);
+    void visitRange(std::string_view column, std::optional<int> from,
+                    std::optional<int> to);
 
     std::string m_generated =
         "SELECT DISTINCT rolas.* FROM rolas LEFT JOIN performers ON "
