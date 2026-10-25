@@ -27,6 +27,7 @@ private:
     void parenthesize(const IExpressionNode& node);
     void visitRange(std::string_view column, std::optional<int> from,
                     std::optional<int> to);
+    void visitClause(SortClause clause);
 
     std::string m_generated;
     std::vector<SqlValue> m_bindings;

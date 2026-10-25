@@ -10,6 +10,9 @@ SQLQuery SQLTranspiler::generate(const Query& query) {
         query.root()->accept(*this);
     }
 
+    if (query.hasSort())
+        visitClause(*query.sortClause());
+
     return {m_generated.append(";"), m_bindings};
 }
 
@@ -135,6 +138,35 @@ void SQLTranspiler::parenthesize(const IExpressionNode& node) {
     m_generated.append("(");
     node.accept(*this);
     m_generated.append(")");
+}
+
+void SQLTranspiler::visitClause(const SortClause clause) {
+    m_generated.append(" ORDER BY ");
+    switch (clause.field()) {
+    case SortField::SONG:
+        m_generated.append("rolas.title");
+        break;
+    case SortField::ALBUM:
+        m_generated.append("albums.name");
+        break;
+    case SortField::PERFORMER:
+        m_generated.append("performers.name");
+        break;
+    case SortField::YEAR:
+        m_generated.append("rolas.year");
+        break;
+    case SortField::TRACK:
+        m_generated.append("rolas.track");
+        break;
+    case SortField::GENRE:
+        m_generated.append("rolas.genre");
+        break;
+    case SortField::PATH:
+        m_generated.append("rolas.path");
+        break;
+    }
+
+    m_generated.append(clause.order() == SortOrder::ASC ? " ASC " : " DESC ");
 }
 
 } // namespace Track8::Compiler::SQL
