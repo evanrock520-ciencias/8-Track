@@ -71,6 +71,7 @@ target_link_libraries(miner PRIVATE tag)
 # Biblioteca de servicios
 add_library(services
     src/services/LibraryService.cpp
+        src/services/SearchService.cpp
 )
 
 target_include_directories(services PUBLIC
