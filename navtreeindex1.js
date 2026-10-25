@@ -1,5 +1,11 @@
 var NAVTREEINDEX1 =
 {
+"classTrack8_1_1Database_1_1DatabaseManager.html":[1,0,0,2,0],
+"classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b":[0,0,0,2,0,0],
+"classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b":[1,0,0,2,0,0],
+"classTrack8_1_1Database_1_1DatabaseManager.html#a54fa467ece8839552b6347550b09ec0e":[0,0,0,2,0,3],
+"classTrack8_1_1Database_1_1DatabaseManager.html#a54fa467ece8839552b6347550b09ec0e":[1,0,0,2,0,3],
+"classTrack8_1_1Database_1_1DatabaseManager.html#a86fc5e674d145c5e6f59355a14bc5727":[0,0,0,2,0,1],
 "classTrack8_1_1Database_1_1DatabaseManager.html#a86fc5e674d145c5e6f59355a14bc5727":[1,0,0,2,0,1],
 "classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5":[0,0,0,2,0,2],
 "classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5":[1,0,0,2,0,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX1 =
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b":[1,0,0,5,1,5],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8":[0,0,0,5,1,10],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8":[1,0,0,5,1,10],
-"classTrack8_1_1Repositories_1_1ISongRepository.html":[0,0,0,5,2],
-"classTrack8_1_1Repositories_1_1ISongRepository.html":[1,0,0,5,2],
-"classTrack8_1_1Repositories_1_1ISongRepository.html#a1903f0f732ec1aa6b7c00a5a2939996c":[0,0,0,5,2,0],
-"classTrack8_1_1Repositories_1_1ISongRepository.html#a1903f0f732ec1aa6b7c00a5a2939996c":[1,0,0,5,2,0],
-"classTrack8_1_1Repositories_1_1ISongRepository.html#a2b670d3289b085cab4f29baa772bee41":[0,0,0,5,2,5],
-"classTrack8_1_1Repositories_1_1ISongRepository.html#a2b670d3289b085cab4f29baa772bee41":[1,0,0,5,2,5],
-"classTrack8_1_1Repositories_1_1ISongRepository.html#a2c85c3dd7a286975a958c0f6a0c33ebd":[0,0,0,5,2,6]
+"classTrack8_1_1Repositories_1_1ISongRepository.html":[0,0,0,5,2]
 };

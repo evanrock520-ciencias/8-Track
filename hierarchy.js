@@ -39,6 +39,7 @@ var hierarchy =
     [ "Track8::Domain::Song", "classTrack8_1_1Domain_1_1Song.html", null ],
     [ "Track8::Domain::SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", null ],
     [ "Track8::Compiler::SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", null ],
+    [ "Track8::Compiler::SQLCompiler", "classTrack8_1_1Compiler_1_1SQLCompiler.html", null ],
     [ "Track8::Compiler::SQL::SQLQuery", "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html", null ],
     [ "Track8::Domain::Stats", "structTrack8_1_1Domain_1_1Stats.html", null ],
     [ "Track8::Cli::Tabulator", "classTrack8_1_1Cli_1_1Tabulator.html", null ],

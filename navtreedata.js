@@ -41,7 +41,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
@@ -55,8 +55,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Album_8hpp.html",
-"classTrack8_1_1Database_1_1DatabaseManager.html#a86fc5e674d145c5e6f59355a14bc5727",
-"classTrack8_1_1Repositories_1_1ISongRepository.html#a2c85c3dd7a286975a958c0f6a0c33ebd"
+"classTrack8_1_1Database_1_1DatabaseManager.html",
+"classTrack8_1_1Repositories_1_1ISongRepository.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
