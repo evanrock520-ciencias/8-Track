@@ -38,7 +38,7 @@ qt_add_resources(database "schema"
     FILES resources/sql/rolas.sql
 )
 
-target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core)
+target_link_libraries(database PUBLIC Qt6::Sql Qt6::Core PRIVATE compiler)
 
 # Biblioteca de MuQL
 add_library(compiler
@@ -47,6 +47,7 @@ add_library(compiler
         src/compiler/ast/AstPrinter.cpp
         src/compiler/parser/Parser.cpp
         src/compiler/transpiler/SQLTranspiler.cpp
+        src/compiler/transpiler/QueryCompiler.cpp
         src/compiler/SQLCompiler.cpp
 )
 
@@ -70,6 +71,7 @@ target_link_libraries(miner PRIVATE tag)
 # Biblioteca de servicios
 add_library(services
     src/services/LibraryService.cpp
+        src/services/SearchService.cpp
 )
 
 target_include_directories(services PUBLIC

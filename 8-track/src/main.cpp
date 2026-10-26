@@ -5,6 +5,7 @@
 #include "database/SQLiteSongRepository.hpp"
 #include "miner/Miner.hpp"
 #include "services/LibraryService.hpp"
+#include "services/SearchService.hpp"
 
 #include <QCoreApplication>
 #include <QStandardPaths>
@@ -31,8 +32,9 @@ int main(int argc, char* argv[]) {
         manager.database(), performers, albums);
 
     Services::LibraryService library(albums, performers, songs);
+    Services::SearchService search(songs);
     if (argc > 1) {
-        Cli::Cli cli(library);
+        const Cli::Cli cli(library, search);
         cli.run(argc, argv);
     }
 
