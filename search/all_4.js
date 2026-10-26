@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['empty_0',['empty',['../namespaceTrack8_1_1Utils.html#a8031a40e3eff52bf77b9ce83a74a5855',1,'Track8::Utils']]],
-  ['end_5fdate_1',['end_date',['../classTrack8_1_1Domain_1_1Group.html#a33a4c774a0cf46ad319879fc16fdbb06',1,'Track8::Domain::Group']]],
-  ['end_5fof_5ffile_2',['END_OF_FILE',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa581953f6b20ad7f993b64b1dc632032e',1,'Track8::Compiler']]],
-  ['errormessage_3',['errorMessage',['../structTrack8_1_1Services_1_1SearchResult.html#adde71e319ee32621ead675e7e1fd5036',1,'Track8::Services::SearchResult']]],
-  ['exact_4',['EXACT',['../namespaceTrack8_1_1Compiler.html#a1accb3830cc60d15715ef601def644a9ac41e056424136b6e8c4e23dd6326efa1',1,'Track8::Compiler']]],
-  ['exactly_5',['EXACTLY',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa7d27cab3cb18950e158cdd9ff492c80a',1,'Track8::Compiler']]],
-  ['expression_6',['expression',['../classTrack8_1_1Compiler_1_1NegationExpressionNode.html#a846b5efc23a8714ae3532dd76c961d2f',1,'Track8::Compiler::NegationExpressionNode::expression()'],['../classTrack8_1_1Compiler_1_1FreeFilterNode.html#adbab7de705c26bc14e840444968eb6c7',1,'Track8::Compiler::FreeFilterNode::expression()']]]
+  ['database_0',['database',['../classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5',1,'Track8::Database::DatabaseManager']]],
+  ['databasemanager_1',['DatabaseManager',['../classTrack8_1_1Database_1_1DatabaseManager.html',1,'Track8::Database::DatabaseManager'],['../classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b',1,'Track8::Database::DatabaseManager::DatabaseManager()']]],
+  ['databasemanager_2ehpp_2',['DatabaseManager.hpp',['../DatabaseManager_8hpp.html',1,'']]],
+  ['date_3',['Date',['../classTrack8_1_1Domain_1_1Date.html',1,'Track8::Domain::Date'],['../classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a',1,'Track8::Domain::Date::Date(const std::string &amp;date)'],['../classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77',1,'Track8::Domain::Date::Date(const int year, const int month, const int day)']]],
+  ['date_2ehpp_4',['Date.hpp',['../Date_8hpp.html',1,'']]],
+  ['day_5',['day',['../classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77',1,'Track8::Domain::Date']]],
+  ['death_5fdate_6',['death_date',['../classTrack8_1_1Domain_1_1Artist.html#ad0be900ccb64ab7c8ce51196c67a448f',1,'Track8::Domain::Artist']]],
+  ['desc_7',['DESC',['../namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC']]]
 ];

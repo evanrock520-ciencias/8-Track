@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['database_0',['database',['../classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5',1,'Track8::Database::DatabaseManager']]],
-  ['databasemanager_1',['DatabaseManager',['../classTrack8_1_1Database_1_1DatabaseManager.html',1,'Track8::Database::DatabaseManager'],['../classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b',1,'Track8::Database::DatabaseManager::DatabaseManager()']]],
-  ['databasemanager_2ehpp_2',['DatabaseManager.hpp',['../DatabaseManager_8hpp.html',1,'']]],
-  ['date_3',['Date',['../classTrack8_1_1Domain_1_1Date.html',1,'Track8::Domain::Date'],['../classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a',1,'Track8::Domain::Date::Date(const std::string &amp;date)'],['../classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77',1,'Track8::Domain::Date::Date(const int year, const int month, const int day)']]],
-  ['date_2ehpp_4',['Date.hpp',['../Date_8hpp.html',1,'']]],
-  ['day_5',['day',['../classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77',1,'Track8::Domain::Date']]],
-  ['death_5fdate_6',['death_date',['../classTrack8_1_1Domain_1_1Artist.html#ad0be900ccb64ab7c8ce51196c67a448f',1,'Track8::Domain::Artist']]],
-  ['desc_7',['DESC',['../namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC']]]
+  ['cli_0',['Cli',['../classTrack8_1_1Cli_1_1Cli.html',1,'Track8::Cli::Cli'],['../classTrack8_1_1Cli_1_1Cli.html#a16f15e3c63edc065926f4193119f9a6e',1,'Track8::Cli::Cli::Cli()']]],
+  ['cli_2ehpp_1',['Cli.hpp',['../Cli_8hpp.html',1,'']]],
+  ['colon_2',['COLON',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35faf65f22e75defc168edfc6444e6aaf4f8',1,'Track8::Compiler']]],
+  ['compile_3',['compile',['../classTrack8_1_1Compiler_1_1QueryCompiler.html#af9270d49e9b8e03fa3218c74a60112b8',1,'Track8::Compiler::QueryCompiler::compile()'],['../classTrack8_1_1Compiler_1_1SQLCompiler.html#ae78a58c543c6bdaa136d4448157f9301',1,'Track8::Compiler::SQLCompiler::compile()']]],
+  ['contains_4',['CONTAINS',['../namespaceTrack8_1_1Compiler.html#a1accb3830cc60d15715ef601def644a9a7c8b81e077a45b6d2c9c03d3a22c0d5b',1,'Track8::Compiler']]],
+  ['count_5',['count',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#aa34421eff859fed90e81ea4167c95e3b',1,'Track8::Database::SQLiteAlbumRepository::count()'],['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#afbf9415cafafb58a965ac6bbf12c88e7',1,'Track8::Database::SQLitePerformerRepository::count()'],['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#ad253a7047ae036d8b8309e456d172300',1,'Track8::Database::SQLiteSongRepository::count()'],['../classTrack8_1_1Repositories_1_1IAlbumRepository.html#aa3aabe8ceed9e75eef8205039c42d873',1,'Track8::Repositories::IAlbumRepository::count()'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#a9cef273da46be8b8fd0bf97410b1ddf8',1,'Track8::Repositories::IPerformerRepository::count()'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#a69607090145b45f8d46a25aaa72d2e65',1,'Track8::Repositories::ISongRepository::count()']]],
+  ['create_6',['create',['../classTrack8_1_1Domain_1_1SongBuilder.html#a44e9fc3e61ee20818306f4f2f0c2a98b',1,'Track8::Domain::SongBuilder']]]
 ];
