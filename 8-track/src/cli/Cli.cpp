@@ -42,9 +42,6 @@ void Cli::run(const int argc, char** argv) const {
     // Si se solicita realizar una consulta por consola.
     if (program.is_used("--query")) {
         const auto query = program.get<std::string>("--query");
-
-        std::cout << "Querying " << query << '\n';
-        // TODO: Tabular la consulta
         queryTable(query);
     }
 }
