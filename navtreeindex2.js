@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b":[1,0,0,5,1,3],
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad42a50e4a30fd5f3d08d1cae7b5dbb25":[0,0,0,5,1,11],
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad42a50e4a30fd5f3d08d1cae7b5dbb25":[1,0,0,5,1,11],
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b":[0,0,0,5,1,5],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b":[1,0,0,5,1,5],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8":[0,0,0,5,1,10],
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8":[1,0,0,5,1,10],
@@ -37,6 +41,12 @@ var NAVTREEINDEX2 =
 "classTrack8_1_1Services_1_1LibraryService.html#a73860fd03a86671eb365941a781eac93":[1,0,0,6,0,2],
 "classTrack8_1_1Services_1_1LibraryService.html#ae7ff752e7866872a60a990d1bc0c981a":[0,0,0,6,0,0],
 "classTrack8_1_1Services_1_1LibraryService.html#ae7ff752e7866872a60a990d1bc0c981a":[1,0,0,6,0,0],
+"classTrack8_1_1Services_1_1SearchService.html":[0,0,0,6,2],
+"classTrack8_1_1Services_1_1SearchService.html":[1,0,0,6,2],
+"classTrack8_1_1Services_1_1SearchService.html#a872032040db8e9e11a547cccaed77d19":[0,0,0,6,2,1],
+"classTrack8_1_1Services_1_1SearchService.html#a872032040db8e9e11a547cccaed77d19":[1,0,0,6,2,1],
+"classTrack8_1_1Services_1_1SearchService.html#ad8c2005290c580d265e57a5595eb4987":[0,0,0,6,2,0],
+"classTrack8_1_1Services_1_1SearchService.html#ad8c2005290c580d265e57a5595eb4987":[1,0,0,6,2,0],
 "classes.html":[1,1],
 "dir_111fe748744795a6647feb1e070c6197.html":[2,0,0,0,1,2],
 "dir_3772db085a8e93248a4d8b51580912e9.html":[2,0,0,0,3],
@@ -239,9 +249,5 @@ var NAVTREEINDEX2 =
 "structTrack8_1_1Miner_1_1Metadata.html#a733dc06366354ebb342e6a70100feb95":[0,0,0,4,0,0],
 "structTrack8_1_1Miner_1_1Metadata.html#a733dc06366354ebb342e6a70100feb95":[1,0,0,4,0,0],
 "structTrack8_1_1Miner_1_1Metadata.html#ab50040d54245a1454b8846b3e3d03c7c":[0,0,0,4,0,5],
-"structTrack8_1_1Miner_1_1Metadata.html#ab50040d54245a1454b8846b3e3d03c7c":[1,0,0,4,0,5],
-"structTrack8_1_1Miner_1_1Metadata.html#aec16cc99dddf596a1ba124e0f8d96e53":[0,0,0,4,0,3],
-"structTrack8_1_1Miner_1_1Metadata.html#aec16cc99dddf596a1ba124e0f8d96e53":[1,0,0,4,0,3],
-"structTrack8_1_1Miner_1_1Metadata.html#af1fd0e1f78910609720999b62dfd113a":[0,0,0,4,0,4],
-"structTrack8_1_1Miner_1_1Metadata.html#af1fd0e1f78910609720999b62dfd113a":[1,0,0,4,0,4]
+"structTrack8_1_1Miner_1_1Metadata.html#ab50040d54245a1454b8846b3e3d03c7c":[1,0,0,4,0,5]
 };

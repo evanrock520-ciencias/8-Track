@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generated_0',['generated',['../structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html#a2ca19e21ade223677a2b529c001165fa',1,'Track8::Compiler::SQL::SQLQuery']]]
+  ['from_0',['from',['../structTrack8_1_1Domain_1_1Range.html#aaae8f9a184f0a825747f1ea2c5199626',1,'Track8::Domain::Range']]]
 ];

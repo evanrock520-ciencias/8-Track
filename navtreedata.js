@@ -55,8 +55,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Album_8hpp.html",
-"classTrack8_1_1Compiler_1_1TrackFilterNode.html#a99fcaf879ce2d9d62195a538a2120cbc",
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad94b6245bce9864a49e8407f8034ed2b"
+"classTrack8_1_1Compiler_1_1TrackFilterNode.html#a405b2afb1e1d22dbd49e7bb5fa3739a0",
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b",
+"structTrack8_1_1Miner_1_1Metadata.html#aec16cc99dddf596a1ba124e0f8d96e53"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

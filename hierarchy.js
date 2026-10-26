@@ -37,6 +37,8 @@ var hierarchy =
     [ "Track8::Compiler::Query", "classTrack8_1_1Compiler_1_1Query.html", null ],
     [ "Track8::Compiler::QueryCompiler", "classTrack8_1_1Compiler_1_1QueryCompiler.html", null ],
     [ "Track8::Domain::Range", "structTrack8_1_1Domain_1_1Range.html", null ],
+    [ "Track8::Services::SearchResult", "structTrack8_1_1Services_1_1SearchResult.html", null ],
+    [ "Track8::Services::SearchService", "classTrack8_1_1Services_1_1SearchService.html", null ],
     [ "Track8::Domain::Song", "classTrack8_1_1Domain_1_1Song.html", null ],
     [ "Track8::Domain::SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", null ],
     [ "Track8::Compiler::SortClause", "structTrack8_1_1Compiler_1_1SortClause.html", null ],
