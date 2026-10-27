@@ -11,13 +11,19 @@
 
 # 8-Track
 
-**8-Track** es un gestor de música local desarrollado en **C++ 20** y **Qt 6**. 
+**8-Track** es un gestor de música local desarrollado en **C++ 20** y **Qt 6**.
 
 ## GUI
 
 ## Terminal
 
-<img src="https://vhs.charm.sh/vhs-tIeMqNQzV3hEU9nuwpzBC.gif" alt="Terminal">
+<img src="https://vhs.charm.sh/vhs-3tEUJuIhrVVu9LKRwFGXUZ.gif" alt="Scan">
+
+<img src="https://vhs.charm.sh/vhs-tIeMqNQzV3hEU9nuwpzBC.gif" alt="List">
+
+## Documentación
+
+La documentación del proyecto se puede encontrar en [8-track](https://evanrock520-ciencias.github.io/8-Track/).
 
 ## Licencia
 
