@@ -56,5 +56,5 @@ add_subdirectory(8-track)
 enable_testing()
 add_subdirectory(tests)
 
-add_executable(main 8-track/src/main.cpp)
-target_link_libraries(main PRIVATE Qt6::Quick compiler miner database services cli)
+add_executable(track8-cli 8-track/src/cli/main.cpp)
+target_link_libraries(track8-cli PRIVATE compiler miner database services cli)

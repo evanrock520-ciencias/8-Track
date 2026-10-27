@@ -82,6 +82,17 @@ target_include_directories(services PUBLIC
 
 target_link_libraries(services PRIVATE domain miner database compiler)
 
+# Biblioteca de app
+add_library(app INTERFACE)
+
+target_include_directories(app INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_sources(domain INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/app/AppContext.hpp
+)
+
 # Biblioteca de CLI
 add_library(cli
         src/cli/Cli.cpp
@@ -93,4 +104,4 @@ target_include_directories(cli PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(cli PRIVATE services argparse tabulate)
+target_link_libraries(cli PRIVATE services argparse tabulate app)
