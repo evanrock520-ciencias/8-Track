@@ -114,6 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a57dfa2f57223441d4a64a4acafec2c70" id="r_a57dfa2f57223441d4a64a4acafec2c70"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57dfa2f57223441d4a64a4acafec2c70">find</a> (int id) const</td></tr>
 <tr class="memitem:a611d4c6c7db8de0e9e613fc7878f1498" id="r_a611d4c6c7db8de0e9e613fc7878f1498"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a611d4c6c7db8de0e9e613fc7878f1498">find</a> (const std::string &amp;name) const</td></tr>
 <tr class="memitem:a7c28f588421dd6b5f176d4bf3128e05b" id="r_a7c28f588421dd6b5f176d4bf3128e05b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Artist.html">Domain::Artist</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c28f588421dd6b5f176d4bf3128e05b">members</a> (int groupId) const</td></tr>
+<tr class="memitem:a2ae62f1bd3b68c8ded502b90fd933109" id="r_a2ae62f1bd3b68c8ded502b90fd933109"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae62f1bd3b68c8ded502b90fd933109">groupsOfPerson</a> (int personId) const</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9bea0cc59d2a85b75073aad706f88580" name="a9bea0cc59d2a85b75073aad706f88580"></a>
@@ -231,6 +232,38 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>El intérprete relacionado al <span class="tt">id</span>, o <span class="tt">nullptr</span> si no existe. </dd></dl>
+
+</div>
+</div>
+<a id="a2ae62f1bd3b68c8ded502b90fd933109" name="a2ae62f1bd3b68c8ded502b90fd933109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae62f1bd3b68c8ded502b90fd933109">&#9670;&#160;</a></span>groupsOfPerson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &gt; &gt; Track8::Services::ArtistService::groupsOfPerson </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>personId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa los grupos a los que pertenece un artista. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">personId</td><td>El id del artista. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Los grupos del artista. </dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['year_0',['YEAR',['../namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9ad18101729d290479023d5eceeb29c9cf',1,'Track8::Compiler::YEAR'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf',1,'Track8::Compiler::YEAR']]]
+  ['unknown_0',['Unknown',['../namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9eaa88183b946cc5f0e8c96b2e66e1c74a7e',1,'Track8::Domain']]]
 ];

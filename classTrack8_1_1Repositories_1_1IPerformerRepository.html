@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa89ee5c73d39b32dfe6648d7a67b2da5" id="r_aa89ee5c73d39b32dfe6648d7a67b2da5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa89ee5c73d39b32dfe6648d7a67b2da5">addToGroup</a> (int groupId, int performerId)=0</td></tr>
 <tr class="memitem:a133435b3774f10ab099130c24b1644ee" id="r_a133435b3774f10ab099130c24b1644ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133435b3774f10ab099130c24b1644ee">removeFromGroup</a> (int groupId, int performerId)=0</td></tr>
 <tr class="memitem:ac74b2960b5dc07479dd1226dd2cbfcf9" id="r_ac74b2960b5dc07479dd1226dd2cbfcf9"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Artist.html">Domain::Artist</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac74b2960b5dc07479dd1226dd2cbfcf9">getMembers</a> (int groupId)=0</td></tr>
+<tr class="memitem:a567804c7c861131a560886fdf08b4300" id="r_a567804c7c861131a560886fdf08b4300"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567804c7c861131a560886fdf08b4300">getGroups</a> (int personId)=0</td></tr>
+<tr class="memitem:a41773b8ae71c1bad5f08ed40ed3c6529" id="r_a41773b8ae71c1bad5f08ed40ed3c6529"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41773b8ae71c1bad5f08ed40ed3c6529">countByType</a> (<a class="el" href="namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9ea">Domain::PerformerType</a> type)=0</td></tr>
 <tr class="memitem:a33ea067821e8bd688232fe8dce2a16a0" id="r_a33ea067821e8bd688232fe8dce2a16a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ea067821e8bd688232fe8dce2a16a0">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Performer.html">Domain::Performer</a> &amp;performer)=0</td></tr>
 <tr class="memitem:ad42a50e4a30fd5f3d08d1cae7b5dbb25" id="r_ad42a50e4a30fd5f3d08d1cae7b5dbb25"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad42a50e4a30fd5f3d08d1cae7b5dbb25">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Artist.html">Domain::Artist</a> &amp;artist)=0</td></tr>
 <tr class="memitem:a1a0298d5b3e03b16f4dbe1e919a1a2a3" id="r_a1a0298d5b3e03b16f4dbe1e919a1a2a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a0298d5b3e03b16f4dbe1e919a1a2a3">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &amp;group)=0</td></tr>
@@ -223,6 +225,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a41773b8ae71c1bad5f08ed40ed3c6529" name="a41773b8ae71c1bad5f08ed40ed3c6529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41773b8ae71c1bad5f08ed40ed3c6529">&#9670;&#160;</a></span>countByType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int Track8::Repositories::IPerformerRepository::countByType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9ea">Domain::PerformerType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa la cantidad de intérpretes de un tipo específico. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>El tipo de intérprete. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>La cantidad de intérpretes de ese tipo. </dd></dl>
+
+<p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a95d96993a705f45e4d1acb8f457e20d0">Track8::Database::SQLitePerformerRepository</a>.</p>
+
+</div>
+</div>
 <a id="ad14ab51a6dd33d6bfc459b29749b285b" name="ad14ab51a6dd33d6bfc459b29749b285b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad14ab51a6dd33d6bfc459b29749b285b">&#9670;&#160;</a></span>find() <span class="overload">[1/2]</span></h2>
 
@@ -316,6 +352,40 @@ Public Member Functions</h2></td></tr>
 <p>Regresa todos los intérpretes de la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>Todos los intérpretes de la base de datos. </dd></dl>
 
 <p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLitePerformerRepository.html#ae86e1879aea5a9ea822a73906655e853">Track8::Database::SQLitePerformerRepository</a>.</p>
+
+</div>
+</div>
+<a id="a567804c7c861131a560886fdf08b4300" name="a567804c7c861131a560886fdf08b4300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567804c7c861131a560886fdf08b4300">&#9670;&#160;</a></span>getGroups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Group.html">Domain::Group</a> &gt; &gt; Track8::Repositories::IPerformerRepository::getGroups </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>personId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa los grupos a los que pertenece un artista. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">personId</td><td>El id del artista en la tabla de <span class="tt">performers</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Los grupos del artista. </dd></dl>
+
+<p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLitePerformerRepository.html#aa696748a147f406e1ddc1308de1f8a43">Track8::Database::SQLitePerformerRepository</a>.</p>
 
 </div>
 </div>

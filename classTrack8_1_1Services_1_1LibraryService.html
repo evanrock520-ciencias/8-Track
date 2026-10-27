@@ -101,12 +101,17 @@ $(function(){initNavTree('classTrack8_1_1Services_1_1LibraryService.html','','cl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae7ff752e7866872a60a990d1bc0c981a" id="r_ae7ff752e7866872a60a990d1bc0c981a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ff752e7866872a60a990d1bc0c981a">LibraryService</a> (const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IAlbumRepository.html">Repositories::IAlbumRepository</a> &gt; &amp;albums, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html">Repositories::IPerformerRepository</a> &gt; &amp;performers, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ISongRepository.html">Repositories::ISongRepository</a> &gt; &amp;<a class="el" href="#a5a41a64a3198c08470f8c2c8ea615406">songs</a>)</td></tr>
+<tr class="memitem:ae7ff752e7866872a60a990d1bc0c981a" id="r_ae7ff752e7866872a60a990d1bc0c981a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ff752e7866872a60a990d1bc0c981a">LibraryService</a> (const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IAlbumRepository.html">Repositories::IAlbumRepository</a> &gt; &amp;<a class="el" href="#acf88cd1523e70be2263db6dfd75fbaab">albums</a>, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html">Repositories::IPerformerRepository</a> &gt; &amp;performers, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ISongRepository.html">Repositories::ISongRepository</a> &gt; &amp;<a class="el" href="#a5a41a64a3198c08470f8c2c8ea615406">songs</a>)</td></tr>
 <tr class="memitem:a1c3f86a635646f9f0c545e9147c828c3" id="r_a1c3f86a635646f9f0c545e9147c828c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c3f86a635646f9f0c545e9147c828c3">~LibraryService</a> ()=default</td></tr>
 <tr class="memitem:a5a0071a88108eb51e92ba4628000915a" id="r_a5a0071a88108eb51e92ba4628000915a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a0071a88108eb51e92ba4628000915a">scan</a> (const std::filesystem::path &amp;path) const</td></tr>
 <tr class="memdesc:a5a0071a88108eb51e92ba4628000915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escanea un directorio y guarda todos sus metadatos en la base de datos de la aplicación.  <br /></td></tr>
 <tr class="memitem:a73860fd03a86671eb365941a781eac93" id="r_a73860fd03a86671eb365941a781eac93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73860fd03a86671eb365941a781eac93">importTrack</a> (const <a class="el" href="structTrack8_1_1Miner_1_1Metadata.html">Track8::Miner::Metadata</a> &amp;metadata) const</td></tr>
 <tr class="memitem:a5a41a64a3198c08470f8c2c8ea615406" id="r_a5a41a64a3198c08470f8c2c8ea615406"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Song.html">Domain::Song</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a41a64a3198c08470f8c2c8ea615406">songs</a> () const</td></tr>
+<tr class="memitem:acf88cd1523e70be2263db6dfd75fbaab" id="r_acf88cd1523e70be2263db6dfd75fbaab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf88cd1523e70be2263db6dfd75fbaab">albums</a> () const</td></tr>
+<tr class="memitem:a4cbcdf4b049b6a77ddfb3a44dc06cd39" id="r_a4cbcdf4b049b6a77ddfb3a44dc06cd39"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cbcdf4b049b6a77ddfb3a44dc06cd39">genres</a> () const</td></tr>
+<tr class="memitem:ac9739fbd0f5416fc6107ae7d1e01c65d" id="r_ac9739fbd0f5416fc6107ae7d1e01c65d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Song.html">Domain::Song</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9739fbd0f5416fc6107ae7d1e01c65d">songsByAlbum</a> (int albumId) const</td></tr>
+<tr class="memitem:af960729fd098d9a514b9f723fbb8aee6" id="r_af960729fd098d9a514b9f723fbb8aee6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Song.html">Domain::Song</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af960729fd098d9a514b9f723fbb8aee6">songsByPerformer</a> (int performerId) const</td></tr>
+<tr class="memitem:a813477bf9037d139cb2bd5db9a3632a6" id="r_a813477bf9037d139cb2bd5db9a3632a6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a813477bf9037d139cb2bd5db9a3632a6">albumsByPerformer</a> (int performerId) const</td></tr>
 <tr class="memitem:a5f029926b1e68379820c3bde6ec0d01e" id="r_a5f029926b1e68379820c3bde6ec0d01e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTrack8_1_1Domain_1_1Stats.html">Domain::Stats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f029926b1e68379820c3bde6ec0d01e">stats</a> () const</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -162,6 +167,90 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="acf88cd1523e70be2263db6dfd75fbaab" name="acf88cd1523e70be2263db6dfd75fbaab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf88cd1523e70be2263db6dfd75fbaab">&#9670;&#160;</a></span>albums()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt; Track8::Services::LibraryService::albums </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa los álbums de la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>Los álbums de la base de datos. </dd></dl>
+
+</div>
+</div>
+<a id="a813477bf9037d139cb2bd5db9a3632a6" name="a813477bf9037d139cb2bd5db9a3632a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813477bf9037d139cb2bd5db9a3632a6">&#9670;&#160;</a></span>albumsByPerformer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt; Track8::Services::LibraryService::albumsByPerformer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>performerId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa los álbums de un intérprete. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">performerId</td><td>El id del intérprete. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Los álbums del intérprete. </dd></dl>
+
+</div>
+</div>
+<a id="a4cbcdf4b049b6a77ddfb3a44dc06cd39" name="a4cbcdf4b049b6a77ddfb3a44dc06cd39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cbcdf4b049b6a77ddfb3a44dc06cd39">&#9670;&#160;</a></span>genres()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; Track8::Services::LibraryService::genres </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa los géneros distintos de la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>Los géneros registrados. </dd></dl>
+
+</div>
+</div>
 <a id="a73860fd03a86671eb365941a781eac93" name="a73860fd03a86671eb365941a781eac93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73860fd03a86671eb365941a781eac93">&#9670;&#160;</a></span>importTrack()</h2>
 
@@ -233,6 +322,70 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Regresa las canciones de la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>Las canciones de la base de datos. </dd></dl>
+
+</div>
+</div>
+<a id="ac9739fbd0f5416fc6107ae7d1e01c65d" name="ac9739fbd0f5416fc6107ae7d1e01c65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9739fbd0f5416fc6107ae7d1e01c65d">&#9670;&#160;</a></span>songsByAlbum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Song.html">Domain::Song</a> &gt; &gt; Track8::Services::LibraryService::songsByAlbum </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>albumId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa las canciones de un álbum. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">albumId</td><td>El id del álbum. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Las canciones del álbum, ordenadas por número de pista. </dd></dl>
+
+</div>
+</div>
+<a id="af960729fd098d9a514b9f723fbb8aee6" name="af960729fd098d9a514b9f723fbb8aee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af960729fd098d9a514b9f723fbb8aee6">&#9670;&#160;</a></span>songsByPerformer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Song.html">Domain::Song</a> &gt; &gt; Track8::Services::LibraryService::songsByPerformer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>performerId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa las canciones de un intérprete. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">performerId</td><td>El id del intérprete. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Las canciones del intérprete. </dd></dl>
 
 </div>
 </div>

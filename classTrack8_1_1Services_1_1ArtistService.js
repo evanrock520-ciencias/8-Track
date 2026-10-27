@@ -4,6 +4,7 @@ var classTrack8_1_1Services_1_1ArtistService =
     [ "addMember", "classTrack8_1_1Services_1_1ArtistService.html#a870f39c5cbde256b2a5130b44b60b512", null ],
     [ "find", "classTrack8_1_1Services_1_1ArtistService.html#a611d4c6c7db8de0e9e613fc7878f1498", null ],
     [ "find", "classTrack8_1_1Services_1_1ArtistService.html#a57dfa2f57223441d4a64a4acafec2c70", null ],
+    [ "groupsOfPerson", "classTrack8_1_1Services_1_1ArtistService.html#a2ae62f1bd3b68c8ded502b90fd933109", null ],
     [ "markAsGroup", "classTrack8_1_1Services_1_1ArtistService.html#a921f2ca511641b62756346fe74c1ab00", null ],
     [ "markAsGroup", "classTrack8_1_1Services_1_1ArtistService.html#a9d952472c23862b29921f3b7713ddc7f", null ],
     [ "markAsPerson", "classTrack8_1_1Services_1_1ArtistService.html#af590f61c9e49e14a8286bb042c3751c7", null ],

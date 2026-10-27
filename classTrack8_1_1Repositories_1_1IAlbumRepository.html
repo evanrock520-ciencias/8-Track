@@ -119,6 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2eb47d0101efb30284fb6042a1e80cc4" id="r_a2eb47d0101efb30284fb6042a1e80cc4"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eb47d0101efb30284fb6042a1e80cc4">find</a> (int id)=0</td></tr>
 <tr class="memitem:a52c8e36102628b45752d7e1c07135a91" id="r_a52c8e36102628b45752d7e1c07135a91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52c8e36102628b45752d7e1c07135a91">update</a> (const <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &amp;album)=0</td></tr>
 <tr class="memitem:aa65cba0902c8dfaa65d5c054e2304c65" id="r_aa65cba0902c8dfaa65d5c054e2304c65"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa65cba0902c8dfaa65d5c054e2304c65">getAll</a> ()=0</td></tr>
+<tr class="memitem:a1d297aaea4ea3137534c88f17a421d1b" id="r_a1d297aaea4ea3137534c88f17a421d1b"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d297aaea4ea3137534c88f17a421d1b">getByPerformer</a> (int performerId)=0</td></tr>
 <tr class="memitem:aa3aabe8ceed9e75eef8205039c42d873" id="r_aa3aabe8ceed9e75eef8205039c42d873"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3aabe8ceed9e75eef8205039c42d873">count</a> ()=0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -276,6 +277,40 @@ Public Member Functions</h2></td></tr>
 <p>Regresa todos los álbums en la base de datos. </p><dl class="section return"><dt>Returns</dt><dd>Todos los álbums en la base de datos. </dd></dl>
 
 <p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#afa7eb9c2e7b61ff913435f1c506e267b">Track8::Database::SQLiteAlbumRepository</a>.</p>
+
+</div>
+</div>
+<a id="a1d297aaea4ea3137534c88f17a421d1b" name="a1d297aaea4ea3137534c88f17a421d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d297aaea4ea3137534c88f17a421d1b">&#9670;&#160;</a></span>getByPerformer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt; Track8::Repositories::IAlbumRepository::getByPerformer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>performerId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Regresa los álbums que tienen al menos una canción de un intérprete. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">performerId</td><td>El id del intérprete en la tabla de <span class="tt">performers</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Los álbums del intérprete. </dd></dl>
+
+<p>Implemented in <a class="el" href="classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a74b310263d83aee20ee0524411e6845d">Track8::Database::SQLiteAlbumRepository</a>.</p>
 
 </div>
 </div>
