@@ -5,6 +5,16 @@
 namespace Track8::Domain {
 
 /**
+ * @enum PerformerType
+ * @brief Tipos de intérprete almacenados en la tabla `types`.
+ */
+enum class PerformerType : int {
+    Person = 0,
+    Group = 1,
+    Unknown = 2,
+};
+
+/**
  * @class Performer
  * @brief Representa a un `intérprete`, se utiliza como fallback al leer las
  * etiquetas ID3V2.4.
