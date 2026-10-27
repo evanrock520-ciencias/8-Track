@@ -191,6 +191,111 @@ TEST_F(SQLiteSongRepositoryTest, UpdateSong) {
     ASSERT_EQ(lark, *larkRepo);
 }
 
+TEST_F(SQLiteSongRepositoryTest, GetSongsByAlbumAndPerformer) {
+    using namespace Track8::Domain;
+    const int angelOlsenId = m_performers->save("Angel Olsen");
+    const int slowdiveId = m_performers->save("Slowdive");
+    const int allMirrorsId = m_albums->save(
+        {1, "/home/user/Music/all-mirrors", "All Mirrors", 2019});
+    const int bigTimeId =
+        m_albums->save({2, "/home/user/Music/big-time", "Big Time", 2022});
+    const int souvlakiId =
+        m_albums->save({3, "/home/user/Music/souvlaki", "Souvlaki", 1993});
+
+    const auto angelOlsen = m_performers->find(angelOlsenId);
+    const auto slowdive = m_performers->find(slowdiveId);
+    const auto allMirrors = m_albums->find(allMirrorsId);
+    const auto bigTime = m_albums->find(bigTimeId);
+    const auto souvlaki = m_albums->find(souvlakiId);
+
+    SongBuilder builder;
+    m_songs->save(builder.with_performer(angelOlsen)
+                      .with_album(allMirrors)
+                      .with_title("Lark")
+                      .with_track(1)
+                      .with_path("/home/user/Music/all-mirrors/lark.mp3")
+                      .create());
+    m_songs->save(
+        builder.with_performer(angelOlsen)
+            .with_album(allMirrors)
+            .with_title("New Love Cassette")
+            .with_track(9)
+            .with_path("/home/user/Music/all-mirrors/new-love-cassette.mp3")
+            .create());
+    m_songs->save(
+        builder.with_performer(angelOlsen)
+            .with_album(bigTime)
+            .with_title("All the Good Times")
+            .with_track(1)
+            .with_path("/home/user/Music/big-time/all-the-good-times.mp3")
+            .create());
+    m_songs->save(builder.with_performer(slowdive)
+                      .with_album(souvlaki)
+                      .with_title("Alison")
+                      .with_track(1)
+                      .with_path("/home/user/Music/souvlaki/alison.mp3")
+                      .create());
+
+    const auto albumSongs = m_songs->getByAlbum(allMirrorsId);
+    ASSERT_EQ(albumSongs.size(), 2);
+    EXPECT_EQ(albumSongs.at(0)->title(), "Lark");
+    EXPECT_EQ(albumSongs.at(1)->title(), "New Love Cassette");
+
+    const auto performerSongs = m_songs->getByPerformer(angelOlsenId);
+    ASSERT_EQ(performerSongs.size(), 3);
+    EXPECT_EQ(performerSongs.at(0)->title(), "All the Good Times");
+    EXPECT_EQ(performerSongs.at(1)->title(), "Lark");
+    EXPECT_EQ(performerSongs.at(2)->title(), "New Love Cassette");
+
+    EXPECT_TRUE(m_songs->getByAlbum(1224).empty());
+    EXPECT_TRUE(m_songs->getByPerformer(1224).empty());
+}
+
+TEST_F(SQLiteSongRepositoryTest, GetGenres) {
+    using namespace Track8::Domain;
+    const int angelOlsenId = m_performers->save("Angel Olsen");
+    const int unknownId = m_performers->save("Unknown");
+    const int allMirrorsId = m_albums->save(
+        {1, "/home/user/Music/all-mirrors", "All Mirrors", 2019});
+    const int unknownAlbumId = m_albums->find(0)->id();
+
+    const auto angelOlsen = m_performers->find(angelOlsenId);
+    const auto unknown = m_performers->find(unknownId);
+    const auto allMirrors = m_albums->find(allMirrorsId);
+    const auto unknownAlbum = m_albums->find(unknownAlbumId);
+
+    SongBuilder builder;
+    m_songs->save(builder.with_performer(angelOlsen)
+                      .with_album(allMirrors)
+                      .with_title("Lark")
+                      .with_genre("Art Pop")
+                      .with_path("/home/user/Music/all-mirrors/lark.mp3")
+                      .create());
+    m_songs->save(builder.with_performer(angelOlsen)
+                      .with_album(allMirrors)
+                      .with_title("All the Good Times")
+                      .with_genre("Americana")
+                      .with_path("/home/user/Music/all-mirrors/good-times.mp3")
+                      .create());
+    m_songs->save(builder.with_performer(angelOlsen)
+                      .with_album(allMirrors)
+                      .with_title("Right Now")
+                      .with_genre("Art Pop")
+                      .with_path("/home/user/Music/all-mirrors/right-now.mp3")
+                      .create());
+    m_songs->save(builder.with_performer(unknown)
+                      .with_album(unknownAlbum)
+                      .with_title("Unknown")
+                      .with_genre("Unknown")
+                      .with_path("/home/user/Music/unknown.mp3")
+                      .create());
+
+    const auto genres = m_songs->genres();
+    ASSERT_EQ(genres.size(), 2);
+    EXPECT_EQ(genres.at(0), "Americana");
+    EXPECT_EQ(genres.at(1), "Art Pop");
+}
+
 TEST_F(SQLiteSongRepositoryTest, GetAllWithSamePerformer) {
     using namespace Track8::Domain;
     constexpr int SONGS = 100;

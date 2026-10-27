@@ -67,11 +67,40 @@ Domain::Stats LibraryService::stats() const {
         .m_albumsCount = m_albums->count(),
         .m_songsCount = m_songs->count(),
         .m_performersCount = m_performers->count(),
+        .m_genresCount = static_cast<unsigned int>(m_songs->genres().size()),
+        .m_bandsCount = m_performers->countByType(Domain::PerformerType::Group),
+        .m_peopleCount =
+            m_performers->countByType(Domain::PerformerType::Person),
+        .m_unknownCount =
+            m_performers->countByType(Domain::PerformerType::Unknown),
     };
 }
 
 std::vector<std::shared_ptr<Domain::Song>> LibraryService::songs() const {
     return m_songs->getAll();
+}
+
+std::vector<std::shared_ptr<Domain::Album>> LibraryService::albums() const {
+    return m_albums->getAll();
+}
+
+std::vector<std::string> LibraryService::genres() const {
+    return m_songs->genres();
+}
+
+std::vector<std::shared_ptr<Domain::Song>>
+LibraryService::songsByAlbum(const int albumId) const {
+    return m_songs->getByAlbum(albumId);
+}
+
+std::vector<std::shared_ptr<Domain::Song>>
+LibraryService::songsByPerformer(const int performerId) const {
+    return m_songs->getByPerformer(performerId);
+}
+
+std::vector<std::shared_ptr<Domain::Album>>
+LibraryService::albumsByPerformer(const int performerId) const {
+    return m_albums->getByPerformer(performerId);
 }
 
 } // namespace Track8::Services

@@ -27,6 +27,9 @@ public:
 
     std::vector<std::shared_ptr<Domain::Album>> getAll() override;
 
+    std::vector<std::shared_ptr<Domain::Album>>
+    getByPerformer(int performerId) override;
+
     unsigned int count() override;
 
 private:

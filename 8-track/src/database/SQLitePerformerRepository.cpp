@@ -14,7 +14,8 @@ int SQLitePerformerRepository::save(const std::string& name) {
     QSqlQuery query(m_database);
     query.prepare(
         "INSERT INTO performers (id_type, name) VALUES (:id_type, :name)");
-    query.bindValue(":id_type", 2); // En un inicio siempre es 'Unknown'
+    query.bindValue(":id_type",
+                    static_cast<int>(Domain::PerformerType::Unknown));
     query.bindValue(":name", QString::fromStdString(name));
 
     if (!query.exec())
@@ -52,13 +53,15 @@ std::shared_ptr<Domain::Performer> SQLitePerformerRepository::find(int id) {
         return nullptr;
 
     const auto name = query.value("name").toString().toStdString();
+    const auto type =
+        static_cast<Domain::PerformerType>(query.value("id_type").toInt());
 
-    switch (query.value("id_type").toInt()) {
-    case 0:
+    switch (type) {
+    case Domain::PerformerType::Person:
         return findArtist(id);
-    case 1:
+    case Domain::PerformerType::Group:
         return findGroup(id);
-    case 2:
+    case Domain::PerformerType::Unknown:
         return std::make_shared<Domain::Performer>(id, name);
     default:
         return nullptr;
@@ -72,7 +75,8 @@ void SQLitePerformerRepository::markAsArtist(int id) {
     QSqlQuery update(m_database);
     update.prepare(
         "UPDATE performers SET id_type = :id_type WHERE id_performer = :id");
-    update.bindValue(":id_type", 0); // 0 = persons
+    update.bindValue(":id_type",
+                     static_cast<int>(Domain::PerformerType::Person));
     update.bindValue(":id", id);
 
     if (!update.exec()) {
@@ -132,7 +136,8 @@ void SQLitePerformerRepository::markAsGroup(int id) {
     QSqlQuery update(m_database);
     update.prepare(
         "UPDATE performers SET id_type = :id_type WHERE id_performer = :id");
-    update.bindValue(":id_type", 1); // 1 = groups
+    update.bindValue(":id_type",
+                     static_cast<int>(Domain::PerformerType::Group));
     update.bindValue(":id", id);
 
     if (!update.exec()) {
@@ -217,6 +222,44 @@ SQLitePerformerRepository::getMembers(int groupId) {
             Domain::Date(query.value("death_date").toString().toStdString())));
     }
     return members;
+}
+
+std::vector<std::shared_ptr<Domain::Group>>
+SQLitePerformerRepository::getGroups(const int personId) {
+    QSqlQuery query(m_database);
+    query.prepare("SELECT groups.id_group, groups.name, groups.start_date, "
+                  "groups.end_date FROM in_group ig JOIN groups "
+                  "ON groups.id_group = ig.id_group WHERE ig.id_person = :id "
+                  "ORDER BY groups.name COLLATE NOCASE");
+    query.bindValue(":id", personId);
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Group>> groups;
+    while (query.next()) {
+        groups.push_back(std::make_shared<Domain::Group>(
+            query.value("id_group").toInt(),
+            query.value("name").toString().toStdString(),
+            Domain::Date(query.value("start_date").toString().toStdString()),
+            Domain::Date(query.value("end_date").toString().toStdString())));
+    }
+    return groups;
+}
+
+unsigned int
+SQLitePerformerRepository::countByType(const Domain::PerformerType type) {
+    QSqlQuery query(m_database);
+    query.prepare("SELECT COUNT(*) FROM performers WHERE id_type = :id_type");
+    query.bindValue(":id_type", static_cast<int>(type));
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    if (!query.next())
+        return 0;
+
+    return query.value(0).toUInt();
 }
 
 void SQLitePerformerRepository::update(const Domain::Performer& performer) {
@@ -344,7 +387,16 @@ SQLitePerformerRepository::findName(const int id) const {
 }
 
 unsigned int SQLitePerformerRepository::count() {
-    return getAll().size();
+    QSqlQuery query(m_database);
+    query.prepare("SELECT COUNT(*) FROM performers");
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    if (!query.next())
+        return 0;
+
+    return query.value(0).toUInt();
 }
 
 } // namespace Track8::Database

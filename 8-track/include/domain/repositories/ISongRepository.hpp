@@ -1,6 +1,7 @@
 #pragma once
 #include "domain/Song.hpp"
 
+#include <string>
 #include <vector>
 
 // Forward Definition
@@ -68,6 +69,28 @@ public:
      * @return Todas las canciones de la base de datos.
      */
     virtual std::vector<std::shared_ptr<Domain::Song>> getAll() = 0;
+
+    /**
+     * Regresa las canciones de un álbum.
+     * @param albumId El id del álbum en la tabla de `albums`.
+     * @return Las canciones del álbum.
+     */
+    virtual std::vector<std::shared_ptr<Domain::Song>>
+    getByAlbum(int albumId) = 0;
+
+    /**
+     * Regresa las canciones de un intérprete.
+     * @param performerId El id del intérprete en la tabla de `performers`.
+     * @return Las canciones del intérprete.
+     */
+    virtual std::vector<std::shared_ptr<Domain::Song>>
+    getByPerformer(int performerId) = 0;
+
+    /**
+     * Regresa los géneros distintos de la base de datos.
+     * @return Los géneros ordenados alfabéticamente.
+     */
+    virtual std::vector<std::string> genres() = 0;
 
     /**
      * Regresa la cantidad de rolas en la base de datos.

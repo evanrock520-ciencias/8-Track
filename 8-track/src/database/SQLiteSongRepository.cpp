@@ -93,8 +93,58 @@ SQLiteSongRepository::find(const Compiler::Query& query) {
             songs.push_back(std::move(song));
 
     return songs;
+}
 
-    return {};
+std::vector<std::shared_ptr<Domain::Song>>
+SQLiteSongRepository::getByAlbum(const int albumId) {
+    QSqlQuery query(m_database);
+    query.prepare("SELECT * FROM rolas WHERE id_album = :id "
+                  "ORDER BY track, title COLLATE NOCASE");
+    query.bindValue(":id", albumId);
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Song>> songs;
+    while (query.next())
+        if (auto song = buildSong(query))
+            songs.push_back(std::move(song));
+
+    return songs;
+}
+
+std::vector<std::shared_ptr<Domain::Song>>
+SQLiteSongRepository::getByPerformer(const int performerId) {
+    QSqlQuery query(m_database);
+    query.prepare("SELECT * FROM rolas WHERE id_performer = :id "
+                  "ORDER BY title COLLATE NOCASE");
+    query.bindValue(":id", performerId);
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Song>> songs;
+    while (query.next())
+        if (auto song = buildSong(query))
+            songs.push_back(std::move(song));
+
+    return songs;
+}
+
+std::vector<std::string> SQLiteSongRepository::genres() {
+    QSqlQuery query(m_database);
+    query.prepare("SELECT DISTINCT genre FROM rolas "
+                  "WHERE genre IS NOT NULL AND TRIM(genre) <> '' "
+                  "AND genre <> 'Unknown' ORDER BY genre COLLATE NOCASE");
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::string> genres;
+    while (query.next())
+        genres.push_back(query.value(0).toString().toStdString());
+
+    return genres;
 }
 
 void SQLiteSongRepository::remove(int id) {
@@ -164,7 +214,16 @@ SQLiteSongRepository::buildSong(const QSqlQuery& query) const {
 }
 
 unsigned int SQLiteSongRepository::count() {
-    return getAll().size();
+    QSqlQuery query(m_database);
+    query.prepare("SELECT COUNT(*) FROM rolas");
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    if (!query.next())
+        return 0;
+
+    return query.value(0).toUInt();
 }
 
 } // namespace Track8::Database

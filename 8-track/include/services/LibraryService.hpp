@@ -37,6 +37,42 @@ public:
     [[nodiscard]] std::vector<std::shared_ptr<Domain::Song>> songs() const;
 
     /**
+     * Regresa los álbums de la base de datos.
+     * @return Los álbums de la base de datos.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Album>> albums() const;
+
+    /**
+     * Regresa los géneros distintos de la base de datos.
+     * @return Los géneros registrados.
+     */
+    [[nodiscard]] std::vector<std::string> genres() const;
+
+    /**
+     * Regresa las canciones de un álbum.
+     * @param albumId El id del álbum.
+     * @return Las canciones del álbum, ordenadas por número de pista.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Song>>
+    songsByAlbum(int albumId) const;
+
+    /**
+     * Regresa las canciones de un intérprete.
+     * @param performerId El id del intérprete.
+     * @return Las canciones del intérprete.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Song>>
+    songsByPerformer(int performerId) const;
+
+    /**
+     * Regresa los álbums de un intérprete.
+     * @param performerId El id del intérprete.
+     * @return Los álbums del intérprete.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Album>>
+    albumsByPerformer(int performerId) const;
+
+    /**
      * Regresa las estadisticas de todos los repositorios.
      * @return Las estadisticas de todos los repositorios.
      */

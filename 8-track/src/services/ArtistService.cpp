@@ -84,6 +84,11 @@ ArtistService::members(const int groupId) const {
     return m_performers->getMembers(groupId);
 }
 
+std::vector<std::shared_ptr<Domain::Group>>
+ArtistService::groupsOfPerson(const int personId) const {
+    return m_performers->getGroups(personId);
+}
+
 std::vector<std::shared_ptr<Domain::Performer>>
 ArtistService::performers() const {
     return m_performers->getAll();

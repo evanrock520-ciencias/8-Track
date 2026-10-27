@@ -40,6 +40,13 @@ public:
 
     std::vector<std::shared_ptr<Domain::Song>> getAll() override;
 
+    std::vector<std::shared_ptr<Domain::Song>> getByAlbum(int albumId) override;
+
+    std::vector<std::shared_ptr<Domain::Song>>
+    getByPerformer(int performerId) override;
+
+    std::vector<std::string> genres() override;
+
     unsigned int count() override;
 
 private:
