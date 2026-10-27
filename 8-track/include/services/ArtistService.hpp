@@ -94,6 +94,14 @@ public:
     [[nodiscard]] std::vector<std::shared_ptr<Domain::Artist>>
     members(int groupId) const;
 
+    /**
+     * Regresa los grupos a los que pertenece un artista.
+     * @param personId El id del artista.
+     * @return Los grupos del artista.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Group>>
+    groupsOfPerson(int personId) const;
+
 private:
     std::shared_ptr<Repositories::IPerformerRepository> m_performers;
 };
