@@ -74,6 +74,21 @@ public:
     getMembers(int groupId) = 0;
 
     /**
+     * Regresa los grupos a los que pertenece un artista.
+     * @param personId El id del artista en la tabla de `performers`.
+     * @return Los grupos del artista.
+     */
+    virtual std::vector<std::shared_ptr<Domain::Group>>
+    getGroups(int personId) = 0;
+
+    /**
+     * Regresa la cantidad de intérpretes de un tipo específico.
+     * @param type El tipo de intérprete.
+     * @return La cantidad de intérpretes de ese tipo.
+     */
+    virtual unsigned int countByType(Domain::PerformerType type) = 0;
+
+    /**
      * Actualiza a un intérprete en la base de datos.
      * @param performer El intérprete actualizado.
      */

@@ -50,6 +50,14 @@ public:
     virtual std::vector<std::shared_ptr<Domain::Album>> getAll() = 0;
 
     /**
+     * Regresa los álbums que tienen al menos una canción de un intérprete.
+     * @param performerId El id del intérprete en la tabla de `performers`.
+     * @return Los álbums del intérprete.
+     */
+    virtual std::vector<std::shared_ptr<Domain::Album>>
+    getByPerformer(int performerId) = 0;
+
+    /**
      * Regresa la cantidad de albums en la base de datos.
      * @return La cantidad de albums en la base de datos.
      */

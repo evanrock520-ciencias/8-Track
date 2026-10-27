@@ -95,8 +95,42 @@ std::vector<std::shared_ptr<Domain::Album>> SQLiteAlbumRepository::getAll() {
     return albums;
 }
 
+std::vector<std::shared_ptr<Domain::Album>>
+SQLiteAlbumRepository::getByPerformer(const int performerId) {
+    QSqlQuery query(m_database);
+    query.prepare(
+        "SELECT DISTINCT albums.id_album, albums.path, albums.name, "
+        "albums.year FROM albums JOIN rolas "
+        "ON rolas.id_album = albums.id_album "
+        "WHERE rolas.id_performer = :id ORDER BY albums.name COLLATE NOCASE");
+    query.bindValue(":id", performerId);
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Album>> albums;
+    while (query.next()) {
+        albums.push_back(std::make_shared<Domain::Album>(
+            query.value("id_album").toInt(),
+            query.value("path").toString().toStdString(),
+            query.value("name").toString().toStdString(),
+            query.value("year").toInt()));
+    }
+
+    return albums;
+}
+
 unsigned int SQLiteAlbumRepository::count() {
-    return getAll().size();
+    QSqlQuery query(m_database);
+    query.prepare("SELECT COUNT(*) FROM albums");
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    if (!query.next())
+        return 0;
+
+    return query.value(0).toUInt();
 }
 
 } // namespace Track8::Database
