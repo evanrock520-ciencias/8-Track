@@ -1,4 +1,4 @@
-Output "demo.gif"
+Output "scan.gif"
 Set FontSize 22
 Set Width 1200
 Set Height 800
@@ -14,7 +14,14 @@ Type "clear"
 Enter
 Show
 
-Type "./main --query 'Love'"
+Type "./main --scan ~/Music/titanic-rising"
+Enter
+Sleep 3s
+Hide
+Type "clear"
+Enter
+Show
+Type "./main --list"
 Sleep 2s
 Enter
 Sleep 5s
