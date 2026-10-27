@@ -1,4 +1,5 @@
 #pragma once
+#include "services/ArtistService.hpp"
 #include "services/LibraryService.hpp"
 #include "services/SearchService.hpp"
 
@@ -9,8 +10,8 @@ namespace Track8::Cli {
  */
 class Cli {
 public:
-    explicit Cli(Services::LibraryService& library,
-                 Services::SearchService& search);
+    Cli(Services::LibraryService& library, Services::SearchService& search,
+        Services::ArtistService& artists);
 
     /**
      * Corre la interfaz de comandos para 8-track.
@@ -31,9 +32,11 @@ private:
      * Muestra una tabla con todas las canciones de la base de datos.
      */
     void list() const;
+    void listPerformers() const;
 
     Services::LibraryService& m_library;
     Services::SearchService& m_search;
+    Services::ArtistService& m_artists;
 };
 
 } // namespace Track8::Cli

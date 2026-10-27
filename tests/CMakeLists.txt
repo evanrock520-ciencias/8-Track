@@ -48,6 +48,7 @@ add_executable(services_tests
         services/main.cpp
         services/test_library_service.cpp
         services/test_search_service.cpp
+        services/test_artist_service.cpp
 )
 
 target_link_libraries(services_tests

@@ -38,4 +38,30 @@ Tabulator::tabulate(const std::vector<std::shared_ptr<Domain::Song>>& songs) {
     return songsTable;
 }
 
+[[nodiscard]] tabulate::Table Tabulator::tabulate(
+    const std::vector<std::shared_ptr<Domain::Performer>>& performers) {
+    using namespace tabulate;
+    Table songsTable;
+    songsTable.use_unicode_borders(true, BorderStyle::Heavy);
+    songsTable.format().multi_byte_characters(true);
+
+    songsTable.add_row({"Id", "Name"});
+    for (const auto& performer : performers)
+        songsTable.add_row(
+            {std::to_string(performer->id()), performer->name()});
+
+    songsTable.column(0).format().font_style({FontStyle::bold});
+    songsTable.column(1).format().font_align(FontAlign::center);
+
+    for (size_t i = 0; i < 2; ++i) {
+        songsTable[0][i]
+            .format()
+            .font_color(Color::red)
+            .font_align(FontAlign::center)
+            .font_style({FontStyle::bold});
+    }
+
+    return songsTable;
+}
+
 } // namespace Track8::Cli

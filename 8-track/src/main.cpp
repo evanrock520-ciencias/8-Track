@@ -33,8 +33,10 @@ int main(int argc, char* argv[]) {
 
     Services::LibraryService library(albums, performers, songs);
     Services::SearchService search(songs);
+    Services::ArtistService artists(performers);
+
     if (argc > 1) {
-        const Cli::Cli cli(library, search);
+        const Cli::Cli cli(library, search, artists);
         cli.run(argc, argv);
     }
 
