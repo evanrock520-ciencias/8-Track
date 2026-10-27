@@ -149,6 +149,7 @@ var NAVTREEINDEX2 =
 "index.html#autotoc_md2":[0,0],
 "index.html#autotoc_md3":[0,1],
 "index.html#autotoc_md4":[0,2],
+"index.html#autotoc_md5":[0,3],
 "namespaceTrack8.html":[1,0,0],
 "namespaceTrack8_1_1Cli.html":[1,0,0,0],
 "namespaceTrack8_1_1Compiler.html":[1,0,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html#a8e55f6388d98c1a87abb07125972038b":[2,0,0,1,0,0,1],
 "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html#a925134378b3f4b108cd88d5831e9d8cb":[1,0,0,1,0,0,0],
 "structTrack8_1_1Compiler_1_1SQL_1_1SQLQuery.html#a925134378b3f4b108cd88d5831e9d8cb":[2,0,0,1,0,0,0],
-"structTrack8_1_1Compiler_1_1SortClause.html":[1,0,0,1,11],
-"structTrack8_1_1Compiler_1_1SortClause.html":[2,0,0,1,11]
+"structTrack8_1_1Compiler_1_1SortClause.html":[1,0,0,1,11]
 };

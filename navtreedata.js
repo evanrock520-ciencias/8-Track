@@ -28,7 +28,8 @@ var NAVTREE =
     [ "8-Track", "index.html#autotoc_md1", [
       [ "GUI", "index.html#autotoc_md2", null ],
       [ "Terminal", "index.html#autotoc_md3", null ],
-      [ "Licencia", "index.html#autotoc_md4", null ]
+      [ "Documentación", "index.html#autotoc_md4", null ],
+      [ "Licencia", "index.html#autotoc_md5", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -62,7 +63,7 @@ var NAVTREEINDEX =
 "Album_8hpp.html",
 "classTrack8_1_1Compiler_1_1TrackFilterNode.html#a128797242a035e2d897c87fbb058b8ca",
 "classTrack8_1_1Repositories_1_1IPerformerRepository.html#ac74b2960b5dc07479dd1226dd2cbfcf9",
-"structTrack8_1_1Compiler_1_1SortClause.html#a1ace22111940d7b83edf541ae9177740"
+"structTrack8_1_1Compiler_1_1SortClause.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

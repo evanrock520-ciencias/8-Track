@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gui_0',['GUI',['../index.html#autotoc_md2',1,'']]]
+  ['documentación_0',['Documentación',['../index.html#autotoc_md4',1,'']]]
 ];

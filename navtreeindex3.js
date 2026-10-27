@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"structTrack8_1_1Compiler_1_1SortClause.html":[2,0,0,1,11],
 "structTrack8_1_1Compiler_1_1SortClause.html#a1ace22111940d7b83edf541ae9177740":[1,0,0,1,11,1],
 "structTrack8_1_1Compiler_1_1SortClause.html#a1ace22111940d7b83edf541ae9177740":[2,0,0,1,11,1],
 "structTrack8_1_1Compiler_1_1SortClause.html#a5180d8a86f76402ae43ffaab502ac00b":[1,0,0,1,11,0],
