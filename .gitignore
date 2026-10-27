@@ -67,8 +67,10 @@ Testing/
 
 # IDE
 .idea/
+.vscode/
 
 # LaTex
+docs/report/out
 *.aux
 *.fls
 *.log
