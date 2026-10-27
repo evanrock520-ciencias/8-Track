@@ -10,7 +10,7 @@ var searchData=
   ['performer_7',['Performer',['../classTrack8_1_1Domain_1_1Performer.html',1,'Track8::Domain::Performer'],['../classTrack8_1_1Domain_1_1Performer.html#af4ddf7fd6e4c6e8985f92d2c005dc9a7',1,'Track8::Domain::Performer::Performer()']]],
   ['performer_8',['performer',['../classTrack8_1_1Domain_1_1Song.html#a120ccbf591362b82964b3926c0de126d',1,'Track8::Domain::Song']]],
   ['performer_2ehpp_9',['Performer.hpp',['../Performer_8hpp.html',1,'']]],
-  ['performers_10',['performers',['../classTrack8_1_1Services_1_1ArtistService.html#a93ede7ce9e041174b35c7d15dddc2645',1,'Track8::Services::ArtistService']]],
+  ['performers_10',['performers',['../structTrack8_1_1App_1_1AppContext.html#a08abbd0353d3a124b1c9ffbf1d2023d9',1,'Track8::App::AppContext::performers'],['../classTrack8_1_1Services_1_1ArtistService.html#a93ede7ce9e041174b35c7d15dddc2645',1,'Track8::Services::ArtistService::performers()']]],
   ['performertype_11',['PerformerType',['../namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9ea',1,'Track8::Domain']]],
   ['person_12',['Person',['../namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9eaa40bed7cf9b3d4bb3a3d7a7e3eb18c5eb',1,'Track8::Domain']]],
   ['print_13',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]]

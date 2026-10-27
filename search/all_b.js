@@ -5,10 +5,11 @@ var searchData=
   ['lexeme_2',['lexeme',['../classTrack8_1_1Compiler_1_1Token.html#add821bca0739acae09b963581afb5b18',1,'Track8::Compiler::Token']]],
   ['lexer_3',['Lexer',['../classTrack8_1_1Compiler_1_1Lexer.html',1,'Track8::Compiler::Lexer'],['../classTrack8_1_1Compiler_1_1Lexer.html#a69fbf6c64b8c30b37dc39a1f6d06f5eb',1,'Track8::Compiler::Lexer::Lexer()']]],
   ['lexer_2ehpp_4',['Lexer.hpp',['../Lexer_8hpp.html',1,'']]],
-  ['libraryservice_5',['LibraryService',['../classTrack8_1_1Services_1_1LibraryService.html',1,'Track8::Services::LibraryService'],['../classTrack8_1_1Services_1_1LibraryService.html#ae7ff752e7866872a60a990d1bc0c981a',1,'Track8::Services::LibraryService::LibraryService()']]],
-  ['libraryservice_2ehpp_6',['LibraryService.hpp',['../LibraryService_8hpp.html',1,'']]],
-  ['licencia_7',['Licencia',['../index.html#autotoc_md5',1,'']]],
-  ['like_8',['LIKE',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35faa7598964efa10e649f92662b79e8d4d3',1,'Track8::Compiler']]],
-  ['line_9',['line',['../classTrack8_1_1Compiler_1_1Token.html#a0208fedebd963328f5ccd1ebaefc6077',1,'Track8::Compiler::Token']]],
-  ['literal_10',['literal',['../classTrack8_1_1Compiler_1_1Token.html#abb998384cb849195deef1557961c681a',1,'Track8::Compiler::Token']]]
+  ['library_5',['library',['../structTrack8_1_1App_1_1AppContext.html#a55b16df09d346123fed48e778b52a919',1,'Track8::App::AppContext']]],
+  ['libraryservice_6',['LibraryService',['../classTrack8_1_1Services_1_1LibraryService.html',1,'Track8::Services::LibraryService'],['../classTrack8_1_1Services_1_1LibraryService.html#ae7ff752e7866872a60a990d1bc0c981a',1,'Track8::Services::LibraryService::LibraryService()']]],
+  ['libraryservice_2ehpp_7',['LibraryService.hpp',['../LibraryService_8hpp.html',1,'']]],
+  ['licencia_8',['Licencia',['../index.html#autotoc_md5',1,'']]],
+  ['like_9',['LIKE',['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35faa7598964efa10e649f92662b79e8d4d3',1,'Track8::Compiler']]],
+  ['line_10',['line',['../classTrack8_1_1Compiler_1_1Token.html#a0208fedebd963328f5ccd1ebaefc6077',1,'Track8::Compiler::Token']]],
+  ['literal_11',['literal',['../classTrack8_1_1Compiler_1_1Token.html#abb998384cb849195deef1557961c681a',1,'Track8::Compiler::Token']]]
 ];

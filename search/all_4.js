@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['database_0',['database',['../classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5',1,'Track8::Database::DatabaseManager']]],
+  ['database_0',['database',['../structTrack8_1_1App_1_1AppContext.html#a6fccaa575a383caee915db85c241b09d',1,'Track8::App::AppContext::database'],['../classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5',1,'Track8::Database::DatabaseManager::database()']]],
   ['databasemanager_1',['DatabaseManager',['../classTrack8_1_1Database_1_1DatabaseManager.html',1,'Track8::Database::DatabaseManager'],['../classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b',1,'Track8::Database::DatabaseManager::DatabaseManager()']]],
   ['databasemanager_2ehpp_2',['DatabaseManager.hpp',['../DatabaseManager_8hpp.html',1,'']]],
   ['date_3',['Date',['../classTrack8_1_1Domain_1_1Date.html',1,'Track8::Domain::Date'],['../classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a',1,'Track8::Domain::Date::Date(const std::string &amp;date)'],['../classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77',1,'Track8::Domain::Date::Date(const int year, const int month, const int day)']]],

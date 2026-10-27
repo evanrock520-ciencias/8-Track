@@ -1,5 +1,6 @@
 var namespaceTrack8 =
 [
+    [ "App", "namespaceTrack8_1_1App.html", "namespaceTrack8_1_1App" ],
     [ "Cli", "namespaceTrack8_1_1Cli.html", "namespaceTrack8_1_1Cli" ],
     [ "Compiler", "namespaceTrack8_1_1Compiler.html", "namespaceTrack8_1_1Compiler" ],
     [ "Database", "namespaceTrack8_1_1Database.html", "namespaceTrack8_1_1Database" ],

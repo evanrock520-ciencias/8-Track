@@ -8,7 +8,8 @@ var searchData=
   ['album_5',['album',['../classTrack8_1_1Domain_1_1Song.html#a85827da638c6b7fd1bd5c874158c011a',1,'Track8::Domain::Song']]],
   ['albums_6',['albums',['../classTrack8_1_1Services_1_1LibraryService.html#acf88cd1523e70be2263db6dfd75fbaab',1,'Track8::Services::LibraryService']]],
   ['albumsbyperformer_7',['albumsByPerformer',['../classTrack8_1_1Services_1_1LibraryService.html#a813477bf9037d139cb2bd5db9a3632a6',1,'Track8::Services::LibraryService']]],
-  ['artist_8',['Artist',['../classTrack8_1_1Domain_1_1Artist.html#a433f7a6e343a10c97ff368022a5cba9c',1,'Track8::Domain::Artist']]],
-  ['artistservice_9',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService']]],
-  ['asstring_10',['asString',['../classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf',1,'Track8::Domain::Date']]]
+  ['appcontext_8',['AppContext',['../structTrack8_1_1App_1_1AppContext.html#a9c15e662f592c7994dc5afd890498226',1,'Track8::App::AppContext']]],
+  ['artist_9',['Artist',['../classTrack8_1_1Domain_1_1Artist.html#a433f7a6e343a10c97ff368022a5cba9c',1,'Track8::Domain::Artist']]],
+  ['artistservice_10',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService']]],
+  ['asstring_11',['asString',['../classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf',1,'Track8::Domain::Date']]]
 ];
