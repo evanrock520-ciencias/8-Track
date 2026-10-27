@@ -60,3 +60,31 @@ TEST_F(ArtistServiceTest, MarkAsGroupByNameNotFound) {
     ASSERT_THROW(m_service->markAsGroup("Florence and the Machine"),
                  std::runtime_error);
 }
+
+TEST_F(ArtistServiceTest, FindByName) {
+    const int id = m_performers->save("Nico");
+
+    const auto performer = m_service->find("Nico");
+
+    ASSERT_NE(performer, nullptr);
+    ASSERT_EQ(performer->id(), id);
+    ASSERT_EQ(performer->name(), "Nico");
+}
+
+TEST_F(ArtistServiceTest, FindById) {
+    const int id = m_performers->save("Nico");
+
+    const auto performer = m_service->find(id);
+
+    ASSERT_NE(performer, nullptr);
+    ASSERT_EQ(performer->id(), id);
+}
+
+TEST_F(ArtistServiceTest, FindMissingReturnsNull) {
+    ASSERT_EQ(m_service->find("Nico"), nullptr);
+    ASSERT_EQ(m_service->find(1224), nullptr);
+}
+
+TEST_F(ArtistServiceTest, MembersOfMissingGroupIsEmpty) {
+    ASSERT_TRUE(m_service->members(1224).empty());
+}
