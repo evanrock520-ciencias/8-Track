@@ -8,8 +8,9 @@
 
 namespace Track8::Cli {
 
-Cli::Cli(Services::LibraryService& library, Services::SearchService& search)
-    : m_library(library), m_search(search) {}
+Cli::Cli(Services::LibraryService& library, Services::SearchService& search,
+         Services::ArtistService& artists)
+    : m_library(library), m_search(search), m_artists(artists) {}
 
 void Cli::run(const int argc, char** argv) const {
     argparse::ArgumentParser program("8-track");
@@ -22,6 +23,9 @@ void Cli::run(const int argc, char** argv) const {
         .default_value(false)
         .implicit_value(true)
         .help("list the complete rolas table.");
+
+    program.add_argument("--person").help("mark a performer as an artist.");
+    program.add_argument("--group").help("mark a performer as a group.");
 
     try {
         program.parse_args(argc, argv);
@@ -43,6 +47,24 @@ void Cli::run(const int argc, char** argv) const {
     if (program.is_used("--query")) {
         const auto query = program.get<std::string>("--query");
         queryTable(query);
+    }
+
+    if (program.is_used("--person")) {
+        const auto name = program.get<std::string>("--person");
+        try {
+            m_artists.markAsPerson(name);
+        } catch (std::exception& exception) {
+            std::cerr << exception.what() << std::endl;
+        }
+    }
+
+    if (program.is_used("--group")) {
+        const auto name = program.get<std::string>("--group");
+        try {
+            m_artists.markAsGroup(name);
+        } catch (std::exception& exception) {
+            std::cerr << exception.what() << std::endl;
+        }
     }
 }
 
