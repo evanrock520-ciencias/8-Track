@@ -10,5 +10,6 @@ var searchData=
   ['performer_7',['Performer',['../classTrack8_1_1Domain_1_1Performer.html',1,'Track8::Domain::Performer'],['../classTrack8_1_1Domain_1_1Performer.html#af4ddf7fd6e4c6e8985f92d2c005dc9a7',1,'Track8::Domain::Performer::Performer()']]],
   ['performer_8',['performer',['../classTrack8_1_1Domain_1_1Song.html#a120ccbf591362b82964b3926c0de126d',1,'Track8::Domain::Song']]],
   ['performer_2ehpp_9',['Performer.hpp',['../Performer_8hpp.html',1,'']]],
-  ['print_10',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]]
+  ['performers_10',['performers',['../classTrack8_1_1Services_1_1ArtistService.html#a93ede7ce9e041174b35c7d15dddc2645',1,'Track8::Services::ArtistService']]],
+  ['print_11',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]]
 ];

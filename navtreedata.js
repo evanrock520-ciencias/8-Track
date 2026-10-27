@@ -60,9 +60,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Album_8hpp.html",
-"classTrack8_1_1Compiler_1_1TrackFilterNode.html#a405b2afb1e1d22dbd49e7bb5fa3739a0",
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ad14ab51a6dd33d6bfc459b29749b285b",
-"structTrack8_1_1Miner_1_1Metadata.html#a733dc06366354ebb342e6a70100feb95"
+"classTrack8_1_1Compiler_1_1TrackFilterNode.html#a128797242a035e2d897c87fbb058b8ca",
+"classTrack8_1_1Repositories_1_1IPerformerRepository.html#ac74b2960b5dc07479dd1226dd2cbfcf9",
+"structTrack8_1_1Compiler_1_1SortClause.html#a1ace22111940d7b83edf541ae9177740"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tabulate_0',['tabulate',['../classTrack8_1_1Cli_1_1Tabulator.html#a80d816ec2f914cca794df97537e093f8',1,'Track8::Cli::Tabulator']]],
+  ['tabulate_0',['tabulate',['../classTrack8_1_1Cli_1_1Tabulator.html#a80d816ec2f914cca794df97537e093f8',1,'Track8::Cli::Tabulator::tabulate(const std::vector&lt; std::shared_ptr&lt; Domain::Song &gt; &gt; &amp;songs)'],['../classTrack8_1_1Cli_1_1Tabulator.html#a81c055ddeb522e1e5d71a4855b5398cf',1,'Track8::Cli::Tabulator::tabulate(const std::vector&lt; std::shared_ptr&lt; Domain::Performer &gt; &gt; &amp;performers)']]],
   ['temporalfilternode_1',['TemporalFilterNode',['../classTrack8_1_1Compiler_1_1TemporalFilterNode.html#a2cc670e1dfd2aa521ed953db58ae56ec',1,'Track8::Compiler::TemporalFilterNode']]],
   ['textfilternode_2',['TextFilterNode',['../classTrack8_1_1Compiler_1_1TextFilterNode.html#a20e8d639a2d30996bc69b3db2d291e24',1,'Track8::Compiler::TextFilterNode']]],
   ['title_3',['title',['../classTrack8_1_1Domain_1_1Song.html#a008891b1fcd8fb5e1dacfd2294884ebe',1,'Track8::Domain::Song']]],
