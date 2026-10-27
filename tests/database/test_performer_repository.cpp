@@ -187,6 +187,28 @@ TEST_F(SQLitePerformerRepositoryTest, UpdatePerformer) {
     ASSERT_EQ(*slowdiveRepo, slowdive);
 }
 
+TEST_F(SQLitePerformerRepositoryTest, GetGroupsOfPerson) {
+    using namespace Track8::Domain;
+
+    const int damonId = m_repository->save("Damon Albarn");
+    m_repository->markAsArtist(damonId);
+
+    const int blurId = m_repository->save("Blur");
+    m_repository->markAsGroup(blurId);
+    m_repository->addToGroup(blurId, damonId);
+
+    const int gorillazId = m_repository->save("Gorillaz");
+    m_repository->markAsGroup(gorillazId);
+    m_repository->addToGroup(gorillazId, damonId);
+
+    const auto groups = m_repository->getGroups(damonId);
+    ASSERT_EQ(groups.size(), 2);
+    EXPECT_EQ(groups.at(0)->id(), blurId);
+    EXPECT_EQ(groups.at(0)->name(), "Blur");
+    ASSERT_EQ(groups.at(1)->id(), gorillazId);
+    ASSERT_EQ(groups.at(1)->name(), "Gorillaz");
+}
+
 TEST_F(SQLitePerformerRepositoryTest, GetAll) {
     using namespace Track8::Domain;
     constexpr int PERFORMERS = 100;
