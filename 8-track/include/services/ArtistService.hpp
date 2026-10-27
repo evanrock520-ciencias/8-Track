@@ -64,6 +64,36 @@ public:
      */
     void removeMember(int groupId, int personId) const;
 
+    /**
+     * Regresa los performers en la base de datos.
+     * @return Los performers en la base de datos.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Performer>>
+    performers() const;
+
+    /**
+     * Encuentra el intérprete relacionado a un `id`
+     * @param id El id relacionado al intérprete.
+     * @return El intérprete relacionado al `id`, o `nullptr` si no existe.
+     */
+    [[nodiscard]] std::shared_ptr<Domain::Performer> find(int id) const;
+
+    /**
+     * Encuentra el intérprete relacionado a un `name`
+     * @param name El nombre relacionado al intérprete.
+     * @return El intérprete relacionado al `name`, o `nullptr` si no existe.
+     */
+    [[nodiscard]] std::shared_ptr<Domain::Performer>
+    find(const std::string& name) const;
+
+    /**
+     * Regresa los miembros de un grupo relacionado a un `id`.
+     * @param groupId El `id` del grupo.
+     * @return Los miembros del grupo, o un vector vacío si no existe.
+     */
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Artist>>
+    members(int groupId) const;
+
 private:
     std::shared_ptr<Repositories::IPerformerRepository> m_performers;
 };

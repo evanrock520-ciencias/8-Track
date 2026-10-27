@@ -70,4 +70,23 @@ void ArtistService::removeMember(const int groupId, const int personId) const {
     }
 }
 
+std::shared_ptr<Domain::Performer>
+ArtistService::find(const std::string& name) const {
+    return m_performers->find(name);
+}
+
+std::shared_ptr<Domain::Performer> ArtistService::find(const int id) const {
+    return m_performers->find(id);
+}
+
+std::vector<std::shared_ptr<Domain::Artist>>
+ArtistService::members(const int groupId) const {
+    return m_performers->getMembers(groupId);
+}
+
+std::vector<std::shared_ptr<Domain::Performer>>
+ArtistService::performers() const {
+    return m_performers->getAll();
+}
+
 } // namespace Track8::Services
