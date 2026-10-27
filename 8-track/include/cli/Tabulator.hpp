@@ -20,6 +20,9 @@ public:
      */
     [[nodiscard]] static tabulate::Table
     tabulate(const std::vector<std::shared_ptr<Domain::Song>>& songs);
+
+    [[nodiscard]] static tabulate::Table
+    tabulate(const std::vector<std::shared_ptr<Domain::Performer>>& performers);
 };
 
 } // namespace Track8::Cli

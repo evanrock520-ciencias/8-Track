@@ -32,6 +32,7 @@ private:
      * Muestra una tabla con todas las canciones de la base de datos.
      */
     void list() const;
+    void listPerformers() const;
 
     Services::LibraryService& m_library;
     Services::SearchService& m_search;

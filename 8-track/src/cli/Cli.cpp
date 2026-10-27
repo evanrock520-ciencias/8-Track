@@ -24,6 +24,11 @@ void Cli::run(const int argc, char** argv) const {
         .implicit_value(true)
         .help("list the complete rolas table.");
 
+    program.add_argument("--performers", "-p")
+        .default_value(false)
+        .implicit_value(true)
+        .help("list the complete performers table.");
+
     program.add_argument("--person").help("mark a performer as an artist.");
     program.add_argument("--group").help("mark a performer as a group.");
 
@@ -42,6 +47,9 @@ void Cli::run(const int argc, char** argv) const {
 
     if (program.is_used("--list"))
         list();
+
+    if (program.is_used("--performers"))
+        listPerformers();
 
     // Si se solicita realizar una consulta por consola.
     if (program.is_used("--query")) {
@@ -71,6 +79,12 @@ void Cli::run(const int argc, char** argv) const {
 void Cli::list() const {
     const auto songs = m_library.songs();
     const auto table = Tabulator::tabulate(songs);
+    std::cout << table << std::endl;
+}
+
+void Cli::listPerformers() const {
+    const auto performers = m_artists.performers();
+    const auto table = Tabulator::tabulate(performers);
     std::cout << table << std::endl;
 }
 
