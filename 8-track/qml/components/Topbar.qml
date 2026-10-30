@@ -7,5 +7,13 @@ Rectangle {
     anchors.left: sidebar.right
     anchors.right: parent.right
 
-    color: Theme.blue
+    color: Theme.cream
+
+    Rectangle {
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        color: Theme.ink
+        height: Theme.borderWidth
+    }
 }

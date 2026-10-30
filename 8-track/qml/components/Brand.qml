@@ -14,5 +14,21 @@ Pane {
 
     background: Rectangle {
         color: Theme.orange
+
+        Rectangle {
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            color: Theme.ink
+            height: Theme.borderWidth
+        }
+
+        Rectangle {
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+            anchors.top: parent.top
+            color: Theme.ink
+            width: Theme.borderWidth
+        }
     }
 }
