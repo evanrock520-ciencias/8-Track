@@ -31,4 +31,18 @@ Pane {
             width: Theme.borderWidth
         }
     }
+
+    Image {
+        id: tape
+        source: "qrc:/qt/qml/Track8/resources/icons/tape.svg"
+    }
+
+    Text {
+        anchors.left: tape.right
+        anchors.leftMargin: 10
+        text: "8-Track"
+        font.family: Theme.fontFamily
+        font.pixelSize: Theme.trackFontSize
+        font.weight: Theme.trackFontWeight
+    }
 }

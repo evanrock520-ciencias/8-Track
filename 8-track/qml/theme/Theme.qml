@@ -42,4 +42,7 @@ QtObject {
     readonly property int brandHeight: 126
     readonly property int brandPaddingX: 18
     readonly property int brandPaddingY: 16
+
+    readonly property int trackFontSize: 28
+    readonly property int trackFontWeight: 900
 }
