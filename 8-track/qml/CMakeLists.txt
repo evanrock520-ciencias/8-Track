@@ -21,6 +21,8 @@ qt_add_qml_module(track8
         components/SearchBar.qml
         components/NavItem.qml
         components/NavSection.qml
+        components/NowPlaying.qml
+        components/Tag.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
@@ -35,4 +37,6 @@ qt_add_qml_module(track8
         resources/icons/microphone.svg
         resources/icons/artist.svg
         resources/icons/band.svg
+
+        resources/images/cover.png
 )

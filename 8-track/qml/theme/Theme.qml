@@ -75,4 +75,21 @@ QtObject {
     readonly property int navPaddingTop: 18
     readonly property int navSpacing: 4
     readonly property int navBarItemIconSize: 18
+
+    // Play bar
+    // Now Playing
+    readonly property int nowPlayingWidth: 360
+    readonly property int nowPlayingPadding: 14
+    readonly property int nowPlayingSpacing: 12
+    readonly property int nowPlayingCoverSize: 84
+    readonly property int nowPlayingTitleFontSize: 16
+    readonly property int nowPlayingSubtitleFontSize: 12
+    readonly property int playbarBorderWidth: 1
+
+    // Tag
+    readonly property int tagPaddingX: 7
+    readonly property int tagPaddingY: 3
+    readonly property int tagHeight: 13
+    readonly property int tagRadius: 4
+    readonly property int tagFontSize: 10
 }
