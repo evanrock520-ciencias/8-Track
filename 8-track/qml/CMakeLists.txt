@@ -26,6 +26,8 @@ qt_add_qml_module(track8
         components/TrackControl.qml
         components/SimpleButton.qml
         components/StateButton.qml
+        components/NeobrutalistSlider.qml
+        components/PlaybackProgress.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf

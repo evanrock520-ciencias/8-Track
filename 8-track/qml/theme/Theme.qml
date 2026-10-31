@@ -104,4 +104,12 @@ QtObject {
     readonly property int playbackButtonSpacing: 18
     readonly property int playerIconSize: 17
     readonly property int playerButtonSize: 28
+
+    // Playback Progress
+    readonly property int progressHeight: 8
+    readonly property int progressBorderWidth: 1
+    readonly property int progressSpacing: 10
+    readonly property int progressTimeWidth: 36
+    readonly property int progressTimeFontSize: 10
+    readonly property int progressTimeWeight: 700
 }

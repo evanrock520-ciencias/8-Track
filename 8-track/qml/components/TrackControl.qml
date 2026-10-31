@@ -12,13 +12,12 @@ Item {
         color: Theme.grey
         width: Theme.playbarBorderWidth
     }
-
     ColumnLayout {
+        anchors.bottomMargin: Theme.trackControlPaddingY
         anchors.fill: parent
         anchors.leftMargin: Theme.trackControlPaddingX
         anchors.rightMargin: Theme.trackControlPaddingX
         anchors.topMargin: Theme.trackControlPaddingY
-        anchors.bottomMargin: Theme.trackControlPaddingY
         spacing: Theme.trackControlSpacing
 
         RowLayout {
@@ -26,8 +25,8 @@ Item {
             spacing: Theme.playbackButtonSpacing
 
             SimpleButton {
-                icon.source: "qrc:/qt/qml/Track8/resources/icons/shuffle.svg"
                 checkable: true
+                icon.source: "qrc:/qt/qml/Track8/resources/icons/shuffle.svg"
             }
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-back.svg"
@@ -37,9 +36,10 @@ Item {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-forward.svg"
             }
         }
-        Item {
-            // TODO: Añadir barra de reproducción
-            Layout.fillHeight: true
+        PlaybackProgress {
+            Layout.fillWidth: true
+            duration: 315000
+            position: 138000
         }
     }
 }
