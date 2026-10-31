@@ -9,6 +9,7 @@ AbstractButton {
     property color buttonColor: Theme.orange
 
     checkable: true
+    hoverEnabled: true
     display: AbstractButton.IconOnly
     icon.color: Theme.cream
     icon.height: Theme.playbackButtonIconSize
@@ -20,6 +21,8 @@ AbstractButton {
     background: Rectangle {
         color: root.buttonColor
         radius: width / 2
+        border.color: Theme.cream
+        border.width: root.hovered ? Theme.borderWidth : 0
     }
     contentItem: IconLabel {
         display: root.display
