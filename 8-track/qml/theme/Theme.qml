@@ -45,4 +45,23 @@ QtObject {
 
     readonly property int trackFontSize: 28
     readonly property int trackFontWeight: 900
+
+    // Status Indicator
+    readonly property int statusFontSize: 10
+
+    // Buttons
+    readonly property int buttonPaddingX: 10
+    readonly property int buttonHeight: 32
+    readonly property int buttonFontSize: 11
+    readonly property int buttonSpacing: 8
+    readonly property int buttonRadius: 4
+    readonly property int buttonIconSize: 14
+
+    // Search Bar
+    readonly property int searchBarFontSize: 14
+    readonly property int searchBarFontWeight: 400
+    readonly property int searchBarHeight: 44
+    readonly property int searchBarPaddingX: 8
+    readonly property int searchBarRadius: 8
+    readonly property int lensIconSize: 20
 }

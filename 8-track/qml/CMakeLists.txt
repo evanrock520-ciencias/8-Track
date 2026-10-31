@@ -18,6 +18,7 @@ qt_add_qml_module(track8
         components/StatusIndicator.qml
         components/NeobrutalistBox.qml
         components/NeobrutalistButton.qml
+        components/SearchBar.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
@@ -25,4 +26,5 @@ qt_add_qml_module(track8
 
         resources/icons/tape.svg
         resources/icons/scan.svg
+        resources/icons/lens.svg
 )

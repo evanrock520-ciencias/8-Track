@@ -38,7 +38,6 @@ Rectangle {
                 font.weight: Theme.trackFontWeight
                 text: root.title
             }
-
             RowLayout {
                 Layout.alignment: Qt.AlignVCenter
                 spacing: 12
@@ -52,8 +51,9 @@ Rectangle {
                 }
             }
         }
-        Item {
-            Layout.fillHeight: true
+        SearchBar {
+            Layout.fillWidth: true
+            Layout.preferredHeight: Theme.searchBarHeight
         }
     }
 }
