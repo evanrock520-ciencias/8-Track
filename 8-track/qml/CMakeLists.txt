@@ -23,6 +23,9 @@ qt_add_qml_module(track8
         components/NavSection.qml
         components/NowPlaying.qml
         components/Tag.qml
+        components/TrackControl.qml
+        components/SimpleButton.qml
+        components/StateButton.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
@@ -37,6 +40,11 @@ qt_add_qml_module(track8
         resources/icons/microphone.svg
         resources/icons/artist.svg
         resources/icons/band.svg
+        resources/icons/skip-back.svg
+        resources/icons/skip-forward.svg
+        resources/icons/shuffle.svg
+        resources/icons/pause.svg
+        resources/icons/play.svg
 
         resources/images/cover.png
 )

@@ -92,4 +92,16 @@ QtObject {
     readonly property int tagHeight: 13
     readonly property int tagRadius: 4
     readonly property int tagFontSize: 10
+
+    // Track Control
+    // Playback Button
+    readonly property int playbackButtonRadius: 42
+    readonly property int playbackButtonIconSize: 20
+    readonly property int trackControlWidth: 750
+    readonly property int trackControlPaddingX: 36
+    readonly property int trackControlPaddingY: 12
+    readonly property int trackControlSpacing: 10
+    readonly property int playbackButtonSpacing: 18
+    readonly property int playerIconSize: 17
+    readonly property int playerButtonSize: 28
 }

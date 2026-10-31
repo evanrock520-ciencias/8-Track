@@ -20,7 +20,7 @@ Rectangle {
             subtitle: "Alvvays - Alvvays"
             title: "Atop a Cake"
         }
-        Item {
+        TrackControl {
             // TODO: Agregar sección de control
             Layout.fillHeight: true
             Layout.fillWidth: true
