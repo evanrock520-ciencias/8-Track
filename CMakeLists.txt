@@ -14,6 +14,9 @@ set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick Sql)
 qt_standard_project_setup(REQUIRES 6.5)
+qt_policy(SET QTP0004 NEW)
+set(QT_QML_GENERATE_QMLLS_INI ON)
+set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 include(FetchContent)
 
@@ -56,5 +59,11 @@ add_subdirectory(8-track)
 enable_testing()
 add_subdirectory(tests)
 
+# CLI
 add_executable(track8-cli 8-track/src/cli/main.cpp)
 target_link_libraries(track8-cli PRIVATE compiler miner database services cli)
+
+# GUI
+add_executable(track8 8-track/src/gui/main.cpp)
+add_subdirectory(8-track/qml)
+target_link_libraries(track8 PRIVATE Qt6::Quick compiler miner database services)
