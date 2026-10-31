@@ -15,10 +15,14 @@ qt_add_qml_module(track8
         components/Playbar.qml
         components/Topbar.qml
         components/Brand.qml
+        components/StatusIndicator.qml
+        components/NeobrutalistBox.qml
+        components/NeobrutalistButton.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
         resources/fonts/RobotoMono-Variable.ttf
 
         resources/icons/tape.svg
+        resources/icons/scan.svg
 )
