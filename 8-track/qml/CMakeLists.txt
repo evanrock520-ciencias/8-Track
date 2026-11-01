@@ -28,6 +28,8 @@ qt_add_qml_module(track8
         components/StateButton.qml
         components/NeobrutalistSlider.qml
         components/PlaybackProgress.qml
+        components/VolumeControl.qml
+        components/OutputControls.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
@@ -47,6 +49,7 @@ qt_add_qml_module(track8
         resources/icons/shuffle.svg
         resources/icons/pause.svg
         resources/icons/play.svg
+        resources/icons/volume.svg
 
         resources/images/cover.png
 )

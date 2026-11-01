@@ -21,14 +21,12 @@ Rectangle {
             title: "Atop a Cake"
         }
         TrackControl {
-            // TODO: Agregar sección de control
             Layout.fillHeight: true
             Layout.fillWidth: true
         }
-        Item {
-            // TODO: Agregar sección de volumen y cola
+        OutputControls {
             Layout.fillHeight: true
-            Layout.preferredWidth: 200
+            Layout.preferredWidth: Theme.outputControlsWidth
         }
     }
 }

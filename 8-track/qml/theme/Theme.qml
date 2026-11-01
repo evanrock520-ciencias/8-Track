@@ -112,4 +112,12 @@ QtObject {
     readonly property int progressTimeWidth: 36
     readonly property int progressTimeFontSize: 10
     readonly property int progressTimeWeight: 700
+
+    // Volume
+    readonly property int volumeSpacing: 8
+    readonly property int volumeValueWidth: 20
+    readonly property int volumeSliderWidth: 127
+    readonly property int outputControlsWidth: 330
+    readonly property int outputControlsPaddingX: 18
+    readonly property int outputControlsSpacing: 16
 }
