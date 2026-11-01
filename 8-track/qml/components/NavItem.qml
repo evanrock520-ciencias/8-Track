@@ -6,9 +6,10 @@ import Track8
 AbstractButton {
     id: root
 
+    property bool active: false
     property int count: -1
 
-    checkable: true
+    checkable: false
     implicitHeight: Theme.navBarItemHeight
     leftPadding: Theme.navBarItemPaddingX
     rightPadding: Theme.navBarItemPaddingX
@@ -20,7 +21,7 @@ AbstractButton {
             border.color: Theme.ink
             border.width: Theme.borderWidth
             color: Theme.yellow
-            visible: root.checked
+            visible: root.active
 
             Behavior on opacity {
                 NumberAnimation {
@@ -34,7 +35,7 @@ AbstractButton {
             anchors.right: parent.right
             color: Theme.ink
             height: Theme.borderWidth
-            visible: !root.checked
+            visible: !root.active
 
             Behavior on opacity {
                 NumberAnimation {
@@ -56,7 +57,7 @@ AbstractButton {
             color: Theme.ink
             font.family: Theme.fontFamily
             font.pixelSize: Theme.navBarItemFontSize
-            font.weight: root.checked ? Font.Bold : Font.Normal
+            font.weight: root.active ? Font.Bold : Font.Normal
             text: root.text
         }
         Text {

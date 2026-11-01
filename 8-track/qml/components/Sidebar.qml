@@ -5,14 +5,16 @@ import Track8
 import Track8.Backend 1.0
 
 Rectangle {
+    id: root
+
+    property string currentSection: "overview"
+
     anchors.left: parent.left
     anchors.top: parent.top
     color: Theme.cream
     width: Theme.sidebarWidth
 
-    ButtonGroup {
-        id: navGroup
-    }
+    signal sectionSelected(string section)
 
     Rectangle {
         anchors.bottom: parent.bottom
@@ -35,60 +37,76 @@ Rectangle {
             Layout.leftMargin: Theme.sidebarPaddingX
             Layout.rightMargin: Theme.sidebarPaddingX
             Layout.topMargin: Theme.navPaddingTop
-            group: navGroup
+            currentSection: root.currentSection
             model: [
                 {
                     label: "Overview",
                     count: -1,
-                    icon: "icons"
+                    icon: "icons",
+                    section: "overview"
                 },
                 {
                     label: "Albums",
                     count: Library.albumCount,
-                    icon: "cd"
+                    icon: "cd",
+                    section: "albums"
                 },
                 {
                     label: "Artists",
                     count: Library.performerCount,
-                    icon: "microphone"
+                    icon: "microphone",
+                    section: "artists"
                 },
                 {
                     label: "Songs",
                     count: Library.songCount,
-                    icon: "list-music"
+                    icon: "list-music",
+                    section: "songs"
                 },
                 {
                     label: "Genres",
                     count: Library.genreCount,
-                    icon: "icons"
+                    icon: "icons",
+                    section: "genres"
                 }
             ]
             title: "LIBRARY"
+
+            onSectionSelected: function (section) {
+                root.sectionSelected(section);
+            }
         }
         NavSection {
             Layout.fillWidth: true
             Layout.leftMargin: Theme.sidebarPaddingX
             Layout.rightMargin: Theme.sidebarPaddingX
             Layout.topMargin: Theme.navPaddingTop
-            group: navGroup
+            currentSection: root.currentSection
             model: [
                 {
                     label: "Bands",
                     count: Library.bandCount,
-                    icon: "band"
+                    icon: "band",
+                    section: "bands"
                 },
                 {
                     label: "People",
                     count: Library.personCount,
-                    icon: "artist"
+                    icon: "artist",
+                    section: "people"
                 },
                 {
                     label: "Unknown",
                     count: Library.unknownCount,
-                    icon: "artist"
+                    icon: "artist",
+                    section: "unknown"
                 }
             ]
             title: "ENTITIES"
+
+            onSectionSelected: function (section) {
+                root.sectionSelected(section);
+            }
         }
         Item {
             Layout.fillHeight: true

@@ -6,9 +6,11 @@ import Track8
 ColumnLayout {
     id: root
 
-    property ButtonGroup group
+    property string currentSection
     property var model: []
     property string title
+
+    signal sectionSelected(string section)
 
     spacing: Theme.navSpacing
 
@@ -22,13 +24,15 @@ ColumnLayout {
         model: root.model
 
         NavItem {
-            ButtonGroup.group: root.group
+            active: root.currentSection === modelData.section
             Layout.fillWidth: true
             count: modelData.count
             icon.height: 16
             icon.source: "qrc:/qt/qml/Track8/resources/icons/" + modelData.icon + ".svg"
             icon.width: 16
             text: modelData.label
+
+            onClicked: root.sectionSelected(modelData.section)
         }
     }
 }
