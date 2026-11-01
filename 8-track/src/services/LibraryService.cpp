@@ -2,6 +2,7 @@
 
 #include "database/TransactionScope.hpp"
 #include "miner/CoverMiner.hpp"
+#include "services/ScanProgress.hpp"
 
 #include <iostream>
 #include <thread>
@@ -20,17 +21,30 @@ LibraryService::LibraryService(
       m_transactions(std::move(transactions)),
       m_cacheDir(cacheDir) {}
 
-void LibraryService::scan(const std::filesystem::path& path) const {
+void LibraryService::scan(
+    const std::filesystem::path& path,
+    const std::function<void(const ScanProgress&)>& onProgress) const {
     const Miner::Miner miner(path);
     Miner::CoverMiner coverMiner(m_cacheDir);
 
+    const std::size_t total = miner.count();
+    std::size_t current = 0;
     std::vector<Miner::Metadata> tracks;
+
+    auto report = [&](const std::size_t currentIndex,
+                      const std::string& currentFile) {
+        if (onProgress)
+            onProgress({.current = currentIndex,
+                        .total = total,
+                        .currentFile = currentFile});
+    };
 
     std::jthread worker([&] {
         miner.mine([&](const Miner::Metadata& data) {
             tracks.push_back(data);
             std::ignore = coverMiner.coverExtract(data.m_path, data.m_performer,
                                                   data.m_album);
+            report(++current, data.m_title);
         });
     });
     worker.join();
@@ -44,6 +58,8 @@ void LibraryService::scan(const std::filesystem::path& path) const {
 
     if (scope)
         scope->commit();
+
+    report(total, {});
 }
 
 void LibraryService::importTrack(const Miner::Metadata& metadata) const {

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "ScanProgress.hpp"
 #include "domain/Stats.hpp"
 #include "domain/repositories/IAlbumRepository.hpp"
 #include "domain/repositories/IPerformerRepository.hpp"
@@ -26,7 +27,9 @@ public:
      * datos de la aplicación.
      * @param path La ruta del directorio a escanear.
      */
-    void scan(const std::filesystem::path& path) const;
+    void
+    scan(const std::filesystem::path& path,
+         const std::function<void(const ScanProgress&)>& onProgress = {}) const;
 
     /**
      * Guarda la metadata de una canción en la base de datos.
