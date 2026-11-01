@@ -5,12 +5,16 @@ qt_add_executable(track8 ../src/gui/main.cpp)
 set_source_files_properties(theme/Theme.qml
         PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
+set_source_files_properties(utils/Utils.qml
+        PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
+
 qt_add_qml_module(track8
         URI Track8
         VERSION 1.0
         QML_FILES
         Main.qml
         theme/Theme.qml
+        utils/Utils.qml
 
         # Componentes
         components/Sidebar.qml
@@ -32,6 +36,17 @@ qt_add_qml_module(track8
         components/PlaybackProgress.qml
         components/VolumeControl.qml
         components/OutputControls.qml
+        components/ContentArea.qml
+        components/SongRow.qml
+        components/RowPlayButton.qml
+        components/SongTableHeader.qml
+
+        # Pages
+        pages/OverviewPage.qml
+        pages/AlbumsPage.qml
+        pages/ArtistsPage.qml
+        pages/GenresPage.qml
+        pages/SongsPage.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
@@ -62,4 +77,5 @@ target_link_libraries(track8 PRIVATE
         miner
         database
         services
+        gui
 )

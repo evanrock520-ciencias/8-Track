@@ -9,11 +9,6 @@ RowLayout {
     property int position: 0       // ms
     signal seekRequested(int ms)
 
-    function formatTime(ms) {
-        const seconds = Math.floor(ms / 1000);
-        return Math.floor(seconds / 60) + ":" + String(seconds % 60).padStart(2, "0");
-    }
-
     spacing: Theme.progressSpacing
 
     Text {
@@ -23,7 +18,7 @@ RowLayout {
         font.pixelSize: Theme.progressTimeFontSize
         font.weight: Theme.progressTimeWeight
         horizontalAlignment: Text.AlignRight
-        text: root.formatTime(root.position)
+        text: Utils.formatTime(root.position)
     }
     NeobrutalistSlider {
         Layout.alignment: Qt.AlignVCenter
@@ -39,6 +34,6 @@ RowLayout {
         font.family: Theme.monoFontFamily
         font.pixelSize: Theme.progressTimeFontSize
         font.weight: Theme.progressTimeWeight
-        text: root.formatTime(root.duration)
+        text: Utils.formatTime(root.duration)
     }
 }

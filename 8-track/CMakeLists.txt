@@ -105,3 +105,21 @@ target_include_directories(cli PUBLIC
 )
 
 target_link_libraries(cli PRIVATE services argparse tabulate app)
+
+# Biblioteca de la GUI
+add_library(gui
+        include/gui/models/LibraryController.hpp
+        src/gui/models/LibraryController.cpp
+        include/gui/models/SongListModel.hpp
+        src/gui/models/SongListModel.cpp
+)
+
+target_include_directories(gui PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
+
+target_link_libraries(gui PUBLIC
+        Qt6::Core
+        services
+        domain
+)

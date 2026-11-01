@@ -1,11 +1,12 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 RowLayout {
     id: root
 
-    property bool connected: false
+    property bool connected: true
     spacing: 8
 
     Rectangle {
