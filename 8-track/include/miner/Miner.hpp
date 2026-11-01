@@ -25,6 +25,8 @@ public:
      */
     static Metadata parseFile(const std::filesystem::path& path);
 
+    int count() const;
+
 private:
     std::filesystem::path m_path;
 };
