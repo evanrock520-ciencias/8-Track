@@ -6,10 +6,11 @@ var searchData=
   ['addtogroup_3',['addToGroup',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a74c4fb05957a1d6bc195ee12862a6e17',1,'Track8::Database::SQLitePerformerRepository::addToGroup()'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#aa89ee5c73d39b32dfe6648d7a67b2da5',1,'Track8::Repositories::IPerformerRepository::addToGroup()']]],
   ['album_4',['Album',['../classTrack8_1_1Domain_1_1Album.html#ad8c8eee7c284fa18eebba0a7997cdc24',1,'Track8::Domain::Album']]],
   ['album_5',['album',['../classTrack8_1_1Domain_1_1Song.html#a85827da638c6b7fd1bd5c874158c011a',1,'Track8::Domain::Song']]],
-  ['albums_6',['albums',['../classTrack8_1_1Services_1_1LibraryService.html#acf88cd1523e70be2263db6dfd75fbaab',1,'Track8::Services::LibraryService']]],
-  ['albumsbyperformer_7',['albumsByPerformer',['../classTrack8_1_1Services_1_1LibraryService.html#a813477bf9037d139cb2bd5db9a3632a6',1,'Track8::Services::LibraryService']]],
-  ['appcontext_8',['AppContext',['../structTrack8_1_1App_1_1AppContext.html#a9c15e662f592c7994dc5afd890498226',1,'Track8::App::AppContext']]],
-  ['artist_9',['Artist',['../classTrack8_1_1Domain_1_1Artist.html#a433f7a6e343a10c97ff368022a5cba9c',1,'Track8::Domain::Artist']]],
-  ['artistservice_10',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService']]],
-  ['asstring_11',['asString',['../classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf',1,'Track8::Domain::Date']]]
+  ['albumcount_6',['albumCount',['../classTrack8_1_1Gui_1_1LibraryController.html#a211ac8589f8936cbdf2e14a85e85ace5',1,'Track8::Gui::LibraryController']]],
+  ['albums_7',['albums',['../classTrack8_1_1Services_1_1LibraryService.html#acf88cd1523e70be2263db6dfd75fbaab',1,'Track8::Services::LibraryService']]],
+  ['albumsbyperformer_8',['albumsByPerformer',['../classTrack8_1_1Services_1_1LibraryService.html#a813477bf9037d139cb2bd5db9a3632a6',1,'Track8::Services::LibraryService']]],
+  ['appcontext_9',['AppContext',['../structTrack8_1_1App_1_1AppContext.html#a9c15e662f592c7994dc5afd890498226',1,'Track8::App::AppContext']]],
+  ['artist_10',['Artist',['../classTrack8_1_1Domain_1_1Artist.html#a433f7a6e343a10c97ff368022a5cba9c',1,'Track8::Domain::Artist']]],
+  ['artistservice_11',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService']]],
+  ['asstring_12',['asString',['../classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf',1,'Track8::Domain::Date']]]
 ];

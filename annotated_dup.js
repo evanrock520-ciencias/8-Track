@@ -47,6 +47,10 @@ var annotated_dup =
         [ "SongBuilder", "classTrack8_1_1Domain_1_1SongBuilder.html", "classTrack8_1_1Domain_1_1SongBuilder" ],
         [ "Stats", "structTrack8_1_1Domain_1_1Stats.html", "structTrack8_1_1Domain_1_1Stats" ]
       ] ],
+      [ "Gui", "namespaceTrack8_1_1Gui.html", [
+        [ "LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", "classTrack8_1_1Gui_1_1LibraryController" ],
+        [ "SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", "classTrack8_1_1Gui_1_1SongListModel" ]
+      ] ],
       [ "Miner", "namespaceTrack8_1_1Miner.html", [
         [ "Metadata", "structTrack8_1_1Miner_1_1Metadata.html", "structTrack8_1_1Miner_1_1Metadata" ],
         [ "Miner", "classTrack8_1_1Miner_1_1Miner.html", "classTrack8_1_1Miner_1_1Miner" ]

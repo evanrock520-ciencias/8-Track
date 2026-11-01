@@ -36,6 +36,12 @@ var hierarchy =
       [ "Track8::Domain::Artist", "classTrack8_1_1Domain_1_1Artist.html", null ],
       [ "Track8::Domain::Group", "classTrack8_1_1Domain_1_1Group.html", null ]
     ] ],
+    [ "QAbstractListModel", null, [
+      [ "Track8::Gui::SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", null ]
+    ] ],
+    [ "QObject", null, [
+      [ "Track8::Gui::LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", null ]
+    ] ],
     [ "Track8::Compiler::Query", "classTrack8_1_1Compiler_1_1Query.html", null ],
     [ "Track8::Compiler::QueryCompiler", "classTrack8_1_1Compiler_1_1QueryCompiler.html", null ],
     [ "Track8::Domain::Range", "structTrack8_1_1Domain_1_1Range.html", null ],

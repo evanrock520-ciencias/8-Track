@@ -49,6 +49,9 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
+        [ "Properties", "functions_prop.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -61,9 +64,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Album_8hpp.html",
-"classTrack8_1_1Compiler_1_1TrackFilterNode.html",
-"classTrack8_1_1Repositories_1_1IPerformerRepository.html#a133435b3774f10ab099130c24b1644ee",
-"namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fad18101729d290479023d5eceeb29c9cf"
+"classTrack8_1_1Compiler_1_1Token.html#abb998384cb849195deef1557961c681a",
+"classTrack8_1_1Gui_1_1LibraryController.html#a9e8885a3cc9f4fd68c8d438f32fcfe1b",
+"functions_func_~.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
