@@ -16,6 +16,7 @@ public:
         const std::shared_ptr<Repositories::IAlbumRepository>& albums,
         const std::shared_ptr<Repositories::IPerformerRepository>& performers,
         const std::shared_ptr<Repositories::ISongRepository>& songs,
+        const std::filesystem::path& cacheDir,
         std::shared_ptr<Repositories::ITransactionManager> transactions =
             nullptr);
     ~LibraryService() = default;
@@ -92,6 +93,7 @@ private:
     std::shared_ptr<Repositories::ISongRepository> m_songs;
     std::shared_ptr<Repositories::IPerformerRepository> m_performers;
     std::shared_ptr<Repositories::ITransactionManager> m_transactions;
+    std::filesystem::path m_cacheDir;
 };
 
 } // namespace Track8::Services

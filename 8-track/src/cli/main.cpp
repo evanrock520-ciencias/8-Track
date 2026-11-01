@@ -24,7 +24,13 @@ int main(int argc, char* argv[]) {
         QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
         "/8-track.db";
 
-    App::AppContext context(databaseDir.toStdString());
+    const auto coversDir =
+        std::filesystem::path(
+            QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
+                .toStdString()) /
+        "covers";
+
+    App::AppContext context(databaseDir.toStdString(), coversDir);
 
     if (argc > 1) {
         const Cli::Cli cli(context.library, context.search, context.artists);

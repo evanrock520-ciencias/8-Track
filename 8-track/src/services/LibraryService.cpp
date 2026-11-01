@@ -1,6 +1,7 @@
 #include "services/LibraryService.hpp"
 
 #include "database/TransactionScope.hpp"
+#include "miner/CoverMiner.hpp"
 
 #include <iostream>
 
@@ -10,14 +11,17 @@ LibraryService::LibraryService(
     const std::shared_ptr<Repositories::IAlbumRepository>& albums,
     const std::shared_ptr<Repositories::IPerformerRepository>& performers,
     const std::shared_ptr<Repositories::ISongRepository>& songs,
+    const std::filesystem::path& cacheDir,
     std::shared_ptr<Repositories::ITransactionManager> transactions)
     : m_albums(albums),
       m_songs(songs),
       m_performers(performers),
-      m_transactions(std::move(transactions)) {}
+      m_transactions(std::move(transactions)),
+      m_cacheDir(cacheDir) {}
 
 void LibraryService::scan(const std::filesystem::path& path) const {
     const Miner::Miner miner(path);
+    Miner::CoverMiner coverMiner(m_cacheDir);
     // TODO: Utilizar una función inyectada para verificar el progreso.
 
     std::unique_ptr<Database::TransactionScope> scope;
@@ -27,6 +31,10 @@ void LibraryService::scan(const std::filesystem::path& path) const {
     miner.mine([&](const Miner::Metadata& metadata) {
         std::cout << "Scanning " << metadata.m_title << "\n" << std::endl;
         importTrack(metadata);
+        const auto covers = coverMiner.coverExtract(
+            metadata.m_path, metadata.m_performer, metadata.m_album);
+        std::cout << "Album Cover on " << covers.album << std::endl;
+        std::cout << "Artist Cover on " << covers.artist << std::endl;
     });
 
     if (scope)

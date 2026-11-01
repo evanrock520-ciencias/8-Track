@@ -41,7 +41,6 @@ void Cli::run(const int argc, char** argv) const {
     // Si se solicita escanear un directorio.
     if (program.is_used("--scan")) {
         const auto path = program.get<std::string>("--scan");
-        std::cout << "Scanning " << path << std::endl;
         m_library.scan(path);
     }
 
