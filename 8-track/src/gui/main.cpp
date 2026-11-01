@@ -16,6 +16,9 @@ int main(int argc, char** argv) {
     Track8::App::AppContext context(databaseDir.toStdString());
     Track8::Gui::LibraryController libraryController(context.library,
                                                      context.artists);
+
+    qmlRegisterUncreatableType<Track8::Gui::SongListModel>(
+        "Track8.Backend", 1, 0, "SongListModel", "");
     qmlRegisterSingletonInstance("Track8.Backend", 1, 0, "Library",
                                  &libraryController);
 
