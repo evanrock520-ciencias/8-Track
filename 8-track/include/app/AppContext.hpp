@@ -21,7 +21,9 @@ struct AppContext {
               database.database())),
           songs(std::make_shared<Database::SQLiteSongRepository>(
               database.database(), performers, albums)),
-          library(albums, performers, songs),
+          library(albums, performers, songs,
+                  std::shared_ptr<Repositories::ITransactionManager>(
+                      &database, [](Repositories::ITransactionManager*) {})),
           search(songs),
           artists(performers) {}
 

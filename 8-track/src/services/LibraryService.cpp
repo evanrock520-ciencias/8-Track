@@ -1,5 +1,7 @@
 #include "services/LibraryService.hpp"
 
+#include "database/TransactionScope.hpp"
+
 #include <iostream>
 
 namespace Track8::Services {
@@ -7,16 +9,28 @@ namespace Track8::Services {
 LibraryService::LibraryService(
     const std::shared_ptr<Repositories::IAlbumRepository>& albums,
     const std::shared_ptr<Repositories::IPerformerRepository>& performers,
-    const std::shared_ptr<Repositories::ISongRepository>& songs)
-    : m_albums(albums), m_songs(songs), m_performers(performers) {}
+    const std::shared_ptr<Repositories::ISongRepository>& songs,
+    std::shared_ptr<Repositories::ITransactionManager> transactions)
+    : m_albums(albums),
+      m_songs(songs),
+      m_performers(performers),
+      m_transactions(std::move(transactions)) {}
 
 void LibraryService::scan(const std::filesystem::path& path) const {
     const Miner::Miner miner(path);
     // TODO: Utilizar una función inyectada para verificar el progreso.
+
+    std::unique_ptr<Database::TransactionScope> scope;
+    if (m_transactions)
+        scope = std::make_unique<Database::TransactionScope>(*m_transactions);
+
     miner.mine([&](const Miner::Metadata& metadata) {
         std::cout << "Scanning " << metadata.m_title << "\n" << std::endl;
         importTrack(metadata);
     });
+
+    if (scope)
+        scope->commit();
 }
 
 void LibraryService::importTrack(const Miner::Metadata& metadata) const {

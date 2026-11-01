@@ -17,6 +17,7 @@ target_sources(domain INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/ISongRepository.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IPerformerRepository.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/ITransactionManager.hpp
 )
 
 # Biblioteca de Database
