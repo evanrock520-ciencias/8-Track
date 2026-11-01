@@ -4,6 +4,7 @@
 #include "domain/repositories/IAlbumRepository.hpp"
 #include "domain/repositories/IPerformerRepository.hpp"
 #include "domain/repositories/ISongRepository.hpp"
+#include "domain/repositories/ITransactionManager.hpp"
 #include "miner/Miner.hpp"
 #include "services/LibraryService.hpp"
 
@@ -14,7 +15,9 @@ public:
     LibraryService(
         const std::shared_ptr<Repositories::IAlbumRepository>& albums,
         const std::shared_ptr<Repositories::IPerformerRepository>& performers,
-        const std::shared_ptr<Repositories::ISongRepository>& songs);
+        const std::shared_ptr<Repositories::ISongRepository>& songs,
+        std::shared_ptr<Repositories::ITransactionManager> transactions =
+            nullptr);
     ~LibraryService() = default;
 
     /**
@@ -88,6 +91,7 @@ private:
     std::shared_ptr<Repositories::IAlbumRepository> m_albums;
     std::shared_ptr<Repositories::ISongRepository> m_songs;
     std::shared_ptr<Repositories::IPerformerRepository> m_performers;
+    std::shared_ptr<Repositories::ITransactionManager> m_transactions;
 };
 
 } // namespace Track8::Services
