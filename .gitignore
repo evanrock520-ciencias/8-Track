@@ -83,3 +83,6 @@ docs/html
 # databases
 *.db
 *.database
+
+# qml
+*.ini
