@@ -62,4 +62,5 @@ target_link_libraries(track8 PRIVATE
         miner
         database
         services
+        gui
 )

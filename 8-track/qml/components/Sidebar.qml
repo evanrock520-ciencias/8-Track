@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls.Basic
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Rectangle {
     anchors.left: parent.left
@@ -43,22 +44,22 @@ Rectangle {
                 },
                 {
                     label: "Albums",
-                    count: 428,
+                    count: Library.albumCount,
                     icon: "cd"
                 },
                 {
                     label: "Artists",
-                    count: 196,
+                    count: Library.performerCount,
                     icon: "microphone"
                 },
                 {
                     label: "Songs",
-                    count: 5842,
+                    count: Library.songCount,
                     icon: "list-music"
                 },
                 {
                     label: "Genres",
-                    count: 37,
+                    count: Library.genreCount,
                     icon: "icons"
                 }
             ]
@@ -73,17 +74,17 @@ Rectangle {
             model: [
                 {
                     label: "Bands",
-                    count: 71,
+                    count: Library.bandCount,
                     icon: "band"
                 },
                 {
                     label: "People",
-                    count: 125,
+                    count: Library.personCount,
                     icon: "artist"
                 },
                 {
                     label: "Unknown",
-                    count: 30,
+                    count: Library.unknownCount,
                     icon: "artist"
                 }
             ]
