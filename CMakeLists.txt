@@ -45,12 +45,21 @@ FetchContent_Declare(
         GIT_TAG v2.0
 )
 
-FetchContent_MakeAvailable(GoogleTest Taglib argparse tabulate)
+FetchContent_Declare(
+        picosha2
+        GIT_REPOSITORY https://github.com/okdshin/PicoSHA2.git
+        GIT_TAG        v1.0.1
+)
+
+FetchContent_MakeAvailable(GoogleTest Taglib argparse tabulate picosha2)
 
 target_include_directories(tag INTERFACE
         $<BUILD_INTERFACE:${taglib_SOURCE_DIR}>
         $<BUILD_INTERFACE:${taglib_SOURCE_DIR}/taglib>
         $<BUILD_INTERFACE:${taglib_SOURCE_DIR}/taglib/toolkit>
+        $<BUILD_INTERFACE:${taglib_SOURCE_DIR}/taglib/mpeg>
+        $<BUILD_INTERFACE:${taglib_SOURCE_DIR}/taglib/mpeg/id3v2>
+        $<BUILD_INTERFACE:${taglib_SOURCE_DIR}/taglib/mpeg/id3v2/frames>
         $<BUILD_INTERFACE:${taglib_BINARY_DIR}>
 )
 
