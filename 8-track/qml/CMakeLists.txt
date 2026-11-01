@@ -1,5 +1,7 @@
 qt_policy(SET QTP0004 NEW)
 
+qt_add_executable(track8 ../src/gui/main.cpp)
+
 set_source_files_properties(theme/Theme.qml
         PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
@@ -52,4 +54,12 @@ qt_add_qml_module(track8
         resources/icons/volume.svg
 
         resources/images/cover.png
+)
+
+target_link_libraries(track8 PRIVATE
+        Qt6::Quick
+        compiler
+        miner
+        database
+        services
 )

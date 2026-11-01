@@ -64,6 +64,4 @@ add_executable(track8-cli 8-track/src/cli/main.cpp)
 target_link_libraries(track8-cli PRIVATE compiler miner database services cli)
 
 # GUI
-add_executable(track8 8-track/src/gui/main.cpp)
 add_subdirectory(8-track/qml)
-target_link_libraries(track8 PRIVATE Qt6::Quick compiler miner database services)
