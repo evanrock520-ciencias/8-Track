@@ -89,7 +89,7 @@ target_include_directories(app INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_sources(domain INTERFACE
+target_sources(app INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/app/AppContext.hpp
 )
 
