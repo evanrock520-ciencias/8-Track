@@ -14,6 +14,9 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v4.2.2
 
+      - name: Format Code
+        uses: j178/prek-action@5337cb91e0fa35a7ff31b9ca345126d8bbbcdf16
+
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
@@ -26,9 +29,6 @@ jobs:
         with:
           source-dir: .
           build-dir: build
-
-      - name: Format Code
-        uses: j178/prek-action@5337cb91e0fa35a7ff31b9ca345126d8bbbcdf16
 
       - name: Run Tests
         run: ctest --test-dir build --output-on-failure
