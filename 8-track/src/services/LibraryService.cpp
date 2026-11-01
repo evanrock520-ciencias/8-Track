@@ -4,6 +4,7 @@
 #include "miner/CoverMiner.hpp"
 
 #include <iostream>
+#include <thread>
 
 namespace Track8::Services {
 
@@ -22,20 +23,24 @@ LibraryService::LibraryService(
 void LibraryService::scan(const std::filesystem::path& path) const {
     const Miner::Miner miner(path);
     Miner::CoverMiner coverMiner(m_cacheDir);
-    // TODO: Utilizar una función inyectada para verificar el progreso.
+
+    std::vector<Miner::Metadata> tracks;
+
+    std::jthread worker([&] {
+        miner.mine([&](const Miner::Metadata& data) {
+            tracks.push_back(data);
+            std::ignore = coverMiner.coverExtract(data.m_path, data.m_performer,
+                                                  data.m_album);
+        });
+    });
+    worker.join();
 
     std::unique_ptr<Database::TransactionScope> scope;
     if (m_transactions)
         scope = std::make_unique<Database::TransactionScope>(*m_transactions);
 
-    miner.mine([&](const Miner::Metadata& metadata) {
-        std::cout << "Scanning " << metadata.m_title << "\n" << std::endl;
-        importTrack(metadata);
-        const auto covers = coverMiner.coverExtract(
-            metadata.m_path, metadata.m_performer, metadata.m_album);
-        std::cout << "Album Cover on " << covers.album << std::endl;
-        std::cout << "Artist Cover on " << covers.artist << std::endl;
-    });
+    for (const auto& track : tracks)
+        importTrack(track);
 
     if (scope)
         scope->commit();
