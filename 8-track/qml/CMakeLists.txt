@@ -39,6 +39,7 @@ qt_add_qml_module(track8
         components/ContentArea.qml
         components/SongRow.qml
         components/RowPlayButton.qml
+        components/SongTableHeader.qml
 
         # Pages
         pages/OverviewPage.qml
