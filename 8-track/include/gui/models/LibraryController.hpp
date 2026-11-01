@@ -1,5 +1,6 @@
 #pragma once
 #include "domain/Stats.hpp"
+#include "gui/models/SongListModel.hpp"
 #include "services/ArtistService.hpp"
 #include "services/LibraryService.hpp"
 
@@ -7,6 +8,11 @@
 
 namespace Track8::Gui {
 
+/**
+ * @class LibraryController
+ * @brief Maneja la interacción entre el servicio `Library` y la interfaz
+ * gráfica.
+ */
 class LibraryController : public QObject {
     Q_OBJECT
     Q_PROPERTY(int albumCount READ albumCount NOTIFY statsChanged)
@@ -16,6 +22,7 @@ class LibraryController : public QObject {
     Q_PROPERTY(int bandCount READ bandCount NOTIFY statsChanged)
     Q_PROPERTY(int personCount READ personCount NOTIFY statsChanged)
     Q_PROPERTY(int unknownCount READ unknownCount NOTIFY statsChanged)
+    Q_PROPERTY(SongListModel* songs READ songs CONSTANT)
 
 public:
     explicit LibraryController(Services::LibraryService& library,
@@ -44,6 +51,9 @@ public:
         return m_stats.m_unknownCount;
     }
 
+    [[nodiscard]] SongListModel* songs() { return &m_songsModel; }
+
+    Q_INVOKABLE void loadSongs();
     Q_INVOKABLE void refresh();
 
 signals:
@@ -51,6 +61,7 @@ signals:
 
 private:
     Domain::Stats m_stats{};
+    SongListModel m_songsModel;
     Services::LibraryService& m_library;
     Services::ArtistService& m_artists;
 };

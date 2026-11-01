@@ -10,6 +10,10 @@ LibraryController::LibraryController(Services::LibraryService& library,
       m_library(library),
       m_artists(artists) {}
 
+void LibraryController::loadSongs() {
+    m_songsModel.setSongs(m_library.songs());
+}
+
 void LibraryController::refresh() {
     m_stats = m_library.stats();
     emit statsChanged();
