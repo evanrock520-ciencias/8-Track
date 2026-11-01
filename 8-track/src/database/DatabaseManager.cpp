@@ -58,4 +58,17 @@ void DatabaseManager::shutdown() {
     m_database = QSqlDatabase();
     QSqlDatabase::removeDatabase(QString::fromStdString(m_connectionName));
 }
+
+bool DatabaseManager::transaction() {
+    return m_database.transaction();
+}
+
+bool DatabaseManager::commit() {
+    return m_database.commit();
+}
+
+bool DatabaseManager::rollback() {
+    return m_database.rollback();
+}
+
 } // namespace Track8::Database
