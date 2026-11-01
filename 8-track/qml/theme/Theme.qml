@@ -133,9 +133,13 @@ QtObject {
     readonly property int songColFormatWidth: 40
     readonly property int songColTimeWidth: 40
     readonly property int songColMenuWidth: 24
-    readonly property int songColTitleFontSize: 12
-    readonly property int songColSubtitlesFontSize: 11
+    readonly property int songColTitleFontSize: 14
+    readonly property int songColSubtitlesFontSize: 14
     readonly property int rowPlayButtonSize: 24
     readonly property int rowPlayIconSize: 12
     readonly property int rowPlayBorderWidth: 1
+
+    // Song Table
+    readonly property int songTableMargin: 22
+    readonly property int songHeaderHeight: 28
 }
