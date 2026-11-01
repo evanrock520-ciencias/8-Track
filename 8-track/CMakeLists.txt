@@ -110,6 +110,8 @@ target_link_libraries(cli PRIVATE services argparse tabulate app)
 add_library(gui
         include/gui/models/LibraryController.hpp
         src/gui/models/LibraryController.cpp
+        include/gui/models/SongListModel.hpp
+        src/gui/models/SongListModel.cpp
 )
 
 target_include_directories(gui PUBLIC
