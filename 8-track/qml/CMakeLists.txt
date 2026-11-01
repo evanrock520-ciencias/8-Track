@@ -32,6 +32,14 @@ qt_add_qml_module(track8
         components/PlaybackProgress.qml
         components/VolumeControl.qml
         components/OutputControls.qml
+        components/ContentArea.qml
+
+        # Pages
+        pages/OverviewPage.qml
+        pages/AlbumsPage.qml
+        pages/ArtistsPage.qml
+        pages/GenresPage.qml
+        pages/SongsPage.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
