@@ -46,12 +46,18 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(
+        indicators
+        GIT_REPOSITORY https://github.com/p-ranav/indicators.git
+        GIT_TAG v2.3
+)
+
+FetchContent_Declare(
         picosha2
         GIT_REPOSITORY https://github.com/okdshin/PicoSHA2.git
         GIT_TAG        v1.0.1
 )
 
-FetchContent_MakeAvailable(GoogleTest Taglib argparse tabulate picosha2)
+FetchContent_MakeAvailable(GoogleTest Taglib argparse tabulate indicators picosha2)
 
 target_include_directories(tag INTERFACE
         $<BUILD_INTERFACE:${taglib_SOURCE_DIR}>

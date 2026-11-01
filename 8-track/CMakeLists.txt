@@ -106,7 +106,7 @@ target_include_directories(cli PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(cli PRIVATE services argparse tabulate app)
+target_link_libraries(cli PRIVATE services argparse tabulate indicators app)
 
 # Biblioteca de la GUI
 add_library(gui
