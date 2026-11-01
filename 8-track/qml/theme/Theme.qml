@@ -120,4 +120,22 @@ QtObject {
     readonly property int outputControlsWidth: 330
     readonly property int outputControlsPaddingX: 18
     readonly property int outputControlsSpacing: 16
+
+    // Song Row
+    readonly property int songRowHeight: 42
+    readonly property int songRowPaddingX: 10
+    readonly property int songRowSpacing: 10
+    readonly property int songColPlayWidth: 24
+    readonly property int songColTitleWidth: 180
+    readonly property int songColArtistWidth: 120
+    readonly property int songColAlbumWidth: 180
+    readonly property int songColYearWidth: 40
+    readonly property int songColFormatWidth: 40
+    readonly property int songColTimeWidth: 40
+    readonly property int songColMenuWidth: 24
+    readonly property int songColTitleFontSize: 12
+    readonly property int songColSubtitlesFontSize: 11
+    readonly property int rowPlayButtonSize: 24
+    readonly property int rowPlayIconSize: 12
+    readonly property int rowPlayBorderWidth: 1
 }
