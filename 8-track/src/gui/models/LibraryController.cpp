@@ -3,11 +3,13 @@
 namespace Track8::Gui {
 
 LibraryController::LibraryController(Services::LibraryService& library,
+                                     Services::SearchService& search,
                                      Services::ArtistService& artists,
                                      QObject* parent)
     : QObject(parent),
       m_stats(library.stats()),
       m_library(library),
+      m_search(search),
       m_artists(artists) {}
 
 void LibraryController::loadSongs() {
@@ -17,6 +19,26 @@ void LibraryController::loadSongs() {
 void LibraryController::refresh() {
     m_stats = m_library.stats();
     emit statsChanged();
+}
+
+void LibraryController::search(const QString& query) {
+    const auto result = m_search.search(query.toStdString());
+
+    if (result.success) {
+        m_searchModel.setSongs(result.songs);
+        m_searchError.clear();
+    } else {
+        m_searchModel.clear();
+        m_searchError = QString::fromStdString(result.errorMessage);
+    }
+
+    emit searchErrorChanged();
+}
+
+void LibraryController::clearSearch() {
+    m_searchModel.clear();
+    m_searchError.clear();
+    emit searchErrorChanged();
 }
 
 } // namespace Track8::Gui

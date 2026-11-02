@@ -24,11 +24,8 @@ class LibraryController : public QObject {
     Q_PROPERTY(int personCount READ personCount NOTIFY statsChanged)
     Q_PROPERTY(int unknownCount READ unknownCount NOTIFY statsChanged)
     Q_PROPERTY(SongListModel* songs READ songs CONSTANT)
-    Q_PROPERTY(SongListModel* search READ search CONSTANT)
+    Q_PROPERTY(SongListModel* searchResults READ searchResults CONSTANT)
     Q_PROPERTY(QString searchError READ searchError NOTIFY searchErrorChanged)
-
-    Q_INVOKABLE void search(const QString& query);
-    Q_INVOKABLE void clearSearch();
 
 public:
     explicit LibraryController(Services::LibraryService& library,
@@ -58,13 +55,19 @@ public:
         return m_stats.m_unknownCount;
     }
 
-    [[nodiscard]] SongListModel* songs() { return &m_songsModel; }
+    [[nodiscard]] QString searchError() const { return m_searchError; }
 
+    [[nodiscard]] SongListModel* songs() { return &m_songsModel; }
+    [[nodiscard]] SongListModel* searchResults() { return &m_searchModel; }
+
+    Q_INVOKABLE void search(const QString& query);
+    Q_INVOKABLE void clearSearch();
     Q_INVOKABLE void loadSongs();
     Q_INVOKABLE void refresh();
 
 signals:
     void statsChanged();
+    void searchErrorChanged();
 
 private:
     Domain::Stats m_stats{};
@@ -73,6 +76,8 @@ private:
     Services::LibraryService& m_library;
     Services::SearchService& m_search;
     Services::ArtistService& m_artists;
+
+    QString m_searchError;
 };
 
 } // namespace Track8::Gui
