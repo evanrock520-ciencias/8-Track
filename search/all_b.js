@@ -6,7 +6,7 @@ var searchData=
   ['lexer_3',['Lexer',['../classTrack8_1_1Compiler_1_1Lexer.html',1,'Track8::Compiler::Lexer'],['../classTrack8_1_1Compiler_1_1Lexer.html#a69fbf6c64b8c30b37dc39a1f6d06f5eb',1,'Track8::Compiler::Lexer::Lexer()']]],
   ['lexer_2ehpp_4',['Lexer.hpp',['../Lexer_8hpp.html',1,'']]],
   ['library_5',['library',['../structTrack8_1_1App_1_1AppContext.html#a55b16df09d346123fed48e778b52a919',1,'Track8::App::AppContext']]],
-  ['librarycontroller_6',['LibraryController',['../classTrack8_1_1Gui_1_1LibraryController.html',1,'Track8::Gui::LibraryController'],['../classTrack8_1_1Gui_1_1LibraryController.html#aa9516ef6c9244fb0b2d799e26c8db357',1,'Track8::Gui::LibraryController::LibraryController()']]],
+  ['librarycontroller_6',['LibraryController',['../classTrack8_1_1Gui_1_1LibraryController.html',1,'Track8::Gui::LibraryController'],['../classTrack8_1_1Gui_1_1LibraryController.html#a86d7014fe39bf194d9ade6db08688597',1,'Track8::Gui::LibraryController::LibraryController()']]],
   ['librarycontroller_2ehpp_7',['LibraryController.hpp',['../LibraryController_8hpp.html',1,'']]],
   ['libraryservice_8',['LibraryService',['../classTrack8_1_1Services_1_1LibraryService.html',1,'Track8::Services::LibraryService'],['../classTrack8_1_1Services_1_1LibraryService.html#a989a8b9f7adc26702a2ee6936a908648',1,'Track8::Services::LibraryService::LibraryService()']]],
   ['libraryservice_2ehpp_9',['LibraryService.hpp',['../LibraryService_8hpp.html',1,'']]],

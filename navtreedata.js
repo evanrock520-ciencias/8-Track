@@ -70,8 +70,8 @@ var NAVTREEINDEX =
 "Album_8hpp.html",
 "classTrack8_1_1Compiler_1_1TextFilterNode.html#a8b3bac5dd2fc359366d2132fac2b823a",
 "classTrack8_1_1Domain_1_1SongBuilder.html#a888907be5dc4cd2360b14bafef4f2eb2",
-"classTrack8_1_1Services_1_1ArtistService.html#a9d952472c23862b29921f3b7713ddc7f",
-"structTrack8_1_1Compiler_1_1SortClause.html#a5180d8a86f76402ae43ffaab502ac00b"
+"classTrack8_1_1Services_1_1ArtistService.html#a611d4c6c7db8de0e9e613fc7878f1498",
+"structTrack8_1_1App_1_1AppContext.html#aebbf8dda2e0a7926ea95674b7b40949d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

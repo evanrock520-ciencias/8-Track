@@ -113,10 +113,11 @@ Inheritance diagram for Track8::Gui::LibraryController:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a160af17255256c2ed1f72de0712cfbcf" id="r_a160af17255256c2ed1f72de0712cfbcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a160af17255256c2ed1f72de0712cfbcf">statsChanged</a> ()</td></tr>
+<tr class="memitem:a51ac0659b9e60f85025014eb1d33727a" id="r_a51ac0659b9e60f85025014eb1d33727a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51ac0659b9e60f85025014eb1d33727a">searchErrorChanged</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa9516ef6c9244fb0b2d799e26c8db357" id="r_aa9516ef6c9244fb0b2d799e26c8db357"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9516ef6c9244fb0b2d799e26c8db357">LibraryController</a> (<a class="el" href="classTrack8_1_1Services_1_1LibraryService.html">Services::LibraryService</a> &amp;library, <a class="el" href="classTrack8_1_1Services_1_1ArtistService.html">Services::ArtistService</a> &amp;artists, QObject *parent=nullptr)</td></tr>
+<tr class="memitem:a86d7014fe39bf194d9ade6db08688597" id="r_a86d7014fe39bf194d9ade6db08688597"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86d7014fe39bf194d9ade6db08688597">LibraryController</a> (<a class="el" href="classTrack8_1_1Services_1_1LibraryService.html">Services::LibraryService</a> &amp;library, <a class="el" href="classTrack8_1_1Services_1_1SearchService.html">Services::SearchService</a> &amp;<a class="el" href="#abe9470ad40185e2dec718a085dcbb472">search</a>, <a class="el" href="classTrack8_1_1Services_1_1ArtistService.html">Services::ArtistService</a> &amp;artists, QObject *parent=nullptr)</td></tr>
 <tr class="memitem:aa728880e4f8f89d8fa601642629d7112" id="r_aa728880e4f8f89d8fa601642629d7112"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa728880e4f8f89d8fa601642629d7112">songCount</a> () const</td></tr>
 <tr class="memitem:a211ac8589f8936cbdf2e14a85e85ace5" id="r_a211ac8589f8936cbdf2e14a85e85ace5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a211ac8589f8936cbdf2e14a85e85ace5">albumCount</a> () const</td></tr>
 <tr class="memitem:a08a28819b042b98ea8e4a919d078f0ee" id="r_a08a28819b042b98ea8e4a919d078f0ee"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08a28819b042b98ea8e4a919d078f0ee">performerCount</a> () const</td></tr>
@@ -124,7 +125,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a494da28242c4b5561fcb7610cc5a24a0" id="r_a494da28242c4b5561fcb7610cc5a24a0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a494da28242c4b5561fcb7610cc5a24a0">bandCount</a> () const</td></tr>
 <tr class="memitem:a6927a113f0d16ff8514d26b4c7f72c91" id="r_a6927a113f0d16ff8514d26b4c7f72c91"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6927a113f0d16ff8514d26b4c7f72c91">personCount</a> () const</td></tr>
 <tr class="memitem:ad9930211f5ee864327b19903c72e2c18" id="r_ad9930211f5ee864327b19903c72e2c18"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9930211f5ee864327b19903c72e2c18">unknownCount</a> () const</td></tr>
+<tr class="memitem:afb0fdc48da1cd3844999b62fb07ebeec" id="r_afb0fdc48da1cd3844999b62fb07ebeec"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb0fdc48da1cd3844999b62fb07ebeec">searchError</a> () const</td></tr>
 <tr class="memitem:a0ea9463eb44be29957ee11919a666085" id="r_a0ea9463eb44be29957ee11919a666085"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTrack8_1_1Gui_1_1SongListModel.html">SongListModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ea9463eb44be29957ee11919a666085">songs</a> ()</td></tr>
+<tr class="memitem:a1ee8a185d71a82cc235a064181468597" id="r_a1ee8a185d71a82cc235a064181468597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTrack8_1_1Gui_1_1SongListModel.html">SongListModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ee8a185d71a82cc235a064181468597">searchResults</a> ()</td></tr>
+<tr class="memitem:abe9470ad40185e2dec718a085dcbb472" id="r_abe9470ad40185e2dec718a085dcbb472"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe9470ad40185e2dec718a085dcbb472">search</a> (const QString &amp;query)</td></tr>
+<tr class="memitem:a42dc66d75a388e5e522b4a1221ecf40a" id="r_a42dc66d75a388e5e522b4a1221ecf40a"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42dc66d75a388e5e522b4a1221ecf40a">clearSearch</a> ()</td></tr>
 <tr class="memitem:abfcccfc1ea6769f9dfdc80aeb34a78f4" id="r_abfcccfc1ea6769f9dfdc80aeb34a78f4"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfcccfc1ea6769f9dfdc80aeb34a78f4">loadSongs</a> ()</td></tr>
 <tr class="memitem:a47246d54fdb0f2fd6efc317fee03ca2d" id="r_a47246d54fdb0f2fd6efc317fee03ca2d"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47246d54fdb0f2fd6efc317fee03ca2d">refresh</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -138,12 +143,14 @@ Properties</h2></td></tr>
 <tr class="memitem:a7d2eeb9288799ad6231c5c919ecf947b" id="r_a7d2eeb9288799ad6231c5c919ecf947b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d2eeb9288799ad6231c5c919ecf947b">personCount</a></td></tr>
 <tr class="memitem:a27898cfe798bba8a6c985f77ab2dcb0e" id="r_a27898cfe798bba8a6c985f77ab2dcb0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27898cfe798bba8a6c985f77ab2dcb0e">unknownCount</a></td></tr>
 <tr class="memitem:a9e8885a3cc9f4fd68c8d438f32fcfe1b" id="r_a9e8885a3cc9f4fd68c8d438f32fcfe1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTrack8_1_1Gui_1_1SongListModel.html">SongListModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e8885a3cc9f4fd68c8d438f32fcfe1b">songs</a></td></tr>
+<tr class="memitem:a91fba4f9d4aad40e356020a94f6c914a" id="r_a91fba4f9d4aad40e356020a94f6c914a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTrack8_1_1Gui_1_1SongListModel.html">SongListModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91fba4f9d4aad40e356020a94f6c914a">searchResults</a></td></tr>
+<tr class="memitem:a908dd5a669f8ef3a7fc4d909d90a260d" id="r_a908dd5a669f8ef3a7fc4d909d90a260d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a908dd5a669f8ef3a7fc4d909d90a260d">searchError</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Maneja la interacción entre el servicio <span class="tt">Library</span> y la interfaz gráfica. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa9516ef6c9244fb0b2d799e26c8db357" name="aa9516ef6c9244fb0b2d799e26c8db357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9516ef6c9244fb0b2d799e26c8db357">&#9670;&#160;</a></span>LibraryController()</h2>
+<a id="a86d7014fe39bf194d9ade6db08688597" name="a86d7014fe39bf194d9ade6db08688597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d7014fe39bf194d9ade6db08688597">&#9670;&#160;</a></span>LibraryController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,6 +162,11 @@ Properties</h2></td></tr>
           <td class="memname">Track8::Gui::LibraryController::LibraryController </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTrack8_1_1Services_1_1LibraryService.html">Services::LibraryService</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTrack8_1_1Services_1_1SearchService.html">Services::SearchService</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>search</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -223,6 +235,23 @@ Properties</h2></td></tr>
 <span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42dc66d75a388e5e522b4a1221ecf40a" name="a42dc66d75a388e5e522b4a1221ecf40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42dc66d75a388e5e522b4a1221ecf40a">&#9670;&#160;</a></span>clearSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Q_INVOKABLE void Track8::Gui::LibraryController::clearSearch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -332,6 +361,98 @@ Properties</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe9470ad40185e2dec718a085dcbb472" name="abe9470ad40185e2dec718a085dcbb472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9470ad40185e2dec718a085dcbb472">&#9670;&#160;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Q_INVOKABLE void Track8::Gui::LibraryController::search </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb0fdc48da1cd3844999b62fb07ebeec" name="afb0fdc48da1cd3844999b62fb07ebeec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0fdc48da1cd3844999b62fb07ebeec">&#9670;&#160;</a></span>searchError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Track8::Gui::LibraryController::searchError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51ac0659b9e60f85025014eb1d33727a" name="a51ac0659b9e60f85025014eb1d33727a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ac0659b9e60f85025014eb1d33727a">&#9670;&#160;</a></span>searchErrorChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Track8::Gui::LibraryController::searchErrorChanged </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ee8a185d71a82cc235a064181468597" name="a1ee8a185d71a82cc235a064181468597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee8a185d71a82cc235a064181468597">&#9670;&#160;</a></span>searchResults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTrack8_1_1Gui_1_1SongListModel.html">SongListModel</a> * Track8::Gui::LibraryController::searchResults </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -536,6 +657,50 @@ Properties</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int Track8::Gui::LibraryController::personCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a908dd5a669f8ef3a7fc4d909d90a260d" name="a908dd5a669f8ef3a7fc4d909d90a260d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908dd5a669f8ef3a7fc4d909d90a260d">&#9670;&#160;</a></span>searchError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Track8::Gui::LibraryController::searchError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91fba4f9d4aad40e356020a94f6c914a" name="a91fba4f9d4aad40e356020a94f6c914a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91fba4f9d4aad40e356020a94f6c914a">&#9670;&#160;</a></span>searchResults</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTrack8_1_1Gui_1_1SongListModel.html">SongListModel</a>* Track8::Gui::LibraryController::searchResults</td>
         </tr>
       </table>
   </td>

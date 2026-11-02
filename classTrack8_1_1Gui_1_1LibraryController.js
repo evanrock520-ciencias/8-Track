@@ -1,13 +1,18 @@
 var classTrack8_1_1Gui_1_1LibraryController =
 [
-    [ "LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html#aa9516ef6c9244fb0b2d799e26c8db357", null ],
+    [ "LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html#a86d7014fe39bf194d9ade6db08688597", null ],
     [ "albumCount", "classTrack8_1_1Gui_1_1LibraryController.html#a211ac8589f8936cbdf2e14a85e85ace5", null ],
     [ "bandCount", "classTrack8_1_1Gui_1_1LibraryController.html#a494da28242c4b5561fcb7610cc5a24a0", null ],
+    [ "clearSearch", "classTrack8_1_1Gui_1_1LibraryController.html#a42dc66d75a388e5e522b4a1221ecf40a", null ],
     [ "genreCount", "classTrack8_1_1Gui_1_1LibraryController.html#ac34876752a1dfb61ec241d6d5cc3173a", null ],
     [ "loadSongs", "classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4", null ],
     [ "performerCount", "classTrack8_1_1Gui_1_1LibraryController.html#a08a28819b042b98ea8e4a919d078f0ee", null ],
     [ "personCount", "classTrack8_1_1Gui_1_1LibraryController.html#a6927a113f0d16ff8514d26b4c7f72c91", null ],
     [ "refresh", "classTrack8_1_1Gui_1_1LibraryController.html#a47246d54fdb0f2fd6efc317fee03ca2d", null ],
+    [ "search", "classTrack8_1_1Gui_1_1LibraryController.html#abe9470ad40185e2dec718a085dcbb472", null ],
+    [ "searchError", "classTrack8_1_1Gui_1_1LibraryController.html#afb0fdc48da1cd3844999b62fb07ebeec", null ],
+    [ "searchErrorChanged", "classTrack8_1_1Gui_1_1LibraryController.html#a51ac0659b9e60f85025014eb1d33727a", null ],
+    [ "searchResults", "classTrack8_1_1Gui_1_1LibraryController.html#a1ee8a185d71a82cc235a064181468597", null ],
     [ "songCount", "classTrack8_1_1Gui_1_1LibraryController.html#aa728880e4f8f89d8fa601642629d7112", null ],
     [ "songs", "classTrack8_1_1Gui_1_1LibraryController.html#a0ea9463eb44be29957ee11919a666085", null ],
     [ "statsChanged", "classTrack8_1_1Gui_1_1LibraryController.html#a160af17255256c2ed1f72de0712cfbcf", null ],
@@ -17,6 +22,8 @@ var classTrack8_1_1Gui_1_1LibraryController =
     [ "genreCount", "classTrack8_1_1Gui_1_1LibraryController.html#ae65307ca2f8b1dd74a1713b6f4a2a929", null ],
     [ "performerCount", "classTrack8_1_1Gui_1_1LibraryController.html#a2e7ac2e7a5acb2a7518c1f59198ffb11", null ],
     [ "personCount", "classTrack8_1_1Gui_1_1LibraryController.html#a7d2eeb9288799ad6231c5c919ecf947b", null ],
+    [ "searchError", "classTrack8_1_1Gui_1_1LibraryController.html#a908dd5a669f8ef3a7fc4d909d90a260d", null ],
+    [ "searchResults", "classTrack8_1_1Gui_1_1LibraryController.html#a91fba4f9d4aad40e356020a94f6c914a", null ],
     [ "songCount", "classTrack8_1_1Gui_1_1LibraryController.html#a4c5fb03627885bea8895985c2e0c057a", null ],
     [ "songs", "classTrack8_1_1Gui_1_1LibraryController.html#a9e8885a3cc9f4fd68c8d438f32fcfe1b", null ],
     [ "unknownCount", "classTrack8_1_1Gui_1_1LibraryController.html#a27898cfe798bba8a6c985f77ab2dcb0e", null ]
