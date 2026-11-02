@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Rectangle {
     id: root
@@ -43,11 +44,26 @@ Rectangle {
                 spacing: 12
 
                 StatusIndicator {}
+
+                DirectorySelector {
+                    id: dialog
+                    onFolderSelected: function (folder) {
+                        scanModal.directory = folder;
+                        scanModal.open();
+                        Scan.start(folder);
+                    }
+                }
+
+                ScanModal {
+                    id: scanModal
+                }
+
                 NeobrutalistButton {
                     icon.height: Theme.buttonIconSize
                     icon.source: "qrc:/qt/qml/Track8/resources/icons/scan.svg"
                     icon.width: Theme.buttonIconSize
                     text: "SCAN"
+                    onClicked: dialog.open()
                 }
             }
         }

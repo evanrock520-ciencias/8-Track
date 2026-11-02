@@ -142,4 +142,31 @@ QtObject {
     // Song Table
     readonly property int songTableMargin: 22
     readonly property int songHeaderHeight: 28
+
+    // Modal
+    readonly property int modalWidth: 620
+    readonly property int modalHeight: 387
+    readonly property int modalPaddingX: 20
+    readonly property int modalHeaderHeight: 58
+    readonly property int modalHeaderSpacing: 10
+    readonly property int modalHeaderIconSize: 20
+    readonly property int modalTitleSize: 20
+
+    // Info Box
+    readonly property int infoBoxHeight: 42
+    readonly property int infoBoxRadius: 4
+    readonly property int infoBoxPaddingX: 12
+    readonly property int infoBoxSpacing: 10
+    readonly property int infoBoxIconSize: 16
+    readonly property int infoBoxFontSize: 11
+
+    // Progress Bar
+    readonly property int progressBarHeight: 18
+
+    readonly property int progressFontSize: 14
+    readonly property int progressFontWeigth: 800
+    readonly property int percentageFontSize: 18
+    readonly property int percentageFontWeigth: 700
+
+    readonly property int labelSpacing: 12
 }

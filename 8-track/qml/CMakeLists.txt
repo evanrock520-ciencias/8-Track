@@ -40,6 +40,12 @@ qt_add_qml_module(track8
         components/SongRow.qml
         components/RowPlayButton.qml
         components/SongTableHeader.qml
+        components/ScanModal.qml
+        components/InfoBox.qml
+        components/NeobrutalistProgressBar.qml
+
+        # Dialogs
+        dialogs/DirectorySelector.qml
 
         # Pages
         pages/OverviewPage.qml
@@ -67,6 +73,9 @@ qt_add_qml_module(track8
         resources/icons/pause.svg
         resources/icons/play.svg
         resources/icons/volume.svg
+        resources/icons/folder.svg
+        resources/icons/song.svg
+        resources/icons/cancel.svg
 
         resources/images/cover.png
 )

@@ -114,6 +114,8 @@ add_library(gui
         src/gui/models/LibraryController.cpp
         include/gui/models/SongListModel.hpp
         src/gui/models/SongListModel.cpp
+        include/gui/models/ScanController.hpp
+        src/gui/models/ScanController.cpp
 )
 
 target_include_directories(gui PUBLIC
@@ -124,4 +126,9 @@ target_link_libraries(gui PUBLIC
         Qt6::Core
         services
         domain
+)
+
+target_link_libraries(gui PRIVATE
+        Qt6::Sql
+        database
 )

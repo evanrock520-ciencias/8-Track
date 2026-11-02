@@ -7,8 +7,9 @@
 
 namespace Track8::Database {
 
-DatabaseManager::DatabaseManager(const std::filesystem::path& path)
-    : m_connectionName("eight_track") {
+DatabaseManager::DatabaseManager(const std::filesystem::path& path,
+                                 const std::string& connectionName)
+    : m_connectionName(connectionName) {
     m_database = QSqlDatabase::addDatabase(
         "QSQLITE", QString::fromStdString(m_connectionName));
     m_database.setDatabaseName(QString::fromStdString(path.string()));
