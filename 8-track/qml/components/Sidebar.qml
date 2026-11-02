@@ -7,7 +7,7 @@ import Track8.Backend 1.0
 Rectangle {
     id: root
 
-    property string currentSection: "overview"
+    property string currentSection: "albums"
 
     anchors.left: parent.left
     anchors.top: parent.top
@@ -40,12 +40,6 @@ Rectangle {
             currentSection: root.currentSection
             model: [
                 {
-                    label: "Overview",
-                    count: -1,
-                    icon: "icons",
-                    section: "overview"
-                },
-                {
                     label: "Albums",
                     count: Library.albumCount,
                     icon: "cd",
@@ -62,47 +56,9 @@ Rectangle {
                     count: Library.songCount,
                     icon: "list-music",
                     section: "songs"
-                },
-                {
-                    label: "Genres",
-                    count: Library.genreCount,
-                    icon: "icons",
-                    section: "genres"
                 }
             ]
             title: "LIBRARY"
-
-            onSectionSelected: function (section) {
-                root.sectionSelected(section);
-            }
-        }
-        NavSection {
-            Layout.fillWidth: true
-            Layout.leftMargin: Theme.sidebarPaddingX
-            Layout.rightMargin: Theme.sidebarPaddingX
-            Layout.topMargin: Theme.navPaddingTop
-            currentSection: root.currentSection
-            model: [
-                {
-                    label: "Bands",
-                    count: Library.bandCount,
-                    icon: "band",
-                    section: "bands"
-                },
-                {
-                    label: "People",
-                    count: Library.personCount,
-                    icon: "artist",
-                    section: "people"
-                },
-                {
-                    label: "Unknown",
-                    count: Library.unknownCount,
-                    icon: "artist",
-                    section: "unknown"
-                }
-            ]
-            title: "ENTITIES"
 
             onSectionSelected: function (section) {
                 root.sectionSelected(section);

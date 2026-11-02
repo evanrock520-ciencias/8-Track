@@ -6,7 +6,7 @@ import Track8.Backend 1.0
 Rectangle {
     id: root
 
-    property string title: "Overview"
+    property string title: "Albums"
 
     anchors.left: sidebar.right
     anchors.right: parent.right

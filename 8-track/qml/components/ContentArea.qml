@@ -5,26 +5,16 @@ Item {
     id: root
 
     readonly property var pages: ({
-            overview: overviewPage,
             albums: albumsPage,
             artists: artistsPage,
             songs: songsPage,
-            genres: genresPage,
-            search: searchPage,
-            bands: placeholderPage,
-            people: placeholderPage,
-            unknown: placeholderPage
+            search: searchPage
         })
-    property string section: "overview"
+    property string section: "albums"
 
     Loader {
         anchors.fill: parent
-        sourceComponent: root.pages[root.section] ?? root.pages.overview
-    }
-    Component {
-        id: overviewPage
-
-        OverviewPage {}
+        sourceComponent: root.pages[root.section] ?? root.pages.albums
     }
     Component {
         id: albumsPage
@@ -42,26 +32,8 @@ Item {
         SongsPage {}
     }
     Component {
-        id: genresPage
-
-        GenresPage {}
-    }
-    Component {
         id: searchPage
 
         SearchPage {}
-    }
-    Component {
-        id: placeholderPage
-
-        Item {
-            Text {
-                anchors.centerIn: parent
-                color: Theme.grey
-                font.family: Theme.fontFamily
-                font.pixelSize: Theme.navBarItemFontSize
-                text: "Unavailable Page"
-            }
-        }
     }
 }

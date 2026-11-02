@@ -5,17 +5,12 @@ import Track8.Backend 1.0
 Window {
     id: window
 
-    property string currentSection: "overview"
+    property string currentSection: "albums"
     readonly property var sectionTitles: ({
-            overview: "Overview",
             albums: "Albums",
             artists: "Artists",
             songs: "Songs",
-            genres: "Genres",
-            search: "Search",
-            bands: "Bands",
-            people: "People",
-            unknown: "Unknown"
+            search: "Search"
         })
 
     color: Theme.cream
@@ -48,7 +43,7 @@ Window {
         anchors.left: sidebar.right
         anchors.right: parent.right
         anchors.top: parent.top
-        title: window.sectionTitles[window.currentSection] ?? "Overview"
+        title: window.sectionTitles[window.currentSection] ?? "Albums"
 
         onSearchRequested: function (query) {
             window.currentSection = "search";

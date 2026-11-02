@@ -48,10 +48,8 @@ qt_add_qml_module(track8
         dialogs/DirectorySelector.qml
 
         # Pages
-        pages/OverviewPage.qml
         pages/AlbumsPage.qml
         pages/ArtistsPage.qml
-        pages/GenresPage.qml
         pages/SongsPage.qml
         pages/SearchPage.qml
 
