@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Rectangle {
     id: root
@@ -49,6 +50,7 @@ Rectangle {
                     onFolderSelected: function (folder) {
                         scanModal.directory = folder;
                         scanModal.open();
+                        Scan.start(folder);
                     }
                 }
 

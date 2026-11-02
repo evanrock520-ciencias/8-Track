@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls.Basic
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Popup {
     id: root
@@ -75,20 +76,20 @@ Popup {
                         font.family: Theme.fontFamily
                         font.pixelSize: Theme.progressFontSize
                         font.weight: Theme.progressFontWeigth
-                        text: "3,687 of 5834 MP3 Files"
+                        text: `${Scan.scanned} from ${Scan.total} MP3 Files`
                     }
                     Text {
                         color: Theme.blue
                         font.family: Theme.monoFontFamily
                         font.pixelSize: Theme.percentageFontSize
                         font.weight: Theme.percentageFontWeigth
-                        text: "64%"
+                        text: `${Math.round(Scan.scanned / Scan.total * 100)}%`
                     }
                 }
                 NeobrutalistProgressBar {
                     Layout.fillWidth: true
-                    indeterminate: root.total === 0
-                    value: root.total > 0 ? root.scanned / root.total : 0
+                    indeterminate: Scan.running && Scan.total === 0
+                    value: Scan.total > 0 ? Scan.scanned / Scan.total : 0
                 }
                 Text {
                     color: Theme.grey
