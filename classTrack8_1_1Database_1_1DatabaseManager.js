@@ -1,7 +1,10 @@
 var classTrack8_1_1Database_1_1DatabaseManager =
 [
     [ "DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b", null ],
-    [ "~DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html#a86fc5e674d145c5e6f59355a14bc5727", null ],
+    [ "~DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html#a772d818bd78ba4b7c1938861963b0bcb", null ],
+    [ "commit", "classTrack8_1_1Database_1_1DatabaseManager.html#a0d33211bdcbab3c09acc41bf8e0d3cbc", null ],
     [ "database", "classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5", null ],
-    [ "shutdown", "classTrack8_1_1Database_1_1DatabaseManager.html#a54fa467ece8839552b6347550b09ec0e", null ]
+    [ "rollback", "classTrack8_1_1Database_1_1DatabaseManager.html#a42ed3504c400fc630231bb48895c7ec6", null ],
+    [ "shutdown", "classTrack8_1_1Database_1_1DatabaseManager.html#a54fa467ece8839552b6347550b09ec0e", null ],
+    [ "transaction", "classTrack8_1_1Database_1_1DatabaseManager.html#af6fe737a675708fe6418391b15ae5cf4", null ]
 ];

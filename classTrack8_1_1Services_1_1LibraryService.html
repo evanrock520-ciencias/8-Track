@@ -101,10 +101,10 @@ $(function(){initNavTree('classTrack8_1_1Services_1_1LibraryService.html','','cl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae7ff752e7866872a60a990d1bc0c981a" id="r_ae7ff752e7866872a60a990d1bc0c981a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ff752e7866872a60a990d1bc0c981a">LibraryService</a> (const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IAlbumRepository.html">Repositories::IAlbumRepository</a> &gt; &amp;<a class="el" href="#acf88cd1523e70be2263db6dfd75fbaab">albums</a>, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html">Repositories::IPerformerRepository</a> &gt; &amp;performers, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ISongRepository.html">Repositories::ISongRepository</a> &gt; &amp;<a class="el" href="#a5a41a64a3198c08470f8c2c8ea615406">songs</a>)</td></tr>
+<tr class="memitem:a989a8b9f7adc26702a2ee6936a908648" id="r_a989a8b9f7adc26702a2ee6936a908648"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a989a8b9f7adc26702a2ee6936a908648">LibraryService</a> (const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IAlbumRepository.html">Repositories::IAlbumRepository</a> &gt; &amp;<a class="el" href="#acf88cd1523e70be2263db6dfd75fbaab">albums</a>, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1IPerformerRepository.html">Repositories::IPerformerRepository</a> &gt; &amp;performers, const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ISongRepository.html">Repositories::ISongRepository</a> &gt; &amp;<a class="el" href="#a5a41a64a3198c08470f8c2c8ea615406">songs</a>, const std::filesystem::path &amp;cacheDir, std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html">Repositories::ITransactionManager</a> &gt; transactions=nullptr)</td></tr>
 <tr class="memitem:a1c3f86a635646f9f0c545e9147c828c3" id="r_a1c3f86a635646f9f0c545e9147c828c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c3f86a635646f9f0c545e9147c828c3">~LibraryService</a> ()=default</td></tr>
-<tr class="memitem:a5a0071a88108eb51e92ba4628000915a" id="r_a5a0071a88108eb51e92ba4628000915a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a0071a88108eb51e92ba4628000915a">scan</a> (const std::filesystem::path &amp;path) const</td></tr>
-<tr class="memdesc:a5a0071a88108eb51e92ba4628000915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escanea un directorio y guarda todos sus metadatos en la base de datos de la aplicación.  <br /></td></tr>
+<tr class="memitem:a73f23528d2da9d715c3ac830a361ea70" id="r_a73f23528d2da9d715c3ac830a361ea70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f23528d2da9d715c3ac830a361ea70">scan</a> (const std::filesystem::path &amp;path, const std::function&lt; void(const <a class="el" href="structScanProgress.html">ScanProgress</a> &amp;)&gt; &amp;onProgress={}) const</td></tr>
+<tr class="memdesc:a73f23528d2da9d715c3ac830a361ea70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escanea un directorio y guarda todos sus metadatos en la base de datos de la aplicación.  <br /></td></tr>
 <tr class="memitem:a73860fd03a86671eb365941a781eac93" id="r_a73860fd03a86671eb365941a781eac93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73860fd03a86671eb365941a781eac93">importTrack</a> (const <a class="el" href="structTrack8_1_1Miner_1_1Metadata.html">Track8::Miner::Metadata</a> &amp;metadata) const</td></tr>
 <tr class="memitem:a5a41a64a3198c08470f8c2c8ea615406" id="r_a5a41a64a3198c08470f8c2c8ea615406"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Song.html">Domain::Song</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a41a64a3198c08470f8c2c8ea615406">songs</a> () const</td></tr>
 <tr class="memitem:acf88cd1523e70be2263db6dfd75fbaab" id="r_acf88cd1523e70be2263db6dfd75fbaab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Domain_1_1Album.html">Domain::Album</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf88cd1523e70be2263db6dfd75fbaab">albums</a> () const</td></tr>
@@ -115,8 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f029926b1e68379820c3bde6ec0d01e" id="r_a5f029926b1e68379820c3bde6ec0d01e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTrack8_1_1Domain_1_1Stats.html">Domain::Stats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f029926b1e68379820c3bde6ec0d01e">stats</a> () const</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae7ff752e7866872a60a990d1bc0c981a" name="ae7ff752e7866872a60a990d1bc0c981a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7ff752e7866872a60a990d1bc0c981a">&#9670;&#160;</a></span>LibraryService()</h2>
+<a id="a989a8b9f7adc26702a2ee6936a908648" name="a989a8b9f7adc26702a2ee6936a908648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989a8b9f7adc26702a2ee6936a908648">&#9670;&#160;</a></span>LibraryService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +134,17 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ISongRepository.html">Repositories::ISongRepository</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>songs</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ISongRepository.html">Repositories::ISongRepository</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>songs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>cacheDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html">Repositories::ITransactionManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>transactions</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -274,8 +284,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a0071a88108eb51e92ba4628000915a" name="a5a0071a88108eb51e92ba4628000915a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a0071a88108eb51e92ba4628000915a">&#9670;&#160;</a></span>scan()</h2>
+<a id="a73f23528d2da9d715c3ac830a361ea70" name="a73f23528d2da9d715c3ac830a361ea70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f23528d2da9d715c3ac830a361ea70">&#9670;&#160;</a></span>scan()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,8 +293,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Track8::Services::LibraryService::scan </td>
           <td>(</td>
-          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(const <a class="el" href="structScanProgress.html">ScanProgress</a> &amp;)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>onProgress</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">

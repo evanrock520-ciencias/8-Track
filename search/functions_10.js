@@ -1,7 +1,7 @@
 var searchData=
 [
   ['save_0',['save',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a85491b910e8cda02e54c9f3a109ba016',1,'Track8::Database::SQLiteAlbumRepository::save()'],['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a809d20086c4965df3dae759186688ede',1,'Track8::Database::SQLitePerformerRepository::save()'],['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#a0ebb3c5b0b7c32b7bbddc5dbd79e9e81',1,'Track8::Database::SQLiteSongRepository::save()'],['../classTrack8_1_1Repositories_1_1IAlbumRepository.html#a3a4a7e31d495dae99f2992a8cc5d8d74',1,'Track8::Repositories::IAlbumRepository::save()'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#ae81bd379799705336226db93fa08a6f8',1,'Track8::Repositories::IPerformerRepository::save()'],['../classTrack8_1_1Repositories_1_1ISongRepository.html#a930a176beadb4ee05c52d719c96949a9',1,'Track8::Repositories::ISongRepository::save()']]],
-  ['scan_1',['scan',['../classTrack8_1_1Services_1_1LibraryService.html#a5a0071a88108eb51e92ba4628000915a',1,'Track8::Services::LibraryService']]],
+  ['scan_1',['scan',['../classTrack8_1_1Services_1_1LibraryService.html#a73f23528d2da9d715c3ac830a361ea70',1,'Track8::Services::LibraryService']]],
   ['scantokens_2',['scanTokens',['../classTrack8_1_1Compiler_1_1Lexer.html#af81971cc9337b9fc6bff570ff5081699',1,'Track8::Compiler::Lexer']]],
   ['search_3',['search',['../classTrack8_1_1Services_1_1SearchService.html#a872032040db8e9e11a547cccaed77d19',1,'Track8::Services::SearchService']]],
   ['searchservice_4',['SearchService',['../classTrack8_1_1Services_1_1SearchService.html#ad8c2005290c580d265e57a5595eb4987',1,'Track8::Services::SearchService']]],

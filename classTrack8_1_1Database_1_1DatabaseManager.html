@@ -101,15 +101,32 @@ $(function(){initNavTree('classTrack8_1_1Database_1_1DatabaseManager.html','','c
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="DatabaseManager_8hpp_source.html">DatabaseManager.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Track8::Database::DatabaseManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classTrack8_1_1Database_1_1DatabaseManager.png" usemap="#Track8_3A_3ADatabase_3A_3ADatabaseManager_map" alt=""/>
+  <map id="Track8_3A_3ADatabase_3A_3ADatabaseManager_map" name="Track8_3A_3ADatabase_3A_3ADatabaseManager_map">
+<area href="classTrack8_1_1Repositories_1_1ITransactionManager.html" title="Interfaz para el control de transacciones en la capa de persistencia." alt="Track8::Repositories::ITransactionManager" shape="rect" coords="0,0,252,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a166b205c614c0eecd55a2785037d147b" id="r_a166b205c614c0eecd55a2785037d147b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a166b205c614c0eecd55a2785037d147b">DatabaseManager</a> (const std::filesystem::path &amp;path)</td></tr>
 <tr class="memdesc:a166b205c614c0eecd55a2785037d147b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accede o crea una base de datos para utilizar en el programa.  <br /></td></tr>
-<tr class="memitem:a86fc5e674d145c5e6f59355a14bc5727" id="r_a86fc5e674d145c5e6f59355a14bc5727"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fc5e674d145c5e6f59355a14bc5727">~DatabaseManager</a> ()</td></tr>
+<tr class="memitem:a772d818bd78ba4b7c1938861963b0bcb" id="r_a772d818bd78ba4b7c1938861963b0bcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a772d818bd78ba4b7c1938861963b0bcb">~DatabaseManager</a> () override</td></tr>
 <tr class="memitem:a54fa467ece8839552b6347550b09ec0e" id="r_a54fa467ece8839552b6347550b09ec0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54fa467ece8839552b6347550b09ec0e">shutdown</a> ()</td></tr>
 <tr class="memdesc:a54fa467ece8839552b6347550b09ec0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cierra la conexión con la base de datos.  <br /></td></tr>
 <tr class="memitem:aa8efacfc0ca3534992fd25493ca566d5" id="r_aa8efacfc0ca3534992fd25493ca566d5"><td class="memItemLeft" align="right" valign="top">QSqlDatabase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8efacfc0ca3534992fd25493ca566d5">database</a> () const</td></tr>
+<tr class="memitem:af6fe737a675708fe6418391b15ae5cf4" id="r_af6fe737a675708fe6418391b15ae5cf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6fe737a675708fe6418391b15ae5cf4">transaction</a> () override</td></tr>
+<tr class="memdesc:af6fe737a675708fe6418391b15ae5cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia una transacción en la base de datos SQLite.  <br /></td></tr>
+<tr class="memitem:a0d33211bdcbab3c09acc41bf8e0d3cbc" id="r_a0d33211bdcbab3c09acc41bf8e0d3cbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d33211bdcbab3c09acc41bf8e0d3cbc">commit</a> () override</td></tr>
+<tr class="memdesc:a0d33211bdcbab3c09acc41bf8e0d3cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirma la transacción actual.  <br /></td></tr>
+<tr class="memitem:a42ed3504c400fc630231bb48895c7ec6" id="r_a42ed3504c400fc630231bb48895c7ec6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ed3504c400fc630231bb48895c7ec6">rollback</a> () override</td></tr>
+<tr class="memdesc:a42ed3504c400fc630231bb48895c7ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revierte la transacción actual.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classTrack8_1_1Repositories_1_1ITransactionManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classTrack8_1_1Repositories_1_1ITransactionManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html">Track8::Repositories::ITransactionManager</a></td></tr>
+<tr class="memitem:a5a6bc28ca82145fba1b3642b32a2ba8c inherit pub_methods_classTrack8_1_1Repositories_1_1ITransactionManager" id="r_a5a6bc28ca82145fba1b3642b32a2ba8c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html#a5a6bc28ca82145fba1b3642b32a2ba8c">~ITransactionManager</a> ()=default</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Maneja la conexión con la base de datos. </p>
@@ -147,11 +164,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a86fc5e674d145c5e6f59355a14bc5727" name="a86fc5e674d145c5e6f59355a14bc5727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86fc5e674d145c5e6f59355a14bc5727">&#9670;&#160;</a></span>~DatabaseManager()</h2>
+<a id="a772d818bd78ba4b7c1938861963b0bcb" name="a772d818bd78ba4b7c1938861963b0bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772d818bd78ba4b7c1938861963b0bcb">&#9670;&#160;</a></span>~DatabaseManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Track8::Database::DatabaseManager::~DatabaseManager </td>
@@ -160,11 +180,46 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0d33211bdcbab3c09acc41bf8e0d3cbc" name="a0d33211bdcbab3c09acc41bf8e0d3cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d33211bdcbab3c09acc41bf8e0d3cbc">&#9670;&#160;</a></span>commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Database::DatabaseManager::commit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Confirma la transacción actual. </p>
+<dl class="section return"><dt>Returns</dt><dd>true si se confirmó exitosamente, false en caso contrario. </dd></dl>
+
+<p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html#ac234d7577d18cf0a9e516f1698b4025b">Track8::Repositories::ITransactionManager</a>.</p>
+
+</div>
+</div>
 <a id="aa8efacfc0ca3534992fd25493ca566d5" name="aa8efacfc0ca3534992fd25493ca566d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8efacfc0ca3534992fd25493ca566d5">&#9670;&#160;</a></span>database()</h2>
 
@@ -191,6 +246,36 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a42ed3504c400fc630231bb48895c7ec6" name="a42ed3504c400fc630231bb48895c7ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ed3504c400fc630231bb48895c7ec6">&#9670;&#160;</a></span>rollback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Database::DatabaseManager::rollback </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Revierte la transacción actual. </p>
+<dl class="section return"><dt>Returns</dt><dd>true si se revirtió exitosamente, false en caso contrario. </dd></dl>
+
+<p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html#aa3f49d26f6421f8c4e63feb94260b7ac">Track8::Repositories::ITransactionManager</a>.</p>
+
+</div>
+</div>
 <a id="a54fa467ece8839552b6347550b09ec0e" name="a54fa467ece8839552b6347550b09ec0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54fa467ece8839552b6347550b09ec0e">&#9670;&#160;</a></span>shutdown()</h2>
 
@@ -207,6 +292,36 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Cierra la conexión con la base de datos. </p>
+
+</div>
+</div>
+<a id="af6fe737a675708fe6418391b15ae5cf4" name="af6fe737a675708fe6418391b15ae5cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fe737a675708fe6418391b15ae5cf4">&#9670;&#160;</a></span>transaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Track8::Database::DatabaseManager::transaction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicia una transacción en la base de datos SQLite. </p>
+<dl class="section return"><dt>Returns</dt><dd>true si la transacción fue iniciada, false en caso contrario. </dd></dl>
+
+<p>Implements <a class="el" href="classTrack8_1_1Repositories_1_1ITransactionManager.html#a049920842d97b1f8b9d2f39dd585601b">Track8::Repositories::ITransactionManager</a>.</p>
 
 </div>
 </div>

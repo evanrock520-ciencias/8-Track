@@ -15,5 +15,6 @@ var searchData=
   ['performertype_12',['PerformerType',['../namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9ea',1,'Track8::Domain']]],
   ['person_13',['Person',['../namespaceTrack8_1_1Domain.html#a53f4167aa9fa07b3fa42405b174bb9eaa40bed7cf9b3d4bb3a3d7a7e3eb18c5eb',1,'Track8::Domain']]],
   ['personcount_14',['personCount',['../classTrack8_1_1Gui_1_1LibraryController.html#a7d2eeb9288799ad6231c5c919ecf947b',1,'Track8::Gui::LibraryController::personCount'],['../classTrack8_1_1Gui_1_1LibraryController.html#a6927a113f0d16ff8514d26b4c7f72c91',1,'Track8::Gui::LibraryController::personCount() const']]],
-  ['print_15',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]]
+  ['pictype_15',['PicType',['../CoverMiner_8hpp.html#a8f8492f720569b541e14d39e0e588dff',1,'CoverMiner.hpp']]],
+  ['print_16',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]]
 ];

@@ -34,7 +34,8 @@ var annotated_dup =
         [ "DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html", "classTrack8_1_1Database_1_1DatabaseManager" ],
         [ "SQLiteAlbumRepository", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html", "classTrack8_1_1Database_1_1SQLiteAlbumRepository" ],
         [ "SQLitePerformerRepository", "classTrack8_1_1Database_1_1SQLitePerformerRepository.html", "classTrack8_1_1Database_1_1SQLitePerformerRepository" ],
-        [ "SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html", "classTrack8_1_1Database_1_1SQLiteSongRepository" ]
+        [ "SQLiteSongRepository", "classTrack8_1_1Database_1_1SQLiteSongRepository.html", "classTrack8_1_1Database_1_1SQLiteSongRepository" ],
+        [ "TransactionScope", "classTrack8_1_1Database_1_1TransactionScope.html", "classTrack8_1_1Database_1_1TransactionScope" ]
       ] ],
       [ "Domain", "namespaceTrack8_1_1Domain.html", [
         [ "Album", "classTrack8_1_1Domain_1_1Album.html", "classTrack8_1_1Domain_1_1Album" ],
@@ -52,13 +53,16 @@ var annotated_dup =
         [ "SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", "classTrack8_1_1Gui_1_1SongListModel" ]
       ] ],
       [ "Miner", "namespaceTrack8_1_1Miner.html", [
+        [ "CoverMiner", "classTrack8_1_1Miner_1_1CoverMiner.html", "classTrack8_1_1Miner_1_1CoverMiner" ],
+        [ "Covers", "structTrack8_1_1Miner_1_1Covers.html", "structTrack8_1_1Miner_1_1Covers" ],
         [ "Metadata", "structTrack8_1_1Miner_1_1Metadata.html", "structTrack8_1_1Miner_1_1Metadata" ],
         [ "Miner", "classTrack8_1_1Miner_1_1Miner.html", "classTrack8_1_1Miner_1_1Miner" ]
       ] ],
       [ "Repositories", "namespaceTrack8_1_1Repositories.html", [
         [ "IAlbumRepository", "classTrack8_1_1Repositories_1_1IAlbumRepository.html", "classTrack8_1_1Repositories_1_1IAlbumRepository" ],
         [ "IPerformerRepository", "classTrack8_1_1Repositories_1_1IPerformerRepository.html", "classTrack8_1_1Repositories_1_1IPerformerRepository" ],
-        [ "ISongRepository", "classTrack8_1_1Repositories_1_1ISongRepository.html", "classTrack8_1_1Repositories_1_1ISongRepository" ]
+        [ "ISongRepository", "classTrack8_1_1Repositories_1_1ISongRepository.html", "classTrack8_1_1Repositories_1_1ISongRepository" ],
+        [ "ITransactionManager", "classTrack8_1_1Repositories_1_1ITransactionManager.html", "classTrack8_1_1Repositories_1_1ITransactionManager" ]
       ] ],
       [ "Services", "namespaceTrack8_1_1Services.html", [
         [ "ArtistService", "classTrack8_1_1Services_1_1ArtistService.html", "classTrack8_1_1Services_1_1ArtistService" ],
@@ -66,5 +70,6 @@ var annotated_dup =
         [ "SearchResult", "structTrack8_1_1Services_1_1SearchResult.html", "structTrack8_1_1Services_1_1SearchResult" ],
         [ "SearchService", "classTrack8_1_1Services_1_1SearchService.html", "classTrack8_1_1Services_1_1SearchService" ]
       ] ]
-    ] ]
+    ] ],
+    [ "ScanProgress", "structScanProgress.html", "structScanProgress" ]
 ];

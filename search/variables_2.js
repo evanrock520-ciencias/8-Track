@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['database_0',['database',['../structTrack8_1_1App_1_1AppContext.html#a6fccaa575a383caee915db85c241b09d',1,'Track8::App::AppContext']]]
+  ['current_0',['current',['../structScanProgress.html#abe53675ca2342709bdb4e97164bb6cbf',1,'ScanProgress']]],
+  ['currentfile_1',['currentFile',['../structScanProgress.html#a5c2eceef6ba081b1c0a60081c3c44d75',1,'ScanProgress']]]
 ];

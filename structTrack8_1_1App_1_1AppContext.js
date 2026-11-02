@@ -1,6 +1,6 @@
 var structTrack8_1_1App_1_1AppContext =
 [
-    [ "AppContext", "structTrack8_1_1App_1_1AppContext.html#a9c15e662f592c7994dc5afd890498226", null ],
+    [ "AppContext", "structTrack8_1_1App_1_1AppContext.html#ade7e2b515f3d1fbbd53456de8333058a", null ],
     [ "albums", "structTrack8_1_1App_1_1AppContext.html#a39c20dd014e718f1fc188267253899bd", null ],
     [ "artists", "structTrack8_1_1App_1_1AppContext.html#a861c50da851f34dd4a766222c8d5d4ac", null ],
     [ "database", "structTrack8_1_1App_1_1AppContext.html#a6fccaa575a383caee915db85c241b09d", null ],

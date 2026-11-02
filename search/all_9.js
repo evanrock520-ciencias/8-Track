@@ -21,5 +21,7 @@ var searchData=
   ['issortkey_18',['isSortKey',['../namespaceTrack8_1_1Compiler.html#a6d998838ac23ebac2c4258b23ddc7ae5',1,'Track8::Compiler']]],
   ['istemporalfield_19',['isTemporalField',['../namespaceTrack8_1_1Compiler.html#ade4826b55b99c1e131d0885e447531e9',1,'Track8::Compiler']]],
   ['istextfield_20',['isTextField',['../namespaceTrack8_1_1Compiler.html#af5f34555928de37de972dbef5db3490c',1,'Track8::Compiler']]],
-  ['isvalue_21',['isValue',['../namespaceTrack8_1_1Compiler.html#a1366f5cbdb9daa8025355382e79aae2e',1,'Track8::Compiler']]]
+  ['isvalue_21',['isValue',['../namespaceTrack8_1_1Compiler.html#a1366f5cbdb9daa8025355382e79aae2e',1,'Track8::Compiler']]],
+  ['itransactionmanager_22',['ITransactionManager',['../classTrack8_1_1Repositories_1_1ITransactionManager.html',1,'Track8::Repositories']]],
+  ['itransactionmanager_2ehpp_23',['ITransactionManager.hpp',['../ITransactionManager_8hpp.html',1,'']]]
 ];
