@@ -142,4 +142,8 @@ QtObject {
     // Song Table
     readonly property int songTableMargin: 22
     readonly property int songHeaderHeight: 28
+
+    // Modal
+    readonly property int modalWidth: 620
+    readonly property int modalPaddingX: 20
 }

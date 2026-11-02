@@ -40,6 +40,10 @@ qt_add_qml_module(track8
         components/SongRow.qml
         components/RowPlayButton.qml
         components/SongTableHeader.qml
+        components/ScanModal.qml
+
+        # Dialogs
+        dialogs/DirectorySelector.qml
 
         # Pages
         pages/OverviewPage.qml

@@ -43,11 +43,25 @@ Rectangle {
                 spacing: 12
 
                 StatusIndicator {}
+
+                DirectorySelector {
+                    id: dialog
+                    onFolderSelected: function (folder) {
+                        scanModal.directory = folder;
+                        scanModal.open();
+                    }
+                }
+
+                ScanModal {
+                    id: scanModal
+                }
+
                 NeobrutalistButton {
                     icon.height: Theme.buttonIconSize
                     icon.source: "qrc:/qt/qml/Track8/resources/icons/scan.svg"
                     icon.width: Theme.buttonIconSize
                     text: "SCAN"
+                    onClicked: dialog.open()
                 }
             }
         }
