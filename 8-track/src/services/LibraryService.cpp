@@ -1,22 +1,65 @@
 #include "services/LibraryService.hpp"
 
+#include "database/TransactionScope.hpp"
+#include "miner/CoverMiner.hpp"
+#include "services/ScanProgress.hpp"
+
 #include <iostream>
+#include <thread>
 
 namespace Track8::Services {
 
 LibraryService::LibraryService(
     const std::shared_ptr<Repositories::IAlbumRepository>& albums,
     const std::shared_ptr<Repositories::IPerformerRepository>& performers,
-    const std::shared_ptr<Repositories::ISongRepository>& songs)
-    : m_albums(albums), m_songs(songs), m_performers(performers) {}
+    const std::shared_ptr<Repositories::ISongRepository>& songs,
+    const std::filesystem::path& cacheDir,
+    std::shared_ptr<Repositories::ITransactionManager> transactions)
+    : m_albums(albums),
+      m_songs(songs),
+      m_performers(performers),
+      m_transactions(std::move(transactions)),
+      m_cacheDir(cacheDir) {}
 
-void LibraryService::scan(const std::filesystem::path& path) const {
+void LibraryService::scan(
+    const std::filesystem::path& path,
+    const std::function<void(const ScanProgress&)>& onProgress) const {
     const Miner::Miner miner(path);
-    // TODO: Utilizar una función inyectada para verificar el progreso.
-    miner.mine([&](const Miner::Metadata& metadata) {
-        std::cout << "Scanning " << metadata.m_title << "\n" << std::endl;
-        importTrack(metadata);
+    Miner::CoverMiner coverMiner(m_cacheDir);
+
+    const std::size_t total = miner.count();
+    std::size_t current = 0;
+    std::vector<Miner::Metadata> tracks;
+
+    auto report = [&](const std::size_t currentIndex,
+                      const std::string& currentFile) {
+        if (onProgress)
+            onProgress({.current = currentIndex,
+                        .total = total,
+                        .currentFile = currentFile});
+    };
+
+    std::jthread worker([&] {
+        miner.mine([&](const Miner::Metadata& data) {
+            tracks.push_back(data);
+            std::ignore = coverMiner.coverExtract(data.m_path, data.m_performer,
+                                                  data.m_album);
+            report(++current, data.m_title);
+        });
     });
+    worker.join();
+
+    std::unique_ptr<Database::TransactionScope> scope;
+    if (m_transactions)
+        scope = std::make_unique<Database::TransactionScope>(*m_transactions);
+
+    for (const auto& track : tracks)
+        importTrack(track);
+
+    if (scope)
+        scope->commit();
+
+    report(total, {});
 }
 
 void LibraryService::importTrack(const Miner::Metadata& metadata) const {

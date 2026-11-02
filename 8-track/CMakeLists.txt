@@ -17,6 +17,7 @@ target_sources(domain INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IAlbumRepository.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/ISongRepository.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/IPerformerRepository.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/domain/repositories/ITransactionManager.hpp
 )
 
 # Biblioteca de Database
@@ -59,6 +60,7 @@ target_include_directories(compiler PUBLIC
 # Biblioteca del Minero
 add_library(miner
     src/miner/Miner.cpp
+        src/miner/CoverMiner.cpp
 )
 
 target_include_directories(miner PUBLIC
@@ -66,7 +68,7 @@ target_include_directories(miner PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(miner PRIVATE tag)
+target_link_libraries(miner PUBLIC tag picosha2)
 
 # Biblioteca de servicios
 add_library(services
@@ -104,7 +106,7 @@ target_include_directories(cli PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(cli PRIVATE services argparse tabulate app)
+target_link_libraries(cli PRIVATE services argparse tabulate indicators app)
 
 # Biblioteca de la GUI
 add_library(gui

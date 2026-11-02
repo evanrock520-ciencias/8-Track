@@ -34,6 +34,24 @@ void Miner::mine(const std::function<void(const Metadata&)>& callback) const {
     }
 }
 
+int Miner::count() const {
+    if (!std::filesystem::exists(m_path)) {
+        throw std::runtime_error("Invalid directory");
+    }
+
+    int count = 0;
+
+    for (const auto& entry :
+         std::filesystem::recursive_directory_iterator(m_path)) {
+        if (entry.is_regular_file()) {
+            if (entry.path().extension() != ".mp3")
+                continue;
+            count++;
+        }
+    }
+    return count;
+}
+
 Metadata Miner::parseFile(const std::filesystem::path& path) {
     Metadata metadata;
     metadata.m_path = path;

@@ -13,7 +13,8 @@
 namespace Track8::App {
 
 struct AppContext {
-    explicit AppContext(const std::filesystem::path& databasePath)
+    AppContext(const std::filesystem::path& databasePath,
+               const std::filesystem::path& coversDir)
         : database(databasePath),
           albums(std::make_shared<Database::SQLiteAlbumRepository>(
               database.database())),
@@ -21,7 +22,9 @@ struct AppContext {
               database.database())),
           songs(std::make_shared<Database::SQLiteSongRepository>(
               database.database(), performers, albums)),
-          library(albums, performers, songs),
+          library(albums, performers, songs, coversDir,
+                  std::shared_ptr<Repositories::ITransactionManager>(
+                      &database, [](Repositories::ITransactionManager*) {})),
           search(songs),
           artists(performers) {}
 

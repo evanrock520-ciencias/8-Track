@@ -5,6 +5,7 @@
 #include "services/SearchService.hpp"
 
 #include <argparse/argparse.hpp>
+#include <indicators/block_progress_bar.hpp>
 
 namespace Track8::Cli {
 
@@ -41,8 +42,31 @@ void Cli::run(const int argc, char** argv) const {
     // Si se solicita escanear un directorio.
     if (program.is_used("--scan")) {
         const auto path = program.get<std::string>("--scan");
-        std::cout << "Scanning " << path << std::endl;
-        m_library.scan(path);
+
+        using namespace indicators;
+        BlockProgressBar bar{
+            option::BarWidth{40},
+            option::Start{"["},
+            option::End{"]"},
+            option::ShowPercentage{true},
+            option::ForegroundColor{Color::cyan},
+            option::FontStyles{std::vector<FontStyle>{FontStyle::bold}},
+            option::MaxPostfixTextLen{35},
+            option::PostfixText{"Iniciando..."}};
+
+        m_library.scan(path, [&](const ScanProgress& progress) {
+            if (progress.total == 0)
+                return;
+
+            const float percent =
+                (static_cast<float>(progress.current) / progress.total) *
+                100.0f;
+
+            bar.set_progress(percent);
+            bar.set_option(option::PostfixText{progress.currentFile});
+        });
+
+        bar.mark_as_completed();
     }
 
     if (program.is_used("--list"))

@@ -13,7 +13,13 @@ int main(int argc, char** argv) {
         QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
         "/8-track.db";
 
-    Track8::App::AppContext context(databaseDir.toStdString());
+    const auto coversDir =
+        std::filesystem::path(
+            QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
+                .toStdString()) /
+        "covers";
+
+    Track8::App::AppContext context(databaseDir.toStdString(), coversDir);
     Track8::Gui::LibraryController libraryController(context.library,
                                                      context.artists);
 

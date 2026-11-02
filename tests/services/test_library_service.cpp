@@ -25,7 +25,7 @@ protected:
         m_songs = std::make_shared<Database::SQLiteSongRepository>(
             database, m_performers, m_albums);
         m_library = std::make_unique<Services::LibraryService>(
-            m_albums, m_performers, m_songs);
+            m_albums, m_performers, m_songs, "");
     };
 
     void TearDown() {

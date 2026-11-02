@@ -1,9 +1,11 @@
 #pragma once
 
+#include "ScanProgress.hpp"
 #include "domain/Stats.hpp"
 #include "domain/repositories/IAlbumRepository.hpp"
 #include "domain/repositories/IPerformerRepository.hpp"
 #include "domain/repositories/ISongRepository.hpp"
+#include "domain/repositories/ITransactionManager.hpp"
 #include "miner/Miner.hpp"
 #include "services/LibraryService.hpp"
 
@@ -14,7 +16,10 @@ public:
     LibraryService(
         const std::shared_ptr<Repositories::IAlbumRepository>& albums,
         const std::shared_ptr<Repositories::IPerformerRepository>& performers,
-        const std::shared_ptr<Repositories::ISongRepository>& songs);
+        const std::shared_ptr<Repositories::ISongRepository>& songs,
+        const std::filesystem::path& cacheDir,
+        std::shared_ptr<Repositories::ITransactionManager> transactions =
+            nullptr);
     ~LibraryService() = default;
 
     /**
@@ -22,7 +27,9 @@ public:
      * datos de la aplicación.
      * @param path La ruta del directorio a escanear.
      */
-    void scan(const std::filesystem::path& path) const;
+    void
+    scan(const std::filesystem::path& path,
+         const std::function<void(const ScanProgress&)>& onProgress = {}) const;
 
     /**
      * Guarda la metadata de una canción en la base de datos.
@@ -88,6 +95,8 @@ private:
     std::shared_ptr<Repositories::IAlbumRepository> m_albums;
     std::shared_ptr<Repositories::ISongRepository> m_songs;
     std::shared_ptr<Repositories::IPerformerRepository> m_performers;
+    std::shared_ptr<Repositories::ITransactionManager> m_transactions;
+    std::filesystem::path m_cacheDir;
 };
 
 } // namespace Track8::Services
