@@ -157,7 +157,7 @@ QtObject {
     readonly property int infoBoxRadius: 4
     readonly property int infoBoxPaddingX: 12
     readonly property int infoBoxSpacing: 10
-    readonly property int infoBoxIconSize: 17
+    readonly property int infoBoxIconSize: 16
     readonly property int infoBoxFontSize: 11
 
     // Progress Bar

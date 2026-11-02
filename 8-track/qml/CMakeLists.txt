@@ -74,6 +74,8 @@ qt_add_qml_module(track8
         resources/icons/play.svg
         resources/icons/volume.svg
         resources/icons/folder.svg
+        resources/icons/song.svg
+        resources/icons/cancel.svg
 
         resources/images/cover.png
 )

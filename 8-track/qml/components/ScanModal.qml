@@ -90,11 +90,41 @@ Popup {
                     indeterminate: root.total === 0
                     value: root.total > 0 ? root.scanned / root.total : 0
                 }
-                NeobrutalistButton {
-                    Layout.alignment: Qt.AlignRight
-                    text: "CLOSE"
+                Text {
+                    color: Theme.grey
+                    font.family: Theme.monoFontFamily
+                    font.pixelSize: 10
+                    text: "Current File"
+                }
+                InfoBox {
+                    Layout.fillWidth: true
+                    iconSource: "qrc:/qt/qml/Track8/resources/icons/song.svg"
+                    text: "Run Run Run"
+                }
+                RowLayout {
+                    Layout.fillWidth: true
 
-                    onClicked: root.close()
+                    NeobrutalistButton {
+                        Layout.alignment: Qt.AlignLeft
+                        fillColor: Theme.cream
+                        text: "Cancel"
+                        textColor: Theme.red
+                        icon.source: "qrc:/qt/qml/Track8/resources/icons/cancel.svg"
+
+                        onClicked: root.close() // TODO: Cancelar el escaneo
+                    }
+                    Item {
+                        Layout.fillWidth: true
+                    }
+                    NeobrutalistButton {
+                        Layout.alignment: Qt.AlignRight
+                        text: "Pause"
+                        icon.source: "qrc:/qt/qml/Track8/resources/icons/pause.svg"
+                        icon.width: Theme.buttonIconSize
+                        icon.height: Theme.buttonIconSize
+
+                        onClicked: root.close()
+                    }
                 }
             }
         }
