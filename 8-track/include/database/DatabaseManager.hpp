@@ -15,8 +15,10 @@ public:
     /**
      * @brief Accede o crea una base de datos para utilizar en el programa.
      * @param path La ruta de inicialización o creación de la base de datos.
+     * @param connectionName El nombre de la conexión a la base de datos.
      */
-    explicit DatabaseManager(const std::filesystem::path& path);
+    explicit DatabaseManager(const std::filesystem::path& path,
+                             const std::string& connectionName = "eight_track");
     ~DatabaseManager() override;
 
     /**
