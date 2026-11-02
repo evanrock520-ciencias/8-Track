@@ -42,6 +42,7 @@ qt_add_qml_module(track8
         components/SongTableHeader.qml
         components/ScanModal.qml
         components/InfoBox.qml
+        components/NeobrutalistProgressBar.qml
 
         # Dialogs
         dialogs/DirectorySelector.qml
