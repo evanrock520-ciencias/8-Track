@@ -41,6 +41,7 @@ qt_add_qml_module(track8
         components/RowPlayButton.qml
         components/SongTableHeader.qml
         components/ScanModal.qml
+        components/InfoBox.qml
 
         # Dialogs
         dialogs/DirectorySelector.qml
@@ -71,6 +72,7 @@ qt_add_qml_module(track8
         resources/icons/pause.svg
         resources/icons/play.svg
         resources/icons/volume.svg
+        resources/icons/folder.svg
 
         resources/images/cover.png
 )

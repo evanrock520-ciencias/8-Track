@@ -145,5 +145,20 @@ QtObject {
 
     // Modal
     readonly property int modalWidth: 620
+    readonly property int modalHeight: 387
     readonly property int modalPaddingX: 20
+    readonly property int modalHeaderHeight: 58
+    readonly property int modalHeaderSpacing: 10
+    readonly property int modalHeaderIconSize: 20
+    readonly property int modalTitleSize: 20
+
+    // Info Box
+    readonly property int infoBoxHeight: 42
+    readonly property int infoBoxRadius: 4
+    readonly property int infoBoxPaddingX: 12
+    readonly property int infoBoxSpacing: 10
+    readonly property int infoBoxIconSize: 17
+    readonly property int infoBoxFontSize: 11
+
+    readonly property int labelSpacing: 12
 }
