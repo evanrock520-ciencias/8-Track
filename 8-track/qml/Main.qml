@@ -1,5 +1,6 @@
 import QtQuick
 import Track8
+import Track8.Backend 1.0
 
 Window {
     id: window
@@ -11,6 +12,7 @@ Window {
             artists: "Artists",
             songs: "Songs",
             genres: "Genres",
+            search: "Search",
             bands: "Bands",
             people: "People",
             unknown: "Unknown"
@@ -47,6 +49,11 @@ Window {
         anchors.right: parent.right
         anchors.top: parent.top
         title: window.sectionTitles[window.currentSection] ?? "Overview"
+
+        onSearchRequested: function (query) {
+            window.currentSection = "search";
+            Library.search(query);
+        }
     }
     ContentArea {
         id: content

@@ -13,6 +13,8 @@ Rectangle {
     color: Theme.cream
     height: Theme.topbarHeight
 
+    signal searchRequested(string query)
+
     Rectangle {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
@@ -70,6 +72,10 @@ Rectangle {
         SearchBar {
             Layout.fillWidth: true
             Layout.preferredHeight: Theme.searchBarHeight
+
+            onSearchRequested: function (query) {
+                root.searchRequested(query);
+            }
         }
     }
 }

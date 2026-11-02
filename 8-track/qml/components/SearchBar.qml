@@ -13,6 +13,8 @@ NeobrutalistBox {
     radius: Theme.searchBarRadius
     shadowEnabled: false
 
+    signal searchRequested(string query)
+
     RowLayout {
         anchors.fill: parent
         anchors.leftMargin: Theme.searchBarPaddingX + Theme.borderWidth
@@ -38,6 +40,8 @@ NeobrutalistBox {
             placeholderText: root.placeholder
             placeholderTextColor: Theme.grey
             verticalAlignment: TextInput.AlignVCenter
+
+            onAccepted: root.searchRequested(field.text)
         }
     }
 }

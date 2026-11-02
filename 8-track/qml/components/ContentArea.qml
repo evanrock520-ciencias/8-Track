@@ -10,6 +10,7 @@ Item {
             artists: artistsPage,
             songs: songsPage,
             genres: genresPage,
+            search: searchPage,
             bands: placeholderPage,
             people: placeholderPage,
             unknown: placeholderPage
@@ -44,6 +45,11 @@ Item {
         id: genresPage
 
         GenresPage {}
+    }
+    Component {
+        id: searchPage
+
+        SearchPage {}
     }
     Component {
         id: placeholderPage

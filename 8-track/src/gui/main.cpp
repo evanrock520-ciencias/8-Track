@@ -21,8 +21,8 @@ int main(int argc, char** argv) {
         "covers";
 
     Track8::App::AppContext context(databaseDir.toStdString(), coversDir);
-    Track8::Gui::LibraryController libraryController(context.library,
-                                                     context.artists);
+    Track8::Gui::LibraryController libraryController(
+        context.library, context.search, context.artists);
     Track8::Gui::ScanController scanController(databaseDir.toStdString(),
                                                coversDir);
 

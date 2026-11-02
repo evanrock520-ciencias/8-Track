@@ -53,6 +53,7 @@ qt_add_qml_module(track8
         pages/ArtistsPage.qml
         pages/GenresPage.qml
         pages/SongsPage.qml
+        pages/SearchPage.qml
 
         RESOURCES
         resources/fonts/Inter-Variable.ttf
