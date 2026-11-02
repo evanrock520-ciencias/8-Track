@@ -160,5 +160,13 @@ QtObject {
     readonly property int infoBoxIconSize: 17
     readonly property int infoBoxFontSize: 11
 
+    // Progress Bar
+    readonly property int progressBarHeight: 18
+
+    readonly property int progressFontSize: 14
+    readonly property int progressFontWeigth: 800
+    readonly property int percentageFontSize: 18
+    readonly property int percentageFontWeigth: 700
+
     readonly property int labelSpacing: 12
 }

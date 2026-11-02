@@ -67,7 +67,29 @@ Popup {
                     iconSource: "qrc:/qt/qml/Track8/resources/icons/folder.svg"
                     text: root.directory
                 }
+                RowLayout {
+                    Layout.fillWidth: true
 
+                    Text {
+                        Layout.fillWidth: true
+                        font.family: Theme.fontFamily
+                        font.pixelSize: Theme.progressFontSize
+                        font.weight: Theme.progressFontWeigth
+                        text: "3,687 of 5834 MP3 Files"
+                    }
+                    Text {
+                        color: Theme.blue
+                        font.family: Theme.monoFontFamily
+                        font.pixelSize: Theme.percentageFontSize
+                        font.weight: Theme.percentageFontWeigth
+                        text: "64%"
+                    }
+                }
+                NeobrutalistProgressBar {
+                    Layout.fillWidth: true
+                    indeterminate: root.total === 0
+                    value: root.total > 0 ? root.scanned / root.total : 0
+                }
                 NeobrutalistButton {
                     Layout.alignment: Qt.AlignRight
                     text: "CLOSE"
