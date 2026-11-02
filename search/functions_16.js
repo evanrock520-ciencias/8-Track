@@ -10,8 +10,9 @@ var searchData=
   ['_7elibraryservice_7',['~LibraryService',['../classTrack8_1_1Services_1_1LibraryService.html#a1c3f86a635646f9f0c545e9147c828c3',1,'Track8::Services::LibraryService']]],
   ['_7eminer_8',['~Miner',['../classTrack8_1_1Miner_1_1Miner.html#a523461a58c96eeb102512a0020d9065f',1,'Track8::Miner::Miner']]],
   ['_7eperformer_9',['~Performer',['../classTrack8_1_1Domain_1_1Performer.html#a0c25fa944a6e1daf6ca8e692af30bcfd',1,'Track8::Domain::Performer']]],
-  ['_7esqlitealbumrepository_10',['~SQLiteAlbumRepository',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a7cec6c6754f655a513e0997419cfd430',1,'Track8::Database::SQLiteAlbumRepository']]],
-  ['_7esqliteperformerrepository_11',['~SQLitePerformerRepository',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#abb72cec510ff6deefdf7e7f4a7b0e6a3',1,'Track8::Database::SQLitePerformerRepository']]],
-  ['_7esqlitesongrepository_12',['~SQLiteSongRepository',['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#a162de14e008511ff112c3d6acc6246fd',1,'Track8::Database::SQLiteSongRepository']]],
-  ['_7etransactionscope_13',['~TransactionScope',['../classTrack8_1_1Database_1_1TransactionScope.html#a41da6afc3328bb2b1b9cece461b91c30',1,'Track8::Database::TransactionScope']]]
+  ['_7escancontroller_10',['~ScanController',['../classTrack8_1_1Gui_1_1ScanController.html#a01142c90928f81dde5ccd5138e6abdda',1,'Track8::Gui::ScanController']]],
+  ['_7esqlitealbumrepository_11',['~SQLiteAlbumRepository',['../classTrack8_1_1Database_1_1SQLiteAlbumRepository.html#a7cec6c6754f655a513e0997419cfd430',1,'Track8::Database::SQLiteAlbumRepository']]],
+  ['_7esqliteperformerrepository_12',['~SQLitePerformerRepository',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#abb72cec510ff6deefdf7e7f4a7b0e6a3',1,'Track8::Database::SQLitePerformerRepository']]],
+  ['_7esqlitesongrepository_13',['~SQLiteSongRepository',['../classTrack8_1_1Database_1_1SQLiteSongRepository.html#a162de14e008511ff112c3d6acc6246fd',1,'Track8::Database::SQLiteSongRepository']]],
+  ['_7etransactionscope_14',['~TransactionScope',['../classTrack8_1_1Database_1_1TransactionScope.html#a41da6afc3328bb2b1b9cece461b91c30',1,'Track8::Database::TransactionScope']]]
 ];

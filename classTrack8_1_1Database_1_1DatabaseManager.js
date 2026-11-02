@@ -1,6 +1,6 @@
 var classTrack8_1_1Database_1_1DatabaseManager =
 [
-    [ "DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html#a166b205c614c0eecd55a2785037d147b", null ],
+    [ "DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html#a94f36843f606c39172465c7e8dfc8e9c", null ],
     [ "~DatabaseManager", "classTrack8_1_1Database_1_1DatabaseManager.html#a772d818bd78ba4b7c1938861963b0bcb", null ],
     [ "commit", "classTrack8_1_1Database_1_1DatabaseManager.html#a0d33211bdcbab3c09acc41bf8e0d3cbc", null ],
     [ "database", "classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5", null ],

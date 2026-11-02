@@ -44,7 +44,8 @@ var hierarchy =
       [ "Track8::Gui::SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", null ]
     ] ],
     [ "QObject", null, [
-      [ "Track8::Gui::LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", null ]
+      [ "Track8::Gui::LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", null ],
+      [ "Track8::Gui::ScanController", "classTrack8_1_1Gui_1_1ScanController.html", null ]
     ] ],
     [ "Track8::Compiler::Query", "classTrack8_1_1Compiler_1_1Query.html", null ],
     [ "Track8::Compiler::QueryCompiler", "classTrack8_1_1Compiler_1_1QueryCompiler.html", null ],

@@ -9,5 +9,6 @@ var searchData=
   ['countchanged_6',['countChanged',['../classTrack8_1_1Gui_1_1SongListModel.html#ac346d8b8c89089ff03b9adecf32e4e4f',1,'Track8::Gui::SongListModel']]],
   ['coverextract_7',['coverExtract',['../classTrack8_1_1Miner_1_1CoverMiner.html#adf6dd0e72a031cf9ab246528872793cc',1,'Track8::Miner::CoverMiner']]],
   ['coverminer_8',['CoverMiner',['../classTrack8_1_1Miner_1_1CoverMiner.html#a84d5502a1fe6627ee2f7c3be41a6b359',1,'Track8::Miner::CoverMiner']]],
-  ['create_9',['create',['../classTrack8_1_1Domain_1_1SongBuilder.html#a44e9fc3e61ee20818306f4f2f0c2a98b',1,'Track8::Domain::SongBuilder']]]
+  ['create_9',['create',['../classTrack8_1_1Domain_1_1SongBuilder.html#a44e9fc3e61ee20818306f4f2f0c2a98b',1,'Track8::Domain::SongBuilder']]],
+  ['currentfile_10',['currentFile',['../classTrack8_1_1Gui_1_1ScanController.html#a59dc4a72ed3274c68956d0e907dceae1',1,'Track8::Gui::ScanController']]]
 ];

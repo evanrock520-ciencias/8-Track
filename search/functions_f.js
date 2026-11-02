@@ -11,5 +11,7 @@ var searchData=
   ['rollback_8',['rollback',['../classTrack8_1_1Database_1_1DatabaseManager.html#a42ed3504c400fc630231bb48895c7ec6',1,'Track8::Database::DatabaseManager::rollback()'],['../classTrack8_1_1Repositories_1_1ITransactionManager.html#aa3f49d26f6421f8c4e63feb94260b7ac',1,'Track8::Repositories::ITransactionManager::rollback()']]],
   ['root_9',['root',['../classTrack8_1_1Compiler_1_1Query.html#a0a1d3ef668b0b9613e518558b1df5dcb',1,'Track8::Compiler::Query']]],
   ['rowcount_10',['rowCount',['../classTrack8_1_1Gui_1_1SongListModel.html#a144b62de09b3083985185db7bc2f7da9',1,'Track8::Gui::SongListModel']]],
-  ['run_11',['run',['../classTrack8_1_1Cli_1_1Cli.html#a16876b7343347680cf85aa739eb04ff4',1,'Track8::Cli::Cli']]]
+  ['run_11',['run',['../classTrack8_1_1Cli_1_1Cli.html#a16876b7343347680cf85aa739eb04ff4',1,'Track8::Cli::Cli']]],
+  ['running_12',['running',['../classTrack8_1_1Gui_1_1ScanController.html#a706e28d425ef1c0342ba36e0160c3318',1,'Track8::Gui::ScanController']]],
+  ['runningchanged_13',['runningChanged',['../classTrack8_1_1Gui_1_1ScanController.html#abd226ff9ced59fb2cd7ad4a58d9fe85e',1,'Track8::Gui::ScanController']]]
 ];

@@ -17,7 +17,7 @@ var searchData=
   ['tokentype_2ehpp_14',['TokenType.hpp',['../TokenType_8hpp.html',1,'']]],
   ['tosortfield_15',['toSortField',['../namespaceTrack8_1_1Utils.html#a602954b96af4932cf928442e0e5f9263',1,'Track8::Utils']]],
   ['tosortorder_16',['toSortOrder',['../namespaceTrack8_1_1Utils.html#a6645182750e9ba01c5e0a8e5287f22cf',1,'Track8::Utils']]],
-  ['total_17',['total',['../structScanProgress.html#a0d870948912a60454c02c0ec8e67b9b3',1,'ScanProgress']]],
+  ['total_17',['total',['../classTrack8_1_1Gui_1_1ScanController.html#aff47a31592184099bbddf47d4bf91bfc',1,'Track8::Gui::ScanController::total'],['../structScanProgress.html#a0d870948912a60454c02c0ec8e67b9b3',1,'ScanProgress::total'],['../classTrack8_1_1Gui_1_1ScanController.html#aea73c3af11f8e746603acc0d9f866574',1,'Track8::Gui::ScanController::total()']]],
   ['track_18',['TRACK',['../namespaceTrack8_1_1Compiler.html#a5f8ea858e9e2d9305befb27b944901f9ab82057c0f8a7631cf533363631986a00',1,'Track8::Compiler::TRACK'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fab82057c0f8a7631cf533363631986a00',1,'Track8::Compiler::TRACK']]],
   ['track_19',['Track',['../index.html',1,'8-Track'],['../index.html#autotoc_md1',1,'8-Track']]],
   ['track_20',['track',['../classTrack8_1_1Domain_1_1Song.html#acce12dedef853db9083e50ab3297276d',1,'Track8::Domain::Song']]],

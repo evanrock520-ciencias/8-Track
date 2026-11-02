@@ -17,5 +17,5 @@ var searchData=
   ['covers_2ehpp_14',['Covers.hpp',['../Covers_8hpp.html',1,'']]],
   ['create_15',['create',['../classTrack8_1_1Domain_1_1SongBuilder.html#a44e9fc3e61ee20818306f4f2f0c2a98b',1,'Track8::Domain::SongBuilder']]],
   ['current_16',['current',['../structScanProgress.html#abe53675ca2342709bdb4e97164bb6cbf',1,'ScanProgress']]],
-  ['currentfile_17',['currentFile',['../structScanProgress.html#a5c2eceef6ba081b1c0a60081c3c44d75',1,'ScanProgress']]]
+  ['currentfile_17',['currentFile',['../classTrack8_1_1Gui_1_1ScanController.html#ae0271fb422e35e2ddc59d3a7b4950834',1,'Track8::Gui::ScanController::currentFile'],['../structScanProgress.html#a5c2eceef6ba081b1c0a60081c3c44d75',1,'ScanProgress::currentFile'],['../classTrack8_1_1Gui_1_1ScanController.html#a59dc4a72ed3274c68956d0e907dceae1',1,'Track8::Gui::ScanController::currentFile()']]]
 ];

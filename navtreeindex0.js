@@ -73,14 +73,16 @@ var NAVTREEINDEX0 =
 "SQLitePerformerRepository_8hpp_source.html":[3,0,0,0,3,2],
 "SQLiteSongRepository_8hpp.html":[3,0,0,0,3,3],
 "SQLiteSongRepository_8hpp_source.html":[3,0,0,0,3,3],
+"ScanController_8hpp.html":[3,0,0,0,5,0,1],
+"ScanController_8hpp_source.html":[3,0,0,0,5,0,1],
 "ScanProgress_8hpp.html":[3,0,0,0,7,2],
 "ScanProgress_8hpp_source.html":[3,0,0,0,7,2],
 "SearchResult_8hpp.html":[3,0,0,0,7,3],
 "SearchResult_8hpp_source.html":[3,0,0,0,7,3],
 "SearchService_8hpp.html":[3,0,0,0,7,4],
 "SearchService_8hpp_source.html":[3,0,0,0,7,4],
-"SongListModel_8hpp.html":[3,0,0,0,5,0,1],
-"SongListModel_8hpp_source.html":[3,0,0,0,5,0,1],
+"SongListModel_8hpp.html":[3,0,0,0,5,0,2],
+"SongListModel_8hpp_source.html":[3,0,0,0,5,0,2],
 "Song_8hpp.html":[3,0,0,0,4,7],
 "Song_8hpp_source.html":[3,0,0,0,4,7],
 "SortClause_8hpp.html":[3,0,0,0,2,0,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classTrack8_1_1Compiler_1_1TextFilterNode.html#a4bf635919c3ba508329fabc21af09bce":[1,0,0,2,14,2],
 "classTrack8_1_1Compiler_1_1TextFilterNode.html#a4bf635919c3ba508329fabc21af09bce":[2,0,0,2,14,2],
 "classTrack8_1_1Compiler_1_1TextFilterNode.html#a6a2e187817defc1fc19226a5ee727e21":[1,0,0,2,14,4],
-"classTrack8_1_1Compiler_1_1TextFilterNode.html#a6a2e187817defc1fc19226a5ee727e21":[2,0,0,2,14,4],
-"classTrack8_1_1Compiler_1_1TextFilterNode.html#a8b3bac5dd2fc359366d2132fac2b823a":[1,0,0,2,14,1],
-"classTrack8_1_1Compiler_1_1TextFilterNode.html#a8b3bac5dd2fc359366d2132fac2b823a":[2,0,0,2,14,1]
+"classTrack8_1_1Compiler_1_1TextFilterNode.html#a6a2e187817defc1fc19226a5ee727e21":[2,0,0,2,14,4]
 };

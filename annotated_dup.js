@@ -50,6 +50,7 @@ var annotated_dup =
       ] ],
       [ "Gui", "namespaceTrack8_1_1Gui.html", [
         [ "LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", "classTrack8_1_1Gui_1_1LibraryController" ],
+        [ "ScanController", "classTrack8_1_1Gui_1_1ScanController.html", "classTrack8_1_1Gui_1_1ScanController" ],
         [ "SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", "classTrack8_1_1Gui_1_1SongListModel" ]
       ] ],
       [ "Miner", "namespaceTrack8_1_1Miner.html", [
