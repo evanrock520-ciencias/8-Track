@@ -5,8 +5,8 @@ import Track8
 NeobrutalistBox {
     id: root
 
-    implicitHeight: 242
-    implicitWidth: 202
+    implicitHeight: Theme.albumCardHeight
+    implicitWidth: Theme.albumCardWidth
 
     ColumnLayout {
         anchors.fill: parent
@@ -14,8 +14,8 @@ NeobrutalistBox {
 
         Rectangle {
             Layout.alignment: Qt.AlignCenter
-            implicitHeight: 142
-            implicitWidth: 142
+            implicitHeight: Theme.albumImageSize
+            implicitWidth: Theme.albumImageSize
 
             Image {
                 anchors.fill: parent
@@ -24,10 +24,10 @@ NeobrutalistBox {
         }
         Rectangle {
             Layout.fillWidth: true
-            Layout.leftMargin: 10
-            Layout.rightMargin: 10
+            Layout.leftMargin: Theme.albumCardBottonSpacingX
+            Layout.rightMargin: Theme.albumCardBottonSpacingX
             color: Theme.cream
-            implicitHeight: 70
+            implicitHeight: Theme.albumCardBottonHeight
 
             Rectangle {
                 anchors.left: parent.left
@@ -42,19 +42,19 @@ NeobrutalistBox {
 
                 Text {
                     font.family: Theme.fontFamily
-                    font.pixelSize: 14
+                    font.pixelSize: Theme.albumNameFontSize
                     text: "Alvvays"
                 }
                 Text {
                     color: Theme.grey
                     font.family: Theme.fontFamily
-                    font.pixelSize: 11
+                    font.pixelSize: Theme.albumArtistNameFontSize
                     text: "Alvvays"
                 }
                 Text {
                     color: Theme.grey
                     font.family: Theme.monoFontFamily
-                    font.pixelSize: 10
+                    font.pixelSize: Theme.albumYearFontSize
                     text: "2014"
                 }
             }
