@@ -27,6 +27,10 @@ void LibraryController::loadAlbums() {
     m_albumsModel.setAlbums(std::move(albums));
 }
 
+void LibraryController::loadPerformers() {
+    m_performersModel.setPerformers(m_artists.performers());
+}
+
 void LibraryController::refresh() {
     m_stats = m_library.stats();
     emit statsChanged();
@@ -62,6 +66,11 @@ QString LibraryController::albumCover(const QString& path,
 
     return QUrl::fromLocalFile(QString::fromStdString(cover.string()))
         .toString();
+}
+
+QString LibraryController::performerCover(const QString& path,
+                                          const QString& name) const {
+    return {};
 }
 
 } // namespace Track8::Gui

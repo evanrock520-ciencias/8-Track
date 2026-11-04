@@ -35,6 +35,7 @@ int main(int argc, char** argv) {
                          libraryController.refresh();
                          libraryController.loadSongs();
                          libraryController.loadAlbums();
+                         libraryController.loadPerformers();
                      });
 
     qmlRegisterUncreatableType<Track8::Gui::SongListModel>(
