@@ -18,6 +18,7 @@ Item {
         delegate: AlbumCard {
             album: model.name
             year: model.year
+            cover: Library.albumCover(model.path, model.name)
         }
     }
 }

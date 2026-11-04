@@ -7,6 +7,7 @@ NeobrutalistBox {
 
     property string album
     property int year
+    property url cover
 
     implicitHeight: Theme.albumCardHeight
     implicitWidth: Theme.albumCardWidth
@@ -22,7 +23,15 @@ NeobrutalistBox {
 
             Image {
                 anchors.fill: parent
-                source: "qrc:/qt/qml/Track8/resources/images/cover.png"
+                source: root.cover
+
+                sourceSize.width: Theme.albumImageSize
+                sourceSize.height: Theme.albumImageSize
+
+                fillMode: Image.PreserveAspectCrop
+                mipmap: true
+                smooth: true
+                asynchronous: true
             }
         }
         Rectangle {
