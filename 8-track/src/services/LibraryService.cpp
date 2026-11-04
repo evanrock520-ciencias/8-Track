@@ -19,13 +19,13 @@ LibraryService::LibraryService(
       m_songs(songs),
       m_performers(performers),
       m_transactions(std::move(transactions)),
-      m_cacheDir(cacheDir) {}
+      m_coverStore(cacheDir) {}
 
 void LibraryService::scan(
     const std::filesystem::path& path,
     const std::function<void(const ScanProgress&)>& onProgress) const {
     const Miner::Miner miner(path);
-    Miner::CoverMiner coverMiner(m_cacheDir);
+    Miner::CoverMiner coverMiner(m_coverStore.cacheDirectory());
 
     const std::size_t total = miner.count();
     std::size_t current = 0;
@@ -144,6 +144,12 @@ LibraryService::songsByPerformer(const int performerId) const {
 std::vector<std::shared_ptr<Domain::Album>>
 LibraryService::albumsByPerformer(const int performerId) const {
     return m_albums->getByPerformer(performerId);
+}
+
+std::filesystem::path
+LibraryService::albumCover(const std::filesystem::path& path,
+                           const std::string& name) const {
+    return m_coverStore.albumCoverPath(path, name);
 }
 
 } // namespace Track8::Services

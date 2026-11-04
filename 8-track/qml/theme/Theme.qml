@@ -169,4 +169,18 @@ QtObject {
     readonly property int percentageFontWeigth: 700
 
     readonly property int labelSpacing: 12
+
+    // Album
+    readonly property int albumCardWidth: 202
+    readonly property int albumCardHeight: 242
+    readonly property int albumImageSize: 142
+    readonly property int albumCardBottonSpacingX: 10
+    readonly property int albumCardBottonSpacingY: 8
+    readonly property int albumCardBottonHeight: 70
+    readonly property int albumNameFontSize: 14
+    readonly property int albumArtistNameFontSize: 11
+    readonly property int albumYearFontSize: 10
+
+    readonly property int albumsGridSpacing: 16
+    readonly property int albumsGridMargin: 22
 }

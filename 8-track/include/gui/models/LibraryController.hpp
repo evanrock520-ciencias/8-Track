@@ -1,4 +1,5 @@
 #pragma once
+#include "AlbumListModel.hpp"
 #include "domain/Stats.hpp"
 #include "gui/models/SongListModel.hpp"
 #include "services/ArtistService.hpp"
@@ -26,6 +27,7 @@ class LibraryController : public QObject {
     Q_PROPERTY(SongListModel* songs READ songs CONSTANT)
     Q_PROPERTY(SongListModel* searchResults READ searchResults CONSTANT)
     Q_PROPERTY(QString searchError READ searchError NOTIFY searchErrorChanged)
+    Q_PROPERTY(AlbumListModel* albums READ albums CONSTANT);
 
 public:
     explicit LibraryController(Services::LibraryService& library,
@@ -59,11 +61,15 @@ public:
 
     [[nodiscard]] SongListModel* songs() { return &m_songsModel; }
     [[nodiscard]] SongListModel* searchResults() { return &m_searchModel; }
+    [[nodiscard]] AlbumListModel* albums() { return &m_albumsModel; }
 
     Q_INVOKABLE void search(const QString& query);
     Q_INVOKABLE void clearSearch();
     Q_INVOKABLE void loadSongs();
+    Q_INVOKABLE void loadAlbums();
     Q_INVOKABLE void refresh();
+    Q_INVOKABLE QString albumCover(const QString& path,
+                                   const QString& name) const;
 
 signals:
     void statsChanged();
@@ -73,6 +79,7 @@ private:
     Domain::Stats m_stats{};
     SongListModel m_songsModel;
     SongListModel m_searchModel;
+    AlbumListModel m_albumsModel;
     Services::LibraryService& m_library;
     Services::SearchService& m_search;
     Services::ArtistService& m_artists;

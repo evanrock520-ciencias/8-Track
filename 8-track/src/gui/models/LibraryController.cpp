@@ -1,5 +1,7 @@
 #include "gui/models/LibraryController.hpp"
 
+#include <QUrl>
+
 namespace Track8::Gui {
 
 LibraryController::LibraryController(Services::LibraryService& library,
@@ -14,6 +16,15 @@ LibraryController::LibraryController(Services::LibraryService& library,
 
 void LibraryController::loadSongs() {
     m_songsModel.setSongs(m_library.songs());
+}
+
+void LibraryController::loadAlbums() {
+    auto albums = m_library.albums();
+    std::erase_if(albums, [](const std::shared_ptr<Domain::Album>& album) {
+        return album->id() == 0;
+    });
+
+    m_albumsModel.setAlbums(std::move(albums));
 }
 
 void LibraryController::refresh() {
@@ -39,6 +50,18 @@ void LibraryController::clearSearch() {
     m_searchModel.clear();
     m_searchError.clear();
     emit searchErrorChanged();
+}
+
+QString LibraryController::albumCover(const QString& path,
+                                      const QString& name) const {
+    const auto cover =
+        m_library.albumCover(path.toStdString(), name.toStdString());
+
+    if (!std::filesystem::exists(cover))
+        return {};
+
+    return QUrl::fromLocalFile(QString::fromStdString(cover.string()))
+        .toString();
 }
 
 } // namespace Track8::Gui

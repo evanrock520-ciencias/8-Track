@@ -6,6 +6,7 @@
 #include "domain/repositories/IPerformerRepository.hpp"
 #include "domain/repositories/ISongRepository.hpp"
 #include "domain/repositories/ITransactionManager.hpp"
+#include "miner/CoverStore.hpp"
 #include "miner/Miner.hpp"
 #include "services/LibraryService.hpp"
 
@@ -85,6 +86,10 @@ public:
      */
     [[nodiscard]] Domain::Stats stats() const;
 
+    [[nodiscard]] std::filesystem::path
+    albumCover(const std::filesystem::path& path,
+               const std::string& name) const;
+
 private:
     [[nodiscard]] std::shared_ptr<Domain::Performer>
     findOrCreatePerformer(const std::string& name) const;
@@ -96,7 +101,7 @@ private:
     std::shared_ptr<Repositories::ISongRepository> m_songs;
     std::shared_ptr<Repositories::IPerformerRepository> m_performers;
     std::shared_ptr<Repositories::ITransactionManager> m_transactions;
-    std::filesystem::path m_cacheDir;
+    Miner::CoverStore m_coverStore;
 };
 
 } // namespace Track8::Services
