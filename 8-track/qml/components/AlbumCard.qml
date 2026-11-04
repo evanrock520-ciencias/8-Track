@@ -8,6 +8,7 @@ NeobrutalistBox {
     property string album
     property int year
     property url cover
+    property var action
 
     implicitHeight: Theme.albumCardHeight
     implicitWidth: Theme.albumCardWidth
@@ -64,6 +65,8 @@ NeobrutalistBox {
             RowPlayButton {
                 anchors.centerIn: parent
                 visible: hover.hovered
+                onClicked: if (root.action)
+                    root.action()
             }
             Tag {
                 visible: root.year > 0
