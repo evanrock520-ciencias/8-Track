@@ -41,7 +41,7 @@ void CoverMiner::write(const std::filesystem::path& out,
 Covers CoverMiner::coverExtract(const std::filesystem::path& path,
                                 const std::string& artistName,
                                 const std::string& albumName) {
-    const std::string albumKey = artistName + "|" + albumName;
+    const std::string albumKey = path.parent_path().string() + "|" + albumName;
 
     const auto albumPath = pathFor(albumKey);
     const auto artistPath = pathFor(artistName);
