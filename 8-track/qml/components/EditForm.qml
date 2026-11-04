@@ -134,5 +134,98 @@ Popup {
                 display: AbstractButton.IconOnly
             }
         }
+
+        Loader {
+            id: fieldsLoader
+            Layout.fillWidth: true
+            Layout.leftMargin: Theme.modalPaddingX
+            Layout.rightMargin: Theme.modalPaddingX
+
+            sourceComponent: {
+                switch (root.selectedType) {
+                case 0:
+                    return artistFields;
+                case 1:
+                    return bandFields;
+                default:
+                    return unknownFields;
+                }
+            }
+        }
+
+        Component {
+            id: artistFields
+            ColumnLayout {
+                width: parent.width
+                Layout.alignment: Qt.AlignCenter
+                spacing: 8
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Stage Name"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: root.name
+                    placeholder: "Artist stage name"
+                }
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Real Name"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: ""
+                    placeholder: "Artist real name"
+                }
+            }
+        }
+
+        Component {
+            id: bandFields
+            ColumnLayout {
+                spacing: 8
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Name"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: root.name
+                    placeholder: "Group name"
+                }
+            }
+        }
+
+        Component {
+            id: unknownFields
+            ColumnLayout {
+                spacing: 8
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Name"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: root.name
+                    placeholder: "Performer name"
+                }
+            }
+        }
+
+        NeobrutalistButton {
+            Layout.alignment: Qt.AlignRight
+            Layout.rightMargin: Theme.modalPaddingX
+            Layout.bottomMargin: Theme.modalPaddingX
+            icon.source: "qrc:/qt/qml/Track8/resources/icons/forward.svg"
+            text: "Apply Changes"
+        }
     }
 }
