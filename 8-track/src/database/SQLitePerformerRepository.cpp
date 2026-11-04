@@ -37,8 +37,10 @@ SQLitePerformerRepository::find(const std::string& name) {
         return nullptr;
 
     const auto id = query.value("id_performer").toInt();
+    const auto type =
+        static_cast<Domain::PerformerType>(query.value("id_type").toInt());
 
-    return std::make_shared<Domain::Performer>(id, name);
+    return std::make_shared<Domain::Performer>(id, name, type);
 }
 
 std::shared_ptr<Domain::Performer> SQLitePerformerRepository::find(int id) {
@@ -62,7 +64,7 @@ std::shared_ptr<Domain::Performer> SQLitePerformerRepository::find(int id) {
     case Domain::PerformerType::Group:
         return findGroup(id);
     case Domain::PerformerType::Unknown:
-        return std::make_shared<Domain::Performer>(id, name);
+        return std::make_shared<Domain::Performer>(id, name, type);
     default:
         return nullptr;
     }
@@ -378,7 +380,9 @@ SQLitePerformerRepository::getAll() {
     while (query.next()) {
         performers.emplace_back(std::make_shared<Domain::Performer>(
             query.value("id_performer").toInt(),
-            query.value("name").toString().toStdString()));
+            query.value("name").toString().toStdString(),
+            static_cast<Domain::PerformerType>(
+                query.value("id_type").toInt())));
     }
 
     return performers;
