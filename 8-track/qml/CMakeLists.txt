@@ -45,6 +45,7 @@ qt_add_qml_module(track8
         components/NeobrutalistProgressBar.qml
         components/AlbumCard.qml
         components/EditForm.qml
+        components/NeobrutalistInput.qml
 
         # Dialogs
         dialogs/DirectorySelector.qml
