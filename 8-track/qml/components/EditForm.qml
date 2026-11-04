@@ -9,6 +9,8 @@ Popup {
 
     property url cover
     property string directory
+    property int type
+    property int selectedType: type
 
     anchors.centerIn: Overlay.overlay
     closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
@@ -82,6 +84,42 @@ Popup {
                         sourceSize.width: Theme.editPerformerImageSize
                     }
                 }
+            }
+        }
+
+        RowLayout {
+            Layout.alignment: Qt.AlignHCenter
+            spacing: 8
+
+            ButtonGroup {
+                id: performerTypeGroup
+            }
+
+            NeobrutalistButton {
+                ButtonGroup.group: performerTypeGroup
+                checkable: true
+                checked: root.selectedType === 2
+                fillColor: checked ? Theme.blue : Theme.cream
+                icon.source: "qrc:/qt/qml/Track8/resources/icons/unknown.svg"
+                display: AbstractButton.IconOnly
+            }
+
+            NeobrutalistButton {
+                ButtonGroup.group: performerTypeGroup
+                checkable: true
+                checked: root.selectedType === 0
+                fillColor: checked ? Theme.blue : Theme.cream
+                icon.source: "qrc:/qt/qml/Track8/resources/icons/artist.svg"
+                display: AbstractButton.IconOnly
+            }
+
+            NeobrutalistButton {
+                ButtonGroup.group: performerTypeGroup
+                checkable: true
+                checked: root.selectedType === 1
+                fillColor: checked ? Theme.blue : Theme.cream
+                icon.source: "qrc:/qt/qml/Track8/resources/icons/band.svg"
+                display: AbstractButton.IconOnly
             }
         }
     }

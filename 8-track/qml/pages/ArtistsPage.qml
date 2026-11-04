@@ -21,6 +21,7 @@ Item {
             album: model.name
             cover: Library.performerCover(model.name)
             action: () => {
+                editForm.type = model.type;
                 editForm.cover = Library.performerCover(model.name);
                 editForm.open();
             }
