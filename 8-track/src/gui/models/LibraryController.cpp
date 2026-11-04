@@ -19,7 +19,12 @@ void LibraryController::loadSongs() {
 }
 
 void LibraryController::loadAlbums() {
-    m_albumsModel.setAlbums(m_library.albums());
+    auto albums = m_library.albums();
+    std::erase_if(albums, [](const std::shared_ptr<Domain::Album>& album) {
+        return album->id() == 0;
+    });
+
+    m_albumsModel.setAlbums(std::move(albums));
 }
 
 void LibraryController::refresh() {
