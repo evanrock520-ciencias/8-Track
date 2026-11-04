@@ -20,6 +20,7 @@ public:
     enum Role {
         PerformerIdRole = Qt::UserRole + 1,
         NameRole,
+        TypeRole,
     };
     Q_ENUM(Role)
 
