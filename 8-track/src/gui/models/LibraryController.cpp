@@ -16,6 +16,10 @@ void LibraryController::loadSongs() {
     m_songsModel.setSongs(m_library.songs());
 }
 
+void LibraryController::loadAlbums() {
+    m_albumsModel.setAlbums(m_library.albums());
+}
+
 void LibraryController::refresh() {
     m_stats = m_library.stats();
     emit statsChanged();
