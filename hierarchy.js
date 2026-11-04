@@ -43,6 +43,7 @@ var hierarchy =
     ] ],
     [ "QAbstractListModel", null, [
       [ "Track8::Gui::AlbumListModel", "classTrack8_1_1Gui_1_1AlbumListModel.html", null ],
+      [ "Track8::Gui::PerformerListModel", "classTrack8_1_1Gui_1_1PerformerListModel.html", null ],
       [ "Track8::Gui::SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", null ]
     ] ],
     [ "QObject", null, [

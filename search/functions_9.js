@@ -8,5 +8,6 @@ var searchData=
   ['line_5',['line',['../classTrack8_1_1Compiler_1_1Token.html#a0208fedebd963328f5ccd1ebaefc6077',1,'Track8::Compiler::Token']]],
   ['literal_6',['literal',['../classTrack8_1_1Compiler_1_1Token.html#abb998384cb849195deef1557961c681a',1,'Track8::Compiler::Token']]],
   ['loadalbums_7',['loadAlbums',['../classTrack8_1_1Gui_1_1LibraryController.html#a833c68edab97239658b345fbbd9ad9ed',1,'Track8::Gui::LibraryController']]],
-  ['loadsongs_8',['loadSongs',['../classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4',1,'Track8::Gui::LibraryController']]]
+  ['loadperformers_8',['loadPerformers',['../classTrack8_1_1Gui_1_1LibraryController.html#a6b16f6d1cde89ba5330f58932407da40',1,'Track8::Gui::LibraryController']]],
+  ['loadsongs_9',['loadSongs',['../classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4',1,'Track8::Gui::LibraryController']]]
 ];

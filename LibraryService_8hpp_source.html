@@ -146,22 +146,25 @@ $(function(){initNavTree('LibraryService_8hpp_source.html','',''); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classTrack8_1_1Services_1_1LibraryService.html#af1dd34022aa56a0996b5ef79fe15e9da">   90</a></span>    <a class="code hl_function" href="classTrack8_1_1Services_1_1LibraryService.html#af1dd34022aa56a0996b5ef79fe15e9da">albumCover</a>(<span class="keyword">const</span> std::filesystem::path&amp; path,</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>               <span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    [[nodiscard]] std::shared_ptr&lt;Domain::Performer&gt;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    findOrCreatePerformer(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    [[nodiscard]] std::shared_ptr&lt;Domain::Album&gt;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    findOrCreateAlbum(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::filesystem::path&amp; dir,</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                      <span class="keywordtype">int</span> year) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::shared_ptr&lt;Repositories::IAlbumRepository&gt; m_albums;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    std::shared_ptr&lt;Repositories::ISongRepository&gt; m_songs;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::shared_ptr&lt;Repositories::IPerformerRepository&gt; m_performers;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    std::shared_ptr&lt;Repositories::ITransactionManager&gt; m_transactions;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_class" href="classTrack8_1_1Miner_1_1CoverStore.html">Miner::CoverStore</a> m_coverStore;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    [[nodiscard]] std::filesystem::path</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classTrack8_1_1Services_1_1LibraryService.html#a2bed9bdbfc4c3e2471d15c608f708eec">   94</a></span>    <a class="code hl_function" href="classTrack8_1_1Services_1_1LibraryService.html#a2bed9bdbfc4c3e2471d15c608f708eec">performerCover</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    [[nodiscard]] std::shared_ptr&lt;Domain::Performer&gt;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    findOrCreatePerformer(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    [[nodiscard]] std::shared_ptr&lt;Domain::Album&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    findOrCreateAlbum(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::filesystem::path&amp; dir,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                      <span class="keywordtype">int</span> year) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    std::shared_ptr&lt;Repositories::IAlbumRepository&gt; m_albums;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    std::shared_ptr&lt;Repositories::ISongRepository&gt; m_songs;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    std::shared_ptr&lt;Repositories::IPerformerRepository&gt; m_performers;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    std::shared_ptr&lt;Repositories::ITransactionManager&gt; m_transactions;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_class" href="classTrack8_1_1Miner_1_1CoverStore.html">Miner::CoverStore</a> m_coverStore;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace Track8::Services</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>} <span class="comment">// namespace Track8::Services</span></div>
 <div class="ttc" id="aCoverStore_8hpp_html"><div class="ttname"><a href="CoverStore_8hpp.html">CoverStore.hpp</a></div></div>
 <div class="ttc" id="aIAlbumRepository_8hpp_html"><div class="ttname"><a href="IAlbumRepository_8hpp.html">IAlbumRepository.hpp</a></div></div>
 <div class="ttc" id="aIPerformerRepository_8hpp_html"><div class="ttname"><a href="IPerformerRepository_8hpp.html">IPerformerRepository.hpp</a></div></div>
@@ -173,6 +176,7 @@ $(function(){initNavTree('LibraryService_8hpp_source.html','',''); });
 <div class="ttc" id="aStats_8hpp_html"><div class="ttname"><a href="Stats_8hpp.html">Stats.hpp</a></div></div>
 <div class="ttc" id="aclassTrack8_1_1Miner_1_1CoverStore_html"><div class="ttname"><a href="classTrack8_1_1Miner_1_1CoverStore.html">Track8::Miner::CoverStore</a></div><div class="ttdef"><b>Definition</b> CoverStore.hpp:7</div></div>
 <div class="ttc" id="aclassTrack8_1_1Services_1_1LibraryService_html_a1c3f86a635646f9f0c545e9147c828c3"><div class="ttname"><a href="classTrack8_1_1Services_1_1LibraryService.html#a1c3f86a635646f9f0c545e9147c828c3">Track8::Services::LibraryService::~LibraryService</a></div><div class="ttdeci">~LibraryService()=default</div></div>
+<div class="ttc" id="aclassTrack8_1_1Services_1_1LibraryService_html_a2bed9bdbfc4c3e2471d15c608f708eec"><div class="ttname"><a href="classTrack8_1_1Services_1_1LibraryService.html#a2bed9bdbfc4c3e2471d15c608f708eec">Track8::Services::LibraryService::performerCover</a></div><div class="ttdeci">std::filesystem::path performerCover(const std::string &amp;name) const</div></div>
 <div class="ttc" id="aclassTrack8_1_1Services_1_1LibraryService_html_a4cbcdf4b049b6a77ddfb3a44dc06cd39"><div class="ttname"><a href="classTrack8_1_1Services_1_1LibraryService.html#a4cbcdf4b049b6a77ddfb3a44dc06cd39">Track8::Services::LibraryService::genres</a></div><div class="ttdeci">std::vector&lt; std::string &gt; genres() const</div></div>
 <div class="ttc" id="aclassTrack8_1_1Services_1_1LibraryService_html_a5a41a64a3198c08470f8c2c8ea615406"><div class="ttname"><a href="classTrack8_1_1Services_1_1LibraryService.html#a5a41a64a3198c08470f8c2c8ea615406">Track8::Services::LibraryService::songs</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Domain::Song &gt; &gt; songs() const</div></div>
 <div class="ttc" id="aclassTrack8_1_1Services_1_1LibraryService_html_a5f029926b1e68379820c3bde6ec0d01e"><div class="ttname"><a href="classTrack8_1_1Services_1_1LibraryService.html#a5f029926b1e68379820c3bde6ec0d01e">Track8::Services::LibraryService::stats</a></div><div class="ttdeci">Domain::Stats stats() const</div></div>

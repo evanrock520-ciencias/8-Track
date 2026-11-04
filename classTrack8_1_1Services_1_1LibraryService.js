@@ -7,6 +7,7 @@ var classTrack8_1_1Services_1_1LibraryService =
     [ "albumsByPerformer", "classTrack8_1_1Services_1_1LibraryService.html#a813477bf9037d139cb2bd5db9a3632a6", null ],
     [ "genres", "classTrack8_1_1Services_1_1LibraryService.html#a4cbcdf4b049b6a77ddfb3a44dc06cd39", null ],
     [ "importTrack", "classTrack8_1_1Services_1_1LibraryService.html#a73860fd03a86671eb365941a781eac93", null ],
+    [ "performerCover", "classTrack8_1_1Services_1_1LibraryService.html#a2bed9bdbfc4c3e2471d15c608f708eec", null ],
     [ "scan", "classTrack8_1_1Services_1_1LibraryService.html#a73f23528d2da9d715c3ac830a361ea70", null ],
     [ "songs", "classTrack8_1_1Services_1_1LibraryService.html#a5a41a64a3198c08470f8c2c8ea615406", null ],
     [ "songsByAlbum", "classTrack8_1_1Services_1_1LibraryService.html#ac9739fbd0f5416fc6107ae7d1e01c65d", null ],

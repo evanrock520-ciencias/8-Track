@@ -107,20 +107,23 @@ $(function(){initNavTree('CoverStore_8hpp_source.html','',''); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTrack8_1_1Miner_1_1CoverStore.html#ae6dd89a4f393efbdb64dccff4bed02c1">   11</a></span>    std::filesystem::path <a class="code hl_function" href="classTrack8_1_1Miner_1_1CoverStore.html#ae6dd89a4f393efbdb64dccff4bed02c1">albumCoverPath</a>(<span class="keyword">const</span> std::filesystem::path&amp; albumPath,</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                                         <span class="keyword">const</span> std::string&amp; albumName) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classTrack8_1_1Miner_1_1CoverStore.html#a97b20f7aa7826a8904ac352fe25f3201">   14</a></span>    [[nodiscard]] std::filesystem::path <a class="code hl_function" href="classTrack8_1_1Miner_1_1CoverStore.html#a97b20f7aa7826a8904ac352fe25f3201">cacheDirectory</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> m_cacheDirectory;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classTrack8_1_1Miner_1_1CoverStore.html#a6468c520b01cf2cb77461bc82b63f412">   14</a></span>    std::filesystem::path <a class="code hl_function" href="classTrack8_1_1Miner_1_1CoverStore.html#a6468c520b01cf2cb77461bc82b63f412">performerCoverPath</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classTrack8_1_1Miner_1_1CoverStore.html#a97b20f7aa7826a8904ac352fe25f3201">   16</a></span>    [[nodiscard]] std::filesystem::path <a class="code hl_function" href="classTrack8_1_1Miner_1_1CoverStore.html#a97b20f7aa7826a8904ac352fe25f3201">cacheDirectory</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> m_cacheDirectory;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::filesystem::path pathFor(<span class="keyword">const</span> std::string&amp; key) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::filesystem::path m_cacheDirectory;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::filesystem::path pathFor(<span class="keyword">const</span> std::string&amp; key) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::filesystem::path m_cacheDirectory;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace Track8::Miner</span></div>
-<div class="ttc" id="aclassTrack8_1_1Miner_1_1CoverStore_html_a97b20f7aa7826a8904ac352fe25f3201"><div class="ttname"><a href="classTrack8_1_1Miner_1_1CoverStore.html#a97b20f7aa7826a8904ac352fe25f3201">Track8::Miner::CoverStore::cacheDirectory</a></div><div class="ttdeci">std::filesystem::path cacheDirectory() const</div><div class="ttdef"><b>Definition</b> CoverStore.hpp:14</div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace Track8::Miner</span></div>
+<div class="ttc" id="aclassTrack8_1_1Miner_1_1CoverStore_html_a6468c520b01cf2cb77461bc82b63f412"><div class="ttname"><a href="classTrack8_1_1Miner_1_1CoverStore.html#a6468c520b01cf2cb77461bc82b63f412">Track8::Miner::CoverStore::performerCoverPath</a></div><div class="ttdeci">std::filesystem::path performerCoverPath(const std::string &amp;name) const</div></div>
+<div class="ttc" id="aclassTrack8_1_1Miner_1_1CoverStore_html_a97b20f7aa7826a8904ac352fe25f3201"><div class="ttname"><a href="classTrack8_1_1Miner_1_1CoverStore.html#a97b20f7aa7826a8904ac352fe25f3201">Track8::Miner::CoverStore::cacheDirectory</a></div><div class="ttdeci">std::filesystem::path cacheDirectory() const</div><div class="ttdef"><b>Definition</b> CoverStore.hpp:16</div></div>
 <div class="ttc" id="aclassTrack8_1_1Miner_1_1CoverStore_html_aa545483ca29d9a0e04d94a21f43a468e"><div class="ttname"><a href="classTrack8_1_1Miner_1_1CoverStore.html#aa545483ca29d9a0e04d94a21f43a468e">Track8::Miner::CoverStore::CoverStore</a></div><div class="ttdeci">CoverStore(std::filesystem::path cacheDirectory)</div></div>
 <div class="ttc" id="aclassTrack8_1_1Miner_1_1CoverStore_html_ae6dd89a4f393efbdb64dccff4bed02c1"><div class="ttname"><a href="classTrack8_1_1Miner_1_1CoverStore.html#ae6dd89a4f393efbdb64dccff4bed02c1">Track8::Miner::CoverStore::albumCoverPath</a></div><div class="ttdeci">std::filesystem::path albumCoverPath(const std::filesystem::path &amp;albumPath, const std::string &amp;albumName) const</div></div>
 <div class="ttc" id="anamespaceTrack8_1_1Miner_html"><div class="ttname"><a href="namespaceTrack8_1_1Miner.html">Track8::Miner</a></div><div class="ttdef"><b>Definition</b> CoverMiner.hpp:12</div></div>
