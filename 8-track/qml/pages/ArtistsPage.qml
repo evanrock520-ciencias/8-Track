@@ -5,6 +5,10 @@ import Track8.Backend 1.0
 Item {
     Component.onCompleted: Library.loadPerformers()
 
+    EditForm {
+        id: editForm
+    }
+
     GridView {
         anchors.fill: parent
         anchors.margins: Theme.albumsGridMargin
@@ -16,6 +20,10 @@ Item {
         delegate: AlbumCard {
             album: model.name
             cover: Library.performerCover(model.name)
+            action: () => {
+                editForm.cover = Library.performerCover(model.name);
+                editForm.open();
+            }
         }
     }
 }

@@ -183,4 +183,7 @@ QtObject {
 
     readonly property int albumsGridSpacing: 16
     readonly property int albumsGridMargin: 22
+
+    // Edit Form
+    readonly property int editPerformerImageSize: 242
 }

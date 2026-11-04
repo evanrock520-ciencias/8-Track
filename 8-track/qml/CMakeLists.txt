@@ -44,6 +44,7 @@ qt_add_qml_module(track8
         components/InfoBox.qml
         components/NeobrutalistProgressBar.qml
         components/AlbumCard.qml
+        components/EditForm.qml
 
         # Dialogs
         dialogs/DirectorySelector.qml
@@ -76,6 +77,8 @@ qt_add_qml_module(track8
         resources/icons/folder.svg
         resources/icons/song.svg
         resources/icons/cancel.svg
+        resources/icons/unknown.svg
+        resources/icons/edit.svg
 
         resources/images/cover.png
 )
