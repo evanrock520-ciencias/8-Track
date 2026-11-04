@@ -5,6 +5,9 @@ import Track8
 NeobrutalistBox {
     id: root
 
+    property string album
+    property int year
+
     implicitHeight: Theme.albumCardHeight
     implicitWidth: Theme.albumCardWidth
 
@@ -41,21 +44,22 @@ NeobrutalistBox {
                 spacing: 0
 
                 Text {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
                     font.family: Theme.fontFamily
                     font.pixelSize: Theme.albumNameFontSize
-                    text: "Alvvays"
-                }
-                Text {
-                    color: Theme.grey
-                    font.family: Theme.fontFamily
-                    font.pixelSize: Theme.albumArtistNameFontSize
-                    text: "Alvvays"
+                    font.weight: 800
+                    wrapMode: Text.WordWrap
+                    verticalAlignment: Text.AlignTop
+                    text: album
+                    maximumLineCount: 2
+                    elide: Text.ElideRight
                 }
                 Text {
                     color: Theme.grey
                     font.family: Theme.monoFontFamily
                     font.pixelSize: Theme.albumYearFontSize
-                    text: "2014"
+                    text: year
                 }
             }
         }
