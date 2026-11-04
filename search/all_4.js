@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['../classTrack8_1_1Gui_1_1SongListModel.html#a77841f2aa4310300e0d23ebfdab1de6a',1,'Track8::Gui::SongListModel']]],
+  ['data_0',['data',['../classTrack8_1_1Gui_1_1AlbumListModel.html#a05f6f3f8598c4e6cf019908cb479f4b7',1,'Track8::Gui::AlbumListModel::data()'],['../classTrack8_1_1Gui_1_1SongListModel.html#a77841f2aa4310300e0d23ebfdab1de6a',1,'Track8::Gui::SongListModel::data()']]],
   ['database_1',['database',['../structTrack8_1_1App_1_1AppContext.html#a6fccaa575a383caee915db85c241b09d',1,'Track8::App::AppContext::database'],['../classTrack8_1_1Database_1_1DatabaseManager.html#aa8efacfc0ca3534992fd25493ca566d5',1,'Track8::Database::DatabaseManager::database()']]],
   ['databasemanager_2',['DatabaseManager',['../classTrack8_1_1Database_1_1DatabaseManager.html',1,'Track8::Database::DatabaseManager'],['../classTrack8_1_1Database_1_1DatabaseManager.html#a94f36843f606c39172465c7e8dfc8e9c',1,'Track8::Database::DatabaseManager::DatabaseManager()']]],
   ['databasemanager_2ehpp_3',['DatabaseManager.hpp',['../DatabaseManager_8hpp.html',1,'']]],

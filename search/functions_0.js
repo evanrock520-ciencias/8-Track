@@ -6,11 +6,15 @@ var searchData=
   ['addtogroup_3',['addToGroup',['../classTrack8_1_1Database_1_1SQLitePerformerRepository.html#a74c4fb05957a1d6bc195ee12862a6e17',1,'Track8::Database::SQLitePerformerRepository::addToGroup()'],['../classTrack8_1_1Repositories_1_1IPerformerRepository.html#aa89ee5c73d39b32dfe6648d7a67b2da5',1,'Track8::Repositories::IPerformerRepository::addToGroup()']]],
   ['album_4',['Album',['../classTrack8_1_1Domain_1_1Album.html#ad8c8eee7c284fa18eebba0a7997cdc24',1,'Track8::Domain::Album']]],
   ['album_5',['album',['../classTrack8_1_1Domain_1_1Song.html#a85827da638c6b7fd1bd5c874158c011a',1,'Track8::Domain::Song']]],
-  ['albumcount_6',['albumCount',['../classTrack8_1_1Gui_1_1LibraryController.html#a211ac8589f8936cbdf2e14a85e85ace5',1,'Track8::Gui::LibraryController']]],
-  ['albums_7',['albums',['../classTrack8_1_1Services_1_1LibraryService.html#acf88cd1523e70be2263db6dfd75fbaab',1,'Track8::Services::LibraryService']]],
-  ['albumsbyperformer_8',['albumsByPerformer',['../classTrack8_1_1Services_1_1LibraryService.html#a813477bf9037d139cb2bd5db9a3632a6',1,'Track8::Services::LibraryService']]],
-  ['appcontext_9',['AppContext',['../structTrack8_1_1App_1_1AppContext.html#ade7e2b515f3d1fbbd53456de8333058a',1,'Track8::App::AppContext']]],
-  ['artist_10',['Artist',['../classTrack8_1_1Domain_1_1Artist.html#a433f7a6e343a10c97ff368022a5cba9c',1,'Track8::Domain::Artist']]],
-  ['artistservice_11',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService']]],
-  ['asstring_12',['asString',['../classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf',1,'Track8::Domain::Date']]]
+  ['albumat_6',['albumAt',['../classTrack8_1_1Gui_1_1AlbumListModel.html#ac4843f7e258d8d5367dd7245391595b0',1,'Track8::Gui::AlbumListModel']]],
+  ['albumcount_7',['albumCount',['../classTrack8_1_1Gui_1_1LibraryController.html#a211ac8589f8936cbdf2e14a85e85ace5',1,'Track8::Gui::LibraryController']]],
+  ['albumcover_8',['albumCover',['../classTrack8_1_1Gui_1_1LibraryController.html#a379d76750a0c7624095490d4310b8a85',1,'Track8::Gui::LibraryController::albumCover()'],['../classTrack8_1_1Services_1_1LibraryService.html#af1dd34022aa56a0996b5ef79fe15e9da',1,'Track8::Services::LibraryService::albumCover()']]],
+  ['albumcoverpath_9',['albumCoverPath',['../classTrack8_1_1Miner_1_1CoverStore.html#ae6dd89a4f393efbdb64dccff4bed02c1',1,'Track8::Miner::CoverStore']]],
+  ['albumlistmodel_10',['AlbumListModel',['../classTrack8_1_1Gui_1_1AlbumListModel.html#af557eb32e3e0621cc0fa453321b477dc',1,'Track8::Gui::AlbumListModel']]],
+  ['albums_11',['albums',['../classTrack8_1_1Gui_1_1LibraryController.html#a50ac3573af0eda196ea2080bee0ef452',1,'Track8::Gui::LibraryController::albums()'],['../classTrack8_1_1Services_1_1LibraryService.html#acf88cd1523e70be2263db6dfd75fbaab',1,'Track8::Services::LibraryService::albums() const']]],
+  ['albumsbyperformer_12',['albumsByPerformer',['../classTrack8_1_1Services_1_1LibraryService.html#a813477bf9037d139cb2bd5db9a3632a6',1,'Track8::Services::LibraryService']]],
+  ['appcontext_13',['AppContext',['../structTrack8_1_1App_1_1AppContext.html#ade7e2b515f3d1fbbd53456de8333058a',1,'Track8::App::AppContext']]],
+  ['artist_14',['Artist',['../classTrack8_1_1Domain_1_1Artist.html#a433f7a6e343a10c97ff368022a5cba9c',1,'Track8::Domain::Artist']]],
+  ['artistservice_15',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService']]],
+  ['asstring_16',['asString',['../classTrack8_1_1Domain_1_1Date.html#abdae0cf3ce0f020e1772e3de4089f3cf',1,'Track8::Domain::Date']]]
 ];

@@ -9,7 +9,7 @@ var searchData=
   ['iexpressionvisitor_6',['IExpressionVisitor',['../classTrack8_1_1Compiler_1_1IExpressionVisitor.html',1,'Track8::Compiler']]],
   ['iexpressionvisitor_2ehpp_7',['IExpressionVisitor.hpp',['../IExpressionVisitor_8hpp.html',1,'']]],
   ['importtrack_8',['importTrack',['../classTrack8_1_1Services_1_1LibraryService.html#a73860fd03a86671eb365941a781eac93',1,'Track8::Services::LibraryService']]],
-  ['indexof_9',['indexOf',['../classTrack8_1_1Gui_1_1SongListModel.html#abc027c610802989a2166b7c02c904437',1,'Track8::Gui::SongListModel']]],
+  ['indexof_9',['indexOf',['../classTrack8_1_1Gui_1_1AlbumListModel.html#ae4d8409342c60a8539643f07a6f5cf91',1,'Track8::Gui::AlbumListModel::indexOf()'],['../classTrack8_1_1Gui_1_1SongListModel.html#abc027c610802989a2166b7c02c904437',1,'Track8::Gui::SongListModel::indexOf()']]],
   ['iperformerrepository_10',['IPerformerRepository',['../classTrack8_1_1Repositories_1_1IPerformerRepository.html',1,'Track8::Repositories']]],
   ['iperformerrepository_2ehpp_11',['IPerformerRepository.hpp',['../IPerformerRepository_8hpp.html',1,'']]],
   ['isalpha_12',['isAlpha',['../namespaceTrack8_1_1Utils.html#a4f75f3945f0a07daa596738fb63ed627',1,'Track8::Utils']]],

@@ -6,6 +6,7 @@ var hierarchy =
     [ "Track8::Cli::Cli", "classTrack8_1_1Cli_1_1Cli.html", null ],
     [ "Track8::Miner::CoverMiner", "classTrack8_1_1Miner_1_1CoverMiner.html", null ],
     [ "Track8::Miner::Covers", "structTrack8_1_1Miner_1_1Covers.html", null ],
+    [ "Track8::Miner::CoverStore", "classTrack8_1_1Miner_1_1CoverStore.html", null ],
     [ "Track8::Domain::Date", "classTrack8_1_1Domain_1_1Date.html", null ],
     [ "Track8::Repositories::IAlbumRepository", "classTrack8_1_1Repositories_1_1IAlbumRepository.html", [
       [ "Track8::Database::SQLiteAlbumRepository", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html", null ]
@@ -41,6 +42,7 @@ var hierarchy =
       [ "Track8::Domain::Group", "classTrack8_1_1Domain_1_1Group.html", null ]
     ] ],
     [ "QAbstractListModel", null, [
+      [ "Track8::Gui::AlbumListModel", "classTrack8_1_1Gui_1_1AlbumListModel.html", null ],
       [ "Track8::Gui::SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", null ]
     ] ],
     [ "QObject", null, [
