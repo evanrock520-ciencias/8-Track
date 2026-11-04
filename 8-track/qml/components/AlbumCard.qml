@@ -11,27 +11,65 @@ NeobrutalistBox {
 
     implicitHeight: Theme.albumCardHeight
     implicitWidth: Theme.albumCardWidth
+    radius: Theme.buttonRadius
+    shadowOffset: hover.hovered ? Theme.shadowOffset + 2 : Theme.shadowOffset
+
+    Behavior on shadowOffset {
+        NumberAnimation {
+            duration: 90
+            easing.type: Easing.OutCubic
+        }
+    }
+
+    HoverHandler {
+        id: hover
+    }
 
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
 
-        Rectangle {
+        Item {
             Layout.alignment: Qt.AlignCenter
             implicitHeight: Theme.albumImageSize
             implicitWidth: Theme.albumImageSize
 
+            Rectangle {
+                anchors.fill: parent
+                border.color: Theme.ink
+                border.width: Theme.borderWidth
+                color: Theme.cream
+            }
             Image {
                 anchors.fill: parent
-                source: root.cover
-
-                sourceSize.width: Theme.albumImageSize
-                sourceSize.height: Theme.albumImageSize
-
+                anchors.margins: Theme.borderWidth
+                asynchronous: true
                 fillMode: Image.PreserveAspectCrop
                 mipmap: true
-                smooth: true
-                asynchronous: true
+                source: root.cover
+                sourceSize.height: Theme.albumImageSize
+                sourceSize.width: Theme.albumImageSize
+            }
+            Rectangle {
+                anchors.fill: parent
+                color: Theme.ink
+                opacity: hover.hovered ? 0.15 : 0
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 90
+                    }
+                }
+            }
+            RowPlayButton {
+                anchors.centerIn: parent
+                visible: hover.hovered
+            }
+            Tag {
+                anchors.right: parent.right
+                anchors.top: parent.top
+                anchors.margins: 6
+                text: root.year.toString()
             }
         }
         Rectangle {
@@ -58,17 +96,11 @@ NeobrutalistBox {
                     font.family: Theme.fontFamily
                     font.pixelSize: Theme.albumNameFontSize
                     font.weight: 800
+                    verticalAlignment: Text.AlignVCenter
                     wrapMode: Text.WordWrap
-                    verticalAlignment: Text.AlignTop
                     text: album
                     maximumLineCount: 2
                     elide: Text.ElideRight
-                }
-                Text {
-                    color: Theme.grey
-                    font.family: Theme.monoFontFamily
-                    font.pixelSize: Theme.albumYearFontSize
-                    text: year
                 }
             }
         }
