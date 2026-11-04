@@ -1,5 +1,7 @@
 #include "gui/models/LibraryController.hpp"
 
+#include <QUrl>
+
 namespace Track8::Gui {
 
 LibraryController::LibraryController(Services::LibraryService& library,
@@ -43,6 +45,18 @@ void LibraryController::clearSearch() {
     m_searchModel.clear();
     m_searchError.clear();
     emit searchErrorChanged();
+}
+
+QString LibraryController::albumCover(const QString& path,
+                                      const QString& name) const {
+    const auto cover =
+        m_library.albumCover(path.toStdString(), name.toStdString());
+
+    if (!std::filesystem::exists(cover))
+        return {};
+
+    return QUrl::fromLocalFile(QString::fromStdString(cover.string()))
+        .toString();
 }
 
 } // namespace Track8::Gui

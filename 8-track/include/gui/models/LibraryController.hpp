@@ -68,6 +68,8 @@ public:
     Q_INVOKABLE void loadSongs();
     Q_INVOKABLE void loadAlbums();
     Q_INVOKABLE void refresh();
+    Q_INVOKABLE QString albumCover(const QString& path,
+                                   const QString& name) const;
 
 signals:
     void statsChanged();
