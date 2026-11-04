@@ -16,7 +16,7 @@ class Artist : public Performer {
 public:
     Artist(const int id, const std::string& stage_name, std::string real_name,
            const Date& birth_date, const Date& death_date)
-        : Performer(id, stage_name),
+        : Performer(id, stage_name, PerformerType::Person),
           m_stage_name(stage_name),
           m_real_name(std::move(real_name)),
           m_birth_date(birth_date),

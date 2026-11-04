@@ -17,7 +17,7 @@ class Group : public Performer {
 public:
     Group(const int id, const std::string& name, const Date& start_date,
           const Date& end_date)
-        : Performer(id, name),
+        : Performer(id, name, PerformerType::Group),
           m_start_date(start_date),
           m_end_date(end_date) {};
 

@@ -21,17 +21,20 @@ enum class PerformerType : int {
  */
 class Performer {
 public:
-    Performer(const int id, std::string name)
-        : m_id(id), m_name(std::move(name)) {};
+    Performer(const int id, std::string name,
+              const PerformerType type = PerformerType::Unknown)
+        : m_id(id), m_name(std::move(name)), m_type(type) {};
     virtual ~Performer() = default;
 
     [[nodiscard]] int id() const { return m_id; };
     [[nodiscard]] const std::string& name() const { return m_name; };
+    [[nodiscard]] PerformerType type() const { return m_type; };
 
     bool operator==(const Performer& performer) const = default;
 
 protected:
     int m_id = -1;
     std::string m_name;
+    PerformerType m_type = PerformerType::Unknown;
 };
 } // namespace Track8::Domain
