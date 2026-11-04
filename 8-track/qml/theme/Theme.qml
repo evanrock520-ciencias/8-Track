@@ -180,4 +180,7 @@ QtObject {
     readonly property int albumNameFontSize: 14
     readonly property int albumArtistNameFontSize: 11
     readonly property int albumYearFontSize: 10
+
+    readonly property int albumsGridSpacing: 16
+    readonly property int albumsGridMargin: 22
 }
