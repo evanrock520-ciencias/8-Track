@@ -61,6 +61,7 @@ target_include_directories(compiler PUBLIC
 add_library(miner
     src/miner/Miner.cpp
         src/miner/CoverMiner.cpp
+        src/miner/CoverStore.cpp
 )
 
 target_include_directories(miner PUBLIC
