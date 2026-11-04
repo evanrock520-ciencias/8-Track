@@ -116,6 +116,8 @@ add_library(gui
         src/gui/models/SongListModel.cpp
         include/gui/models/ScanController.hpp
         src/gui/models/ScanController.cpp
+        include/gui/models/AlbumListModel.hpp
+        src/gui/models/AlbumListModel.cpp
 )
 
 target_include_directories(gui PUBLIC
