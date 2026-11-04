@@ -7,6 +7,7 @@ NeobrutalistBox {
 
     property string text
     property color textColor: Theme.ink
+    property int size: Theme.tagFontSize
 
     color: Theme.yellow
     implicitHeight: Theme.tagHeight + Theme.tagPaddingY * 2
@@ -20,7 +21,7 @@ NeobrutalistBox {
         anchors.centerIn: parent
         color: root.textColor
         font.family: Theme.monoFontFamily
-        font.pixelSize: Theme.tagFontSize
+        font.pixelSize: root.size
         font.weight: Font.Bold
         text: root.text
     }
