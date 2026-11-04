@@ -1,9 +1,21 @@
 import QtQuick
 import Track8
+import Track8.Backend 1.0
 
 Item {
-    Rectangle {
+    Component.onCompleted: Library.loadPerformers()
+
+    GridView {
         anchors.fill: parent
-        color: Theme.blue
+        anchors.margins: Theme.albumsGridMargin
+        cellHeight: Theme.albumCardHeight + Theme.albumsGridSpacing
+        cellWidth: Theme.albumCardWidth + Theme.albumsGridSpacing
+        clip: true
+        model: Library.performers
+
+        delegate: AlbumCard {
+            album: model.name
+            cover: Library.performerCover(model.name)
+        }
     }
 }

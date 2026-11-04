@@ -19,4 +19,9 @@ CoverStore::albumCoverPath(const std::filesystem::path& albumPath,
     return pathFor(albumPath.string() + "|" + albumName);
 }
 
+std::filesystem::path
+CoverStore::performerCoverPath(const std::string& name) const {
+    return pathFor(name);
+}
+
 } // namespace Track8::Miner

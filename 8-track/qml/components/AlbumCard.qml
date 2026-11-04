@@ -66,6 +66,7 @@ NeobrutalistBox {
                 visible: hover.hovered
             }
             Tag {
+                visible: root.year > 0
                 anchors.right: parent.right
                 anchors.top: parent.top
                 anchors.margins: 6

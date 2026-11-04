@@ -27,6 +27,10 @@ void LibraryController::loadAlbums() {
     m_albumsModel.setAlbums(std::move(albums));
 }
 
+void LibraryController::loadPerformers() {
+    m_performersModel.setPerformers(m_artists.performers());
+}
+
 void LibraryController::refresh() {
     m_stats = m_library.stats();
     emit statsChanged();
@@ -56,6 +60,16 @@ QString LibraryController::albumCover(const QString& path,
                                       const QString& name) const {
     const auto cover =
         m_library.albumCover(path.toStdString(), name.toStdString());
+
+    if (!std::filesystem::exists(cover))
+        return {};
+
+    return QUrl::fromLocalFile(QString::fromStdString(cover.string()))
+        .toString();
+}
+
+QString LibraryController::performerCover(const QString& name) const {
+    const auto cover = m_library.performerCover(name.toStdString());
 
     if (!std::filesystem::exists(cover))
         return {};

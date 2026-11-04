@@ -152,4 +152,9 @@ LibraryService::albumCover(const std::filesystem::path& path,
     return m_coverStore.albumCoverPath(path, name);
 }
 
+std::filesystem::path
+LibraryService::performerCover(const std::string& name) const {
+    return m_coverStore.performerCoverPath(name);
+}
+
 } // namespace Track8::Services
