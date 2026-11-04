@@ -79,6 +79,7 @@ qt_add_qml_module(track8
         resources/icons/cancel.svg
         resources/icons/unknown.svg
         resources/icons/edit.svg
+        resources/icons/forward.svg
 
         resources/images/cover.png
 )

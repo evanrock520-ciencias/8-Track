@@ -9,8 +9,17 @@ Popup {
 
     property url cover
     property string directory
+    property string name
     property int type
     property int selectedType: type
+
+    function openFor(performer) {
+        name = performer.name;
+        cover = Library.performerCover(performer.name);
+        type = performer.type;
+        selectedType = performer.type;
+        open();
+    }
 
     anchors.centerIn: Overlay.overlay
     closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
@@ -99,6 +108,7 @@ Popup {
                 ButtonGroup.group: performerTypeGroup
                 checkable: true
                 checked: root.selectedType === 2
+                onClicked: root.selectedType = 2
                 fillColor: checked ? Theme.blue : Theme.cream
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/unknown.svg"
                 display: AbstractButton.IconOnly
@@ -108,6 +118,7 @@ Popup {
                 ButtonGroup.group: performerTypeGroup
                 checkable: true
                 checked: root.selectedType === 0
+                onClicked: root.selectedType = 0
                 fillColor: checked ? Theme.blue : Theme.cream
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/artist.svg"
                 display: AbstractButton.IconOnly
@@ -117,6 +128,7 @@ Popup {
                 ButtonGroup.group: performerTypeGroup
                 checkable: true
                 checked: root.selectedType === 1
+                onClicked: root.selectedType = 1
                 fillColor: checked ? Theme.blue : Theme.cream
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/band.svg"
                 display: AbstractButton.IconOnly

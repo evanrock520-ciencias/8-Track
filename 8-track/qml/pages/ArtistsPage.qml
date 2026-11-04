@@ -18,13 +18,12 @@ Item {
         model: Library.performers
 
         delegate: AlbumCard {
+            action: () => editForm.openFor({
+                    name: model.name,
+                    type: model.type
+                })
             album: model.name
             cover: Library.performerCover(model.name)
-            action: () => {
-                editForm.type = model.type;
-                editForm.cover = Library.performerCover(model.name);
-                editForm.open();
-            }
         }
     }
 }
