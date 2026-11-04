@@ -15,7 +15,7 @@ Item {
 
         delegate: AlbumCard {
             album: model.name
-            // cover: Library.albumCover(model.path, model.name)
+            cover: Library.performerCover(model.name)
         }
     }
 }

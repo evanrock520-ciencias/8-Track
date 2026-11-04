@@ -76,8 +76,7 @@ public:
     Q_INVOKABLE void refresh();
     Q_INVOKABLE QString albumCover(const QString& path,
                                    const QString& name) const;
-    Q_INVOKABLE QString performerCover(const QString& path,
-                                       const QString& name) const;
+    Q_INVOKABLE QString performerCover(const QString& name) const;
 
 signals:
     void statsChanged();

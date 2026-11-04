@@ -68,9 +68,14 @@ QString LibraryController::albumCover(const QString& path,
         .toString();
 }
 
-QString LibraryController::performerCover(const QString& path,
-                                          const QString& name) const {
-    return {};
+QString LibraryController::performerCover(const QString& name) const {
+    const auto cover = m_library.performerCover(name.toStdString());
+
+    if (!std::filesystem::exists(cover))
+        return {};
+
+    return QUrl::fromLocalFile(QString::fromStdString(cover.string()))
+        .toString();
 }
 
 } // namespace Track8::Gui

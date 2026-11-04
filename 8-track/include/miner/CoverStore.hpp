@@ -11,6 +11,8 @@ public:
     std::filesystem::path albumCoverPath(const std::filesystem::path& albumPath,
                                          const std::string& albumName) const;
 
+    std::filesystem::path performerCoverPath(const std::string& name) const;
+
     [[nodiscard]] std::filesystem::path cacheDirectory() const {
         return m_cacheDirectory;
     }

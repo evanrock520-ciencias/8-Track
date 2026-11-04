@@ -90,6 +90,9 @@ public:
     albumCover(const std::filesystem::path& path,
                const std::string& name) const;
 
+    [[nodiscard]] std::filesystem::path
+    performerCover(const std::string& name) const;
+
 private:
     [[nodiscard]] std::shared_ptr<Domain::Performer>
     findOrCreatePerformer(const std::string& name) const;
