@@ -37,6 +37,19 @@ public:
     void markAsGroup(const std::string& name) const;
 
     /**
+     * Actualiza el tipo de un intérprete a `unknown`.
+     * @param id El id del intérprete.
+     */
+    void markAsUnknown(int id) const;
+
+    /**
+     * Actualiza el tipo de un intérprete a `unknown`.
+     * @param name El nombre del intérprete.
+     * @throws std::runtime_error Si no existe un intérprete con ese nombre.
+     */
+    void markAsUnknown(const std::string& name) const;
+
+    /**
      * Actualiza los valores de un intérprete de tipo `person` en la base de
      * datos.
      * @param person La `person` con valores actualizados.

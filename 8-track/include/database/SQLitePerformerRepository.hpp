@@ -29,6 +29,8 @@ public:
 
     void markAsArtist(int id) override;
 
+    void markAsUnknown(int id) override;
+
     void addToGroup(int groupId, int performerId) override;
 
     void removeFromGroup(int groupId, int performerId) override;

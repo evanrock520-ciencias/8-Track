@@ -38,6 +38,21 @@ void ArtistService::markAsGroup(const std::string& name) const {
     markAsGroup(performer->id());
 }
 
+void ArtistService::markAsUnknown(const int id) const {
+    try {
+        m_performers->markAsUnknown(id);
+    } catch (std::exception& exception) {
+        throw std::runtime_error(exception.what());
+    }
+}
+
+void ArtistService::markAsUnknown(const std::string& name) const {
+    const auto performer = m_performers->find(name);
+    if (!performer)
+        throw std::runtime_error("Performer with name " + name + " not found");
+    markAsUnknown(performer->id());
+}
+
 void ArtistService::updatePerson(const Domain::Artist& person) const {
     try {
         m_performers->update(person);

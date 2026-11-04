@@ -52,6 +52,11 @@ public:
     virtual void markAsArtist(int id) = 0;
 
     /**
+     * Marca a un intérprete como desconocido (`unknown`).
+     */
+    virtual void markAsUnknown(int id) = 0;
+
+    /**
      * Añade a un artista como miembro de una banda.
      * @param groupId El id de la banda en la tabla de `performers`.
      * @param performerId El id del artista en la tabla de `performers`.

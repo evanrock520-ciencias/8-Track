@@ -178,6 +178,61 @@ void SQLitePerformerRepository::markAsGroup(int id) {
         throw std::runtime_error(m_database.lastError().text().toStdString());
 }
 
+void SQLitePerformerRepository::markAsUnknown(int id) {
+    if (!m_database.transaction())
+        throw std::runtime_error(m_database.lastError().text().toStdString());
+
+    QSqlQuery update(m_database);
+    update.prepare(
+        "UPDATE performers SET id_type = :id_type WHERE id_performer = :id");
+    update.bindValue(":id_type",
+                     static_cast<int>(Domain::PerformerType::Unknown));
+    update.bindValue(":id", id);
+
+    if (!update.exec()) {
+        m_database.rollback();
+        throw std::runtime_error(update.lastError().text().toStdString());
+    }
+
+    if (!findName(id)) {
+        m_database.rollback();
+        throw std::runtime_error("Performer with id " + std::to_string(id) +
+                                 " not found");
+    }
+
+    QSqlQuery removeMembers(m_database);
+    removeMembers.prepare(
+        "DELETE FROM in_group WHERE id_person = :id OR id_group = :id");
+    removeMembers.bindValue(":id", id);
+
+    if (!removeMembers.exec()) {
+        m_database.rollback();
+        throw std::runtime_error(
+            removeMembers.lastError().text().toStdString());
+    }
+
+    QSqlQuery removePerson(m_database);
+    removePerson.prepare("DELETE FROM persons WHERE id_person = :id");
+    removePerson.bindValue(":id", id);
+
+    if (!removePerson.exec()) {
+        m_database.rollback();
+        throw std::runtime_error(removePerson.lastError().text().toStdString());
+    }
+
+    QSqlQuery removeGroup(m_database);
+    removeGroup.prepare("DELETE FROM groups WHERE id_group = :id");
+    removeGroup.bindValue(":id", id);
+
+    if (!removeGroup.exec()) {
+        m_database.rollback();
+        throw std::runtime_error(removeGroup.lastError().text().toStdString());
+    }
+
+    if (!m_database.commit())
+        throw std::runtime_error(m_database.lastError().text().toStdString());
+}
+
 void SQLitePerformerRepository::addToGroup(int groupId, int performerId) {
     QSqlQuery query(m_database);
     query.prepare("INSERT OR IGNORE INTO in_group (id_person, id_group) VALUES "
