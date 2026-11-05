@@ -64,6 +64,13 @@ public:
     void updateGroup(const Domain::Group& group) const;
 
     /**
+     * Actualiza los datos de un intérprete de tipo `unknown` en la base de
+     * datos.
+     * @param performer El `performer` con valores actualizados.
+     */
+    void updatePerformer(const Domain::Performer& performer) const;
+
+    /**
      * Añade un miembro a un grupo (relación en la tabla in_group).
      * @param groupId El id del grupo en la tabla de performers.
      * @param personId El id del miembro en la tabla de performers.

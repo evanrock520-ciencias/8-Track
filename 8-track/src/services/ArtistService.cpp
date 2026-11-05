@@ -69,6 +69,14 @@ void ArtistService::updateGroup(const Domain::Group& group) const {
     }
 }
 
+void ArtistService::updatePerformer(const Domain::Performer& performer) const {
+    try {
+        m_performers->update(performer);
+    } catch (std::exception& exception) {
+        throw std::runtime_error(exception.what());
+    }
+}
+
 void ArtistService::addMember(const int groupId, const int personId) const {
     try {
         m_performers->addToGroup(groupId, personId);
