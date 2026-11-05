@@ -78,4 +78,37 @@ QString LibraryController::performerCover(const QString& name) const {
         .toString();
 }
 
+QVariantMap LibraryController::performerDetails(const int id) const {
+    const auto performer = m_artists.find(id);
+    if (!performer)
+        return {};
+
+    QVariantMap data{
+        {"id", performer->id()},
+        {"name", QString::fromStdString(performer->name())},
+        {"type", static_cast<int>(performer->type())},
+    };
+
+    if (const auto artist =
+            std::dynamic_pointer_cast<Domain::Artist>(performer)) {
+        data["realName"] = QString::fromStdString(artist->real_name());
+        data["birthDate"] =
+            QString::fromStdString(artist->birth_date().asString());
+        data["deathDate"] =
+            artist->death_date()
+                ? QString::fromStdString(artist->death_date()->asString())
+                : QString{};
+    } else if (const auto group =
+                   std::dynamic_pointer_cast<Domain::Group>(performer)) {
+        data["startDate"] =
+            QString::fromStdString(group->start_date().asString());
+        data["endDate"] =
+            group->end_date()
+                ? QString::fromStdString(group->end_date()->asString())
+                : QString{};
+    }
+
+    return data;
+}
+
 } // namespace Track8::Gui

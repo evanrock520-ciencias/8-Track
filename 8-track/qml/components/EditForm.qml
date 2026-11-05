@@ -12,12 +12,26 @@ Popup {
     property string name
     property int type
     property int selectedType: type
+    property int performerId
+    property int originalType
+    property string realName
+    property string birthDate
+    property string deathDate
+    property string startDate
+    property string endDate
 
-    function openFor(performer) {
-        name = performer.name;
-        cover = Library.performerCover(performer.name);
-        type = performer.type;
-        selectedType = performer.type;
+    function openFor(id) {
+        const data = Library.performerDetails(id);
+        performerId = data.id;
+        name = data.name;
+        originalType = data.type;
+        selectedType = data.type;
+        realName = data.realName ?? "";
+        birthDate = data.birthDate ?? "";
+        deathDate = data.deathDate ?? "";
+        startDate = data.startDate ?? "";
+        endDate = data.endDate ?? "";
+        cover = Library.performerCover(data.name);
         open();
     }
 
@@ -178,7 +192,7 @@ Popup {
                 }
 
                 NeobrutalistInput {
-                    value: ""
+                    value: root.realName
                     placeholder: "Artist real name"
                 }
 
@@ -189,7 +203,7 @@ Popup {
                 }
 
                 NeobrutalistInput {
-                    value: ""
+                    value: root.birthDate
                     placeholder: "Artist Birth Date: YYYY-MM-DD"
                 }
 
@@ -200,7 +214,7 @@ Popup {
                 }
 
                 NeobrutalistInput {
-                    value: ""
+                    value: root.deathDate
                     placeholder: "Artist Death Date: YYYY-MM-DD"
                 }
             }
@@ -229,7 +243,7 @@ Popup {
                 }
 
                 NeobrutalistInput {
-                    value: ""
+                    value: root.startDate
                     placeholder: "Band Start Date: YYYY-MM-DD"
                 }
 
@@ -240,7 +254,7 @@ Popup {
                 }
 
                 NeobrutalistInput {
-                    value: ""
+                    value: root.endDate
                     placeholder: "Band End Date: YYYY-MM-DD"
                 }
             }

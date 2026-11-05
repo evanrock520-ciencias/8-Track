@@ -18,10 +18,7 @@ Item {
         model: Library.performers
 
         delegate: AlbumCard {
-            action: () => editForm.openFor({
-                    name: model.name,
-                    type: model.type
-                })
+            action: () => editForm.openFor(model.performerId)
             album: model.name
             cover: Library.performerCover(model.name)
         }
