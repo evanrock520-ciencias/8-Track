@@ -181,6 +181,28 @@ Popup {
                     value: ""
                     placeholder: "Artist real name"
                 }
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Birth Date"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: ""
+                    placeholder: "Artist Birth Date: YYYY-MM-DD"
+                }
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Death Date"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: ""
+                    placeholder: "Artist Death Date: YYYY-MM-DD"
+                }
             }
         }
 
@@ -198,6 +220,28 @@ Popup {
                 NeobrutalistInput {
                     value: root.name
                     placeholder: "Group name"
+                }
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "Start Date"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: ""
+                    placeholder: "Band Start Date: YYYY-MM-DD"
+                }
+
+                Tag {
+                    Layout.alignment: Qt.AlignCenter
+                    text: "End Date"
+                    size: 14
+                }
+
+                NeobrutalistInput {
+                    value: ""
+                    placeholder: "Band End Date: YYYY-MM-DD"
                 }
             }
         }
