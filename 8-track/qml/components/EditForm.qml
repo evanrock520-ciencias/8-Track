@@ -182,6 +182,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.name
+                    onTextEdited: root.name = text
                     placeholder: "Artist stage name"
                 }
 
@@ -193,6 +194,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.realName
+                    onTextEdited: root.realName = text
                     placeholder: "Artist real name"
                 }
 
@@ -204,6 +206,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.birthDate
+                    onTextEdited: root.birthDate = text
                     placeholder: "Artist Birth Date: YYYY-MM-DD"
                 }
 
@@ -215,6 +218,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.deathDate
+                    onTextEdited: root.deathDate = text
                     placeholder: "Artist Death Date: YYYY-MM-DD"
                 }
             }
@@ -233,6 +237,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.name
+                    onTextEdited: root.name = text
                     placeholder: "Group name"
                 }
 
@@ -244,6 +249,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.startDate
+                    onTextEdited: root.startDate = text
                     placeholder: "Band Start Date: YYYY-MM-DD"
                 }
 
@@ -255,6 +261,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.endDate
+                    onTextEdited: root.endDate = text
                     placeholder: "Band End Date: YYYY-MM-DD"
                 }
             }
@@ -273,6 +280,7 @@ Popup {
 
                 NeobrutalistInput {
                     value: root.name
+                    onTextEdited: root.name = text
                     placeholder: "Performer name"
                 }
             }
@@ -284,6 +292,12 @@ Popup {
             Layout.bottomMargin: Theme.modalPaddingX
             icon.source: "qrc:/qt/qml/Track8/resources/icons/forward.svg"
             text: "Apply Changes"
+            onClicked: {
+                const saved = Library.savePerformer(root.performerId, root.name, root.selectedType, root.realName, root.birthDate, root.deathDate, root.startDate, root.endDate);
+
+                if (saved)
+                    root.close();
+            }
         }
     }
 }

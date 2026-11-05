@@ -4,6 +4,15 @@
 
 namespace Track8::Gui {
 
+namespace {
+Domain::Date toDate(const QString& value) {
+    const auto text = value.trimmed().toStdString();
+    if (text.empty())
+        return Domain::Date("0000-00-00");
+    return Domain::Date(text);
+}
+} // namespace
+
 LibraryController::LibraryController(Services::LibraryService& library,
                                      Services::SearchService& search,
                                      Services::ArtistService& artists,
@@ -109,6 +118,60 @@ QVariantMap LibraryController::performerDetails(const int id) const {
     }
 
     return data;
+}
+
+bool LibraryController::savePerformer(
+    const int id, const QString& name, const int selectedType,
+    const QString& realName, const QString& birthDate, const QString& deathDate,
+    const QString& startDate, const QString& endDate) {
+    try {
+        const auto original = m_artists.find(id);
+        if (!original)
+            return false;
+
+        const auto newType = static_cast<Domain::PerformerType>(selectedType);
+        const auto stdName = name.trimmed().toStdString();
+
+        m_artists.updatePerformer(Domain::Performer(id, stdName, newType));
+
+        if (newType != original->type()) {
+            switch (newType) {
+            case Domain::PerformerType::Person:
+                m_artists.markAsPerson(id);
+                break;
+            case Domain::PerformerType::Group:
+                m_artists.markAsGroup(id);
+                break;
+            default:
+                m_artists.markAsUnknown(id);
+                break;
+            }
+        }
+
+        switch (newType) {
+        case Domain::PerformerType::Person: {
+            const Domain::Artist artist(id, stdName, realName.toStdString(),
+                                        toDate(birthDate), toDate(deathDate));
+            m_artists.updatePerson(artist);
+            break;
+        }
+        case Domain::PerformerType::Group: {
+            const Domain::Group group(id, stdName, toDate(startDate),
+                                      toDate(endDate));
+            m_artists.updateGroup(group);
+            break;
+        }
+        default:
+            break;
+        }
+
+        loadPerformers();
+        refresh();
+        return true;
+    } catch (const std::exception& e) {
+        qWarning() << "savePerformer:" << e.what();
+        return false;
+    }
 }
 
 } // namespace Track8::Gui

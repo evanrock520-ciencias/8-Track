@@ -77,7 +77,13 @@ public:
     Q_INVOKABLE QString albumCover(const QString& path,
                                    const QString& name) const;
     Q_INVOKABLE QString performerCover(const QString& name) const;
-    Q_INVOKABLE QVariantMap performerDetails(const int id) const;
+    Q_INVOKABLE QVariantMap performerDetails(int id) const;
+    Q_INVOKABLE bool savePerformer(int id, const QString& name,
+                                   int selectedType, const QString& realName,
+                                   const QString& birthDate,
+                                   const QString& deathDate,
+                                   const QString& startDate,
+                                   const QString& endDate);
 
 signals:
     void statsChanged();
