@@ -331,41 +331,72 @@ void SQLitePerformerRepository::update(const Domain::Performer& performer) {
 }
 
 void SQLitePerformerRepository::update(const Domain::Artist& artist) {
-    QSqlQuery query(m_database);
-    query.prepare("UPDATE persons SET stage_name = :stage_name, real_name = "
-                  ":real_name, birth_date = :birth_date, death_date = "
-                  ":death_date WHERE id_person = :id_person");
-    query.bindValue(":stage_name", QString::fromStdString(artist.stage_name()));
-    query.bindValue(":real_name", QString::fromStdString(artist.real_name()));
-    query.bindValue(":birth_date",
-                    QString::fromStdString(artist.birth_date().asString()));
-    query.bindValue(":id", artist.id());
+    if (!m_database.transaction())
+        throw std::runtime_error(m_database.lastError().text().toStdString());
 
-    std::string death_date = "0000-00-00";
-    if (artist.death_date())
-        death_date = artist.death_date()->asString();
-    query.bindValue(":death_date", QString::fromStdString(death_date));
+    try {
+        update({artist.id(), artist.stage_name()});
 
-    if (!query.exec())
-        throw std::runtime_error(query.lastError().text().toStdString());
+        QSqlQuery query(m_database);
+        query.prepare(
+            "UPDATE persons SET stage_name = :stage_name, real_name = "
+            ":real_name, birth_date = :birth_date, death_date = "
+            ":death_date WHERE id_person = :id");
+        query.bindValue(":stage_name",
+                        QString::fromStdString(artist.stage_name()));
+        query.bindValue(":real_name",
+                        QString::fromStdString(artist.real_name()));
+        query.bindValue(":birth_date",
+                        QString::fromStdString(artist.birth_date().asString()));
+        query.bindValue(":id", artist.id());
+
+        std::string death_date = "0000-00-00";
+        if (artist.death_date())
+            death_date = artist.death_date()->asString();
+        query.bindValue(":death_date", QString::fromStdString(death_date));
+
+        if (!query.exec())
+            throw std::runtime_error(query.lastError().text().toStdString());
+
+        if (!m_database.commit())
+            throw std::runtime_error(
+                m_database.lastError().text().toStdString());
+    } catch (...) {
+        m_database.rollback();
+        throw;
+    }
 }
 
 void SQLitePerformerRepository::update(const Domain::Group& group) {
-    QSqlQuery query(m_database);
-    query.prepare("UPDATE groups SET name = :name, start_date = :start_date, "
-                  "end_date = :end_date WHERE id_group = :id");
-    query.bindValue(":name", QString::fromStdString(group.name()));
-    query.bindValue(":start_date",
-                    QString::fromStdString(group.start_date().asString()));
-    query.bindValue(":id", group.id());
+    if (!m_database.transaction())
+        throw std::runtime_error(m_database.lastError().text().toStdString());
 
-    std::string end_date = "0000-00-00";
-    if (group.end_date())
-        end_date = group.end_date()->asString();
-    query.bindValue(":end_date", QString::fromStdString(end_date));
+    try {
+        update({group.id(), group.name()});
+        QSqlQuery query(m_database);
+        query.prepare(
+            "UPDATE groups SET name = :name, start_date = :start_date, "
+            "end_date = :end_date WHERE id_group = :id");
+        query.bindValue(":name", QString::fromStdString(group.name()));
+        query.bindValue(":start_date",
+                        QString::fromStdString(group.start_date().asString()));
+        query.bindValue(":id", group.id());
 
-    if (!query.exec())
-        throw std::runtime_error(query.lastError().text().toStdString());
+        std::string end_date = "0000-00-00";
+        if (group.end_date())
+            end_date = group.end_date()->asString();
+        query.bindValue(":end_date", QString::fromStdString(end_date));
+
+        if (!query.exec())
+            throw std::runtime_error(query.lastError().text().toStdString());
+
+        if (!m_database.commit())
+            throw std::runtime_error(
+                m_database.lastError().text().toStdString());
+    } catch (...) {
+        m_database.rollback();
+        throw;
+    }
 }
 
 std::vector<std::shared_ptr<Domain::Performer>>
