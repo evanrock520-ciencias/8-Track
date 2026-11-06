@@ -40,6 +40,10 @@ void LibraryController::loadPerformers() {
     m_performersModel.setPerformers(m_artists.performers());
 }
 
+void LibraryController::loadArtists() {
+    m_artistsModel.setPerformers(m_artists.artists());
+}
+
 void LibraryController::refresh() {
     m_stats = m_library.stats();
     emit statsChanged();
