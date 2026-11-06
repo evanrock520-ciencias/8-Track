@@ -51,6 +51,8 @@ public:
 
     std::vector<std::shared_ptr<Domain::Performer>> getAll() override;
 
+    std::vector<std::shared_ptr<Domain::Performer>> getArtists() override;
+
     unsigned int count() override;
 
 private:

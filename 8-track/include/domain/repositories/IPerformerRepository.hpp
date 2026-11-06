@@ -118,6 +118,12 @@ public:
     virtual std::vector<std::shared_ptr<Domain::Performer>> getAll() = 0;
 
     /**
+     * Regresa todos los intérpretes del tipo `person`.
+     * @return Todos los intérpretes del tipo `person`.
+     */
+    virtual std::vector<std::shared_ptr<Domain::Performer>> getArtists() = 0;
+
+    /**
      * Regresa la cantidad de intérpretes en la base de datos.
      * @return La cantidad de intérpretes en la base de datos.
      */

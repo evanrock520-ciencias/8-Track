@@ -117,4 +117,8 @@ ArtistService::performers() const {
     return m_performers->getAll();
 }
 
+std::vector<std::shared_ptr<Domain::Performer>> ArtistService::artists() const {
+    return m_performers->getArtists();
+}
+
 } // namespace Track8::Services

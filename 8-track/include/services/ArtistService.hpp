@@ -91,6 +91,9 @@ public:
     [[nodiscard]] std::vector<std::shared_ptr<Domain::Performer>>
     performers() const;
 
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Performer>>
+    artists() const;
+
     /**
      * Encuentra el intérprete relacionado a un `id`
      * @param id El id relacionado al intérprete.

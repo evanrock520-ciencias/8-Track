@@ -419,6 +419,26 @@ SQLitePerformerRepository::getAll() {
     return performers;
 }
 
+std::vector<std::shared_ptr<Domain::Performer>>
+SQLitePerformerRepository::getArtists() {
+    QSqlQuery query(m_database);
+    query.prepare("SELECT * FROM performers WHERE id_type = 0;");
+
+    if (!query.exec())
+        throw std::runtime_error(query.lastError().text().toStdString());
+
+    std::vector<std::shared_ptr<Domain::Performer>> performers;
+    while (query.next()) {
+        performers.emplace_back(std::make_shared<Domain::Performer>(
+            query.value("id_performer").toInt(),
+            query.value("name").toString().toStdString(),
+            static_cast<Domain::PerformerType>(
+                query.value("id_type").toInt())));
+    }
+
+    return performers;
+}
+
 std::shared_ptr<Domain::Artist>
 SQLitePerformerRepository::findArtist(int id) const {
     QSqlQuery query(m_database);
