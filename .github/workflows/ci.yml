@@ -24,11 +24,20 @@ jobs:
           target: 'desktop'
           cache: 'true'
 
+      - uses: rui314/setup-mold@v1
+        with:
+          make-default: false
+
+      - uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          key: ubuntu-release
+
       - name: Build Project
         uses: threeal/cmake-action@v2.1.0
         with:
           source-dir: .
-          build-dir: build
+          build-dir: build/release
+          args: --preset release
 
       - name: Run Tests
         run: ctest --test-dir build --output-on-failure
