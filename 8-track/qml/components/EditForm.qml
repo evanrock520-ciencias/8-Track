@@ -286,17 +286,35 @@ Popup {
             }
         }
 
-        NeobrutalistButton {
-            Layout.alignment: Qt.AlignRight
-            Layout.rightMargin: Theme.modalPaddingX
-            Layout.bottomMargin: Theme.modalPaddingX
-            icon.source: "qrc:/qt/qml/Track8/resources/icons/forward.svg"
-            text: "Apply Changes"
-            onClicked: {
-                const saved = Library.savePerformer(root.performerId, root.name, root.selectedType, root.realName, root.birthDate, root.deathDate, root.startDate, root.endDate);
+        RowLayout {
+            Layout.fillWidth: true
 
-                if (saved)
-                    root.close();
+            NeobrutalistButton {
+                Layout.alignment: Qt.AlignLeft
+                Layout.leftMargin: Theme.modalPaddingX
+                Layout.bottomMargin: Theme.modalPaddingX
+                icon.source: "qrc:/qt/qml/Track8/resources/icons/artist.svg"
+                text: "Add Member"
+                fillColor: Theme.blue
+                visible: root.selectedType === 1
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
+            NeobrutalistButton {
+                Layout.alignment: Qt.AlignRight
+                Layout.rightMargin: Theme.modalPaddingX
+                Layout.bottomMargin: Theme.modalPaddingX
+                icon.source: "qrc:/qt/qml/Track8/resources/icons/forward.svg"
+                text: "Apply Changes"
+                onClicked: {
+                    const saved = Library.savePerformer(root.performerId, root.name, root.selectedType, root.realName, root.birthDate, root.deathDate, root.startDate, root.endDate);
+
+                    if (saved)
+                        root.close();
+                }
             }
         }
     }
