@@ -15,6 +15,7 @@ var searchData=
   ['line_12',['line',['../classTrack8_1_1Compiler_1_1Token.html#a0208fedebd963328f5ccd1ebaefc6077',1,'Track8::Compiler::Token']]],
   ['literal_13',['literal',['../classTrack8_1_1Compiler_1_1Token.html#abb998384cb849195deef1557961c681a',1,'Track8::Compiler::Token']]],
   ['loadalbums_14',['loadAlbums',['../classTrack8_1_1Gui_1_1LibraryController.html#a833c68edab97239658b345fbbd9ad9ed',1,'Track8::Gui::LibraryController']]],
-  ['loadperformers_15',['loadPerformers',['../classTrack8_1_1Gui_1_1LibraryController.html#a6b16f6d1cde89ba5330f58932407da40',1,'Track8::Gui::LibraryController']]],
-  ['loadsongs_16',['loadSongs',['../classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4',1,'Track8::Gui::LibraryController']]]
+  ['loadartists_15',['loadArtists',['../classTrack8_1_1Gui_1_1LibraryController.html#af3c4826ca938ce327f298432d61957f6',1,'Track8::Gui::LibraryController']]],
+  ['loadperformers_16',['loadPerformers',['../classTrack8_1_1Gui_1_1LibraryController.html#a6b16f6d1cde89ba5330f58932407da40',1,'Track8::Gui::LibraryController']]],
+  ['loadsongs_17',['loadSongs',['../classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4',1,'Track8::Gui::LibraryController']]]
 ];

@@ -2,7 +2,8 @@ var classTrack8_1_1Gui_1_1PerformerListModel =
 [
     [ "Role", "classTrack8_1_1Gui_1_1PerformerListModel.html#ab99d93da89e41330aa450fd58dd97375", [
       [ "PerformerIdRole", "classTrack8_1_1Gui_1_1PerformerListModel.html#ab99d93da89e41330aa450fd58dd97375adedf63438016c79192e6e24ba1995ac2", null ],
-      [ "NameRole", "classTrack8_1_1Gui_1_1PerformerListModel.html#ab99d93da89e41330aa450fd58dd97375a4f77a5a67392990a32061131c26c66b2", null ]
+      [ "NameRole", "classTrack8_1_1Gui_1_1PerformerListModel.html#ab99d93da89e41330aa450fd58dd97375a4f77a5a67392990a32061131c26c66b2", null ],
+      [ "TypeRole", "classTrack8_1_1Gui_1_1PerformerListModel.html#ab99d93da89e41330aa450fd58dd97375ab4f2486a75577ad92db51338bdde91fd", null ]
     ] ],
     [ "PerformerListModel", "classTrack8_1_1Gui_1_1PerformerListModel.html#a476f061d0802b16b936b2bdb5d483d27", null ],
     [ "clear", "classTrack8_1_1Gui_1_1PerformerListModel.html#a332a65734cdc05e63950b22604906829", null ],

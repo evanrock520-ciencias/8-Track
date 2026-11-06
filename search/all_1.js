@@ -26,7 +26,7 @@ var searchData=
   ['artist_23',['artist',['../structTrack8_1_1Miner_1_1Covers.html#a22aa46bf72fcda82d0a535b0d2cecbdd',1,'Track8::Miner::Covers']]],
   ['artist_2ehpp_24',['Artist.hpp',['../Artist_8hpp.html',1,'']]],
   ['artistrole_25',['ArtistRole',['../classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a5b028a59bef271f1e149f9069f31e0be',1,'Track8::Gui::SongListModel']]],
-  ['artists_26',['artists',['../structTrack8_1_1App_1_1AppContext.html#a861c50da851f34dd4a766222c8d5d4ac',1,'Track8::App::AppContext']]],
+  ['artists_26',['artists',['../structTrack8_1_1App_1_1AppContext.html#a861c50da851f34dd4a766222c8d5d4ac',1,'Track8::App::AppContext::artists'],['../classTrack8_1_1Gui_1_1LibraryController.html#accf4683535de41114aa93d9e44072610',1,'Track8::Gui::LibraryController::artists'],['../classTrack8_1_1Gui_1_1LibraryController.html#a407a94d16071eed4844efa3dc56bdf42',1,'Track8::Gui::LibraryController::artists()'],['../classTrack8_1_1Services_1_1ArtistService.html#a4e03d5ec66162b11ad08259d7c8a6637',1,'Track8::Services::ArtistService::artists()']]],
   ['artistservice_27',['ArtistService',['../classTrack8_1_1Services_1_1ArtistService.html',1,'Track8::Services::ArtistService'],['../classTrack8_1_1Services_1_1ArtistService.html#a9bea0cc59d2a85b75073aad706f88580',1,'Track8::Services::ArtistService::ArtistService()']]],
   ['artistservice_2ehpp_28',['ArtistService.hpp',['../ArtistService_8hpp.html',1,'']]],
   ['asc_29',['ASC',['../namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78ac6e421eaad140c1bc1a39980502df80c',1,'Track8::Compiler::ASC'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fac6e421eaad140c1bc1a39980502df80c',1,'Track8::Compiler::ASC']]],

@@ -14,6 +14,7 @@ var searchData=
   ['m_5fsongscount_11',['m_songsCount',['../structTrack8_1_1Domain_1_1Stats.html#a5bfd04f7f11051d06dccc40365c7a264',1,'Track8::Domain::Stats']]],
   ['m_5ftitle_12',['m_title',['../structTrack8_1_1Miner_1_1Metadata.html#af1fd0e1f78910609720999b62dfd113a',1,'Track8::Miner::Metadata']]],
   ['m_5ftracknumber_13',['m_trackNumber',['../structTrack8_1_1Miner_1_1Metadata.html#ab50040d54245a1454b8846b3e3d03c7c',1,'Track8::Miner::Metadata']]],
-  ['m_5funknowncount_14',['m_unknownCount',['../structTrack8_1_1Domain_1_1Stats.html#a276dba618e07f7c15d60073429eb1d65',1,'Track8::Domain::Stats']]],
-  ['m_5fyear_15',['m_year',['../structTrack8_1_1Miner_1_1Metadata.html#a1fffc5d75599c6aed6617353e4e0451d',1,'Track8::Miner::Metadata']]]
+  ['m_5ftype_14',['m_type',['../classTrack8_1_1Domain_1_1Performer.html#a130ddbb9db4c1c8d06fc6ce3f7e40511',1,'Track8::Domain::Performer']]],
+  ['m_5funknowncount_15',['m_unknownCount',['../structTrack8_1_1Domain_1_1Stats.html#a276dba618e07f7c15d60073429eb1d65',1,'Track8::Domain::Stats']]],
+  ['m_5fyear_16',['m_year',['../structTrack8_1_1Miner_1_1Metadata.html#a1fffc5d75599c6aed6617353e4e0451d',1,'Track8::Miner::Metadata']]]
 ];
