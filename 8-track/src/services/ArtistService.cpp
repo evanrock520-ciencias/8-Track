@@ -1,5 +1,6 @@
 #include "services/ArtistService.hpp"
 
+#include <algorithm>
 #include <stdexcept>
 
 namespace Track8::Services {
@@ -90,6 +91,25 @@ void ArtistService::removeMember(const int groupId, const int personId) const {
         m_performers->removeFromGroup(groupId, personId);
     } catch (std::exception& exception) {
         throw std::runtime_error(exception.what());
+    }
+}
+
+void ArtistService::updateMembers(const int groupId,
+                                  const std::vector<int>& selectedIds) const {
+    const auto bandMembers = members(groupId);
+
+    for (const auto id : selectedIds) {
+        const bool alreadyMember =
+            std::ranges::any_of(bandMembers, [id](const auto& member) {
+                return member->id() == id;
+            });
+        if (!alreadyMember)
+            addMember(groupId, id);
+    }
+
+    for (const auto& member : bandMembers) {
+        if (std::ranges::find(selectedIds, member->id()) == selectedIds.end())
+            removeMember(groupId, member->id());
     }
 }
 

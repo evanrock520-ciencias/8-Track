@@ -84,6 +84,10 @@ public:
      */
     void removeMember(int groupId, int personId) const;
 
+    /** Actualiza las membresías para conservar únicamente los IDs
+     * seleccionados. */
+    void updateMembers(int groupId, const std::vector<int>& selectedIds) const;
+
     /**
      * Regresa los performers en la base de datos.
      * @return Los performers en la base de datos.
