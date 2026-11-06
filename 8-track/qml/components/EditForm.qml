@@ -20,6 +20,13 @@ Popup {
     property string startDate
     property string endDate
 
+    Component {
+        id: addMemberModalComponent
+        AddMemberModal {
+            onClosed: destroy()
+        }
+    }
+
     function openFor(id) {
         const data = Library.performerDetails(id);
         performerId = data.id;
@@ -295,6 +302,12 @@ Popup {
                 Layout.bottomMargin: Theme.modalPaddingX
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/artist.svg"
                 text: "Add Member"
+
+                onClicked: {
+                    const modal = addMemberModalComponent.createObject(root);
+                    modal.open();
+                }
+
                 fillColor: Theme.blue
                 visible: root.selectedType === 1
             }
