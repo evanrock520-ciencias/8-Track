@@ -87,6 +87,9 @@ public:
                                    const QString& deathDate,
                                    const QString& startDate,
                                    const QString& endDate);
+    Q_INVOKABLE QList<int> members(int bandId) const;
+    Q_INVOKABLE void updateMembers(int bandId,
+                                   const QList<int>& selectedIds) const;
 
 signals:
     void statsChanged();

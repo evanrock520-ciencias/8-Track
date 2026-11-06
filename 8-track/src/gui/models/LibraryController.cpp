@@ -178,4 +178,23 @@ bool LibraryController::savePerformer(
     }
 }
 
+QList<int> LibraryController::members(const int bandId) const {
+    const auto bandMembers = m_artists.members(bandId);
+    auto ids = bandMembers | std::views::transform([](const auto& artist) {
+                   return artist->id();
+               });
+
+    QList<int> result;
+    result.reserve(std::ranges::distance(ids));
+
+    std::ranges::copy(ids, std::back_inserter(result));
+    return result;
+}
+
+void LibraryController::updateMembers(const int bandId,
+                                      const QList<int>& selectedIds) const {
+    m_artists.updateMembers(
+        bandId, std::vector<int>(selectedIds.begin(), selectedIds.end()));
+}
+
 } // namespace Track8::Gui

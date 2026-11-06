@@ -304,12 +304,14 @@ Popup {
                 text: "Add Member"
 
                 onClicked: {
-                    const modal = addMemberModalComponent.createObject(root);
+                    const modal = addMemberModalComponent.createObject(root, {
+                        bandId: root.performerId
+                    });
                     modal.open();
                 }
 
                 fillColor: Theme.blue
-                visible: root.selectedType === 1
+                visible: root.originalType === 1
             }
 
             Item {
