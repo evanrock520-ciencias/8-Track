@@ -4,6 +4,15 @@
 
 namespace Track8::Gui {
 
+namespace {
+Domain::Date toDate(const QString& value) {
+    const auto text = value.trimmed().toStdString();
+    if (text.empty())
+        return Domain::Date("0000-00-00");
+    return Domain::Date(text);
+}
+} // namespace
+
 LibraryController::LibraryController(Services::LibraryService& library,
                                      Services::SearchService& search,
                                      Services::ArtistService& artists,
@@ -29,6 +38,10 @@ void LibraryController::loadAlbums() {
 
 void LibraryController::loadPerformers() {
     m_performersModel.setPerformers(m_artists.performers());
+}
+
+void LibraryController::loadArtists() {
+    m_artistsModel.setPerformers(m_artists.artists());
 }
 
 void LibraryController::refresh() {
@@ -76,6 +89,112 @@ QString LibraryController::performerCover(const QString& name) const {
 
     return QUrl::fromLocalFile(QString::fromStdString(cover.string()))
         .toString();
+}
+
+QVariantMap LibraryController::performerDetails(const int id) const {
+    const auto performer = m_artists.find(id);
+    if (!performer)
+        return {};
+
+    QVariantMap data{
+        {"id", performer->id()},
+        {"name", QString::fromStdString(performer->name())},
+        {"type", static_cast<int>(performer->type())},
+    };
+
+    if (const auto artist =
+            std::dynamic_pointer_cast<Domain::Artist>(performer)) {
+        data["realName"] = QString::fromStdString(artist->real_name());
+        data["birthDate"] =
+            QString::fromStdString(artist->birth_date().asString());
+        data["deathDate"] =
+            artist->death_date()
+                ? QString::fromStdString(artist->death_date()->asString())
+                : QString{};
+    } else if (const auto group =
+                   std::dynamic_pointer_cast<Domain::Group>(performer)) {
+        data["startDate"] =
+            QString::fromStdString(group->start_date().asString());
+        data["endDate"] =
+            group->end_date()
+                ? QString::fromStdString(group->end_date()->asString())
+                : QString{};
+    }
+
+    return data;
+}
+
+bool LibraryController::savePerformer(
+    const int id, const QString& name, const int selectedType,
+    const QString& realName, const QString& birthDate, const QString& deathDate,
+    const QString& startDate, const QString& endDate) {
+    try {
+        const auto original = m_artists.find(id);
+        if (!original)
+            return false;
+
+        const auto newType = static_cast<Domain::PerformerType>(selectedType);
+        const auto stdName = name.trimmed().toStdString();
+
+        m_artists.updatePerformer(Domain::Performer(id, stdName, newType));
+
+        if (newType != original->type()) {
+            switch (newType) {
+            case Domain::PerformerType::Person:
+                m_artists.markAsPerson(id);
+                break;
+            case Domain::PerformerType::Group:
+                m_artists.markAsGroup(id);
+                break;
+            default:
+                m_artists.markAsUnknown(id);
+                break;
+            }
+        }
+
+        switch (newType) {
+        case Domain::PerformerType::Person: {
+            const Domain::Artist artist(id, stdName, realName.toStdString(),
+                                        toDate(birthDate), toDate(deathDate));
+            m_artists.updatePerson(artist);
+            break;
+        }
+        case Domain::PerformerType::Group: {
+            const Domain::Group group(id, stdName, toDate(startDate),
+                                      toDate(endDate));
+            m_artists.updateGroup(group);
+            break;
+        }
+        default:
+            break;
+        }
+
+        loadPerformers();
+        refresh();
+        return true;
+    } catch (const std::exception& e) {
+        qWarning() << "savePerformer:" << e.what();
+        return false;
+    }
+}
+
+QList<int> LibraryController::members(const int bandId) const {
+    const auto bandMembers = m_artists.members(bandId);
+    auto ids = bandMembers | std::views::transform([](const auto& artist) {
+                   return artist->id();
+               });
+
+    QList<int> result;
+    result.reserve(std::ranges::distance(ids));
+
+    std::ranges::copy(ids, std::back_inserter(result));
+    return result;
+}
+
+void LibraryController::updateMembers(const int bandId,
+                                      const QList<int>& selectedIds) const {
+    m_artists.updateMembers(
+        bandId, std::vector<int>(selectedIds.begin(), selectedIds.end()));
 }
 
 } // namespace Track8::Gui

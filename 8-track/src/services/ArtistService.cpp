@@ -1,5 +1,6 @@
 #include "services/ArtistService.hpp"
 
+#include <algorithm>
 #include <stdexcept>
 
 namespace Track8::Services {
@@ -38,6 +39,21 @@ void ArtistService::markAsGroup(const std::string& name) const {
     markAsGroup(performer->id());
 }
 
+void ArtistService::markAsUnknown(const int id) const {
+    try {
+        m_performers->markAsUnknown(id);
+    } catch (std::exception& exception) {
+        throw std::runtime_error(exception.what());
+    }
+}
+
+void ArtistService::markAsUnknown(const std::string& name) const {
+    const auto performer = m_performers->find(name);
+    if (!performer)
+        throw std::runtime_error("Performer with name " + name + " not found");
+    markAsUnknown(performer->id());
+}
+
 void ArtistService::updatePerson(const Domain::Artist& person) const {
     try {
         m_performers->update(person);
@@ -49,6 +65,14 @@ void ArtistService::updatePerson(const Domain::Artist& person) const {
 void ArtistService::updateGroup(const Domain::Group& group) const {
     try {
         m_performers->update(group);
+    } catch (std::exception& exception) {
+        throw std::runtime_error(exception.what());
+    }
+}
+
+void ArtistService::updatePerformer(const Domain::Performer& performer) const {
+    try {
+        m_performers->update(performer);
     } catch (std::exception& exception) {
         throw std::runtime_error(exception.what());
     }
@@ -67,6 +91,25 @@ void ArtistService::removeMember(const int groupId, const int personId) const {
         m_performers->removeFromGroup(groupId, personId);
     } catch (std::exception& exception) {
         throw std::runtime_error(exception.what());
+    }
+}
+
+void ArtistService::updateMembers(const int groupId,
+                                  const std::vector<int>& selectedIds) const {
+    const auto bandMembers = members(groupId);
+
+    for (const auto id : selectedIds) {
+        const bool alreadyMember =
+            std::ranges::any_of(bandMembers, [id](const auto& member) {
+                return member->id() == id;
+            });
+        if (!alreadyMember)
+            addMember(groupId, id);
+    }
+
+    for (const auto& member : bandMembers) {
+        if (std::ranges::find(selectedIds, member->id()) == selectedIds.end())
+            removeMember(groupId, member->id());
     }
 }
 
@@ -92,6 +135,10 @@ ArtistService::groupsOfPerson(const int personId) const {
 std::vector<std::shared_ptr<Domain::Performer>>
 ArtistService::performers() const {
     return m_performers->getAll();
+}
+
+std::vector<std::shared_ptr<Domain::Performer>> ArtistService::artists() const {
+    return m_performers->getArtists();
 }
 
 } // namespace Track8::Services

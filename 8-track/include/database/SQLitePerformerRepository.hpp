@@ -29,6 +29,8 @@ public:
 
     void markAsArtist(int id) override;
 
+    void markAsUnknown(int id) override;
+
     void addToGroup(int groupId, int performerId) override;
 
     void removeFromGroup(int groupId, int performerId) override;
@@ -48,6 +50,8 @@ public:
     void update(const Domain::Group& group) override;
 
     std::vector<std::shared_ptr<Domain::Performer>> getAll() override;
+
+    std::vector<std::shared_ptr<Domain::Performer>> getArtists() override;
 
     unsigned int count() override;
 

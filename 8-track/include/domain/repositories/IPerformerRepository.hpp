@@ -52,6 +52,11 @@ public:
     virtual void markAsArtist(int id) = 0;
 
     /**
+     * Marca a un intérprete como desconocido (`unknown`).
+     */
+    virtual void markAsUnknown(int id) = 0;
+
+    /**
      * Añade a un artista como miembro de una banda.
      * @param groupId El id de la banda en la tabla de `performers`.
      * @param performerId El id del artista en la tabla de `performers`.
@@ -111,6 +116,12 @@ public:
      * @return Todos los intérpretes de la base de datos.
      */
     virtual std::vector<std::shared_ptr<Domain::Performer>> getAll() = 0;
+
+    /**
+     * Regresa todos los intérpretes del tipo `person`.
+     * @return Todos los intérpretes del tipo `person`.
+     */
+    virtual std::vector<std::shared_ptr<Domain::Performer>> getArtists() = 0;
 
     /**
      * Regresa la cantidad de intérpretes en la base de datos.

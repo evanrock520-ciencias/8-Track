@@ -22,6 +22,8 @@ QVariant PerformerListModel::data(const QModelIndex& index, int role) const {
         return performer->id();
     case NameRole:
         return QString::fromStdString(performer->name());
+    case TypeRole:
+        return static_cast<int>(performer->type());
     default:
         return {};
     }
@@ -50,7 +52,9 @@ void PerformerListModel::setPerformers(
 }
 
 QHash<int, QByteArray> PerformerListModel::roleNames() const {
-    return {{PerformerIdRole, "performerId"}, {NameRole, "name"}};
+    return {{PerformerIdRole, "performerId"},
+            {NameRole, "name"},
+            {TypeRole, "type"}};
 }
 
 void PerformerListModel::clear() {

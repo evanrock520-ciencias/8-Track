@@ -37,6 +37,19 @@ public:
     void markAsGroup(const std::string& name) const;
 
     /**
+     * Actualiza el tipo de un intérprete a `unknown`.
+     * @param id El id del intérprete.
+     */
+    void markAsUnknown(int id) const;
+
+    /**
+     * Actualiza el tipo de un intérprete a `unknown`.
+     * @param name El nombre del intérprete.
+     * @throws std::runtime_error Si no existe un intérprete con ese nombre.
+     */
+    void markAsUnknown(const std::string& name) const;
+
+    /**
      * Actualiza los valores de un intérprete de tipo `person` en la base de
      * datos.
      * @param person La `person` con valores actualizados.
@@ -49,6 +62,13 @@ public:
      * @param group El `group` con valores actualizados.
      */
     void updateGroup(const Domain::Group& group) const;
+
+    /**
+     * Actualiza los datos de un intérprete de tipo `unknown` en la base de
+     * datos.
+     * @param performer El `performer` con valores actualizados.
+     */
+    void updatePerformer(const Domain::Performer& performer) const;
 
     /**
      * Añade un miembro a un grupo (relación en la tabla in_group).
@@ -64,12 +84,19 @@ public:
      */
     void removeMember(int groupId, int personId) const;
 
+    /** Actualiza las membresías para conservar únicamente los IDs
+     * seleccionados. */
+    void updateMembers(int groupId, const std::vector<int>& selectedIds) const;
+
     /**
      * Regresa los performers en la base de datos.
      * @return Los performers en la base de datos.
      */
     [[nodiscard]] std::vector<std::shared_ptr<Domain::Performer>>
     performers() const;
+
+    [[nodiscard]] std::vector<std::shared_ptr<Domain::Performer>>
+    artists() const;
 
     /**
      * Encuentra el intérprete relacionado a un `id`

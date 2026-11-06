@@ -225,3 +225,21 @@ TEST_F(SQLitePerformerRepositoryTest, GetAll) {
         ASSERT_EQ(*performerRepo, performer);
     }
 }
+
+TEST_F(SQLitePerformerRepositoryTest, GetAllArtists) {
+    using namespace Track8::Domain;
+    constexpr int PERFORMERS = 100;
+
+    for (int id = 1; id < PERFORMERS + 1; ++id)
+        m_repository->save("Performer" + std::to_string(id));
+
+    const auto all = m_repository->getAll();
+
+    for (const auto& performer : all) {
+        if (const int id = performer->id(); id % 2 == 0)
+            m_repository->markAsArtist(id);
+    }
+
+    const auto artists = m_repository->getArtists();
+    ASSERT_EQ(artists.size(), PERFORMERS / 2);
+}

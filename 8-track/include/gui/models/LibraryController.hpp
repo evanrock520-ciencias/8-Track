@@ -30,6 +30,7 @@ class LibraryController : public QObject {
     Q_PROPERTY(QString searchError READ searchError NOTIFY searchErrorChanged)
     Q_PROPERTY(AlbumListModel* albums READ albums CONSTANT);
     Q_PROPERTY(PerformerListModel* performers READ performers CONSTANT);
+    Q_PROPERTY(PerformerListModel* artists READ artists CONSTANT);
 
 public:
     explicit LibraryController(Services::LibraryService& library,
@@ -67,16 +68,28 @@ public:
     [[nodiscard]] PerformerListModel* performers() {
         return &m_performersModel;
     }
+    [[nodiscard]] PerformerListModel* artists() { return &m_artistsModel; }
 
     Q_INVOKABLE void search(const QString& query);
     Q_INVOKABLE void clearSearch();
     Q_INVOKABLE void loadSongs();
     Q_INVOKABLE void loadAlbums();
     Q_INVOKABLE void loadPerformers();
+    Q_INVOKABLE void loadArtists();
     Q_INVOKABLE void refresh();
     Q_INVOKABLE QString albumCover(const QString& path,
                                    const QString& name) const;
     Q_INVOKABLE QString performerCover(const QString& name) const;
+    Q_INVOKABLE QVariantMap performerDetails(int id) const;
+    Q_INVOKABLE bool savePerformer(int id, const QString& name,
+                                   int selectedType, const QString& realName,
+                                   const QString& birthDate,
+                                   const QString& deathDate,
+                                   const QString& startDate,
+                                   const QString& endDate);
+    Q_INVOKABLE QList<int> members(int bandId) const;
+    Q_INVOKABLE void updateMembers(int bandId,
+                                   const QList<int>& selectedIds) const;
 
 signals:
     void statsChanged();
@@ -88,6 +101,7 @@ private:
     SongListModel m_searchModel;
     AlbumListModel m_albumsModel;
     PerformerListModel m_performersModel;
+    PerformerListModel m_artistsModel;
     Services::LibraryService& m_library;
     Services::SearchService& m_search;
     Services::ArtistService& m_artists;
