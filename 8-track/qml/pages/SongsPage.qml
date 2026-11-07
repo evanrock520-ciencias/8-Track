@@ -32,6 +32,8 @@ Item {
             year: model.year
             path: model.path
 
+            onPlayClicked: Playback.playFor(songsList.model, index)
+
             width: ListView.view.width
         }
     }

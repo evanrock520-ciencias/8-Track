@@ -32,10 +32,7 @@ Item {
 
         RowPlayButton {
             Layout.alignment: Qt.AlignVCenter
-            onClicked: {
-                Playback.load(root.path);
-                Playback.play();
-            }
+            onClicked: root.playClicked()
         }
 
         Text {
