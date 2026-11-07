@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
         context.library, context.search, context.artists);
     Track8::Gui::ScanController scanController(databaseDir.toStdString(),
                                                coversDir);
-    Track8::Gui::PlaybackController playbackController;
+    Track8::Gui::PlaybackController playbackController(context.library);
 
     QObject::connect(&scanController, &Track8::Gui::ScanController::finished,
                      &libraryController,
