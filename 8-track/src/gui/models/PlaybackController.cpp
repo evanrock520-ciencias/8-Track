@@ -135,12 +135,20 @@ void PlaybackController::togglePlayback() const {
         m_backend->play();
 }
 
-qint64 PlaybackController::duration() {
+qint64 PlaybackController::duration() const {
     return m_duration;
 }
 
-qint64 PlaybackController::position() {
+qint64 PlaybackController::position() const {
     return m_position;
+}
+
+void PlaybackController::seek(const qint64 position) const {
+    m_backend->seek(position);
+}
+
+void PlaybackController::setVolume(const qint16 volume) const {
+    m_backend->setVolume(volume / 100.0);
 }
 
 } // namespace Track8::Gui

@@ -45,6 +45,7 @@ Item {
             Layout.fillWidth: true
             duration: Playback.duration
             position: Playback.position
+            onSeekRequested: ms => Playback.seek(ms)
         }
     }
 }

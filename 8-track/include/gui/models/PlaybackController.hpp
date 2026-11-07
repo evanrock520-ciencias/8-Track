@@ -25,6 +25,8 @@ public:
     Q_INVOKABLE void previous();
     Q_INVOKABLE void playFor(const SongListModel* model, int idx);
     Q_INVOKABLE void togglePlayback() const;
+    Q_INVOKABLE void seek(qint64 position) const;
+    Q_INVOKABLE void setVolume(qint16 volume) const;
 
     explicit PlaybackController(Services::LibraryService& library,
                                 QObject* parent = nullptr);
@@ -33,8 +35,8 @@ public:
     [[nodiscard]] QString artist() const;
     [[nodiscard]] QString album() const;
     [[nodiscard]] QUrl cover() const;
-    [[nodiscard]] qint64 duration();
-    [[nodiscard]] qint64 position();
+    [[nodiscard]] qint64 duration() const;
+    [[nodiscard]] qint64 position() const;
     [[nodiscard]] bool playing();
 
 signals:

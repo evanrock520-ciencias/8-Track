@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Item {
     RowLayout {
@@ -12,6 +13,7 @@ Item {
         VolumeControl {
             Layout.alignment: Qt.AlignVCenter
             Layout.fillWidth: true
+            onVolumeRequest: volume => Playback.setVolume(volume)
         }
         SimpleButton {
             Layout.alignment: Qt.AlignVCenter
