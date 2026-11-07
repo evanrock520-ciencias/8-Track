@@ -109,6 +109,16 @@ target_include_directories(cli PUBLIC
 
 target_link_libraries(cli PRIVATE services argparse tabulate indicators app)
 
+# Biblioteca del reproductor
+add_library(player
+    src/player/Queue.cpp
+)
+
+target_link_libraries(player PUBLIC
+        Qt6::Multimedia
+        domain
+)
+
 # Biblioteca de la GUI
 add_library(gui
         include/gui/models/LibraryController.hpp
@@ -131,6 +141,7 @@ target_link_libraries(gui PUBLIC
         Qt6::Core
         services
         domain
+        player
 )
 
 target_link_libraries(gui PRIVATE
