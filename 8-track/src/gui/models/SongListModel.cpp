@@ -1,5 +1,7 @@
 #include "gui/models/SongListModel.hpp"
 
+#include <QUrl>
+
 namespace Track8::Gui {
 
 SongListModel::SongListModel(QObject* parent) : QAbstractListModel(parent) {}
@@ -32,6 +34,9 @@ QVariant SongListModel::data(const QModelIndex& index, const int role) const {
         return QString::fromStdString(song->genre());
     case YearRole:
         return song->year();
+    case PathRole:
+        return QUrl::fromLocalFile(
+            QString::fromStdString(song->path().string()));
     default:
         return {};
     }
@@ -40,7 +45,8 @@ QVariant SongListModel::data(const QModelIndex& index, const int role) const {
 QHash<int, QByteArray> SongListModel::roleNames() const {
     return {{SongIdRole, "songId"}, {TitleRole, "title"},
             {ArtistRole, "artist"}, {AlbumRole, "album"},
-            {GenreRole, "genre"},   {YearRole, "year"}};
+            {GenreRole, "genre"},   {YearRole, "year"},
+            {PathRole, "path"}};
 }
 
 void SongListModel::setSongs(std::vector<std::shared_ptr<Domain::Song>> songs) {

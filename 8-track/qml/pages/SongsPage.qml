@@ -30,6 +30,7 @@ Item {
             artist: model.artist
             album: model.album
             year: model.year
+            path: model.path
 
             width: ListView.view.width
         }
