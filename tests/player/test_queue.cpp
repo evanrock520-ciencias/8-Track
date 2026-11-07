@@ -56,7 +56,7 @@ TEST_F(QueueTest, FollowsInsertionOrder) {
     ASSERT_EQ(queue->size(), m_songs.size());
 
     for (const auto& expected : m_songs) {
-        EXPECT_EQ(queue->current().id(), expected.id());
+        EXPECT_EQ(queue->current().value().id(), expected.id());
         queue->next();
     }
 }
@@ -64,7 +64,7 @@ TEST_F(QueueTest, FollowsInsertionOrder) {
 TEST_F(QueueTest, NextAdvancesSong) {
     queue->next();
 
-    EXPECT_EQ(queue->current().id(), m_songs[1].id());
+    EXPECT_EQ(queue->current().value().id(), m_songs[1].id());
 }
 
 TEST_F(QueueTest, PlayNext) {
@@ -72,9 +72,9 @@ TEST_F(QueueTest, PlayNext) {
     const Song song = builder.with_id(11).with_title("Dagger").create();
     queue->playNext(song);
 
-    EXPECT_EQ(queue->current().id(), m_songs.front().id());
+    EXPECT_EQ(queue->current().value().id(), m_songs.front().id());
     queue->next();
-    EXPECT_EQ(queue->current().id(), song.id());
+    EXPECT_EQ(queue->current().value().id(), song.id());
 }
 
 TEST_F(QueueTest, UserAddSongToQueue) {
@@ -82,19 +82,19 @@ TEST_F(QueueTest, UserAddSongToQueue) {
     const Song song = builder.with_id(11).with_title("Dagger").create();
     queue->userAddSong(song);
 
-    EXPECT_EQ(queue->current().id(), m_songs.front().id());
+    EXPECT_EQ(queue->current().value().id(), m_songs.front().id());
     queue->next();
 
-    EXPECT_EQ(queue->current().id(), song.id());
+    EXPECT_EQ(queue->current().value().id(), song.id());
     queue->next();
-    EXPECT_EQ(queue->current().id(), m_songs[1].id());
+    EXPECT_EQ(queue->current().value().id(), m_songs[1].id());
 }
 
 TEST_F(QueueTest, EnableShuffle) {
-    const auto currentId = queue->current().id();
+    const auto currentId = queue->current().value().id();
     queue->shuffle();
 
-    EXPECT_EQ(queue->current().id(), currentId);
+    EXPECT_EQ(queue->current().value().id(), currentId);
     EXPECT_EQ(queue->size(), m_songs.size());
 
     auto shuffled = queue->songsInQueue();
@@ -111,7 +111,7 @@ TEST_F(QueueTest, DisableShuffle) {
     queue->disableShuffle();
 
     for (const auto& song : m_songs) {
-        EXPECT_EQ(queue->current().id(), song.id());
+        EXPECT_EQ(queue->current().value().id(), song.id());
         queue->next();
     }
 }
@@ -120,7 +120,7 @@ TEST_F(QueueTest, PreviousSong) {
     const auto song = queue->current();
     queue->next();
     queue->previous();
-    EXPECT_EQ(queue->current().id(), song.id());
+    EXPECT_EQ(queue->current().value().id(), song.value().id());
 }
 
 TEST_F(QueueTest, RemoveSong) {
