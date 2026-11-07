@@ -1,5 +1,6 @@
 #include "app/AppContext.hpp"
 #include "gui/models/LibraryController.hpp"
+#include "gui/models/PlaybackController.hpp"
 #include "gui/models/ScanController.hpp"
 
 #include <QGuiApplication>
@@ -25,6 +26,7 @@ int main(int argc, char** argv) {
         context.library, context.search, context.artists);
     Track8::Gui::ScanController scanController(databaseDir.toStdString(),
                                                coversDir);
+    Track8::Gui::PlaybackController playbackController;
 
     QObject::connect(&scanController, &Track8::Gui::ScanController::finished,
                      &libraryController,
@@ -47,6 +49,9 @@ int main(int argc, char** argv) {
 
     qmlRegisterSingletonInstance("Track8.Backend", 1, 0, "Scan",
                                  &scanController);
+
+    qmlRegisterSingletonInstance("Track8.Backend", 1, 0, "Playback",
+                                 &playbackController);
 
     QQmlApplicationEngine engine;
     engine.loadFromModule("Track8", "Main");
