@@ -112,6 +112,7 @@ target_link_libraries(cli PRIVATE services argparse tabulate indicators app)
 # Biblioteca del reproductor
 add_library(player
     src/player/Queue.cpp
+        src/player/QtMultimediaBackend.cpp
 )
 
 target_link_libraries(player PUBLIC
