@@ -88,4 +88,24 @@ void PlaybackController::playFor(const SongListModel* model, const int idx) {
     m_backend->play();
 }
 
+void PlaybackController::next() {
+    m_queue.next();
+    if (m_queue.current()) {
+        m_backend->load(m_queue.current()->path());
+        m_backend->play();
+        emit currentSongChanged();
+    }
+}
+
+void PlaybackController::previous() {
+    m_queue.previous();
+    if (m_queue.current()) {
+        m_backend->load(m_queue.current()->path());
+        m_backend->play();
+        emit currentSongChanged();
+    }
+}
+
+void PlaybackController::pause() const {}
+
 } // namespace Track8::Gui

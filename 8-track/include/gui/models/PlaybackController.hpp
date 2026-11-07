@@ -19,6 +19,9 @@ public:
 
     Q_INVOKABLE void load(const QUrl& path) const;
     Q_INVOKABLE void play() const;
+    Q_INVOKABLE void pause() const;
+    Q_INVOKABLE void next();
+    Q_INVOKABLE void previous();
     Q_INVOKABLE void playFor(const SongListModel* model, int idx);
 
     explicit PlaybackController(Services::LibraryService& library,

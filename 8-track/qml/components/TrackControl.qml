@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Item {
     id: root
@@ -30,10 +31,12 @@ Item {
             }
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-back.svg"
+                onClicked: Playback.previous()
             }
             StateButton {}
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-forward.svg"
+                onClicked: Playback.next()
             }
         }
         PlaybackProgress {
