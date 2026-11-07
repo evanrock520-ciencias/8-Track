@@ -23,7 +23,8 @@ public:
         ArtistRole,
         AlbumRole,
         GenreRole,
-        YearRole
+        YearRole,
+        PathRole
     };
     Q_ENUM(Role)
 

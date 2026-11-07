@@ -22,6 +22,7 @@ Item {
             artist: model.artist
             title: model.title
             width: ListView.view.width
+            onPlayClicked: Playback.playFor(songsList.model, index)
             year: model.year
         }
         header: SongTableHeader {

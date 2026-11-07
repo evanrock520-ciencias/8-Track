@@ -48,8 +48,8 @@ NeobrutalistBox {
                 fillMode: Image.PreserveAspectCrop
                 mipmap: true
                 source: root.cover
-                sourceSize.height: Theme.albumImageSize
-                sourceSize.width: Theme.albumImageSize
+                sourceSize.height: Theme.albumImageSize * Screen.devicePixelRatio
+                sourceSize.width: Theme.albumImageSize * Screen.devicePixelRatio
             }
             Rectangle {
                 anchors.fill: parent

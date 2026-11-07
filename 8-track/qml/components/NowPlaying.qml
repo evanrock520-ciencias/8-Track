@@ -26,12 +26,17 @@ Item {
         Rectangle {
             Layout.preferredHeight: Theme.nowPlayingCoverSize
             Layout.preferredWidth: Theme.nowPlayingCoverSize
-            color: Theme.blue
+            color: Theme.cream
 
             Image {
                 anchors.fill: parent
+                anchors.margins: Theme.borderWidth
+                asynchronous: true
                 fillMode: Image.PreserveAspectCrop
+                mipmap: true
                 source: root.cover
+                sourceSize.width: width * Screen.devicePixelRatio
+                sourceSize.height: height * Screen.devicePixelRatio
             }
         }
         ColumnLayout {
