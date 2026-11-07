@@ -132,6 +132,8 @@ add_library(gui
         src/gui/models/AlbumListModel.cpp
         include/gui/models/PerformerListModel.hpp
         src/gui/models/PerformerListModel.cpp
+        include/gui/models/PlaybackController.hpp
+        src/gui/models/PlaybackController.cpp
 )
 
 target_include_directories(gui PUBLIC
