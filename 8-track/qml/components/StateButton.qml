@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls.Basic
 import QtQuick.Controls.impl
 import Track8
+import Track8.Backend
 
 AbstractButton {
     id: root
@@ -13,7 +14,7 @@ AbstractButton {
     display: AbstractButton.IconOnly
     icon.color: Theme.cream
     icon.height: Theme.playbackButtonIconSize
-    icon.source: checked ? "qrc:/qt/qml/Track8/resources/icons/pause.svg" : "qrc:/qt/qml/Track8/resources/icons/play.svg"
+    icon.source: Playback.playing ? "qrc:/qt/qml/Track8/resources/icons/pause.svg" : "qrc:/qt/qml/Track8/resources/icons/play.svg"
     icon.width: Theme.playbackButtonIconSize
     implicitHeight: Theme.playbackButtonRadius
     implicitWidth: Theme.playbackButtonRadius

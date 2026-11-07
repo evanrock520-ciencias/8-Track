@@ -5,6 +5,8 @@
 
 namespace Track8::Player {
 
+enum class PlaybackState { Stopped, Playing, Paused };
+
 /**
  * @class IAudioBackend
  * @brief Interfaz para reproductores de audio.
@@ -47,6 +49,15 @@ public:
     virtual void seek(int64_t positionMs) = 0;
 
     virtual void onFinished(std::function<void()> callback) = 0;
+
+    virtual void
+    onStateChanged(std::function<void(PlaybackState)> callback) = 0;
+
+    virtual void
+    onDurationChanged(std::function<void(std::int64_t)> callback) = 0;
+
+    virtual void
+    onPositionChanged(std::function<void(std::int64_t)> callback) = 0;
 };
 
 } // namespace Track8::Player

@@ -33,7 +33,9 @@ Item {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-back.svg"
                 onClicked: Playback.previous()
             }
-            StateButton {}
+            StateButton {
+                onClicked: Playback.togglePlayback()
+            }
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-forward.svg"
                 onClicked: Playback.next()
@@ -41,8 +43,8 @@ Item {
         }
         PlaybackProgress {
             Layout.fillWidth: true
-            duration: 315000
-            position: 138000
+            duration: Playback.duration
+            position: Playback.position
         }
     }
 }

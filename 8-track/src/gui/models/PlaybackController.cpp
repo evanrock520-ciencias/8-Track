@@ -13,6 +13,16 @@ PlaybackController::PlaybackController(Services::LibraryService& library,
       m_queue({}),
       m_backend(std::make_unique<Player::QtMultimediaBackend>()),
       m_library(library) {
+    m_backend->onDurationChanged([this](std::int64_t duration) {
+        m_duration = duration;
+        emit durationChanged();
+    });
+
+    m_backend->onPositionChanged([this](std::int64_t position) {
+        m_position = position;
+        emit currentPositionChanged();
+    });
+
     m_backend->onFinished([this] {
         m_queue.next();
 
@@ -60,10 +70,6 @@ void PlaybackController::load(const QUrl& path) const {
     m_backend->load(path.toLocalFile().toStdString());
 }
 
-void PlaybackController::play() const {
-    m_backend->play();
-}
-
 void PlaybackController::playFor(const SongListModel* model, const int idx) {
     if (!model || idx < 0 || idx >= model->count())
         return;
@@ -106,6 +112,35 @@ void PlaybackController::previous() {
     }
 }
 
-void PlaybackController::pause() const {}
+bool PlaybackController::playing() {
+    m_backend->onStateChanged([this](const Player::PlaybackState state) {
+        const bool playing = state == Player::PlaybackState::Playing;
+        if (m_playing == playing)
+            return;
+
+        m_playing = playing;
+        emit playbackStateChanged();
+    });
+
+    return m_playing;
+}
+
+void PlaybackController::togglePlayback() const {
+    if (!m_queue.current())
+        return;
+
+    if (m_playing)
+        m_backend->pause();
+    else
+        m_backend->play();
+}
+
+qint64 PlaybackController::duration() {
+    return m_duration;
+}
+
+qint64 PlaybackController::position() {
+    return m_position;
+}
 
 } // namespace Track8::Gui
