@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <stdexcept>
 
 #include "player/Queue.hpp"
 
@@ -68,10 +67,8 @@ void Queue::shuffle() {
     std::ranges::shuffle(m_queue, m_rng);
 }
 
-Domain::Song Queue::current() {
-    if (!m_current)
-        throw std::out_of_range("queue has no current song");
-    return *m_current;
+std::optional<Domain::Song> Queue::current() const {
+    return m_current;
 }
 
 void Queue::disableShuffle() {

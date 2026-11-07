@@ -18,9 +18,9 @@ public:
 
     /**
      * Regresa la canción actual.
-     * @return La canción actual.
+     * @return La canción actual, o std::nullopt si no hay ninguna.
      */
-    Domain::Song current();
+    [[nodiscard]] std::optional<Domain::Song> current() const;
 
     /**
      * Mueve el índice a la siguiente canción.
