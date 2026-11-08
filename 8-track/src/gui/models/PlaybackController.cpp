@@ -92,6 +92,8 @@ void PlaybackController::playFor(const SongListModel* model, const int idx) {
     m_backend->load(song->path());
     emit currentSongChanged();
     m_backend->play();
+    if (m_shuffleEnabled)
+        m_queue.shuffle();
 }
 
 void PlaybackController::next() {
@@ -149,6 +151,21 @@ void PlaybackController::seek(const qint64 position) const {
 
 void PlaybackController::setVolume(const qint16 volume) const {
     m_backend->setVolume(volume / 100.0);
+}
+
+void PlaybackController::toggleShuffle() {
+    m_shuffleEnabled = !m_shuffleEnabled;
+
+    if (m_shuffleEnabled)
+        m_queue.shuffle();
+    else
+        m_queue.disableShuffle();
+
+    emit shuffleEnabledChanged();
+}
+
+bool PlaybackController::shuffleEnabled() const {
+    return m_shuffleEnabled;
 }
 
 } // namespace Track8::Gui

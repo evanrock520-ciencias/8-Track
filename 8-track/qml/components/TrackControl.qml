@@ -27,7 +27,9 @@ Item {
 
             SimpleButton {
                 checkable: true
+                checked: Playback.shuffleEnabled
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/shuffle.svg"
+                onClicked: Playback.toggleShuffle()
             }
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-back.svg"

@@ -19,12 +19,15 @@ public:
     Q_PROPERTY(bool playing READ playing NOTIFY playbackStateChanged)
     Q_PROPERTY(qint64 duration READ duration NOTIFY durationChanged)
     Q_PROPERTY(qint64 position READ position NOTIFY currentPositionChanged)
+    Q_PROPERTY(
+        bool shuffleEnabled READ shuffleEnabled NOTIFY shuffleEnabledChanged)
 
     Q_INVOKABLE void load(const QUrl& path) const;
     Q_INVOKABLE void next();
     Q_INVOKABLE void previous();
     Q_INVOKABLE void playFor(const SongListModel* model, int idx);
     Q_INVOKABLE void togglePlayback() const;
+    Q_INVOKABLE void toggleShuffle();
     Q_INVOKABLE void seek(qint64 position) const;
     Q_INVOKABLE void setVolume(qint16 volume) const;
 
@@ -38,12 +41,14 @@ public:
     [[nodiscard]] qint64 duration() const;
     [[nodiscard]] qint64 position() const;
     [[nodiscard]] bool playing();
+    [[nodiscard]] bool shuffleEnabled() const;
 
 signals:
     void currentSongChanged();
     void playbackStateChanged();
     void durationChanged();
     void currentPositionChanged();
+    void shuffleEnabledChanged();
 
 private:
     Player::Queue m_queue;
@@ -52,6 +57,7 @@ private:
     bool m_playing = false;
     qint64 m_duration = 0;
     qint64 m_position = 0;
+    bool m_shuffleEnabled = false;
 };
 
 } // namespace Track8::Gui
