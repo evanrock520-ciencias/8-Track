@@ -68,10 +68,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AlbumListModel_8hpp.html",
-"classTrack8_1_1Compiler_1_1TextFilterNode.html#a474dd176a083871bd74d3ff97f9b1176",
-"classTrack8_1_1Domain_1_1SongBuilder.html",
-"classTrack8_1_1Miner_1_1CoverMiner.html#a84d5502a1fe6627ee2f7c3be41a6b359",
-"functions_prop.html"
+"classTrack8_1_1Compiler_1_1TemporalFilterNode.html#a8b65d4ab86fc812b45da28796c652577",
+"classTrack8_1_1Domain_1_1Song.html#a85827da638c6b7fd1bd5c874158c011a",
+"classTrack8_1_1Gui_1_1ScanController.html#a08a85ff2a28a00fb379fd5df74092ecd",
+"classTrack8_1_1Repositories_1_1ISongRepository.html#aaa5726f08aa51f9e54923e867393f65b",
+"namespaceTrack8_1_1Player.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

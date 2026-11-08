@@ -9,7 +9,8 @@ var searchData=
   ['track8_3a_3adomain_6',['Domain',['../namespaceTrack8_1_1Domain.html',1,'Track8']]],
   ['track8_3a_3agui_7',['Gui',['../namespaceTrack8_1_1Gui.html',1,'Track8']]],
   ['track8_3a_3aminer_8',['Miner',['../namespaceTrack8_1_1Miner.html',1,'Track8']]],
-  ['track8_3a_3arepositories_9',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
-  ['track8_3a_3aservices_10',['Services',['../namespaceTrack8_1_1Services.html',1,'Track8']]],
-  ['track8_3a_3autils_11',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]]
+  ['track8_3a_3aplayer_9',['Player',['../namespaceTrack8_1_1Player.html',1,'Track8']]],
+  ['track8_3a_3arepositories_10',['Repositories',['../namespaceTrack8_1_1Repositories.html',1,'Track8']]],
+  ['track8_3a_3aservices_11',['Services',['../namespaceTrack8_1_1Services.html',1,'Track8']]],
+  ['track8_3a_3autils_12',['Utils',['../namespaceTrack8_1_1Utils.html',1,'Track8']]]
 ];

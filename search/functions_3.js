@@ -5,5 +5,8 @@ var searchData=
   ['databasemanager_2',['DatabaseManager',['../classTrack8_1_1Database_1_1DatabaseManager.html#a94f36843f606c39172465c7e8dfc8e9c',1,'Track8::Database::DatabaseManager']]],
   ['date_3',['Date',['../classTrack8_1_1Domain_1_1Date.html#a191ab4ef2037b1515d11df737325a74a',1,'Track8::Domain::Date::Date(const std::string &amp;date)'],['../classTrack8_1_1Domain_1_1Date.html#a5aa62efe85c457ab64def63afca1dd77',1,'Track8::Domain::Date::Date(const int year, const int month, const int day)']]],
   ['day_4',['day',['../classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77',1,'Track8::Domain::Date']]],
-  ['death_5fdate_5',['death_date',['../classTrack8_1_1Domain_1_1Artist.html#ad0be900ccb64ab7c8ce51196c67a448f',1,'Track8::Domain::Artist']]]
+  ['death_5fdate_5',['death_date',['../classTrack8_1_1Domain_1_1Artist.html#ad0be900ccb64ab7c8ce51196c67a448f',1,'Track8::Domain::Artist']]],
+  ['disableshuffle_6',['disableShuffle',['../classTrack8_1_1Player_1_1Queue.html#a9d9de1594f2fb829737b8333c801e6b2',1,'Track8::Player::Queue']]],
+  ['duration_7',['duration',['../classTrack8_1_1Gui_1_1PlaybackController.html#ad96fb7ff8cd4ac23b7333d25d2c7c06e',1,'Track8::Gui::PlaybackController']]],
+  ['durationchanged_8',['durationChanged',['../classTrack8_1_1Gui_1_1PlaybackController.html#a03f56fd4fc8620099ff53f4ba3eac6e1',1,'Track8::Gui::PlaybackController']]]
 ];

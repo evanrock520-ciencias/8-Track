@@ -7,6 +7,7 @@ var dir_6e443ed9fdb9c1d855261b201f7ffebe =
     [ "domain", "dir_3772db085a8e93248a4d8b51580912e9.html", "dir_3772db085a8e93248a4d8b51580912e9" ],
     [ "gui", "dir_30a27cf6505647fab94f0dd2e2b95695.html", "dir_30a27cf6505647fab94f0dd2e2b95695" ],
     [ "miner", "dir_9156e4f5593fcabe1b11b37dee420033.html", "dir_9156e4f5593fcabe1b11b37dee420033" ],
+    [ "player", "dir_d405f00c5bafaf1ea4fd72cca2fd1a27.html", "dir_d405f00c5bafaf1ea4fd72cca2fd1a27" ],
     [ "services", "dir_ff151beb8aba9727d39520631d25c792.html", "dir_ff151beb8aba9727d39520631d25c792" ],
     [ "utils", "dir_e4d7b69c25a5b1e9c7634e1eede69cda.html", "dir_e4d7b69c25a5b1e9c7634e1eede69cda" ]
 ];

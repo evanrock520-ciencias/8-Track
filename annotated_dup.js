@@ -52,6 +52,7 @@ var annotated_dup =
         [ "AlbumListModel", "classTrack8_1_1Gui_1_1AlbumListModel.html", "classTrack8_1_1Gui_1_1AlbumListModel" ],
         [ "LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", "classTrack8_1_1Gui_1_1LibraryController" ],
         [ "PerformerListModel", "classTrack8_1_1Gui_1_1PerformerListModel.html", "classTrack8_1_1Gui_1_1PerformerListModel" ],
+        [ "PlaybackController", "classTrack8_1_1Gui_1_1PlaybackController.html", "classTrack8_1_1Gui_1_1PlaybackController" ],
         [ "ScanController", "classTrack8_1_1Gui_1_1ScanController.html", "classTrack8_1_1Gui_1_1ScanController" ],
         [ "SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html", "classTrack8_1_1Gui_1_1SongListModel" ]
       ] ],
@@ -61,6 +62,11 @@ var annotated_dup =
         [ "CoverStore", "classTrack8_1_1Miner_1_1CoverStore.html", "classTrack8_1_1Miner_1_1CoverStore" ],
         [ "Metadata", "structTrack8_1_1Miner_1_1Metadata.html", "structTrack8_1_1Miner_1_1Metadata" ],
         [ "Miner", "classTrack8_1_1Miner_1_1Miner.html", "classTrack8_1_1Miner_1_1Miner" ]
+      ] ],
+      [ "Player", "namespaceTrack8_1_1Player.html", [
+        [ "IAudioBackend", "classTrack8_1_1Player_1_1IAudioBackend.html", "classTrack8_1_1Player_1_1IAudioBackend" ],
+        [ "QtMultimediaBackend", "classTrack8_1_1Player_1_1QtMultimediaBackend.html", "classTrack8_1_1Player_1_1QtMultimediaBackend" ],
+        [ "Queue", "classTrack8_1_1Player_1_1Queue.html", "classTrack8_1_1Player_1_1Queue" ]
       ] ],
       [ "Repositories", "namespaceTrack8_1_1Repositories.html", [
         [ "IAlbumRepository", "classTrack8_1_1Repositories_1_1IAlbumRepository.html", "classTrack8_1_1Repositories_1_1IAlbumRepository" ],

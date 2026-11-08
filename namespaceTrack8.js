@@ -7,6 +7,7 @@ var namespaceTrack8 =
     [ "Domain", "namespaceTrack8_1_1Domain.html", "namespaceTrack8_1_1Domain" ],
     [ "Gui", "namespaceTrack8_1_1Gui.html", "namespaceTrack8_1_1Gui" ],
     [ "Miner", "namespaceTrack8_1_1Miner.html", "namespaceTrack8_1_1Miner" ],
+    [ "Player", "namespaceTrack8_1_1Player.html", "namespaceTrack8_1_1Player" ],
     [ "Repositories", "namespaceTrack8_1_1Repositories.html", "namespaceTrack8_1_1Repositories" ],
     [ "Services", "namespaceTrack8_1_1Services.html", "namespaceTrack8_1_1Services" ],
     [ "Utils", "namespaceTrack8_1_1Utils.html", [

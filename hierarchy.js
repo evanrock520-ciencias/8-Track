@@ -11,6 +11,9 @@ var hierarchy =
     [ "Track8::Repositories::IAlbumRepository", "classTrack8_1_1Repositories_1_1IAlbumRepository.html", [
       [ "Track8::Database::SQLiteAlbumRepository", "classTrack8_1_1Database_1_1SQLiteAlbumRepository.html", null ]
     ] ],
+    [ "Track8::Player::IAudioBackend", "classTrack8_1_1Player_1_1IAudioBackend.html", [
+      [ "Track8::Player::QtMultimediaBackend", "classTrack8_1_1Player_1_1QtMultimediaBackend.html", null ]
+    ] ],
     [ "Track8::Compiler::IExpressionNode", "classTrack8_1_1Compiler_1_1IExpressionNode.html", [
       [ "Track8::Compiler::BinaryExpressionNode", "classTrack8_1_1Compiler_1_1BinaryExpressionNode.html", null ],
       [ "Track8::Compiler::FreeFilterNode", "classTrack8_1_1Compiler_1_1FreeFilterNode.html", null ],
@@ -48,10 +51,12 @@ var hierarchy =
     ] ],
     [ "QObject", null, [
       [ "Track8::Gui::LibraryController", "classTrack8_1_1Gui_1_1LibraryController.html", null ],
+      [ "Track8::Gui::PlaybackController", "classTrack8_1_1Gui_1_1PlaybackController.html", null ],
       [ "Track8::Gui::ScanController", "classTrack8_1_1Gui_1_1ScanController.html", null ]
     ] ],
     [ "Track8::Compiler::Query", "classTrack8_1_1Compiler_1_1Query.html", null ],
     [ "Track8::Compiler::QueryCompiler", "classTrack8_1_1Compiler_1_1QueryCompiler.html", null ],
+    [ "Track8::Player::Queue", "classTrack8_1_1Player_1_1Queue.html", null ],
     [ "Track8::Domain::Range", "structTrack8_1_1Domain_1_1Range.html", null ],
     [ "ScanProgress", "structScanProgress.html", null ],
     [ "Track8::Services::SearchResult", "structTrack8_1_1Services_1_1SearchResult.html", null ],

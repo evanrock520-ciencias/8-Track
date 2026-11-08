@@ -7,8 +7,9 @@ var searchData=
   ['libraryservice_4',['LibraryService',['../classTrack8_1_1Services_1_1LibraryService.html#a989a8b9f7adc26702a2ee6936a908648',1,'Track8::Services::LibraryService']]],
   ['line_5',['line',['../classTrack8_1_1Compiler_1_1Token.html#a0208fedebd963328f5ccd1ebaefc6077',1,'Track8::Compiler::Token']]],
   ['literal_6',['literal',['../classTrack8_1_1Compiler_1_1Token.html#abb998384cb849195deef1557961c681a',1,'Track8::Compiler::Token']]],
-  ['loadalbums_7',['loadAlbums',['../classTrack8_1_1Gui_1_1LibraryController.html#a833c68edab97239658b345fbbd9ad9ed',1,'Track8::Gui::LibraryController']]],
-  ['loadartists_8',['loadArtists',['../classTrack8_1_1Gui_1_1LibraryController.html#af3c4826ca938ce327f298432d61957f6',1,'Track8::Gui::LibraryController']]],
-  ['loadperformers_9',['loadPerformers',['../classTrack8_1_1Gui_1_1LibraryController.html#a6b16f6d1cde89ba5330f58932407da40',1,'Track8::Gui::LibraryController']]],
-  ['loadsongs_10',['loadSongs',['../classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4',1,'Track8::Gui::LibraryController']]]
+  ['load_7',['load',['../classTrack8_1_1Gui_1_1PlaybackController.html#a6065a35e70af321f5c75ef2ba74b26b0',1,'Track8::Gui::PlaybackController::load()'],['../classTrack8_1_1Player_1_1IAudioBackend.html#a77bc9fe01c700c2aab27c2ec763db2b0',1,'Track8::Player::IAudioBackend::load()'],['../classTrack8_1_1Player_1_1QtMultimediaBackend.html#a2b013eaa6a0295460d604647241387e6',1,'Track8::Player::QtMultimediaBackend::load()']]],
+  ['loadalbums_8',['loadAlbums',['../classTrack8_1_1Gui_1_1LibraryController.html#a833c68edab97239658b345fbbd9ad9ed',1,'Track8::Gui::LibraryController']]],
+  ['loadartists_9',['loadArtists',['../classTrack8_1_1Gui_1_1LibraryController.html#af3c4826ca938ce327f298432d61957f6',1,'Track8::Gui::LibraryController']]],
+  ['loadperformers_10',['loadPerformers',['../classTrack8_1_1Gui_1_1LibraryController.html#a6b16f6d1cde89ba5330f58932407da40',1,'Track8::Gui::LibraryController']]],
+  ['loadsongs_11',['loadSongs',['../classTrack8_1_1Gui_1_1LibraryController.html#abfcccfc1ea6769f9dfdc80aeb34a78f4',1,'Track8::Gui::LibraryController']]]
 ];

@@ -6,7 +6,8 @@ var classTrack8_1_1Gui_1_1SongListModel =
       [ "ArtistRole", "classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a5b028a59bef271f1e149f9069f31e0be", null ],
       [ "AlbumRole", "classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a86851c83b080a457995c3a176754ea30", null ],
       [ "GenreRole", "classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a6507fe8af88a8d3d8121167b61aae025", null ],
-      [ "YearRole", "classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a8e02a1ec1a895e3fb68266107c26e7c7", null ]
+      [ "YearRole", "classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a8e02a1ec1a895e3fb68266107c26e7c7", null ],
+      [ "PathRole", "classTrack8_1_1Gui_1_1SongListModel.html#af4ecb8c8ee30358f01f3222031e12224a30a921b9406f4b07278ba7833bd8645f", null ]
     ] ],
     [ "SongListModel", "classTrack8_1_1Gui_1_1SongListModel.html#aece9cde4ca7aafbf88d03bd24926cf01", null ],
     [ "clear", "classTrack8_1_1Gui_1_1SongListModel.html#aac5653829c41f053ecd4995dafcbdb23", null ],

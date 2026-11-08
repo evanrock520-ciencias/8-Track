@@ -5,5 +5,6 @@ var searchData=
   ['updategroup_2',['updateGroup',['../classTrack8_1_1Services_1_1ArtistService.html#aefc8dc72d0b2ecb18101ff66c944001f',1,'Track8::Services::ArtistService']]],
   ['updatemembers_3',['updateMembers',['../classTrack8_1_1Gui_1_1LibraryController.html#a7a8a128a18fd47bc681a4ac0cd9b5009',1,'Track8::Gui::LibraryController::updateMembers()'],['../classTrack8_1_1Services_1_1ArtistService.html#a73db9ead49be4dcf2efe9ca86d04c2ad',1,'Track8::Services::ArtistService::updateMembers(int groupId, const std::vector&lt; int &gt; &amp;selectedIds) const']]],
   ['updateperformer_4',['updatePerformer',['../classTrack8_1_1Services_1_1ArtistService.html#ad1456281fca95b175fd96a2c817e95de',1,'Track8::Services::ArtistService']]],
-  ['updateperson_5',['updatePerson',['../classTrack8_1_1Services_1_1ArtistService.html#a03299f0e4dfe65ff7e58901e1f40884d',1,'Track8::Services::ArtistService']]]
+  ['updateperson_5',['updatePerson',['../classTrack8_1_1Services_1_1ArtistService.html#a03299f0e4dfe65ff7e58901e1f40884d',1,'Track8::Services::ArtistService']]],
+  ['useraddsong_6',['userAddSong',['../classTrack8_1_1Player_1_1Queue.html#aead9785ce17c44513df0920b96415e20',1,'Track8::Player::Queue']]]
 ];
