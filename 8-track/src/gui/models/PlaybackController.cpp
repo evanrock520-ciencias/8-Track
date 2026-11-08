@@ -168,4 +168,28 @@ bool PlaybackController::shuffleEnabled() const {
     return m_shuffleEnabled;
 }
 
+void PlaybackController::playAlbum(const int idx) {
+    const auto albumSongs = m_library.songsByAlbum(idx);
+
+    std::vector<Domain::Song> songs;
+    songs.reserve(albumSongs.size());
+
+    for (const auto& song : albumSongs) {
+        if (song)
+            songs.push_back(*song);
+    }
+
+    m_queue = Player::Queue(songs);
+
+    const auto song = m_queue.current();
+    if (!song)
+        return;
+
+    if (m_shuffleEnabled)
+        m_queue.shuffle();
+
+    m_backend->load(song->path());
+    emit currentSongChanged();
+    m_backend->play();
+}
 } // namespace Track8::Gui

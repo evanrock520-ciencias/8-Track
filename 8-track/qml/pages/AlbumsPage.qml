@@ -19,6 +19,7 @@ Item {
             album: model.name
             year: model.year
             cover: Library.albumCover(model.path, model.name)
+            action: () => Playback.playAlbum(model.albumId)
         }
     }
 }

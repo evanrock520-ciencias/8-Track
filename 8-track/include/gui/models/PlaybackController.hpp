@@ -26,6 +26,7 @@ public:
     Q_INVOKABLE void next();
     Q_INVOKABLE void previous();
     Q_INVOKABLE void playFor(const SongListModel* model, int idx);
+    Q_INVOKABLE void playAlbum(int idx);
     Q_INVOKABLE void togglePlayback() const;
     Q_INVOKABLE void toggleShuffle();
     Q_INVOKABLE void seek(qint64 position) const;
