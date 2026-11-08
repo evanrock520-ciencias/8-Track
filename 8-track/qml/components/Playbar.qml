@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Rectangle {
     anchors.bottom: parent.bottom
@@ -16,9 +17,9 @@ Rectangle {
         NowPlaying {
             Layout.fillHeight: true
             Layout.preferredWidth: Theme.nowPlayingWidth
-            cover: "qrc:/qt/qml/Track8/resources/images/cover.png"
-            subtitle: "Alvvays - Alvvays"
-            title: "Atop a Cake"
+            cover: Playback.cover
+            subtitle: `${Playback.artist} - ${Playback.album}`
+            title: Playback.title
         }
         TrackControl {
             Layout.fillHeight: true

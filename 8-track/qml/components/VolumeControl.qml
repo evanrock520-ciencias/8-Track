@@ -5,9 +5,10 @@ import Track8
 RowLayout {
     id: root
 
-    property int volume: 74
+    property int volume: 100
 
     spacing: Theme.volumeSpacing
+    signal volumeRequest(int volume)
 
     Image {
         Layout.alignment: Qt.AlignVCenter
@@ -21,8 +22,13 @@ RowLayout {
         from: 0
         to: 100
         value: root.volume
+        onMoved: {
+            volumeText.text = Math.round(value);
+            root.volumeRequest(value);
+        }
     }
     Text {
+        id: volumeText
         Layout.alignment: Qt.AlignVCenter
         Layout.preferredWidth: Theme.volumeValueWidth
         color: Theme.cream

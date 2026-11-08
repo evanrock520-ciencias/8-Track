@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Item {
     id: root
@@ -26,20 +27,27 @@ Item {
 
             SimpleButton {
                 checkable: true
+                checked: Playback.shuffleEnabled
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/shuffle.svg"
+                onClicked: Playback.toggleShuffle()
             }
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-back.svg"
+                onClicked: Playback.previous()
             }
-            StateButton {}
+            StateButton {
+                onClicked: Playback.togglePlayback()
+            }
             SimpleButton {
                 icon.source: "qrc:/qt/qml/Track8/resources/icons/skip-forward.svg"
+                onClicked: Playback.next()
             }
         }
         PlaybackProgress {
             Layout.fillWidth: true
-            duration: 315000
-            position: 138000
+            duration: Playback.duration
+            position: Playback.position
+            onSeekRequested: ms => Playback.seek(ms)
         }
     }
 }

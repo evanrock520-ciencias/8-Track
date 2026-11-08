@@ -25,6 +25,7 @@ jobs:
         with:
           version: '6.12'
           target: 'desktop'
+          modules: 'qtmultimedia'
           cache: 'true'
 
       - uses: rui314/setup-mold@v1

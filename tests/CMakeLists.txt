@@ -76,6 +76,18 @@ target_link_libraries(compiler_tests
         compiler
 )
 
+# Test del player
+add_executable(player_tests
+    player/test_queue.cpp
+)
+
+target_link_libraries(player_tests
+        PRIVATE
+        GTest::gtest_main
+        domain
+        player
+)
+
 include(GoogleTest)
 gtest_discover_tests(domain_tests)
 gtest_discover_tests(miner_tests)

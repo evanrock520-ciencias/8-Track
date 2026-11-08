@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Track8
+import Track8.Backend 1.0
 
 Item {
     id: root
@@ -9,6 +10,7 @@ Item {
     property string artist
     property string title
     property int year
+    property url path
 
     signal playClicked
 
