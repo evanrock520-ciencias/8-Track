@@ -8,20 +8,20 @@ Set Theme "Monokai Soda"
 Set Shell fish
 
 Hide
-Type "cd cmake-build-release"
+Type "cd build/release"
 Enter
 Type "clear"
 Enter
 Show
 
-Type "./main --scan ~/Music/titanic-rising"
+Type "./track8-cli --scan ~/Music/titanic-rising"
 Enter
 Sleep 3s
 Hide
 Type "clear"
 Enter
 Show
-Type "./main --list"
+Type "./track8-cli --list"
 Sleep 2s
 Enter
 Sleep 5s
