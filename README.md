@@ -14,7 +14,7 @@
 **8-Track** es un gestor de música local desarrollado en **C++ 20** y **Qt 6**
 para la plataforma **Linux**.
 
-<https://github.com/user-attachments/assets/edf1e33a-dbb9-440d-a6a8-f59bb15c10ae>
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/ec4a033a-91de-4c6a-a185-3a2ad05a5403" />
 
 ## Features
 
