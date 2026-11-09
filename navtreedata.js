@@ -26,10 +26,29 @@ var NAVTREE =
 [
   [ "8-Track", "index.html", [
     [ "8-Track", "index.html#autotoc_md1", [
-      [ "GUI", "index.html#autotoc_md2", null ],
-      [ "Terminal", "index.html#autotoc_md3", null ],
-      [ "Documentación", "index.html#autotoc_md4", null ],
-      [ "Licencia", "index.html#autotoc_md5", null ]
+      [ "Features", "index.html#autotoc_md2", null ],
+      [ "Requisitos", "index.html#autotoc_md3", [
+        [ "Recomendaciones", "index.html#autotoc_md4", null ],
+        [ "Dependencias", "index.html#autotoc_md5", [
+          [ "Globales", "index.html#autotoc_md6", null ],
+          [ "CLI", "index.html#autotoc_md7", null ]
+        ] ]
+      ] ],
+      [ "Compilación", "index.html#autotoc_md8", [
+        [ "Preset Release", "index.html#autotoc_md9", null ],
+        [ "Normal", "index.html#autotoc_md10", null ]
+      ] ],
+      [ "Terminal", "index.html#autotoc_md11", [
+        [ "Quickstart", "index.html#autotoc_md12", null ],
+        [ "Scan", "index.html#autotoc_md13", null ],
+        [ "Query", "index.html#autotoc_md14", null ]
+      ] ],
+      [ "Pruebas", "index.html#autotoc_md15", [
+        [ "Release", "index.html#autotoc_md16", null ],
+        [ "Normal", "index.html#autotoc_md17", null ]
+      ] ],
+      [ "Documentación", "index.html#autotoc_md18", null ],
+      [ "Licencia", "index.html#autotoc_md19", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -72,7 +91,7 @@ var NAVTREEINDEX =
 "classTrack8_1_1Domain_1_1Song.html#a85827da638c6b7fd1bd5c874158c011a",
 "classTrack8_1_1Gui_1_1ScanController.html#a08a85ff2a28a00fb379fd5df74092ecd",
 "classTrack8_1_1Repositories_1_1ISongRepository.html#aaa5726f08aa51f9e54923e867393f65b",
-"namespaceTrack8_1_1Player.html"
+"namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35faf65f22e75defc168edfc6444e6aaf4f8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

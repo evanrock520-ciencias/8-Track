@@ -37,7 +37,9 @@ var searchData=
   ['playing_34',['playing',['../classTrack8_1_1Gui_1_1PlaybackController.html#a5dcd3a1ad2880280d50d4fe1a180e5bf',1,'Track8::Gui::PlaybackController::playing'],['../classTrack8_1_1Gui_1_1PlaybackController.html#a46a15afe8b1259f2b31a43bb08ec5b06',1,'Track8::Gui::PlaybackController::playing()']]],
   ['playnext_35',['playNext',['../classTrack8_1_1Player_1_1Queue.html#a322cb43545fa22d22a5e152553892219',1,'Track8::Player::Queue']]],
   ['position_36',['position',['../classTrack8_1_1Gui_1_1PlaybackController.html#a88778a223885c173104a45e46c1c3455',1,'Track8::Gui::PlaybackController::position'],['../classTrack8_1_1Gui_1_1PlaybackController.html#aee617fa9e802f2ba5dbbbc0e41d14d83',1,'Track8::Gui::PlaybackController::position() const']]],
-  ['previous_37',['previous',['../classTrack8_1_1Gui_1_1PlaybackController.html#a0bd8f6747b6635a7cec5f989e7b15489',1,'Track8::Gui::PlaybackController::previous()'],['../classTrack8_1_1Player_1_1Queue.html#a7487bcb1ac1fe3e28e8baa4898cebdc5',1,'Track8::Player::Queue::previous()']]],
-  ['print_38',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]],
-  ['progresschanged_39',['progressChanged',['../classTrack8_1_1Gui_1_1ScanController.html#a08a85ff2a28a00fb379fd5df74092ecd',1,'Track8::Gui::ScanController']]]
+  ['preset_20release_37',['Preset Release',['../index.html#autotoc_md9',1,'']]],
+  ['previous_38',['previous',['../classTrack8_1_1Gui_1_1PlaybackController.html#a0bd8f6747b6635a7cec5f989e7b15489',1,'Track8::Gui::PlaybackController::previous()'],['../classTrack8_1_1Player_1_1Queue.html#a7487bcb1ac1fe3e28e8baa4898cebdc5',1,'Track8::Player::Queue::previous()']]],
+  ['print_39',['print',['../classTrack8_1_1Compiler_1_1AstPrinter.html#addbd977070efcc71c5c4a72b038016dd',1,'Track8::Compiler::AstPrinter']]],
+  ['progresschanged_40',['progressChanged',['../classTrack8_1_1Gui_1_1ScanController.html#a08a85ff2a28a00fb379fd5df74092ecd',1,'Track8::Gui::ScanController']]],
+  ['pruebas_41',['Pruebas',['../index.html#autotoc_md15',1,'']]]
 ];

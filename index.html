@@ -98,17 +98,111 @@ $(function(){initNavTree('index.html','',''); });
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 8-Track</h1>
-<p><b>8-Track</b> es un gestor de música local desarrollado en <b>C++ 20</b> y <b>Qt 6</b>.</p>
+<p><b>8-Track</b> es un gestor de música local desarrollado en <b>C++ 20</b> y <b>Qt 6</b> para la plataforma <b>Linux</b>.</p>
+<p><a href="https://github.com/user-attachments/assets/edf1e33a-dbb9-440d-a6a8-f59bb15c10ae">https://github.com/user-attachments/assets/edf1e33a-dbb9-440d-a6a8-f59bb15c10ae</a></p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-GUI</h2>
+Features</h2>
+<ul>
+<li>Escaneo de archivos <b>mp3</b>.</li>
+<li>Exploración de artistas, álbumes y canciones.</li>
+<li>Búsquedas avanzadas mediante <b>MuQL</b>.</li>
+<li>Edición de metadatos (en la base de datos).</li>
+<li>Reproducción de audio.</li>
+</ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Requisitos</h2>
+<ul>
+<li>Compilador compatible con <b>C++20</b>, como <b>GCC</b> o <b>Clang</b>.</li>
+<li><b>CMake 3.25</b> o superior.</li>
+<li><b>Qt 6.8</b> o superior, con los módulos:<ul>
+<li>Qt Quick.</li>
+<li>Qt SQL.</li>
+<li>Qt Multimedia.</li>
+</ul>
+</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Recomendaciones</h3>
+<p>Para compilar con el preset de <b>release</b> es necesario instalar:</p>
+<ul>
+<li><b>Ninja</b></li>
+<li><b>Ccache</b></li>
+<li><b>Mold</b></li>
+</ul>
+<details >
+<summary >
+Fedora</summary>
+<p></p>
+<div class="fragment"><div class="line">sudo dnf install ninja-build mold ccache</div>
+</div><!-- fragment --><p></p>
+</details>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Dependencias</h3>
+<p>Además, varias dependencias se incluyen mediante <b>Fetch Content</b>.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Globales</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Biblioteca  </th><th class="markdownTableHeadNone">Versión  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Taglib  </td><td class="markdownTableBodyNone">2.3.2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Picosha2  </td><td class="markdownTableBodyNone">1.0.1  </td></tr>
+</table>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+CLI</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Biblioteca  </th><th class="markdownTableHeadNone">Versión  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Tabulate  </td><td class="markdownTableBodyNone">2.0  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Argparse  </td><td class="markdownTableBodyNone">3.2  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Indicators  </td><td class="markdownTableBodyNone">2.3  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Compilación</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Preset Release</h3>
+<div class="fragment"><div class="line">git clone https://github.com/evanrock520-ciencias/8-Track.git</div>
+<div class="line">cd 8-Track</div>
+<div class="line">cmake -S . --preset release</div>
+<div class="line">cmake --build --preset release</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Normal</h3>
+<div class="fragment"><div class="line">git clone https://github.com/evanrock520-ciencias/8-Track.git</div>
+<div class="line">cd 8-Track</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Terminal</h2>
-<p><img src="https://vhs.charm.sh/vhs-3tEUJuIhrVVu9LKRwFGXUZ.gif" alt="Scan" class="inline"/></p>
-<p><img src="https://vhs.charm.sh/vhs-tIeMqNQzV3hEU9nuwpzBC.gif" alt="List" class="inline"/></p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Quickstart</h3>
+<p><b>8-track</b> proporciona una CLI para realizar operaciones elementales como:</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+Scan</h3>
+<p>Escanea tu biblioteca musical.</p>
+<div class="fragment"><div class="line">./build/release/track8-cli --scan &quot;$HOME/Music&quot;</div>
+</div><!-- fragment --><p><img src="https://vhs.charm.sh/vhs-4WmZcsXk5aX3XTE6WQLEMy.gif" alt="Scan" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Query</h3>
+<p>Realiza potentes consultas utilizando <b>MuQL</b>.</p>
+<div class="fragment"><div class="line">./build/release/track8-cli --query &#39;song: &quot;Black&quot;&#39;</div>
+</div><!-- fragment --><p><img src="https://vhs.charm.sh/vhs-xkjTYZAKLWxggVLjX2x8q.gif" alt="List" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+Pruebas</h2>
+<p>Para ejecutar las pruebas unitarias también se proporciona <b>Google Test</b>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+Release</h3>
+<div class="fragment"><div class="line">ctest --test-dir build/release --output-on-failure</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+Normal</h3>
+<div class="fragment"><div class="line">ctest --test-dir build --output-on-failure</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 Documentación</h2>
 <p>La documentación del proyecto se puede encontrar en <a href="https://evanrock520-ciencias.github.io/8-Track/">8-track</a>.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Licencia</h2>
 <p>Este proyecto se encuentra bajo la licencia [GPL-3](LICENSE). </p>
 </div></div><!-- PageDoc -->

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['documentación_0',['Documentación',['../index.html#autotoc_md4',1,'']]]
+  ['cli_0',['CLI',['../index.html#autotoc_md7',1,'']]],
+  ['compilación_1',['Compilación',['../index.html#autotoc_md8',1,'']]]
 ];

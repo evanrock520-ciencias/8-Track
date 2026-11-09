@@ -8,9 +8,10 @@ var searchData=
   ['date_2ehpp_5',['Date.hpp',['../Date_8hpp.html',1,'']]],
   ['day_6',['day',['../classTrack8_1_1Domain_1_1Date.html#a9ac55dbc5d29579b264a401feb436d77',1,'Track8::Domain::Date']]],
   ['death_5fdate_7',['death_date',['../classTrack8_1_1Domain_1_1Artist.html#ad0be900ccb64ab7c8ce51196c67a448f',1,'Track8::Domain::Artist']]],
-  ['desc_8',['DESC',['../namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC']]],
-  ['disableshuffle_9',['disableShuffle',['../classTrack8_1_1Player_1_1Queue.html#a9d9de1594f2fb829737b8333c801e6b2',1,'Track8::Player::Queue']]],
-  ['documentación_10',['Documentación',['../index.html#autotoc_md4',1,'']]],
-  ['duration_11',['duration',['../classTrack8_1_1Gui_1_1PlaybackController.html#a2a3e48b55d6f0411cb20a98b0d5382e4',1,'Track8::Gui::PlaybackController::duration'],['../classTrack8_1_1Gui_1_1PlaybackController.html#ad96fb7ff8cd4ac23b7333d25d2c7c06e',1,'Track8::Gui::PlaybackController::duration() const']]],
-  ['durationchanged_12',['durationChanged',['../classTrack8_1_1Gui_1_1PlaybackController.html#a03f56fd4fc8620099ff53f4ba3eac6e1',1,'Track8::Gui::PlaybackController']]]
+  ['dependencias_8',['Dependencias',['../index.html#autotoc_md5',1,'']]],
+  ['desc_9',['DESC',['../namespaceTrack8_1_1Compiler.html#a3236dd2fe772b1498a347dd1800a3d78a65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC'],['../namespaceTrack8_1_1Compiler.html#a95550111a704460ff9d70502d9c3a35fa65a6d757dbb571ccc3af9706e9a5f607',1,'Track8::Compiler::DESC']]],
+  ['disableshuffle_10',['disableShuffle',['../classTrack8_1_1Player_1_1Queue.html#a9d9de1594f2fb829737b8333c801e6b2',1,'Track8::Player::Queue']]],
+  ['documentación_11',['Documentación',['../index.html#autotoc_md18',1,'']]],
+  ['duration_12',['duration',['../classTrack8_1_1Gui_1_1PlaybackController.html#a2a3e48b55d6f0411cb20a98b0d5382e4',1,'Track8::Gui::PlaybackController::duration'],['../classTrack8_1_1Gui_1_1PlaybackController.html#ad96fb7ff8cd4ac23b7333d25d2c7c06e',1,'Track8::Gui::PlaybackController::duration() const']]],
+  ['durationchanged_13',['durationChanged',['../classTrack8_1_1Gui_1_1PlaybackController.html#a03f56fd4fc8620099ff53f4ba3eac6e1',1,'Track8::Gui::PlaybackController']]]
 ];
