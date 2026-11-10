@@ -1,3 +1,49 @@
 \section{Análisis y Diseño}
 
-Este es el contenido del análisis y diseño.
+\subsection{Arquitectura General}
+
+La arquitectura de \textbf{8-Track} se diseñó siguiendo un enfoque modular, en el que las
+distintas partes del programa se distribuyen entre bibliotecas independientes. Cada
+biblioteca cumple un rol especifico dentro de la funcionalidad del programa:
+
+\begin{itemize}
+	\item \textbf{Domain}: Representa las entidades básicas del programa, i.e, \textbf{canciones},
+	      \textbf{álbumes}, \textbf{intérpretes}, entre otros.
+	\item \textbf{Database}: Abstrae la comunicación con la base de datos por medio de
+	      interfaces y \textbf{repositorios}.
+	\item \textbf{Compiler}: Contiene la implementación completa del compilador de \textbf{MuQL}.
+	\item \textbf{Miner}: Realiza el escaneo de directorios para minar \textbf{metadatos}
+	      y \textbf{carátulas} de archivos \textbf{MP3}.
+	\item \textbf{Player}: Ejecuta la reproducción de audio por medio de \textbf{QtMultimedia}.
+	\item \textbf{Services}: Representa una capa de unificación y coordinación de las otras bibliotecas
+	      para ofrecer métodos sencillos de consumir por las vistas del programa.
+	\item \textbf{CLI}: Es la interfaz secundaria del programa, que permite ejecutar operaciones
+	      básicas sobre la biblioteca musical mediante comandos de texto. Su propósito es
+	      ofrecer un mecanismo de interacción sencillo y directo, sin necesidad de utilizar un
+	      entorno gráfico.
+
+	\item \textbf{GUI}: Es la interfaz principal del programa, diseñada para proporcionar una
+	      experiencia de usuario más intuitiva y visual. Permite interactuar
+	      con las funcionalidades del sistema mediante componentes gráficos, facilitando la
+	      navegación, consulta y administración de la biblioteca musical.
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/architecture.pdf}
+	\caption{Diagrama de Arquitectura}
+\end{figure}
+
+
+La separación en bibliotecas busca reducir el acoplamiento entre componentes y delimitar sus
+responsabilidades. La interfaz gráfica y la interfaz de línea de comandos comparten una capa de
+servicios que expone las operaciones de la aplicación y coordina los subsistemas necesarios.
+Esto permite reutilizar la lógica de la aplicación y realizar cambios internos de manera más
+sencilla.
+\subsection{Base de Datos}
+
+\subsection{Minero}
+
+\subsection{MuQL}
+
+\subsection{Interfaz Gráfica}
