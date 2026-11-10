@@ -1,3 +1,40 @@
 \section{Introducción}
 
-Este es el contenido de la introducción.
+El objetivo principal de este proyecto es diseñar e implementar una \textbf{base de datos} musical
+para archivos de audio en formato \textbf{MP3} con etiquetas \textbf{ID3v2.4}. El sistema cuenta con
+al menos 4 módulos bien definidos: un \textbf{minero}, una \textbf{base de datos}, un \textbf{lenguaje de consultas}
+y una \textbf{interfaz gráfica}.
+
+\section*{Alcance}
+
+\textbf{8-Track} contempla cubrir el flujo de la especificación del \textbf{Proyecto 2}, es decir:
+escaneo de directorios con archivos MP3, base de datos con la biblioteca musical, edición de
+metadatos en la base de datos, búsquedas avanzadas a partir de un \textbf{DSL} y una intefaz
+gráfica que permita realizar todas las \textit{features} de la especificación.
+
+Adicionalmente, se contempla extender las funcionalidades básicas mediante la incorporación de
+reproducción de audio directamente desde la aplicación, así como el diseño de una interfaz intuitiva,
+visualmente atractiva y orientada a ofrecer una experiencia de usuario fluida y enriquecida.
+
+\section*{Limitaciones}
+
+La principal limitación del proyecto es su compatibilidad restringida con formatos de audio, pues
+únicamente admite archivos \textbf{MP3}. En consecuencia, las colecciones musicales heterogéneas que
+incluyan formatos populares como \textbf{FLAC}, \textbf{ALAC}, \textbf{WAV} u \textbf{OGG} no podrán administrarse en su totalidad.
+Por ello, la incorporación de soporte para formatos adicionales representa una de las principales
+oportunidades de expansión del sistema.
+
+Además, la aplicación opera bajo el principio de \textit{Garbage In, Garbage Out} (GIGO), pues la calidad y
+precisión de la información presentada dependen directamente de los \textbf{metadatos} contenidos
+en los archivos \textbf{MP3}. En consecuencia, elementos como los nombres de álbumes, las portadas y
+la información de los artistas pueden resultar incompletos, incorrectos o incluso inexistentes si
+los archivos originales carecen de los datos correspondientes.
+
+Esta dependencia podría mitigarse mediante la integración de \textbf{APIs de terceros}, como las proporcionadas
+por \textbf{MusicBrainz}, \textbf{Last.fm} o \textbf{Deezer}, que permitirían consultar fuentes externas
+para complementar, verificar y enriquecer los metadatos de la biblioteca musical, así como recuperar
+portadas de álbumes e imágenes de artistas. Sin embargo, estas integraciones quedan fuera del alcance
+actual del proyecto y se consideran posibles extensiones futuras.
+
+El proyecto está completamente orientado a usuarios de \textbf{Linux} y no contempla una extensión
+multiplataforma.
