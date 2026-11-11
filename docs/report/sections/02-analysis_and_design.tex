@@ -42,8 +42,57 @@ Esto permite reutilizar la lógica de la aplicación y realizar cambios internos
 sencilla.
 \subsection{Base de Datos}
 
+\subsubsection*{Modelo Relacional}
+
+El modelo relacional utilizado en \textbf{8-Track} forma parte de la especificación del \textbf{Proyecto 2}.
+
+La Figura \ref{fig:database-relations} muestra las relaciones principales del modelo musical.
+La entidad \texttt{rolas} constituye el elemento central del modelo de la biblioteca musical, ya que representa las canciones y establece sus relaciones con
+los intérpretes y los álbumes.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/database-relations.pdf}
+	\caption{Relaciones entre canciones, álbumes e intérpretes}
+	\label{fig:database-relations}
+\end{figure}
+
+La Figura~\ref{fig:performers-isa} presenta la especialización conceptual de los intérpretes. En este modelo, un intérprete
+puede representar una persona o una agrupación musical, permitiendo distinguir entre ambos tipos y almacenar
+información específica de cada uno. Además, de también definir relaciones de pertenencia entre personas y agrupaciones musicales.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/performers-isa.pdf}
+	\caption{Especialización de intérpretes y pertenencia a grupos}
+	\label{fig:performers-isa}
+\end{figure}
+
+\subsubsection*{Modelos de Dominio}
+
+El modelo relacional de la base de datos da pie a la definición de las clases de \texttt{dominio} encargadas de representar
+las entidades musicales dentro de la aplicación. En este caso, como se ve en la Figura \ref{fig:domain-uml}, cada tabla tiene
+un mapeo unívoco con una clase de dominio, conservando además sus relaciones.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/domain.pdf}
+	\caption{Diagrama UML de las clases de dominio}
+	\label{fig:domain-uml}
+\end{figure}
+
+\subsubsection*{Repositorios}
+
 \subsection{Minero}
 
+\subsubsection*{Extracción de Metadatos}
+
+\subsubsection*{Extracción de Carátulas}
+
 \subsection{MuQL}
+
+\subsubsection*{Gramática}
+
+\subsubsection*{Compilador}
 
 \subsection{Interfaz Gráfica}
