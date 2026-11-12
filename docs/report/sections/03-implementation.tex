@@ -270,6 +270,23 @@ para ejecutar la suite correspondiente a la base de datos:
 
 \subsection{CI/CD}
 
+\subsubsection*{Verificación}
+
+El \texttt{workflow} principal de \texttt{CI} sirve principalmente como una verificación de reproducibilidad
+del sistema. Se encarga de configurar el entorno, descargar dependencias, verificar el formato de código,
+compilar \textbf{8-Track} y correr las suites de pruebas unitarias.
+
 \subsubsection*{Calidad}
 
+La calidad, legibilidad y consistencia del código es bastante importante para mí.
+Por ello, en lugar de depender de una disciplina manual para mantener un formato consistente, el proceso
+se automatiza mediante \textit{hooks} de \texttt{prek}: \texttt{clang-format} para \textbf{C++} y
+\texttt{qmlformat} para \textbf{QML}. Estos se ejecutan antes de cada \textit{commit} y se vuelven a verificar
+en el \texttt{workflow} principal de \texttt{CI}, de modo que ningún cambio con formato inconsistente llega
+a \texttt{main}.
+
+
 \subsubsection*{Documentación}
+
+Durante cada \texttt{push} a la rama \texttt{main} se ejecuta un despliegue automático de documentación
+relacionada al código del proyecto en \url{https://evanrock520-ciencias.github.io/8-Track/}.

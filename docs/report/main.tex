@@ -6,10 +6,14 @@
 
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{dirtree}
 % \usepackage{caption}
 % \usepackage{enumitem}
 % \usepackage{dirtree}
-% \usepackage{hyperref}
+\usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{biblatex}
 \usepackage{csquotes}
@@ -40,6 +44,17 @@
 }
 
 \lstset{style=mystyle}
+
+\titleformat{\paragraph}[block]
+  {\normalfont\normalsize\bfseries}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\paragraph}
+  {0pt}
+  {1ex}
+  {0.3ex}
 
 \title{Base de datos musical}
 \author{Evan Miranda}
