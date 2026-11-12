@@ -60,7 +60,7 @@ Item {
                 color: Theme.cream
                 elide: Text.ElideRight
                 font.family: Theme.fontFamily
-                font.pixelSize: Theme.nowPlayigSubtitleFontSize
+                font.pixelSize: Theme.nowPlayingSubtitleFontSize
                 text: root.subtitle
             }
         }

@@ -63,6 +63,7 @@ QtObject {
     readonly property int searchBarHeight: 44
     readonly property int searchBarPaddingX: 8
     readonly property int searchBarRadius: 8
+    readonly property int searchBarWeight: 800
     readonly property int lensIconSize: 20
 
     // Nav Item
