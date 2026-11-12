@@ -1,3 +1,275 @@
 \section{Implementación}
 
-Este es el contenido de la implementación.
+\subsection{Requisitos y Tecnologías}
+
+El desarrollo de \textbf{8-Track} se llevó a cabo en el lenguaje de programación \textbf{C++20} y contó con el
+uso de múltiples dependencias del framework \textbf{Qt}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{@{}llX@{}}
+		\toprule
+		Tecnología   & Versión     & Uso                        \\
+		\midrule
+		C++          & 20          & Lenguaje de implementación \\
+		QtQuick      & Qt 6.8+     & Interfaz gráfica           \\
+		QtSQL        & Qt 6.8+     & Acceso a la base de datos  \\
+		QtMultimedia & Qt 6.8+     & Reproducción de audio      \\
+		SQLite       & vía QSQLITE & Motor de base de datos     \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Tecnologías del núcleo de la aplicación}
+\end{table}
+
+Todas las dependencias \texttt{third-party} se descargan automáticamente antes de la compilación por medio
+de \texttt{FetchContent}; por lo tanto, es necesario contar con conexión a internet.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{@{}llX@{}}
+		\toprule
+		Herramienta & Versión & Uso                                     \\
+		\midrule
+		CMake       & 3.25+   & Configuración y generación del proyecto \\
+		Ninja       & ---     & Generador del preset de release         \\
+		ccache      & ---     & Caché de compilación                    \\
+		mold        & ---     & Enlazador del preset de release         \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Herramientas de construcción}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{@{}llX@{}}
+		\toprule
+		Biblioteca & Versión & Uso                                          \\
+		\midrule
+		TagLib     & 2.3.2   & Lectura de las etiquetas ID3v2.4 y carátulas \\
+		PicoSHA2   & 1.0.1   & Hash para el caché de las carátulas          \\
+		argparse   & 3.2     & Argumentos para la CLI                       \\
+		tabulate   & 2.0     & Presentación de datos tabulados para la CLI  \\
+		indicators & 2.3     & Barra de progreso para la CLI                \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Bibliotecas de terceros utilizadas por la aplicación}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{@{}llX@{}}
+		\toprule
+		Herramienta    & Versión & Uso                         \\
+		\midrule
+		GoogleTest     & 1.15.2  & Pruebas unitarias           \\
+		prek           & 0.5     & Gestión de hooks de Git     \\
+		clang-format   & 23.1.1  & Formato del código C++      \\
+		qmlformat      & 1.2.0   & Formato del código QML      \\
+		Doxygen        & 1.18    & Generación de documentación \\
+		GitHub Actions & ---     & Integración continua (CI)   \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Herramientas de pruebas, calidad y documentación}
+\end{table}
+
+\subsection{Organización del Proyecto}
+
+El código de la aplicación se concentra en \texttt{8-track/}. Las cabeceras de C++ se agrupan
+por responsabilidad en \texttt{include/}, mientras que \texttt{src/} contiene sus implementaciones
+y los puntos de entrada de la CLI y la interfaz gráfica.
+
+\begingroup
+\small
+\setlength{\DTbaselineskip}{\baselineskip}
+\dirtree{%
+	.1 ./.
+	.2 8-track/\DTcomment{Código y recursos de la aplicación}.
+	.3 include/\DTcomment{Cabeceras de C++ por módulo}.
+	.4 app/\DTcomment{Ensamblado de repositorios y servicios}.
+	.4 cli/\DTcomment{Comandos y presentación de tablas}.
+	.4 compiler/\DTcomment{Análisis de MuQL y traducción a SQL}.
+	.4 database/\DTcomment{Conexión y repositorios SQLite}.
+	.4 domain/\DTcomment{Entidades y tipos del dominio musical}.
+	.5 repositories/\DTcomment{Interfaces de persistencia y transacciones}.
+	.4 gui/\DTcomment{Integración de C++ con la interfaz QML}.
+	.5 models/\DTcomment{Modelos de listas y controladores Qt}.
+	.4 miner/\DTcomment{Extracción de metadatos y caché de carátulas}.
+	.4 player/\DTcomment{Cola de reproducción y motor de audio}.
+	.4 services/\DTcomment{Biblioteca, búsquedas y gestión de intérpretes}.
+	.4 utils/\DTcomment{Funciones auxiliares de texto y del compilador}.
+	.3 src/\DTcomment{Implementaciones de C++ y puntos de entrada}.
+	.3 resources/\DTcomment{Recursos del núcleo de la aplicación}.
+	.4 sql/\DTcomment{Esquema de la base de datos SQLite}.
+	.3 qml/\DTcomment{Interfaz gráfica y ventana principal}.
+	.4 components/\DTcomment{Controles y elementos visuales reutilizables}.
+	.4 dialogs/\DTcomment{Selector de directorios para el escaneo}.
+	.4 pages/\DTcomment{Vistas de canciones, álbumes, artistas y búsqueda}.
+	.4 resources/\DTcomment{Iconos, imágenes y fuentes tipográficas}.
+	.4 theme/\DTcomment{Colores, tipografías y medidas de la interfaz}.
+	.4 utils/\DTcomment{Formato del tiempo de reproducción}.
+	.2 tests/\DTcomment{Pruebas por módulo con GoogleTest}.
+	.3 data/\DTcomment{Archivos MP3 e imágenes para las pruebas}.
+}
+\endgroup
+
+\subsection{Instrucciones de Compilación}
+
+Se recomienda utilizar el preset \texttt{release}, que centraliza la
+configuración empleada durante el desarrollo y en integración continua.
+Este utiliza Ninja para la construcción, ccache para reutilizar resultados
+de compilaciones anteriores y mold para acelerar el enlazado.
+
+Para utilizarlo, es necesario contar con estas herramientas instaladas.
+En \textbf{Fedora}, pueden instalarse con el siguiente comando:
+
+\begin{lstlisting}[language=bash]
+sudo dnf install ninja-build mold ccache
+\end{lstlisting}
+
+Primero, se debe clonar el repositorio y acceder al directorio del proyecto:
+
+\begin{lstlisting}[language=bash]
+git clone https://github.com/evanrock520-ciencias/8-Track.git
+cd 8-Track
+\end{lstlisting}
+
+A continuación, se puede elegir una de las siguientes alternativas.
+Ambas compilan el proyecto en modo \texttt{Release}.
+
+\paragraph{Compilación con preset}
+
+El preset almacena los archivos generados en \texttt{build/release}:
+
+\begin{lstlisting}[language=bash]
+cmake -S . --preset release
+cmake --build --preset release
+\end{lstlisting}
+
+\paragraph{Compilación sin preset}
+
+Como alternativa, se puede configurar la construcción directamente,
+sin exigir Ninja, ccache ni mold. En este caso, los archivos generados
+se almacenan en \texttt{build}:
+
+\begin{lstlisting}[language=bash]
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+\end{lstlisting}
+
+\subsection{Instrucciones de Ejecución}
+
+\subsubsection*{Interfaz Gráfica}
+
+En el primer arranque, la aplicación crea automáticamente la base de datos SQLite e inicializa su esquema. Los datos se
+almacenan en el directorio determinado por \texttt{QStandardPaths::AppDataLocation}, que en Linux normalmente corresponde
+a \texttt{\$HOME/.local/share/8-track/}
+
+\paragraph{Abrir interfaz gráfica}
+
+\begin{lstlisting}[language=bash]
+build/release/8-track/qml/track8
+\end{lstlisting}
+
+La biblioteca inicialmente está vacía. Para agregar canciones se debe seleccionar un directorio mediante el botón \texttt{Scan}
+de la interfaz gráfica o mediante el comando \texttt{--scan} de la CLI.
+
+Al seleccionar el directorio, comienza el escaneo de los archivos MP3
+y se muestra una ventana con el progreso y el archivo actual.
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth,trim=0bp 60bp 0bp 60bp,clip]{screnshoots/scan.png}
+\end{center}
+
+Al finalizar, la biblioteca se actualiza con las canciones,
+álbumes e intérpretes encontrados.
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth,trim=0bp 60bp 0bp 60bp,clip]{screnshoots/landing.png}
+\end{center}
+
+Para iniciar la reproducción, se utiliza el botón de reproducción de una canción o de un álbum. La barra
+inferior permite pausar o reanudar el audio, cambiar de canción, activar el modo aleatorio y ajustar el
+volumen y la posición de reproducción.
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth,trim=0bp 60bp 0bp 60bp,clip]{screnshoots/playback.png}
+\end{center}
+
+Para buscar canciones, se escribe una consulta de MuQL en la barra superior y se presiona \texttt{Enter};
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth,trim=0bp 60bp 0bp 60bp,clip]{screnshoots/search.png}
+\end{center}
+
+\subsubsection*{CLI}
+
+\paragraph{Escanear un directorio}
+
+\begin{lstlisting}[language=bash]
+build/release/track8-cli --scan $HOME/Music
+\end{lstlisting}
+
+\paragraph{Ver la biblioteca}
+
+\begin{lstlisting}[language=bash]
+build/release/track8-cli --list
+\end{lstlisting}
+
+\begin{center}
+	\includegraphics[width=0.68\textwidth,trim=16bp 68bp 16bp 30bp,clip]{screnshoots/library.png}
+\end{center}
+
+\paragraph{Realizar una consulta}
+
+\begin{lstlisting}[language=bash]
+build/release/track8-cli --query 'big'
+\end{lstlisting}
+
+\begin{center}
+	\includegraphics[width=0.62\textwidth,trim=16bp 70bp 48bp 40bp,clip]{screnshoots/query.png}
+\end{center}
+
+\subsection{Pruebas}
+
+La mayoría del proceso de desarrollo fue guiado por pruebas unitarias desarrolladas con la biblioteca de \textbf{GoogleTest}.
+Las pruebas están divididas por módulos, cada uno correspondiente a una biblioteca de \textbf{8-Track}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{@{}lX@{}}
+		\toprule
+		Suite    & Cobertura                                                            \\
+		\midrule
+		database & Implementación de los repositorios para SQLite                       \\
+		domain   & Validación de fechas                                                 \\
+		compiler & Pruebas para lexer, parser, generación del AST y transpilación a SQL \\
+		miner    & Mineria de metadatos con archivos de prueba heterogéneos             \\
+		player   & Lógica de la cola de reproducción.                                   \\
+		services & Verificación de datos y acciones de usuario                          \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Suites de pruebas unitarias}
+\end{table}
+
+\paragraph{Ejecutar Pruebas}
+
+Para ejecutar todas las suites de pruebas registradas en CTest,
+se utiliza el siguiente comando:
+
+\begin{lstlisting}[language=bash]
+ctest --test-dir build/release/ --output-on-failure
+\end{lstlisting}
+
+También es posible ejecutar una suite de pruebas de manera
+individual, invocando directamente su ejecutable. Por ejemplo,
+para ejecutar la suite correspondiente a la base de datos:
+
+\begin{lstlisting}[language=bash]
+./build/release/tests/database_tests
+\end{lstlisting}
+
+\subsection{CI/CD}
+
+\subsubsection*{Calidad}
+
+\subsubsection*{Documentación}
