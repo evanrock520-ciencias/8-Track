@@ -384,9 +384,6 @@ una pila, de modo que la canción reproducida más recientemente queda en la par
 se recupera la última canción del historial y se devuelve la canción actual al frente de la cola del usuario,
 permitiendo retomar la reproducción en el mismo orden. Este comportamiento se ilustra en la Figura \ref{fig:queue-history}.
 
-
-
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{screnshoots/queue-history.png}
@@ -403,4 +400,85 @@ canciones para permitir su restauración, a costa de un consumo adicional de mem
 
 \subsection{Interfaz Gráfica}
 
-\subsection{Interfaz de Terminal}
+\subsubsection*{Diseño}
+
+El nombre \textbf{8-Track} evoca directamente la cultura musical retro-analógica de los años 60-70, por lo tanto, se
+buscó que el diseño visual de la aplicación reflejara esta identidad. En un principio, se contempló una interfaz
+inspirada en los videojuegos de estética \textit{pixel art}. Sin embargo, tras evaluar el esfuerzo de implementación
+que supondría esta propuesta, se optó por una alternativa más sencilla, pero igualmente distintiva: el \textbf{neobrutalismo}.
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[t]{0.2\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figures/pause-pixel.pdf}
+		\par\smallskip
+		\textbf{Pixel art}
+	\end{minipage}%
+	\hspace{0.06\textwidth}%
+	\begin{minipage}[t]{0.2\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figures/pause.pdf}
+		\par\smallskip
+		\textbf{Neobrutalismo}
+	\end{minipage}
+	\caption{Alternativas de diseño visual para el botón de pausa}
+\end{figure}
+
+La paleta cromática de \textbf{8-Track} sigue una línea visual caracterizada por el uso de colores saturados
+y contrastes pronunciados, con el naranja coral como color predominante. Los colores se seleccionaron
+tomando como referencia \href{https://htmlcolorcodes.com}{HTML Color Codes}. La paleta principal es visibible
+en la Figura \ref{fig:interface-palette}
+
+\begin{figure}[htbp]
+	\centering
+	\setlength{\fboxsep}{0pt}
+	\colorbox{coral}{\rule{0pt}{2cm}\rule{0.12\linewidth}{0pt}}%
+	\colorbox{ambar}{\rule{0pt}{2cm}\rule{0.12\linewidth}{0pt}}%
+	\colorbox{mustard}{\rule{0pt}{2cm}\rule{0.12\linewidth}{0pt}}%
+	\colorbox{electricBlue}{\rule{0pt}{2cm}\rule{0.12\linewidth}{0pt}}%
+	\colorbox{statusGreen}{\rule{0pt}{2cm}\rule{0.12\linewidth}{0pt}}%
+	\caption{Paleta de colores de la interfaz}
+	\label{fig:interface-palette}
+\end{figure}
+
+\subsubsection*{Vistas}
+
+Las vistas de \textbf{8-Track} se definen a partir de los requisitos funcionales establecidos en la especificación. Entre las
+funcionalidades que deben contemplarse se encuentran el escaneo de la biblioteca musical, la exploración del catálogo,
+la búsqueda de canciones, la edición de intérpretes y opcionalmente, el control de la reproducción.
+
+A partir de estas necesidades, se identifican tres componentes compartidos entre las distintas vistas: la \textbf{barra de navegación},
+la \textbf{barra de reproducción} y la \textbf{barra de búsqueda}. Estos elementos permanecen accesibles independientemente de la
+vista seleccionada.
+
+De esta forma, el contenido del panel principal es el único que cambia al navegar por la aplicación, mientras que los componentes
+compartidos permanecen fijos. Para gestionar este comportamiento, se utiliza un \texttt{Loader}, encargado de cargar y renderizar
+dinámicamente la vista correspondiente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../../mockups/library.pdf}
+	\caption{Mockup de la vista de la biblioteca}
+	\label{fig:library-mockup}
+	\par\smallskip
+\end{figure}
+
+Además, para las funcionalidades \texttt{puntuales} se prefiere no utilizar una vista completa, si no más bien utilizar una
+ventana \texttt{modal} que no rompa el flujo de navegación, pero sea lo suficientemente cómodo para realizar la acción.
+Por ejemplo, la Figura \ref{fig:scan-modal} muestra un ejemplo para el escaneo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figures/scan-modal.pdf}
+	\caption{Diagrama de reproducción}
+	\label{fig:scan-modal}
+	\par\smallskip
+\end{figure}
+
+\subsubsection*{Integración}
+
+Las vistas de \textbf{8-Track} se implementaron utilizando el lenguaje declarativo \texttt{QML} y se comunican con el \textit{backend} mediante controladores que actúan como intermediarios entre la interfaz y la capa de servicios, exponiendo sus funcionalidades a través de objetos nativos de \textbf{Qt}.
+
+Los estilos visuales se centralizan en \texttt{Theme.qml} mediante \textit{tokens} de diseño, cuyos valores se trasladaron directamente desde \textbf{Figma}. Y los artefactos como \texttt{logos} o \texttt{fuentes}
+se incorporan al binario mediante el sistema de recursos de Qt.
