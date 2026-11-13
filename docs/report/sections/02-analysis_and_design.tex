@@ -330,7 +330,7 @@ biblioteca.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures/miner-sequence.pdf}
+	\includegraphics[width=0.52\textwidth]{figures/miner-sequence.pdf}
 	\caption{Diagrama de secuencia de la importación de la biblioteca}
 	\label{fig:library-sequence}
 \end{figure}
@@ -356,6 +356,50 @@ como personas, grupos o desconocidos, actualizar sus datos y administrar las per
 Estas operaciones se delegan en \texttt{IPerformerRepository}, cuya implementación se encarga de la persistencia.
 
 \subsection{Reproductor}
+
+\paragraph{Backend de Audio}
+
+La reproducción de audio se delega a una interfaz, \texttt{IAudioBackend}, que define las operaciones elementales
+de reproducción: \texttt{play}, \texttt{pause}, \texttt{stop}, \texttt{load}, \texttt{setVolume} y \texttt{seek}.
+Los eventos se comunican mediante \textit{callbacks}, de modo que \texttt{IAudioBackend} permanece independiente
+del sistema de \textit{signals and slots} de \textbf{Qt}.
+
+La implementación actual de \textbf{8-Track} delega la reproducción a \textbf{QtMultimedia}, que encaja con
+el ecosistema de \textbf{Qt} y ofrece las operaciones de la interfaz a alto nivel, por lo que no es necesario
+implementar la decodificación de audio directamente.
+
+Sin embargo, mantener la interfaz abstracta permite sustituir esta implementación en el futuro por otra
+con mayor control sobre la decodificación.
+
+\paragraph{Cola de Reproducción}
+
+\textbf{Queue} es la encargada de toda la lógica alrededor de la reproducción. Es independiente del
+\textit{backend} de audio: solo administra el orden de las canciones. Para ello mantiene cuatro
+estructuras: la lista de reproducción (\texttt{queue}), la cola del usuario (\texttt{userQueue}),
+el historial (\texttt{history}), y una copia del orden original (\texttt{original}).
+
+Al avanzar de canción, la canción actual se incorpora al \texttt{historial} y se selecciona la siguiente,
+dando prioridad a la cola del usuario sobre la lista de reproducción. El historial se organiza como
+una pila, de modo que la canción reproducida más recientemente queda en la parte superior. Al retroceder,
+se recupera la última canción del historial y se devuelve la canción actual al frente de la cola del usuario,
+permitiendo retomar la reproducción en el mismo orden. Este comportamiento se ilustra en la Figura \ref{fig:queue-history}.
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{screnshoots/queue-history.png}
+	\caption{Diagrama de reproducción}
+	\label{fig:queue-history}
+	\par\smallskip
+\end{figure}
+
+\texttt{Queue} también implementa el método \texttt{shuffle} mediante \texttt{std::ranges::shuffle}, que habitualmente emplea una
+variante del algoritmo de \textbf{Fisher-Yates}. El modo aleatorio se aplica exclusivamente a las canciones pendientes
+de la lista principal. Al desactivarlo, estas recuperan su orden original, sin alterar el historial de reproducción ni
+la cola del usuario. Dado que el barajado no es una operación reversible, \texttt{Queue} conserva el orden previo de las
+canciones para permitir su restauración, a costa de un consumo adicional de memoria.
 
 \subsection{Interfaz Gráfica}
 
