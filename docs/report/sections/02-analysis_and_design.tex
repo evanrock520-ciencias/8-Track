@@ -307,6 +307,54 @@ Para más ejemplos del lenguaje \textbf{MuQL}, véase
 
 \subsection{Servicios}
 
+La capa de \textbf{servicios} actúa como una \textit{fachada} que coordina los módulos y expone
+operaciones de alto nivel para la interfaz gráfica y la interfaz de línea de comandos.
+
+\paragraph{Servicio de Biblioteca}
+
+\texttt{LibraryService} es la fachada de la biblioteca: coordina el minero, las carátulas, los
+repositorios y las transacciones, de modo que la interfaz no necesita conocer ninguno de ellos.
+
+El escaneo comienza con \texttt{scan()}, que recorre el directorio con el minero
+y, por cada archivo encontrado, invoca \texttt{importTrack()}. Esta operación
+resuelve el intérprete y el álbum, reutilizando los existentes o creando nuevos
+si hace falta, construye la canción y la guarda en el repositorio. La
+Figura~\ref{fig:library-sequence} muestra este flujo.
+
+Para informar a la interfaz del avance, el servicio recibe un \textit{callback} \texttt{ScanProgress}
+que reporta el archivo actual, los archivos procesados y el total.
+
+Además del escaneo, el servicio ofrece consultas de apoyo: listado de canciones,
+álbumes y géneros, canciones por álbum o por intérprete, y estadísticas de la
+biblioteca.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/miner-sequence.pdf}
+	\caption{Diagrama de secuencia de la importación de la biblioteca}
+	\label{fig:library-sequence}
+\end{figure}
+
+\paragraph{Servicio de Búsqueda}
+
+\texttt{Search Sequence} es la fachada para las búsquedas relacionadas a \textbf{MuQL}. Es una capa muy delgada
+que recibe una cadena cruda de código \textbf{MuQL} y retorna un \textbf{Search Result} con las canciones o
+un mensaje de error, con el objetivo de capturar las excepciones antes de que lleguen a la interfaz gráfica.
+Sigue el flujo de la Figura \ref{fig:search-sequence}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/search-sequence.pdf}
+	\caption{Diagrama de secuencia de la importación de la biblioteca}
+	\label{fig:search-sequence}
+\end{figure}
+
+\paragraph{Servicio de Artistas}
+
+El servicio \texttt{ArtistService} expone las operaciones de consulta y edición de intérpretes. Permite clasificarlos
+como personas, grupos o desconocidos, actualizar sus datos y administrar las pertenencias entre personas y grupos.
+Estas operaciones se delegan en \texttt{IPerformerRepository}, cuya implementación se encarga de la persistencia.
+
 \subsection{Reproductor}
 
 \subsection{Interfaz Gráfica}
