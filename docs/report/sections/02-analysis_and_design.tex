@@ -152,7 +152,156 @@ le corresponde a quien la consulta.
 
 \subsection{MuQL}
 
+\textbf{MuQL} (\texttt{Musical Query Language}) es un lenguaje de consulta para la aplicación \textbf{8-Track},
+ampliamente basado en los lenguajes de búsqueda \texttt{clave-valor} de \textbf{Github} y en la
+sintáxis clara, legible, y cercana al lenguaje natural de \textbf{Python}.
+
 \subsubsection*{Gramática}
+
+Una \texttt{query} de \textbf{MuQL} se compone de una expresión y una cláusula de orden. Ambos campos son opcionales y
+la consulta vacía es válida.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/query.pdf}
+	\caption{Diagrama UML de una Query}
+\end{figure}
+
+\paragraph{Coincidencias Parciales y Exactas}
+
+\textbf{MuQL} proporciona dos operadores para realizar búsquedas dentro de la biblioteca musical. El operador
+\enquote{\texttt{:}} realiza una búsqueda parcial, equivalente al \texttt{LIKE} de \texttt{SQL}:
+basta con que el valor aparezca en cualquier posición del campo. El operador \enquote{\texttt{:=}}
+realiza una búsqueda exacta, equivalente al \texttt{=} de \texttt{SQL}, que exige una coincidencia completa.
+
+\paragraph{Filtros por Categoría}
+
+Los filtros por categoría restringen la búsqueda a un atributo o relación específica de la biblioteca.
+
+\begin{itemize}
+	\item \texttt{performer}: Busca canciones por el nombre del intérprete, ya sea una persona o una banda.
+	\item \texttt{artist}: Busca canciones por el nombre de un intérprete clasificado como persona.
+	\item \texttt{band}: Busca canciones por el nombre de un intérprete clasificado como banda.
+	\item \texttt{album}: Busca canciones por el nombre del álbum al que pertenecen.
+	\item \texttt{song}: Busca canciones por su título.
+	\item \texttt{genre}: Busca canciones por su género musical.
+	\item \texttt{member}: Busca canciones de grupos por el nombre de uno de sus miembros.
+	\item \texttt{path}: Busca canciones por la ruta del archivo de audio.
+	\item \texttt{track}: Busca canciones por su número de pista dentro del álbum; admite valores individuales y rangos.
+\end{itemize}
+
+\paragraph{Rangos}
+
+Para los campos numéricos, como el año o el número de pista, \textbf{MuQL}
+ofrece el operador \enquote{\texttt{=>}}, que permite filtrar por un intervalo
+de valores. Ambos límites son inclusivos y cualquiera de ellos puede omitirse,
+dejando el rango abierto por ese lado. La Tabla~\ref{tab:muql-ranges} resume las
+formas admitidas.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lll}
+		\hline
+		\textbf{Forma}      & \textbf{Ejemplo}              & \textbf{Significado}   \\
+		\hline
+		Valor individual    & \texttt{year: 2020}           & Solo el año 2020       \\
+		Rango cerrado       & \texttt{year: 1990 => \ 1999} & Desde 1990 hasta 1999  \\
+		Sin límite superior & \texttt{year: 2010 =>}        & Desde 2010 en adelante \\
+		Sin límite inferior & \texttt{year: => \ 1980}      & Hasta el año 1980      \\
+		\hline
+	\end{tabular}
+	\caption{Formas de especificar valores numéricos en MuQL}
+	\label{tab:muql-ranges}
+\end{table}
+
+\paragraph{Filtros Temporales}
+
+Los filtros temporales restringen la búsqueda únicamente al atributo \texttt{year}. Tanto \texttt{from}
+como \texttt{to} son azúcar sintáctica de rangos abiertos sobre \texttt{year}.
+
+\begin{itemize}
+	\item \texttt{from}: Busca canciones desde un determinado año.
+	\item \texttt{to}: Busca canciones hasta un determinado año.
+	\item \texttt{year}: Busca canciones en un rango de años.
+\end{itemize}
+
+\paragraph{Búsquedas Libres}
+
+Cuando el usuario no especifica un campo, \textbf{MuQL} interpreta el término como una búsqueda libre.
+Una búsqueda libre se interpreta por coincidencia parcial sobre los campos: \texttt{performer},
+\texttt{album}, \texttt{song} y \texttt{genre}.
+
+Los valores que contienen caracteres especiales o acentuados, las frases completas con espacios y los
+valores que coinciden con palabras reservadas deben delimitarse con comillas dobles
+
+\paragraph{Lógica}
+
+\textbf{MuQL} permite combinar expresiones mediantes los operadores booleanos \texttt{and}, \texttt{or}
+y \texttt{not}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{l X X}
+		\toprule
+		\textbf{Operador} & \textbf{Significado}                          & \textbf{Ejemplo} \\
+		\midrule
+		\texttt{and}
+		                  & Exige que se cumplan ambas condiciones.
+		                  & \texttt{genre: "Rock" and year: 1990 => 1999}                    \\
+		\addlinespace
+		\texttt{or}
+		                  & Exige que se cumpla al menos una condición.
+		                  & \texttt{genre: "Jazz" or genre: "Blues"}                         \\
+		\addlinespace
+		\texttt{not}
+		                  & Niega la condición siguiente.
+		                  & \texttt{not album: "Live"}                                       \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Operadores lógicos de MuQL}
+\end{table}
+
+Las expresiones consecutivas se combinan con un \texttt{and} implícito, por lo que omitir el operador
+no modifica el resultado de la consulta. Así, las siguientes consultas son equivalentes:
+
+\begin{lstlisting}
+  performer: "Vampire Weekend" and year: => 2020
+  performer: "Vampire Weekend" year: => 2020
+\end{lstlisting}
+
+El operador \texttt{or} permite concatenar varios valores para un mismo campo sin tener que repetirlo.
+Por ejemplo, las siguientes consultas son equivalentes:
+
+\begin{lstlisting}
+  performer: "The Beatles" or "The Zombies"
+  performer: "The Beatles" or performer: "The Zombies"
+\end{lstlisting}
+
+\paragraph{Cláusulas de Orden}
+
+\textbf{MuQL} permite añadir una cláusula de ordenamiento al final de la \textit{query}, que ordena
+los resultados de forma \textbf{ascendente} (\texttt{asc}) o \textbf{descendente} (\texttt{desc})
+según alguno de los campos de la Tabla~\ref{tab:sort-orders}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{ll}
+		\hline
+		\textbf{Tipo} & \textbf{Campos}                                                                  \\
+		\hline
+		Textual       & \texttt{song}, \texttt{performer}, \texttt{album}, \texttt{genre}, \texttt{path} \\
+		Numérico      & \texttt{year}, \texttt{track}                                                    \\
+		\hline
+	\end{tabular}
+	\caption{Campos disponibles para ordenar}
+	\label{tab:sort-orders}
+\end{table}
+
+Se utiliza la sintáxis \texttt{sort: order by field} para especificar las claúsulas de orden.
+El orden por omisión es \textbf{ascendente}.
+
+Para más ejemplos del lenguaje \textbf{MuQL}, véase
+\url{https://github.com/evanrock520-ciencias/8-Track/blob/main/docs/muql/examples.md}.
 
 \subsubsection*{Compilador}
 
