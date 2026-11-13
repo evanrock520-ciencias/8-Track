@@ -35,21 +35,88 @@ biblioteca cumple un rol especifico dentro de la funcionalidad del programa:
 \end{figure}
 
 
-La separación en bibliotecas busca reducir el acoplamiento entre componentes y delimitar sus
-responsabilidades. La interfaz gráfica y la interfaz de línea de comandos comparten una capa de
-servicios que expone las operaciones de la aplicación y coordina los subsistemas necesarios.
-Esto permite reutilizar la lógica de la aplicación y realizar cambios internos de manera más
-sencilla.
-
 \subsection{Base de Datos}
 
 \subsubsection*{Modelo Relacional}
 
+El modelo relacional utilizado en \textbf{8-Track} forma parte de la especificación principal del proyecto. Fundamentalmente contempla
+tres entidades básicas: \texttt{rola}, \texttt{album} y \texttt{performer}. Las relaciones se pueden observar en la Figura
+\ref{fig:database-relations}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{figures/database-relations.pdf}
+	\caption{Relación-entidad de la base de datos}
+	\label{fig:database-relations}
+\end{figure}
+
+El esquema contempla una especialización de la entidad \texttt{performers} en dos subtipos: \texttt{persons} y
+\texttt{groups}, que permiten distinguir entre solistas y agrupaciones musicales. Asimismo,
+se establece una relación de membresía entre ambas entidades para representar la pertenencia de una
+persona a algún grupo. Esta estructura se ilustra en la Figura \ref{fig:performers-isa}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{figures/performers-isa.pdf}
+	\caption{Especialización de intérpretes en personas y grupos.}
+	\label{fig:performers-isa}
+\end{figure}
+
 \subsubsection*{Modelos de Dominio}
+
+Cada entidad del esquema de la base de datos tiene su correspondiente representación en una clase de dominio.
+Estas clases modelan los elementos musicales mediante objetos de C++, independientes tanto de la capa de persistencia
+como de \textbf{Qt} y la interfaz gráfica. Permitiendo que el resto de la aplicación trabaje directamente con ellos.
+
+La clase \textbf{Song} es la única que emplea el patrón de diseño \textit{Builder}, debido a su mayor complejidad y al
+número de atributos que intervienen en su construcción. Para el resto de las entidades, cuya estructura
+es más sencilla, se optó por utilizar constructores convencionales.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/domain.pdf}
+	\caption{Especialización de intérpretes en personas y grupos.}
+\end{figure}
 
 \subsubsection*{Repositorios}
 
+La persistencia de datos se organiza mediante el patrón de diseño \textbf{Repository}. Un repository se encarga de abstraer la comunicación con la base de datos,
+realizar operaciones \texttt{CRUD} sobre las tablas y transformar los resultados en objetos de dominio.
+
+Existe un repositorio por agregado:
+
+\begin{itemize}
+	\item \textbf{ISongRepository}: Gestiona la persistencia de las canciones,
+	      incluyendo su creación, actualización y eliminación, así como su búsqueda
+	      por identificador o mediante consultas MuQL.
+
+	\item \textbf{IAlbumRepository}: Gestiona la persistencia de los álbumes,
+	      permitiendo su creación, actualización y listado, además de su búsqueda
+	      por identificador o por la combinación de nombre y ruta.
+
+	\item \textbf{IPerformerRepository}: Gestiona la persistencia de los
+	      intérpretes y su especialización en personas y grupos, así como las
+	      relaciones de membresía entre ellos.
+\end{itemize}
+
+Las implementaciones concretas de estas interfaces utilizan \texttt{SQLite} como motor de base de datos y el módulo \texttt{Qt SQL}
+para gestionar el acceso a los datos.
+
+Algunos puntos importantes sobre los repositorios, son:
+
+\begin{itemize}
+	\item Todas las consultas a la base de datos están parametrizadas.
+	\item Las acciones con múltiples sentencias van en transacciones.
+	\item Los cambios de clasificación de intérpretes son destructivos.
+\end{itemize}
+
 \subsubsection*{Conexión}
+
+La clase \texttt{DatabaseManager} se encarga de gestionar la conexión con SQLite mediante el controlador \texttt{QSQLITE}
+del módulo Qt SQL. Durante su inicialización, crea el directorio de almacenamiento si no existe y abre
+el archivo de la base de datos. En caso de no encontrar la tabla \texttt{rolas}, inicializa la estructura
+de la base de datos ejecutando el esquema definido en \texttt{rolas.sql}. La conexión resultante se proporciona
+a los repositorios para que puedan ejecutar sus operaciones sobre la base de datos.
 
 \subsection{Minero}
 
@@ -83,7 +150,7 @@ si no es posible extraer los metadatos de un archivo, este simplemente se ignora
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/miner.pdf}
+	\includegraphics[width=0.49\textwidth]{figures/miner.pdf}
 	\caption{Diagrama UML del minero}
 \end{figure}
 
