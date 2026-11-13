@@ -72,46 +72,6 @@ de \texttt{FetchContent}; por lo tanto, es necesario contar con conexión a inte
 	\caption{Herramientas de pruebas, calidad y documentación}
 \end{table}
 
-\subsection{Organización del Proyecto}
-
-El código de la aplicación se concentra en \texttt{8-track/}. Las cabeceras de C++ se agrupan
-por responsabilidad en \texttt{include/}, mientras que \texttt{src/} contiene sus implementaciones
-y los puntos de entrada de la CLI y la interfaz gráfica.
-
-\begingroup
-\small
-\setlength{\DTbaselineskip}{\baselineskip}
-\dirtree{%
-	.1 ./.
-	.2 8-track/\DTcomment{Código y recursos de la aplicación}.
-	.3 include/\DTcomment{Cabeceras de C++ por módulo}.
-	.4 app/\DTcomment{Ensamblado de repositorios y servicios}.
-	.4 cli/\DTcomment{Comandos y presentación de tablas}.
-	.4 compiler/\DTcomment{Análisis de MuQL y traducción a SQL}.
-	.4 database/\DTcomment{Conexión y repositorios SQLite}.
-	.4 domain/\DTcomment{Entidades y tipos del dominio musical}.
-	.5 repositories/\DTcomment{Interfaces de persistencia y transacciones}.
-	.4 gui/\DTcomment{Integración de C++ con la interfaz QML}.
-	.5 models/\DTcomment{Modelos de listas y controladores Qt}.
-	.4 miner/\DTcomment{Extracción de metadatos y caché de carátulas}.
-	.4 player/\DTcomment{Cola de reproducción y motor de audio}.
-	.4 services/\DTcomment{Biblioteca, búsquedas y gestión de intérpretes}.
-	.4 utils/\DTcomment{Funciones auxiliares de texto y del compilador}.
-	.3 src/\DTcomment{Implementaciones de C++ y puntos de entrada}.
-	.3 resources/\DTcomment{Recursos del núcleo de la aplicación}.
-	.4 sql/\DTcomment{Esquema de la base de datos SQLite}.
-	.3 qml/\DTcomment{Interfaz gráfica y ventana principal}.
-	.4 components/\DTcomment{Controles y elementos visuales reutilizables}.
-	.4 dialogs/\DTcomment{Selector de directorios para el escaneo}.
-	.4 pages/\DTcomment{Vistas de canciones, álbumes, artistas y búsqueda}.
-	.4 resources/\DTcomment{Iconos, imágenes y fuentes tipográficas}.
-	.4 theme/\DTcomment{Colores, tipografías y medidas de la interfaz}.
-	.4 utils/\DTcomment{Formato del tiempo de reproducción}.
-	.2 tests/\DTcomment{Pruebas por módulo con GoogleTest}.
-	.3 data/\DTcomment{Archivos MP3 e imágenes para las pruebas}.
-}
-\endgroup
-
 \subsection{Instrucciones de Compilación}
 
 Se recomienda utilizar el preset \texttt{release}, que centraliza la
