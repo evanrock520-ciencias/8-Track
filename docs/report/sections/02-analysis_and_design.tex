@@ -372,6 +372,42 @@ Para más ejemplos del lenguaje \textbf{MuQL}, véase
 
 \subsubsection*{Compilador}
 
+El compilador de \textbf{MuQL} está completamente basado en la estructura del compilador de \textbf{Lox} descrito en el libro de \textit{Crafting Interpreters} \cite{nystrom2021crafting}.
+
+\paragraph{Lexer}
+
+El \textit{lexer} recibe una cadena de código fuente en \textbf{MuQL} y la descompone en una secuencia
+de \textit{tokens}, identificando los operadores, literales y demás elementos léxicos
+definidos por el lenguaje.
+
+\paragraph{Parser}
+
+El \textit{parser} recibe la secuencia de \textit{tokens} generada por el \textit{lexer} y construye un
+árbol de sintaxis abstracta (\texttt{AST}) que representa una \texttt{query}.
+
+El \textit{parser} utiliza una técnica de análisis sintáctico conocida como \textbf{descenso recursivo}, en la que cada
+regla de la gramática se implementa mediante una función. El análisis se organiza en tres niveles de
+operadores lógicos: \texttt{OR}, \texttt{AND} y \texttt{NOT}, ordenados de menor a mayor precedencia. A medida que
+se reconocen las distintas expresiones, las funciones construyen recursivamente el árbol de sintaxis abstracta,
+combinando los nodos generados hasta obtener una representación completa de la consulta.
+
+Los nodos de la gramática de \textbf{MuQL} se pueden observar en la Figura \ref{fig:ast-nodes}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/nodes.pdf}
+	\caption{Diagrama UML de los nodos del AST de MuQL}
+	\label{fig:ast-nodes}
+\end{figure}
+
+\paragraph{Transpilación a SQL}
+
+El proceso de transpilación utiliza el patrón de diseño \textbf{Visitor} para tranformar un árbol de sintáxis abstracta MuQL en una consulta
+de \textbf{SQL}.
+
+Cada nodo dispone de una operación de traducción que genera su condición \textbf{SQL} y las expresiones compuestas se evaluan recursivamente.
+El resultado contiene el texto SQL y una colección separada de parámetros, cuyos valores se representan mediante comodines.
+
 \subsection{Servicios}
 
 La capa de \textbf{servicios} actúa como una \textit{fachada} que coordina los módulos y expone
